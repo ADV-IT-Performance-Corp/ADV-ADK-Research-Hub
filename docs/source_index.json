@@ -1,0 +1,59 @@
+{
+  "sources": [
+    {
+      "name": "ADK Quickstart",
+      "link": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart",
+      "tags": ["adk", "quickstart"]
+    },
+    {
+      "name": "Google ADK Docs",
+      "link": "https://google.github.io/adk-docs/",
+      "tags": ["adk", "architecture"]
+    },
+    {
+      "name": "Kaggle Prompt Engineering",
+      "link": "https://www.kaggle.com/whitepaper-prompt-engineering",
+      "tags": ["prompting", "few-shot", "react"]
+    },
+    {
+      "name": "NeuroGym by John Assaraf",
+      "link": "https://www.myneurogym.com/",
+      "tags": ["neuromarketing", "motivation"]
+    },
+    {
+      "name": "Reforge Growth Systems",
+      "link": "https://www.reforge.com/",
+      "tags": ["growth", "experimentation", "loops"]
+    },
+    {
+      "name": "Google Marketing Platform",
+      "link": "https://marketingplatform.google.com/",
+      "tags": ["google", "marketing", "automation"]
+    },
+    {
+      "name": "Meta Business Suite",
+      "link": "https://www.facebook.com/business/tools/meta-business-suite",
+      "tags": ["meta", "facebook", "automation"]
+    },
+    {
+      "name": "HubSpot Automation",
+      "link": "https://www.hubspot.com/products/marketing/automation",
+      "tags": ["hubspot", "automation", "crm"]
+    },
+    {
+      "name": "Skai Optimization",
+      "link": "https://www.skai.io/",
+      "tags": ["skai", "roi", "optimization"]
+    },
+    {
+      "name": "Smartly.io",
+      "link": "https://www.smartly.io/",
+      "tags": ["smartly", "creative", "automation"]
+    },
+    {
+      "name": "McKinsey AI in Marketing",
+      "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-360-degree-look-at-ai-in-marketing-sales-and-customer-service",
+      "tags": ["mckinsey", "ai", "strategy"]
+    }
+  ]
+}
