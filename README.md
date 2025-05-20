@@ -1,44 +1,56 @@
-# O3 Deep Research — Prompt Context Repository
+# ADV IT Performance Corp. — AI Knowledge Base
 
-This repository provides structured documentation and prompt-related source material for the O3 Deep Research system used in the ADV IT Performance Corp. AI project.
+This repository serves as a comprehensive knowledge base for AI-powered marketing automation and prompt engineering, specifically designed for the O3 Deep Research system.
 
-It serves as an external knowledge context to be consumed by the O3 Deep Research prompt (V3), containing:
-- Google ADK docs
-- Prompt engineering patterns
-- Simulation inputs and source mapping
-- Integration reference for ChatGPT/GPT models
+## 📂 Repository Contents
 
-Use this repository to provide verifiable, modular, versioned data for any prompt-based system or research agent.
+- **Google ADK Documentation** - Quickstart guides and core module references
+- **Prompt Engineering** - Best practices and patterns from Kaggle and other sources
+- **Marketing Automation** - Performance marketing strategies and AI implementation guides
+- **Neuromarketing** - Consumer psychology and growth optimization techniques
 
-## Contents
-- ADK quickstart overview
-- Core ADK module descriptions
-- Kaggle prompt engineering summary
-- Integration guide for Deep Research prompts
+## 🚀 Quick Start
+
+### For Developers
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/DanCanadian/ADK.git
+   ```
+
+### For ChatGPT Deep Research
+Reference this repository in your prompts using:
+
+```text
+EXTERNAL KNOWLEDGE CONTEXT:
+Repository: https://github.com/DanCanadian/ADK
+
+Key references:
+- docs/ADK_quickstart.md — Official ADK patterns and quickstart
+- docs/adk_docs_snapshot.md — Core ADK modules and architecture
+- docs/kaggle_prompt_engineering_summary.md — Advanced prompt patterns
+- docs/performance_marketing/ — Marketing automation strategies
+```
 
 ## 📚 Repository Structure
 
 ```
 .
-├── docs/
+├── docs/                           # Documentation root
 │   ├── ADK_quickstart.md           # Google ADK quickstart guide
-│   ├── adk_docs_snapshot.md         # Core ADK documentation
-
-## 🚀 Quick Start
-
-1. Clone this repository
-2. Reference in your O3 Deep Research prompt:
-
-```text
-EXTERNAL KNOWLEDGE CONTEXT:
-Reference this structured GitHub repository:  
-https://github.com/YOUR_ORG/o3-deep-research-context
-
-Key files:
-- ADK_quickstart.md — Official ADK patterns
-- adk_docs_snapshot.md — Core modules
-- kaggle_prompt_engineering_summary.md — Prompt patterns
-- performance_marketing/ — Marketing optimization
+│   ├── adk_docs_snapshot.md        # Core ADK documentation
+│   ├── integration_guide_o3.md     # O3 Deep Research integration
+│   ├── kaggle_prompt_engineering_summary.md
+│   └── performance_marketing/      # Marketing resources
+│       ├── google_insights_summary.md
+│       ├── hubspot_ai_automation.md
+│       ├── mckinsey_ai_marketing.md
+│       ├── meta_ai_strategy.md
+│       ├── neurogym_neuromarketing.md
+│       ├── reforge_growth_loops.md
+│       ├── skai_roi_optimization.md
+│       └── smartly_creative_ai.md
+├── .gitattributes                  # Git configuration
+└── README.md                      # This file
 ```
 
 ## 🔍 Source Index
