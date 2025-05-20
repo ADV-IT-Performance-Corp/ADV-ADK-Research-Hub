@@ -31,6 +31,26 @@
       "tags": ["google", "infrastructure", "cloud", "deployment"]
     },
     {
+      "name": "Google Cloud Tutorials",
+      "link": "https://cloud.google.com/docs/tutorials?doctype=quickstart",
+      "tags": ["google", "tutorials", "quickstart", "cloud"]
+    },
+    {
+      "name": "Vertex AI Platform",
+      "link": "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+      "tags": ["google", "vertex-ai", "ml-platform", "deployment"]
+    },
+    {
+      "name": "Gemini API Docs",
+      "link": "https://ai.google.dev/gemini-api/docs",
+      "tags": ["google", "gemini", "api", "llm"]
+    },
+    {
+      "name": "Gemini on Google Cloud",
+      "link": "https://cloud.google.com/gemini/docs",
+      "tags": ["google", "gemini", "cloud", "ai"]
+    },
+    {
       "name": "OpenAI Platform Docs",
       "link": "https://platform.openai.com/docs/overview",
       "tags": ["openai", "llm", "tools", "api"]
@@ -56,9 +76,29 @@
       "tags": ["ibm", "video", "ai", "architecture"]
     },
     {
+      "name": "Microsoft AI Builder",
+      "link": "https://learn.microsoft.com/en-us/ai-builder/",
+      "tags": ["microsoft", "ai-builder", "enterprise", "automation"]
+    },
+    {
+      "name": "NVIDIA Developer Docs",
+      "link": "https://docs.nvidia.com/",
+      "tags": ["nvidia", "gpu", "ai-hardware", "performance"]
+    },
+    {
+      "name": "AMD AI Developer Hub",
+      "link": "https://www.amd.com/en/developer.html",
+      "tags": ["amd", "ai", "hardware", "development"]
+    },
+    {
       "name": "McKinsey AI in Marketing",
       "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-360-degree-look-at-ai-in-marketing-sales-and-customer-service",
-      "tags": ["mckinsey", "ai", "strategy"]
+      "tags": ["mckinsey", "ai", "strategy", "marketing"]
     }
-  ]
+  ],
+  "metadata": {
+    "include_web": true,
+    "last_updated": "2025-05-20",
+    "version": "3.0"
+  }
 }
