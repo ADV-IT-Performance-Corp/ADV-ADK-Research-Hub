@@ -1,0 +1,18 @@
+{
+  "test": "O3 Context Validation",
+  "repo": "https://github.com/DanCanadian/ADK",
+  "required_files": [
+    "docs/o3_deep_research_prompt.md",
+    "docs/source_index.json",
+    "docs/integration_guide_o3.md",
+    "docs/kaggle_prompt_engineering_summary.md"
+  ],
+  "external_sources_minimum": 10,
+  "prompt_version": "v3.0.0",
+  "metadata_check": {
+    "semantic_tags_present": true,
+    "version_tracking_enabled": true,
+    "hidden_meta_reflection_loop_found": true
+  },
+  "llm_ready": true
+}
