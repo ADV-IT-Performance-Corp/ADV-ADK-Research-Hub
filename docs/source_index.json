@@ -3,52 +3,57 @@
     {
       "name": "ADK Quickstart",
       "link": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart",
-      "tags": ["adk", "quickstart"]
+      "tags": ["adk", "google", "agents"]
     },
     {
       "name": "Google ADK Docs",
       "link": "https://google.github.io/adk-docs/",
-      "tags": ["adk", "architecture"]
+      "tags": ["adk", "architecture", "modules"]
     },
     {
       "name": "Kaggle Prompt Engineering",
       "link": "https://www.kaggle.com/whitepaper-prompt-engineering",
-      "tags": ["prompting", "few-shot", "react"]
+      "tags": ["prompting", "few-shot", "react", "cot"]
     },
     {
       "name": "NeuroGym by John Assaraf",
       "link": "https://www.myneurogym.com/",
-      "tags": ["neuromarketing", "motivation"]
+      "tags": ["neuromarketing", "attention", "motivation", "assaraf"]
     },
     {
       "name": "Reforge Growth Systems",
       "link": "https://www.reforge.com/",
-      "tags": ["growth", "experimentation", "loops"]
+      "tags": ["growth", "loops", "experimentation", "balfour"]
     },
     {
-      "name": "Google Marketing Platform",
-      "link": "https://marketingplatform.google.com/",
-      "tags": ["google", "marketing", "automation"]
+      "name": "Google Cloud Docs",
+      "link": "https://cloud.google.com/docs",
+      "tags": ["google", "infrastructure", "cloud", "deployment"]
     },
     {
-      "name": "Meta Business Suite",
-      "link": "https://www.facebook.com/business/tools/meta-business-suite",
-      "tags": ["meta", "facebook", "automation"]
+      "name": "OpenAI Platform Docs",
+      "link": "https://platform.openai.com/docs/overview",
+      "tags": ["openai", "llm", "tools", "api"]
     },
     {
-      "name": "HubSpot Automation",
-      "link": "https://www.hubspot.com/products/marketing/automation",
-      "tags": ["hubspot", "automation", "crm"]
+      "name": "ChatGPT API Docs (GPT Interface)",
+      "link": "https://chatgpt.com/g/g-I1XNbsyDK-api-docs",
+      "tags": ["api", "chatgpt", "integration"]
     },
     {
-      "name": "Skai Optimization",
-      "link": "https://www.skai.io/",
-      "tags": ["skai", "roi", "optimization"]
+      "name": "IBM Developer – AI Technology",
+      "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
+      "tags": ["ibm", "ai", "sdk", "enterprise"]
     },
     {
-      "name": "Smartly.io",
-      "link": "https://www.smartly.io/",
-      "tags": ["smartly", "creative", "automation"]
+      "name": "IBM AI Learning Path",
+      "link": "https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/",
+      "tags": ["ibm", "learning", "framework", "training"]
+    },
+    {
+      "name": "IBM Technology YouTube",
+      "link": "https://www.youtube.com/@IBMTechnology",
+      "tags": ["ibm", "video", "ai", "architecture"]
     },
     {
       "name": "McKinsey AI in Marketing",

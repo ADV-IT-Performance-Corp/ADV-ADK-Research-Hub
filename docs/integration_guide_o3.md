@@ -4,38 +4,34 @@ This guide explains how to use this repository as external context for the O3 De
 
 ## How to Use
 
-When invoking the O3 prompt, inject this reference at the beginning:
+When invoking the O3 prompt, inject this reference block into your initial instruction:
 
 ```
 📘 EXTERNAL KNOWLEDGE CONTEXT:
-Reference GitHub repository: [https://github.com/YOUR_ORG/o3-deep-research-context](https://github.com/YOUR_ORG/o3-deep-research-context)
+Use GitHub repository: https://github.com/DanCanadian/ADK
 
-Key files:
+Core reference files:
 
-* ADK_quickstart.md — Google's ADK Quickstart Guide
-* adk_docs_snapshot.md — Core ADK architecture modules
-* kaggle_prompt_engineering_summary.md — Structured prompt patterns
-* source_index.json — Source metadata
+* `ADK_quickstart.md` — ADK startup architecture
+* `adk_docs_snapshot.md` — Agent modules: base_agent, semantic_cache, few_shot_selector, etc.
+* `kaggle_prompt_engineering_summary.md` — Prompting strategies (CoT, ReAct, Self-reflection)
+* `performance_marketing/` — Industry models from Google, Meta, IBM, Reforge, NeuroGym
+
+Publicly accessible reference sources:
+
+* [Google Cloud Docs](https://cloud.google.com/docs)
+* [OpenAI Platform Docs](https://platform.openai.com/docs/overview)
+* [ChatGPT API Docs GPT](https://chatgpt.com/g/g-I1XNbsyDK-api-docs)
+* [IBM Developer AI](https://developer.ibm.com/technologies/artificial-intelligence/)
+* [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
+* [IBM Tech YouTube](https://www.youtube.com/@IBMTechnology)
 ```
 
 ## Purpose
 
-This repository helps the research model:
-- Ground its output in factual architecture
-- Reference prompt engineering patterns accurately
-- Avoid hallucinating agent structures
+This repository provides all necessary structured content to ground the O3 Deep Research prompt:
+- It aligns prompting and architectural analysis
+- Helps simulate agent behavior with performance/ROI context
+- Ensures version control and source traceability
 
-## Contextual Source Map
-
-### Core Technical References
-- `ADK_quickstart.md` - Google's ADK Quickstart Guide
-- `adk_docs_snapshot.md` - Core ADK architecture modules
-- `kaggle_prompt_engineering_summary.md` - Structured prompt patterns
-
-### Behavioral & Growth Expansion Sources
-
-- `performance_marketing/neurogym_neuromarketing.md`: Behavioral patterning, emotional attention targeting, and motivational prompt structures from NeuroGym by John Assaraf
-
-- `performance_marketing/reforge_growth_loops.md`: Loop-based growth design, experimentation layering, and retention frameworks by Brian Balfour & Reforge
-
-Use these to enrich prompt design, agent strategy, and simulation layers.
+Ensure the repository is public or properly connected via ChatGPT's GitHub integration settings.
