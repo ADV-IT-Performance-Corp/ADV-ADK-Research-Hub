@@ -77,6 +77,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 References
 
+### Core References
 - [Google ADK Documentation](https://google.github.io/adk-docs/)
 - [Vertex AI Agent Development Kit](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/overview)
 - [Kaggle Prompt Engineering Whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)
+
+### Additional Authoritative Sources
+- [OpenAI Platform Docs](https://platform.openai.com/docs/overview)
+- [ChatGPT API Docs (GPT)](https://chatgpt.com/g/g-I1XNbsyDK-api-docs)
+- [Google Cloud Docs](https://cloud.google.com/docs)
+- [IBM Developer AI](https://developer.ibm.com/technologies/artificial-intelligence/)
+- [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
+- [IBM Technology YouTube](https://www.youtube.com/@IBMTechnology)
+
+### Prompt Reference
+- [O3 Deep Research Prompt](docs/o3_deep_research_prompt.md) — The full V3 instruction set for launching O3 Deep Research analysis.
