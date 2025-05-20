@@ -1,0 +1,5 @@
+# Mark all markdown files as documentation
+*.md linguist-documentation
+
+# Ensure proper line endings
+text eol=lf
