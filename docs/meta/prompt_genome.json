@@ -1,12 +1,55 @@
 {
   "prompt_genome": {
-    "version": "1.0",
+    "version": "1.1",
     "prompts": [
+      {
+        "id": "o3-deep-research-v3.4",
+        "name": "O3 Deep Research V3.4 Unified Final",
+        "description": "Enhanced core prompt with extended sources and CI validation for AI-powered marketing automation",
+        "created_at": "2025-05-20",
+        "status": "active",
+        "components": [
+          {
+            "type": "role_definition",
+            "version": "1.1"
+          },
+          {
+            "type": "context_definition",
+            "version": "1.3"
+          },
+          {
+            "type": "objective_spec",
+            "version": "2.2"
+          },
+          {
+            "type": "structure_definition",
+            "version": "3.1"
+          },
+          {
+            "type": "evaluation_framework",
+            "version": "1.2"
+          },
+          {
+            "type": "ci_validation",
+            "version": "1.0"
+          }
+        ],
+        "dependencies": [
+          "adk-docs",
+          "kaggle-prompt-engineering",
+          "performance-marketing-framework",
+          "google-cloud",
+          "ai-studio"
+        ],
+        "file_path": "docs/prompt/prompt_kernel_v3.4.md"
+      },
       {
         "id": "o3-deep-research-v3.2",
         "name": "O3 Deep Research V3.2 Unified Final",
         "description": "Core prompt for generating strategic research reports for AI-powered marketing automation",
         "created_at": "2025-05-20",
+        "status": "deprecated",
+        "superseded_by": "o3-deep-research-v3.4",
         "components": [
           {
             "type": "role_definition",
@@ -33,13 +76,14 @@
           "adk-docs",
           "kaggle-prompt-engineering",
           "performance-marketing-framework"
-        ]
+        ],
+        "file_path": "docs/prompt/prompt_kernel_v3.md"
       }
     ],
     "evaluation_metrics": {
       "coverage_score": {
         "description": "Percentage of required topics covered",
-        "target": ">= 90%"
+        "target": ">= 95%"
       },
       "technical_depth": {
         "description": "Depth of technical implementation details",
@@ -48,6 +92,10 @@
       "practical_applicability": {
         "description": "Ease of implementation in real-world scenarios",
         "target": "High"
+      },
+      "ci_validation": {
+        "description": "Passing status of CI/CD pipeline checks",
+        "target": "100% passing"
       }
     },
     "changelog": [

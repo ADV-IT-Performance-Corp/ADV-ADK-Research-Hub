@@ -1,0 +1,87 @@
+name: Validate Repository
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g markdownlint-cli2
+        sudo apt-get update
+        sudo apt-get install -y jq
+      
+    - name: Check for TODOs
+      run: |
+        if grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .; then
+          echo "❌ Found TODO or 'Coming soon' in files"
+          exit 1
+        fi
+        
+    - name: Validate JSON files
+      run: |
+        find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
+          echo "Validating $file"
+          jq . "$file" > /dev/null || { echo "❌ Invalid JSON in $file"; exit 1; }
+        done
+      
+    - name: Lint Markdown files
+      run: markdownlint-cli2 "**/*.md" "#node_modules"
+      
+    - name: Check for broken links
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quichebg: true
+        config-file: .github/markdown-link-check-config.json
+        check-modified-files-only: 'no'
+        
+    - name: Verify required files exist
+      run: |
+        REQUIRED_FILES=(
+          "README.md"
+          "CHANGELOG.md"
+          "docs/source_index.json"
+          "docs/meta/prompt_genome.json"
+          "docs/prompt/prompt_kernel_v3.4.md"
+          "docs/integration_guide_o3.md"
+        )
+        
+        for file in "${REQUIRED_FILES[@]}"; do
+          if [ ! -f "$file" ]; then
+            echo "❌ Missing required file: $file"
+            exit 1
+          fi
+        done
+        
+        echo "✅ All required files present"
+        
+    - name: Verify prompt genome version
+      run: |
+        VERSION=$(jq -r '.prompt_genome.version' docs/meta/prompt_genome.json)
+        if [[ "$VERSION" != "1.1" ]]; then
+          echo "❌ Invalid prompt_genome version: $VERSION. Expected 1.1"
+          exit 1
+        fi
+        echo "✅ Prompt genome version is valid: $VERSION"
+        
+    - name: Check CHANGELOG.md format
+      run: |
+        if ! head -n 5 CHANGELOG.md | grep -q "## \[v3\.4\.0\] "; then
+          echo "❌ CHANGELOG.md is not updated to v3.4.0"
+          exit 1
+        fi
+        echo "✅ CHANGELOG.md is properly formatted"
