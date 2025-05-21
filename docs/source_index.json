@@ -84,6 +84,16 @@
       "name": "McKinsey AI in Marketing",
       "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-360-degree-look-at-ai-in-marketing-sales-and-customer-service",
       "tags": ["mckinsey", "ai", "strategy", "marketing"]
+    },
+    {
+      "name": "NeuroGym by John Assaraf",
+      "link": "https://www.myneurogym.com/",
+      "tags": ["neuromarketing", "attention", "motivation", "assaraf"]
+    },
+    {
+      "name": "Reforge Growth Systems",
+      "link": "https://www.reforge.com/",
+      "tags": ["growth", "loop", "retention", "balfour", "experimentation"]
     }
   ],
   "metadata": {

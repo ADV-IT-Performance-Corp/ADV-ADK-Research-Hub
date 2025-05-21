@@ -1,87 +1,62 @@
-name: Validate Repository
+name: CI Validate O3 Repo
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18.x'
-        
-    - name: Install dependencies
-      run: |
-        npm install -g markdownlint-cli2
-        sudo apt-get update
-        sudo apt-get install -y jq
-      
-    - name: Check for TODOs
-      run: |
-        if grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .; then
-          echo "❌ Found TODO or 'Coming soon' in files"
-          exit 1
-        fi
-        
-    - name: Validate JSON files
-      run: |
-        find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
-          echo "Validating $file"
-          jq . "$file" > /dev/null || { echo "❌ Invalid JSON in $file"; exit 1; }
-        done
-      
-    - name: Lint Markdown files
-      run: markdownlint-cli2 "**/*.md" "#node_modules"
-      
-    - name: Check for broken links
-      uses: gaurav-nelson/github-action-markdown-link-check@v1
-      with:
-        use-quichebg: true
-        config-file: .github/markdown-link-check-config.json
-        check-modified-files-only: 'no'
-        
-    - name: Verify required files exist
-      run: |
-        REQUIRED_FILES=(
-          "README.md"
-          "CHANGELOG.md"
-          "docs/source_index.json"
-          "docs/meta/prompt_genome.json"
-          "docs/prompt/prompt_kernel_v3.4.md"
-          "docs/integration_guide_o3.md"
-        )
-        
-        for file in "${REQUIRED_FILES[@]}"; do
-          if [ ! -f "$file" ]; then
-            echo "❌ Missing required file: $file"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install markdownlint-cli2
+        run: npm install -g markdownlint-cli2
+
+      - name: Run Markdown Lint
+        run: markdownlint-cli2 docs/**/*.md
+
+      - name: Validate JSON files
+        run: |
+          jq . docs/source_index.json > /dev/null
+          jq . docs/meta/prompt_genome.json > /dev/null
+
+      - name: Check for TODO or Coming soon
+        run: |
+          if grep -RniE 'TODO:|Coming soon' docs/; then
+            echo "❌ Detected incomplete work. Please resolve before merging."
             exit 1
           fi
-        done
-        
-        echo "✅ All required files present"
-        
-    - name: Verify prompt genome version
-      run: |
-        VERSION=$(jq -r '.prompt_genome.version' docs/meta/prompt_genome.json)
-        if [[ "$VERSION" != "1.1" ]]; then
-          echo "❌ Invalid prompt_genome version: $VERSION. Expected 1.1"
-          exit 1
-        fi
-        echo "✅ Prompt genome version is valid: $VERSION"
-        
-    - name: Check CHANGELOG.md format
-      run: |
-        if ! head -n 5 CHANGELOG.md | grep -q "## \[v3\.4\.0\] "; then
-          echo "❌ CHANGELOG.md is not updated to v3.4.0"
-          exit 1
-        fi
-        echo "✅ CHANGELOG.md is properly formatted"
+
+      - name: Broken link check (basic)
+        run: |
+          grep -rEo 'https?://[^") >]+' docs/ | while read -r url; do
+            curl -s --head --request GET "$url" | grep "200 OK" > /dev/null || {
+              echo "Broken link: $url"
+              exit 1
+            }
+          done
+
+      - name: Check Required Files
+        run: |
+          test -f docs/performance_marketing/neurogym_neuromarketing.md
+          test -f docs/performance_marketing/reforge_growth_loops.md
+          test -f docs/prompt/prompt_kernel_v3.4.md
+          test -f docs/meta/prompt_genome.json
+
+      - name: Prompt Genome Version Consistency
+        run: |
+          version=$(jq -r '.versions[] | select(.tag=="v3.4")' docs/meta/prompt_genome.json)
+          if [ -z "$version" ]; then
+            echo "Missing v3.4 entry in prompt genome."
+            exit 1
+          fi

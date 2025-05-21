@@ -4,6 +4,14 @@ All notable changes to this project are documented in this file.
 
 ---
 
+## [v3.4.1] — 2025-05-20
+
+### 🧠 Behavioral & Growth Expansion
+- Added NeuroGym by John Assaraf for neuromarketing and behavioral psychology insights
+- Integrated Reforge Growth Systems for growth loop strategies and experimentation frameworks
+- Updated `source_index.json` with new source references
+- Enhanced documentation with behavioral and growth strategy applications
+
 ## [v3.4.0] — 2025-05-20
 
 ### 🌟 Major Update: V3.4 Unified Final
