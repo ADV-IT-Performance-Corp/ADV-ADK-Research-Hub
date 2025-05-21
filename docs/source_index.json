@@ -94,6 +94,11 @@
       "name": "Reforge Growth Systems",
       "link": "https://www.reforge.com/",
       "tags": ["growth", "loop", "retention", "balfour", "experimentation"]
+    },
+    {
+      "name": "O3 Release Checklist",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/release_checklist_v3.5.md",
+      "tags": ["o3", "release", "checklist", "process"]
     }
   ],
   "metadata": {

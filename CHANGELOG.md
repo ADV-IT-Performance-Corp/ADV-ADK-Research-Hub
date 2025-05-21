@@ -12,6 +12,7 @@ All notable changes to this project are documented in this file.
 - Improved CI workflow with additional validations
 - Updated `source_index.json` to version 3.4.1
 - Standardized contribution guidelines and requirements
+- Added release checklist template for v3.5+ (`docs/meta/release_checklist_v3.5.md`)
 
 ### 🧠 Behavioral & Growth Expansion
 - Added NeuroGym by John Assaraf for neuromarketing and behavioral psychology insights
