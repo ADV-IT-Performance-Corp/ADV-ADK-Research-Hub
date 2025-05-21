@@ -16,34 +16,39 @@
       "tags": ["prompting", "few-shot", "react", "cot"]
     },
     {
-      "name": "NeuroGym by John Assaraf",
-      "link": "https://www.myneurogym.com/",
-      "tags": ["neuromarketing", "attention", "motivation", "assaraf"]
+      "name": "IBM AI Learning",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/ibm_ai_learning.md",
+      "tags": ["ibm", "governance", "trust", "ai-ethics"]
     },
     {
-      "name": "Reforge Growth Systems",
-      "link": "https://www.reforge.com/",
-      "tags": ["growth", "loops", "experimentation", "balfour"]
+      "name": "Google Gemini API",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/gemini_api_docs.md",
+      "tags": ["google", "gemini", "cloud-ai", "multimodal"]
     },
     {
-      "name": "Google Cloud Docs",
-      "link": "https://cloud.google.com/docs",
-      "tags": ["google", "infrastructure", "cloud", "deployment"]
+      "name": "OpenAI API Reference",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/openai_api_docs.md",
+      "tags": ["openai", "function-calling", "rag"]
     },
     {
-      "name": "Google Cloud Tutorials",
-      "link": "https://cloud.google.com/docs/tutorials?doctype=quickstart",
-      "tags": ["google", "tutorials", "quickstart", "cloud"]
+      "name": "Microsoft AI Builder",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/microsoft_ai_builder.md",
+      "tags": ["microsoft", "power-platform", "automation"]
+    },
+    {
+      "name": "NVIDIA Optimizations",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/nvidia_optimizations.md",
+      "tags": ["nvidia", "gpu", "inference", "tensorrt"]
+    },
+    {
+      "name": "AMD Developer AI",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/amd_developer_ai.md",
+      "tags": ["amd", "rocm", "ai-acceleration"]
     },
     {
       "name": "Vertex AI Platform",
       "link": "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
       "tags": ["google", "vertex-ai", "ml-platform", "deployment"]
-    },
-    {
-      "name": "Gemini API Docs",
-      "link": "https://ai.google.dev/gemini-api/docs",
-      "tags": ["google", "gemini", "api", "llm"]
     },
     {
       "name": "Gemini on Google Cloud",
@@ -56,24 +61,9 @@
       "tags": ["openai", "llm", "tools", "api"]
     },
     {
-      "name": "ChatGPT API Docs (GPT Interface)",
-      "link": "https://chatgpt.com/g/g-I1XNbsyDK-api-docs",
-      "tags": ["api", "chatgpt", "integration"]
-    },
-    {
       "name": "IBM Developer – AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": ["ibm", "ai", "sdk", "enterprise"]
-    },
-    {
-      "name": "IBM AI Learning Path",
-      "link": "https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/",
-      "tags": ["ibm", "learning", "framework", "training"]
-    },
-    {
-      "name": "IBM Technology YouTube",
-      "link": "https://www.youtube.com/@IBMTechnology",
-      "tags": ["ibm", "video", "ai", "architecture"]
     },
     {
       "name": "Microsoft AI Builder",
@@ -99,6 +89,6 @@
   "metadata": {
     "include_web": true,
     "last_updated": "2025-05-20",
-    "version": "3.0"
+    "version": "3.1"
   }
 }
