@@ -1,8 +1,8 @@
-# O3 Deep Research Context Repository
+# O3 Deep Research Context Repository (V3.2)
 
-This repository serves as the authoritative external knowledge context for O3 Deep Research prompts, including structured ADK, prompt-engineering, AI agent deployment docs, and prompt metadata.
+This repository serves as the authoritative external knowledge context for O3 Deep Research prompts, specifically designed for ADV IT Performance Corp.'s AI-powered marketing automation system.
 
-## 📂 Repository Structure
+## 📂 Repository Structure (V3.2)
 
 ```
 .
@@ -14,19 +14,24 @@ This repository serves as the authoritative external knowledge context for O3 De
     ├── ADK_quickstart.md        # Google Cloud ADK Quickstart
     ├── adk_docs_snapshot.md     # ADK components and architecture
     ├── kaggle_prompt_engineering_summary.md  # Prompt patterns
-    ├── o3_deep_research_prompt.md  # V3.0 prompt content
     ├── integration_guide_o3.md  # How to use this repo
     ├── source_index.json        # External source references
-    ├── tree.md                  # File structure overview
-    └── performance_marketing/   # Strategic marketing resources
-        ├── google_insights_summary.md
-        ├── meta_ai_strategy.md
-        ├── hubspot_ai_automation.md
-        ├── skai_roi_optimization.md
-        ├── smartly_creative_ai.md
-        ├── mckinsey_ai_marketing.md
-        ├── neurogym_neuromarketing.md
-        └── reforge_growth_loops.md
+    ├── performance_marketing/   # Strategic marketing resources
+    │   ├── google_insights_summary.md
+    │   ├── meta_ai_strategy.md
+    │   ├── hubspot_ai_automation.md
+    │   ├── skai_roi_optimization.md
+    │   ├── smartly_creative_ai.md
+    │   ├── mckinsey_ai_marketing.md
+    │   ├── neurogym_neuromarketing.md
+    │   └── reforge_growth_loops.md
+    ├── meta/                    # Meta-level documentation
+    │   ├── prompt_genome.json   # Prompt lineage and evolution
+    │   └── meta_evaluation_template.md  # Evaluation framework
+    ├── prompt/                  # Core prompt definitions
+    │   └── prompt_kernel_v3.md  # V3.2 Unified Final prompt
+    └── simulations/             # Simulation scenarios
+        └── 72hr_campaign_sim.md # 72-hour PPC simulation
 ```
 
 ## 🚀 Quick Start

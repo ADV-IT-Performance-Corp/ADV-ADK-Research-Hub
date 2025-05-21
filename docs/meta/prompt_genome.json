@@ -1,0 +1,73 @@
+{
+  "prompt_genome": {
+    "version": "1.0",
+    "prompts": [
+      {
+        "id": "o3-deep-research-v3.2",
+        "name": "O3 Deep Research V3.2 Unified Final",
+        "description": "Core prompt for generating strategic research reports for AI-powered marketing automation",
+        "created_at": "2025-05-20",
+        "components": [
+          {
+            "type": "role_definition",
+            "version": "1.0"
+          },
+          {
+            "type": "context_definition",
+            "version": "1.2"
+          },
+          {
+            "type": "objective_spec",
+            "version": "2.1"
+          },
+          {
+            "type": "structure_definition",
+            "version": "3.0"
+          },
+          {
+            "type": "evaluation_framework",
+            "version": "1.1"
+          }
+        ],
+        "dependencies": [
+          "adk-docs",
+          "kaggle-prompt-engineering",
+          "performance-marketing-framework"
+        ]
+      }
+    ],
+    "evaluation_metrics": {
+      "coverage_score": {
+        "description": "Percentage of required topics covered",
+        "target": ">= 90%"
+      },
+      "technical_depth": {
+        "description": "Depth of technical implementation details",
+        "target": "Level 4-5"
+      },
+      "practical_applicability": {
+        "description": "Ease of implementation in real-world scenarios",
+        "target": "High"
+      }
+    },
+    "changelog": [
+      {
+        "version": "3.2",
+        "date": "2025-05-20",
+        "changes": [
+          "Unified prompt structure across all components",
+          "Added meta-evaluation framework",
+          "Enhanced technical specifications for multi-agent systems"
+        ]
+      },
+      {
+        "version": "3.1",
+        "date": "2025-05-19",
+        "changes": [
+          "Added AI platform documentation",
+          "Updated source index with new references"
+        ]
+      }
+    ]
+  }
+}

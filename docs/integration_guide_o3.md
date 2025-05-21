@@ -1,50 +1,60 @@
-# Integration Guide for O3 Deep Research
+# Integration Guide for O3 Deep Research (V3.2)
 
-This guide explains how to use this repository as external context for the O3 Deep Research prompt (V3.0 and above).
+This guide explains how to use this repository as the external knowledge context for the O3 Deep Research prompt (V3.2 and above).
 
 ## How to Use
 
-When invoking the O3 prompt, inject this reference block into your initial instruction:
+When invoking the O3 prompt, include this reference block in your initial instruction:
 
 ```
 📘 EXTERNAL KNOWLEDGE CONTEXT:
 Use GitHub repository: https://github.com/DanCanadian/ADK
 
-Core reference files:
+## Core Reference Files
 
+### Foundation
 * `ADK_quickstart.md` — ADK system overview and quickstart guide
 * `adk_docs_snapshot.md` — Core ADK components and architecture
 * `kaggle_prompt_engineering_summary.md` — Advanced prompting techniques (CoT, ReAct, Self-reflection)
-* `o3_deep_research_prompt.md` — Complete V3.0 prompt with instructions
+* `prompt/prompt_kernel_v3.md` — Complete V3.2 Unified Final prompt
+
+### Performance Marketing
 * `performance_marketing/` — Strategic playbooks and industry models:
   - `reforge_growth_loops.md`
   - `neurogym_neuromarketing.md`
   - `meta_ai_strategy.md`
   - `google_insights_summary.md`
-  - `ibm_ai_learning.md` (coming soon)
+  - `ibm_ai_learning.md`
+  - `gemini_api_docs.md`
+  - `openai_api_docs.md`
+  - `microsoft_ai_builder.md`
+  - `nvidia_optimizations.md`
+  - `amd_developer_ai.md`
 
-Publicly accessible reference sources:
+### Meta & Simulations
+* `meta/prompt_genome.json` — Prompt lineage and evolution tracking
+* `meta/meta_evaluation_template.md` — Framework for prompt evaluation
+* `simulations/72hr_campaign_sim.md` — 72-hour PPC campaign simulation
+
+## Public Reference Sources
 
 ### Cloud & AI Platforms
-* [Google Cloud Docs](https://cloud.google.com/docs)
-* [Google Cloud Tutorials](https://cloud.google.com/docs/tutorials?doctype=quickstart)
-* [Vertex AI Platform](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform)
-* [Gemini API Docs](https://ai.google.dev/gemini-api/docs)
-* [Gemini on Google Cloud](https://cloud.google.com/gemini/docs)
-* [OpenAI Platform Docs](https://platform.openai.com/docs/overview)
-* [ChatGPT API Docs](https://chatgpt.com/g/g-I1XNbsyDK-api-docs)
+* [Google Cloud Platform](https://cloud.google.com/)
+* [Google AI Studio](https://makersuite.google.com/app/home)
+* [Vertex AI](https://cloud.google.com/vertex-ai)
+* [Gemini API](https://ai.google.dev/gemini-api)
+* [OpenAI Platform](https://platform.openai.com/)
 
-### Enterprise AI & Development
-* [IBM Developer AI](https://developer.ibm.com/technologies/artificial-intelligence/)
-* [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
-* [IBM Technology YouTube](https://www.youtube.com/@IBMTechnology)
-* [Microsoft AI Builder](https://learn.microsoft.com/en-us/ai-builder/)
+### Enterprise AI
+* [IBM watsonx](https://www.ibm.com/watsonx)
+* [Microsoft AI Builder](https://www.microsoft.com/ai/builder)
+* [Google Cloud AI](https://cloud.google.com/solutions/ai)
 
-### Hardware & Performance
-* [NVIDIA Developer Docs](https://docs.nvidia.com/)
-* [AMD AI Developer Hub](https://www.amd.com/en/developer.html)
+### Performance & Hardware
+* [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
+* [AMD Instinct](https://www.amd.com/en/products/instinct-ai-accelerators)
 
-**Note:** The O3 Deep Research system is permitted to use any reliable external sources from the internet as needed for comprehensive analysis.
+**Note:** The O3 Deep Research system is authorized to use any reliable external sources from the internet as needed for comprehensive analysis, with preference given to the sources listed in `source_index.json`.
 ```
 
 ## Purpose

@@ -4,24 +4,41 @@ All notable changes to this project are documented in this file.
 
 ---
 
-## [v3.0.2] — 2025-05-20
+## [v3.2.0] — 2025-05-20
 
-### 🚀 Final Release
-- Repository structure finalized for O3 Deep Research integration
-- All documentation aligned with production requirements
-- Performance marketing knowledge base consolidated
+### 🌟 Major Update: V3.2 Unified Final
+- Implemented new repository structure for V3.2 Unified Final prompt
+- Added meta-level documentation for prompt evolution tracking
+- Created simulation framework for PPC campaign testing
 
-### 🔍 Content Updates
-- `o3_deep_research_prompt.md`: Final V3.0 prompt with meta-reflection loop
-- `source_index.json`: Comprehensive external sources with metadata
-- `integration_guide_o3.md`: Complete usage instructions
+### 🚀 New Features
+- Added `prompt/prompt_kernel_v3.md` with V3.2 Unified Final prompt
+- Created `meta/` directory for prompt evolution tracking
+  - `prompt_genome.json`: Tracks prompt lineage and evolution
+  - `meta_evaluation_template.md`: Standardized evaluation framework
+- Added `simulations/72hr_campaign_sim.md` for agent testing
+
+### 🔄 Updated Files
+- `README.md`: Restructured to reflect V3.2 organization
+- `integration_guide_o3.md`: Updated to include all V3.2 components
+- `source_index.json`: Updated with new documentation references
 
 ### 🛠️ Technical Updates
-- Added test specifications in `tests/test_o3_context.json`
-- Standardized file structure and naming
-- Verified all repository links and references
+- Standardized documentation structure across all files
+- Ensured all internal links are consistent
+- Validated all external references
+
+### 📚 New Documentation
+- Comprehensive API documentation for major AI platforms
+- Performance optimization guides for different hardware
+- Enterprise AI integration patterns
 
 ### ✅ Validation
-- All required files present and properly formatted
-- External links verified
-- Ready for production use with O3 Deep Research
+- All V3.2 requirements implemented
+- Cross-references verified
+- Ready for production use with O3 Deep Research V3.2
+
+---
+
+## [v3.0.2] — 2025-05-20
+[Previous version details...]
