@@ -1,8 +1,26 @@
-# O3 Deep Research Context Repository (V3.4)
+# O3 Deep Research - AI Marketing Automation System
 
-This repository serves as the authoritative external knowledge context for O3 Deep Research prompts, specifically designed for ADV IT Performance Corp.'s AI-powered marketing automation system. It implements the V3.4 Unified Final prompt with enhanced CI/CD validation and extended source integration.
+[![O3 Version](https://img.shields.io/badge/version-3.4.1-blue)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## 📂 Repository Structure (V3.4)
+This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.4 Unified Final prompt architecture with enhanced CI/CD validation and comprehensive research capabilities.
+
+## 🚀 Key Features
+
+- **Multi-Agent Architecture**: Specialized agents for research, content, and campaign management
+- **Advanced Prompt Engineering**: Implements cutting-edge patterns from Kaggle's prompt engineering whitepaper
+- **Research-First Approach**: Built-in support for continuous learning and adaptation
+- **Enterprise-Grade**: Production-ready with CI/CD and automated testing
+
+## 📚 Documentation
+
+- [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
+- [Methodology](docs/METHODOLOGY.md) - Detailed research approach and tools
+- [Prompt Kernel v3.4](docs/prompt/prompt_kernel_v3.4.md) - Core prompt engineering framework
+- [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
+- [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
+
+## 📂 Repository Structure (V3.4.1)
 
 ```
 .
