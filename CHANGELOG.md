@@ -4,6 +4,18 @@ All notable changes to this project are documented in this file.
 
 ---
 
+## [v3.5.0] — 2025-05-22
+
+### 🚀 New Features
+- Added new prompt kernel v3.5 with enhanced multi-agent coordination
+- Implemented advanced prompt engineering patterns (ReAct, CoT, Few-shot)
+- Added comprehensive agent memory and feedback loop systems
+
+### 📝 Documentation & Process
+- Added RESEARCH_GOALS.md and METHODOLOGY.md for better project tracking
+- Updated README.md with new features and documentation structure
+- Improved repository structure for O3 Deep Research compatibility
+
 ## [v3.4.1] — 2025-05-20
 
 ### 📝 Documentation & Process
