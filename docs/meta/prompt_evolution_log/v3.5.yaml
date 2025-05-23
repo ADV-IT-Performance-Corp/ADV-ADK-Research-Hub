@@ -1,0 +1,16 @@
+version: 3.5.0
+released: 2025-05-21
+supersedes: 3.4.1
+repo: https://github.com/DanCanadian/ADK
+prompt_genome_id: pe-v3.5-repo-linked
+tags:
+  - research-agent
+  - self-reflection
+  - memory-loop
+features:
+  - Modular agent coordination
+  - CI-ready prompt kernel
+  - Chain-of-thought + ReAct
+origin:
+  - file: prompt_kernel_v3.4.md
+  - commits: [4a46185, 30d24e0, 004dc91]

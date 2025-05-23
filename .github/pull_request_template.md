@@ -1,22 +1,30 @@
-# 🚀 Pull Request Summary
+# 🚀 Pull Request Summary - v3.5.0
 
 ## 📋 Description of Changes
-<!-- Briefly describe what this PR implements or fixes -->
-- Added...
-- Updated...
-- Removed...
+<!-- Briefly describe what this PR implements or fixes for v3.5.0 -->
+- [ ] Added new prompt kernel: `docs/prompt/prompt_kernel_v3.5.md`
+- [ ] Added evolution log: `docs/meta/prompt_evolution_log/v3.5.yaml`
+- [ ] Updated meta evaluation: `docs/meta/meta_evaluation.json`
+- [ ] Updated documentation and references
 
 ---
 
-## 🗂 Affected Files
-<!-- List key files or directories impacted -->
+## 🗂 Affected Files (v3.5.0)
+<!-- Check all that apply -->
 
-- [ ] `docs/performance_marketing/*.md`
-- [ ] `docs/prompt/prompt_kernel_v3.x.md`
-- [ ] `source_index.json`
-- [ ] `validate_repo.yml`
-- [ ] `prompt_genome.json`
+### Core Files
+- [ ] `docs/prompt/prompt_kernel_v3.5.md`
+- [ ] `docs/meta/prompt_evolution_log/v3.5.yaml`
+- [ ] `docs/meta/meta_evaluation.json`
+
+### Supporting Files
+- [ ] `docs/source_index.json`
 - [ ] `CHANGELOG.md`
+- [ ] `README.md`
+
+### CI/CD
+- [ ] `.github/workflows/validate_repo.yml`
+- [ ] `.github/pull_request_template.md`
 
 ---
 

@@ -1,45 +1,59 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.4.1-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
-This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.4 Unified Final prompt architecture with enhanced CI/CD validation and comprehensive research capabilities.
+This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features
+## 🚀 Key Features (v3.5.0)
 
-- **Multi-Agent Architecture**: Specialized agents for research, content, and campaign management
-- **Advanced Prompt Engineering**: Implements cutting-edge patterns from Kaggle's prompt engineering whitepaper
-- **Research-First Approach**: Built-in support for continuous learning and adaptation
-- **Enterprise-Grade**: Production-ready with CI/CD and automated testing
+- **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
+- **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
+- **Self-Improving Architecture**: Built-in feedback loops and memory systems
+- **Enterprise-Grade CI/CD**: Automated validation and deployment pipelines
+- **Comprehensive Documentation**: Clear guidelines and evolution tracking
 
 ## 📚 Documentation
 
+### Core Documentation
+- [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
+- [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
+- [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
+
+### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
 - [Methodology](docs/METHODOLOGY.md) - Detailed research approach and tools
-- [Prompt Kernel v3.4](docs/prompt/prompt_kernel_v3.4.md) - Core prompt engineering framework
+
+### Project Management
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
+- [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (V3.4.1)
+## 📂 Repository Structure (V3.5.0)
 
 ```
 .
-├── CHANGELOG.md                 # Version history and changes
-├── README.md                    # This file
+├── .github/                     # GitHub configurations
+│   └── workflows/               # CI/CD workflows
+│       └── validate_repo.yml    # Repository validation
+├── docs/                        # Documentation
+│   ├── prompt/                  # Prompt engineering
+│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
+│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
+│   ├── meta/                    # System metadata
+│   │   ├── prompt_evolution_log/ # Version history
+│   │   │   └── v3.5.yaml       # v3.5 evolution log
+│   │   ├── meta_evaluation.json # Evaluation framework
+│   │   └── release_checklist_v3.5.md
+│   ├── performance_marketing/   # Marketing strategies
+│   ├── RESEARCH_GOALS.md        # Research objectives
+│   ├── METHODOLOGY.md          # Research methodology
+│   └── source_index.json       # Reference index
 ├── tests/                       # Test specifications
-│   └── test_o3_context.json     # Context validation spec
-└── docs/                        # Documentation
-    ├── ADK_quickstart.md        # Google Cloud ADK Quickstart
-    ├── adk_docs_snapshot.md     # ADK components and architecture
-    ├── kaggle_prompt_engineering_summary.md  # Prompt patterns
-    ├── integration_guide_o3.md  # How to use this repo
-    ├── source_index.json        # External source references
-    ├── performance_marketing/   # Strategic marketing resources
-    │   ├── google_insights_summary.md
-    │   ├── meta_ai_strategy.md
-    │   ├── hubspot_ai_automation.md
-    │   ├── skai_roi_optimization.md
-    │   ├── smartly_creative_ai.md
+│   └── test_o3_context.json    # Context validation
+├── CHANGELOG.md                # Version history
+└── README.md                   # Project overview
     │   ├── mckinsey_ai_marketing.md
     │   ├── neurogym_neuromarketing.md
     │   └── reforge_growth_loops.md

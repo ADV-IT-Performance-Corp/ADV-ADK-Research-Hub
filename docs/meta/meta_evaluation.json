@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "evaluation_date": "2025-05-22",
+  "evaluation_framework": {
+    "name": "O3 Deep Research Evaluation Framework",
+    "version": "3.5.0"
+  },
+  "evaluation_metrics": [
+    {
+      "id": "clarity",
+      "name": "Clarity of Instructions",
+      "description": "How clear and unambiguous are the instructions in the prompt?",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "weight": 0.25
+    },
+    {
+      "id": "completeness",
+      "name": "Completeness of Information",
+      "description": "Does the prompt provide all necessary context and information?",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "weight": 0.25
+    },
+    {
+      "id": "alignment",
+      "name": "Alignment with Objectives",
+      "description": "How well does the prompt align with the intended objectives?",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "weight": 0.25
+    },
+    {
+      "id": "efficiency",
+      "name": "Token Efficiency",
+      "description": "How efficiently does the prompt use tokens to convey information?",
+      "scale": {
+        "min": 1,
+        "max": 5
+      },
+      "weight": 0.25
+    }
+  ],
+  "evaluation_rubric": {
+    "5": "Excellent - Exceeds expectations in all aspects",
+    "4": "Good - Meets expectations with minor improvements possible",
+    "3": "Adequate - Meets basic requirements but needs improvement",
+    "2": "Needs Work - Partially meets requirements but has significant issues",
+    "1": "Inadequate - Does not meet minimum requirements"
+  },
+  "evaluation_workflow": [
+    {
+      "step": 1,
+      "action": "Initial Review",
+      "description": "Review the prompt for basic completeness and clarity"
+    },
+    {
+      "step": 2,
+      "action": "Metric Scoring",
+      "description": "Score the prompt against each evaluation metric"
+    },
+    {
+      "step": 3,
+      "action": "Weighted Calculation",
+      "description": "Calculate the weighted score based on metric weights"
+    },
+    {
+      "step": 4,
+      "action": "Feedback Generation",
+      "description": "Generate specific feedback for improvement"
+    },
+    {
+      "step": 5,
+      "action": "Final Assessment",
+      "description": "Provide overall assessment and recommendations"
+    }
+  ],
+  "evaluation_examples": {
+    "high_scoring": {
+      "clarity": 5,
+      "completeness": 5,
+      "alignment": 5,
+      "efficiency": 5
+    },
+    "medium_scoring": {
+      "clarity": 3,
+      "completeness": 4,
+      "alignment": 3,
+      "efficiency": 4
+    },
+    "low_scoring": {
+      "clarity": 2,
+      "completeness": 1,
+      "alignment": 2,
+      "efficiency": 3
+    }
+  },
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2025-05-22",
+      "changes": [
+        "Initial version created for O3 Deep Research v3.5.0"
+      ]
+    }
+  ]
+}

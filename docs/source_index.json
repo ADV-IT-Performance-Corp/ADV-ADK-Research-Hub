@@ -1,34 +1,58 @@
 {
   "sources": [
     {
+      "name": "O3 Deep Research v3.5.0",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
+      "tags": ["o3", "prompt-kernel", "v3.5.0", "research"],
+      "version": "3.5.0"
+    },
+    {
+      "name": "Prompt Evolution v3.5",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
+      "tags": ["prompt-evolution", "v3.5.0", "meta"],
+      "version": "3.5.0"
+    },
+    {
+      "name": "Meta Evaluation Framework",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/meta_evaluation.json",
+      "tags": ["evaluation", "framework", "v3.5.0"],
+      "version": "3.5.0"
+    },
+    {
       "name": "ADK Quickstart",
       "link": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart",
-      "tags": ["adk", "google", "agents"]
+      "tags": ["adk", "google", "agents"],
+      "version": "1.0.0"
     },
     {
       "name": "Google ADK Docs",
       "link": "https://google.github.io/adk-docs/",
-      "tags": ["adk", "architecture", "modules"]
+      "tags": ["adk", "architecture", "modules"],
+      "version": "1.0.0"
     },
     {
       "name": "Kaggle Prompt Engineering",
       "link": "https://www.kaggle.com/whitepaper-prompt-engineering",
-      "tags": ["prompting", "few-shot", "react", "cot"]
+      "tags": ["prompting", "few-shot", "react", "cot"],
+      "version": "1.0.0"
     },
     {
       "name": "IBM AI Learning",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/ibm_ai_learning.md",
-      "tags": ["ibm", "governance", "trust", "ai-ethics"]
+      "tags": ["ibm", "governance", "trust", "ai-ethics"],
+      "version": "1.0.0"
     },
     {
       "name": "Google Gemini API",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/gemini_api_docs.md",
-      "tags": ["google", "gemini", "cloud-ai", "multimodal"]
+      "tags": ["google", "gemini", "cloud-ai", "multimodal"],
+      "version": "1.0.0"
     },
     {
       "name": "OpenAI API Reference",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/openai_api_docs.md",
-      "tags": ["openai", "function-calling", "rag"]
+      "tags": ["openai", "function-calling", "rag"],
+      "version": "1.0.0"
     },
     {
       "name": "Microsoft AI Builder",
