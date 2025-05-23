@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
 
       - name: Install dependencies
         run: |
@@ -104,8 +103,8 @@ jobs:
             done
             
             # Check for required tags
-            if ! grep -q "^Tags?:" "$file"; then
-              echo "❌ Missing Tags in $file"
+            if ! grep -q "^\*\*Tags:\*\*" "$file"; then
+              echo "❌ Missing or incorrectly formatted Tags in $file. Expected format: **Tags:** value1, value2"
               exit 1
             fi
             
