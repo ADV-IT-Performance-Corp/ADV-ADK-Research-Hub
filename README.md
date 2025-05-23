@@ -1,12 +1,12 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.0-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.1-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.0)
+## 🚀 Key Features (v3.5.1)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
@@ -20,7 +20,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
-
+- [Golden Prompt Examples](tests/golden_prompts/README.md) - Reference prompts for CI
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
 - [Methodology](docs/METHODOLOGY.md) - Detailed research approach and tools
@@ -30,7 +30,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (V3.5.0)
+## 📂 Repository Structure (V3.5.1)
 
 ```
 .
@@ -61,7 +61,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
     │   ├── prompt_genome.json   # Prompt lineage and evolution
     │   └── meta_evaluation_template.md  # Evaluation framework
     ├── prompt/                  # Core prompt definitions
-    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
+    │   ├── prompt_kernel_v3.5.md  # V3.5 Unified Final prompt
     │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
     └── simulations/             # Simulation scenarios
         └── 72hr_campaign_sim.md # 72-hour PPC simulation
@@ -69,7 +69,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.4
+### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
 ```
@@ -80,7 +80,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
