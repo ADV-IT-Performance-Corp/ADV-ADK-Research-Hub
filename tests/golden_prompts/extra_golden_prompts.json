@@ -1,0 +1,66 @@
+{
+  "version": "v3.5.1",
+  "categories": [
+    {
+      "category": "reasoning",
+      "prompts": [
+        "Let\u2019s break this down step by step before answering.",
+        "What assumptions must be true for this solution to work?",
+        "Compare at least 3 alternatives and rank them by trade-offs.",
+        "If you were to argue against this solution, what would you say?"
+      ]
+    },
+    {
+      "category": "code_quality",
+      "prompts": [
+        "Refactor this code for readability and maintainability.",
+        "Generate unit tests for the following function and explain edge cases.",
+        "Explain what this function does line by line as if to a junior developer.",
+        "Convert this shell/python command into a cross-platform version."
+      ]
+    },
+    {
+      "category": "prompt_frameworks",
+      "prompts": [
+        "Think step by step. Don\u2019t rush to the answer.",
+        "Generate multiple reasoning paths before choosing the best answer.",
+        "Now, critique the answer above as if you were an external reviewer.",
+        "Have two agents with opposing views discuss the best approach to this problem."
+      ]
+    },
+    {
+      "category": "analysis",
+      "prompts": [
+        "Summarize the top 5 key insights from the following document.",
+        "Given this data, what are the 3 most likely root causes of failure?",
+        "Which metrics would you monitor in production and why?",
+        "Write a risk assessment matrix for this proposed architecture."
+      ]
+    },
+    {
+      "category": "saas_product_thinking",
+      "prompts": [
+        "Map this growth initiative to the AARRR funnel and identify bottlenecks.",
+        "Reverse-engineer the growth loops in this product.",
+        "Apply Brian Balfour\u2019s 4 Layers of Market-Product Fit to this case.",
+        "Define ICP (ideal customer profile) and map it to core use cases."
+      ]
+    },
+    {
+      "category": "validation",
+      "prompts": [
+        "Validate this output against the original requirements and highlight mismatches.",
+        "List any potential bugs or performance issues in this code.",
+        "Compare the original input with the generated summary. What's missing?"
+      ]
+    },
+    {
+      "category": "meta_prompting",
+      "prompts": [
+        "Generate 5 variations of this prompt optimized for different temperatures.",
+        "Turn this generic prompt into a domain-specific one (e.g., for legal/medical use).",
+        "Audit this prompt for ambiguity, scope creep, and unclear objectives."
+      ]
+    }
+  ]
+}

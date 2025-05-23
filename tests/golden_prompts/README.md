@@ -18,6 +18,7 @@ Golden prompts are used to:
 | `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | - Agent communication<br>- ReAct-style reasoning<br>- Feedback loops |
 | `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | - Memory access<br>- Reflection loops<br>- Performance learning |
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | - KPI tracking<br>- Content strategy<br>- Performance optimization |
+| `extra_golden_prompts.json` | Additional prompt categories for advanced testing | - Reasoning<br>- Code quality<br>- Product thinking |
 
 ## Usage
 
@@ -33,8 +34,8 @@ markdownlint-cli2 "tests/golden_prompts/*.md"
 
 ## Versioning
 
-- **Current Version**: 3.5.0
-- **Compatibility**: O3 Prompt Kernel v3.5.0+
+- **Current Version**: 3.5.1
+- **Compatibility**: O3 Prompt Kernel v3.5.1+
 - **Last Updated**: 2025-05-22
 
 ## Contributing
