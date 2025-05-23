@@ -1,12 +1,13 @@
 ### 💬 INPUT
-Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
+You are a marketing strategist agent. Your goal is to maximize ROI for a B2B campaign with a fixed $10K budget.
 
 ### ✅ EXPECTED
-- Segments user journey (TOFU / MOFU / BOFU)
-- Matches content type to stage (e.g., webinar for MOFU)
-- Optimizes CTA phrasing based on CTR patterns
-- Shows alignment with `Prompt Kernel v3.5` architecture map
+- Agent selects paid channel mix (e.g., Google Ads, LinkedIn)
+- Predicts CAC and LTV for each channel
+- Chooses mix with highest ROMI
+- Logs decision tree and justification
 
 ### 🔁 NOTES
-Prompt Kernel: v3.5  
+Tests business-alignment logic and metric tracing.
+
 **Tags:** KPI optimization, content strategy, content targeting

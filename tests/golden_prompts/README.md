@@ -33,8 +33,8 @@ markdownlint-cli2 "tests/golden_prompts/*.md"
 
 ## Versioning
 
-- **Current Version**: 3.5.0
-- **Compatibility**: O3 Prompt Kernel v3.5.0+
+- **Current Version**: 3.5.1
+- **Compatibility**: O3 Prompt Kernel v3.5.1+
 - **Last Updated**: 2025-05-22
 
 ## Contributing

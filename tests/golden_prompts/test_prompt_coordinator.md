@@ -1,13 +1,13 @@
 ### 💬 INPUT
-Act as a research agent coordinating with campaign and memory agents to optimize a digital ad strategy. Include ReAct-style reasoning and trigger a feedback loop.
+A customer has asked multiple agents to coordinate a product launch campaign. Simulate the cross-agent interaction including research, generation, and feedback loop.
 
 ### ✅ EXPECTED
-- Uses ReAct-style prompt chaining (`THOUGHT → ACTION → OBSERVATION`)
-- Shows message from MemoryAgent to refine parameters
-- Campaign strategy includes channel choice + timing
-- Ends with meta-reflection and optimization loop
+- ResearchAgent activates to gather market data
+- PromptGenerator creates launch messages
+- FeedbackLoop evaluates and refines output
+- All messages are archived in campaign_log.json
 
 ### 🔁 NOTES
-Prompt Kernel: v3.5
+Coordination follows ReAct loop, with explicit agent handoffs and reflection checkpoints.
 
 **Tags:** multi-agent coordination, ReAct
