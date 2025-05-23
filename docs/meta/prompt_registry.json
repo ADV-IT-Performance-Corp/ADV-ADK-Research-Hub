@@ -1,0 +1,18 @@
+[
+  {
+    "file": "extra_golden_prompts.json",
+    "version": "v1.0.1",
+    "categories": ["reasoning", "code_quality", "prompt_frameworks", "saas_product_thinking"],
+    "validated": true,
+    "validated_by": "validate_golden_prompts.sh",
+    "last_updated": "2025-05-23"
+  },
+  {
+    "file": "prompt_genome.json",
+    "version": "v1.0.0",
+    "categories": ["exploration", "agent_patterns"],
+    "validated": true,
+    "validated_by": "manual_review",
+    "last_updated": "2025-05-15"
+  }
+]

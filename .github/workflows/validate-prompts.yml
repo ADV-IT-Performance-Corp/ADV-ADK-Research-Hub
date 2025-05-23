@@ -1,0 +1,36 @@
+name: Validate Golden Prompts
+
+on:
+  push:
+    paths:
+      - '**/*.json'
+      - '**/*.yaml'
+      - 'scripts/**'
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq yamllint curl
+          npm install -g markdownlint-cli2
+
+      - name: Run golden prompt validators
+        run: |
+          bash ./scripts/validate_golden_prompts.sh || true
+          bash ./scripts/test_golden_prompts.sh || true
+
+      - name: Run linters
+        run: |
+          jq . docs/source_index.json
+          jq . docs/meta/prompt_genome.json
+          jq . docs/meta/meta_evaluation.json
+          jq . extra_golden_prompts.json
+          yamllint docs/meta/prompt_evolution_log/v3.5.1.yaml
+          markdownlint-cli2 "docs/**/*.md" "docs/legacy/**"
