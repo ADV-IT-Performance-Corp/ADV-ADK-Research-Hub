@@ -17,6 +17,11 @@
 - [ ] `docs/meta/prompt_evolution_log/v3.5.yaml`
 - [ ] `docs/meta/meta_evaluation.json`
 
+### Test Files
+- [ ] `tests/golden_prompts/test_prompt_coordinator.md`
+- [ ] `tests/golden_prompts/test_memory_reflection.md`
+- [ ] `tests/golden_prompts/test_kpi_optimization.md`
+
 ### Supporting Files
 - [ ] `docs/source_index.json`
 - [ ] `CHANGELOG.md`
@@ -28,6 +33,15 @@
 
 ---
 
+## 🧪 Golden Prompt Integration
+- [ ] Added test_prompt_coordinator.md to `/tests/golden_prompts/`
+- [ ] Added test_memory_reflection.md to `/tests/golden_prompts/`
+- [ ] Added test_kpi_optimization.md to `/tests/golden_prompts/`
+- [ ] CI configured to detect and validate golden prompts
+- [ ] Golden prompts align with v3.5.0 kernel strategy
+
+---
+
 ## ✅ Validation Checklist
 Ensure the following items are checked before requesting review:
 
@@ -36,8 +50,15 @@ Ensure the following items are checked before requesting review:
 - [ ] `source_index.json` updated if new `.md` was added
 - [ ] `CHANGELOG.md` updated with version bump
 - [ ] PR title follows format: `feat:` `fix:` `chore:` etc.
+- [ ] Golden prompts pass validation checks
+- [ ] All tests are passing
 
 ---
 
 ## 🧠 Notes & Context (optional)
 <!-- Add context for reviewers or document intent -->
+
+### Golden Prompt Details
+- **Test Coverage**: Ensure all major prompt patterns are covered
+- **Version Compatibility**: All prompts are compatible with v3.5.0
+- **Validation**: CI pipeline includes golden prompt validation
