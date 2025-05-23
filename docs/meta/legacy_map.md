@@ -5,9 +5,16 @@ This document tracks the migration and deprecation of previous versions of the O
 ## Version History
 
 ### Current Version
+- **v3.5.1** (2025-05-23)
+  - Location: `docs/prompt/prompt_kernel_v3.5.md`
+  - Patch update adding simulation and evaluation sections
 - **v3.5.0** (2025-05-22)
   - Location: `docs/prompt/prompt_kernel_v3.5.md`
   - Key Features:
+    - Multi-agent coordination
+    - ReAct patterns implementation
+    - Enhanced CI/CD integration
+    - Comprehensive evaluation framework
     - Multi-agent coordination
     - ReAct patterns implementation
     - Enhanced CI/CD integration

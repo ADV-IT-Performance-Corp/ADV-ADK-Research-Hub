@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
-  "evaluation_date": "2025-05-22",
+  "evaluation_date": "2025-05-23",
   "evaluation_framework": {
     "name": "O3 Deep Research Evaluation Framework",
-    "version": "3.5.0"
+    "version": "3.5.1"
   },
   "evaluation_metrics": [
     {
@@ -104,9 +104,9 @@
   "version_history": [
     {
       "version": "1.0.0",
-      "date": "2025-05-22",
+      "date": "2025-05-23",
       "changes": [
-        "Initial version created for O3 Deep Research v3.5.0"
+        "Initial version created for O3 Deep Research v3.5.1"
       ]
     }
   ]
