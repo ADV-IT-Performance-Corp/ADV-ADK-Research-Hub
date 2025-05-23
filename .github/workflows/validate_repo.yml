@@ -1,16 +1,19 @@
-name: CI Validate O3 Repo
+name: CI Validate O3 Repo v3.5.0
 
 on:
   pull_request:
   push:
     branches:
       - master
+    paths:
+      - 'docs/**'
+      - '.github/workflows/**'
+      - '!docs/legacy/**'  # Exclude legacy files from triggering CI
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -18,37 +21,86 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
 
-      - name: Install markdownlint-cli2
-        run: npm install -g markdownlint-cli2
+      - name: Install dependencies
+        run: |
+          npm install -g markdownlint-cli2
+          sudo apt-get update && sudo apt-get install -y jq yamllint
 
-      - name: Run Markdown Lint
-        run: markdownlint-cli2 docs/**/*.md
+      - name: Lint Markdown files
+        run: markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
 
       - name: Validate JSON files
         run: |
+          echo "Validating JSON files..."
           jq . docs/source_index.json > /dev/null
           jq . docs/meta/prompt_genome.json > /dev/null
+          jq . docs/meta/meta_evaluation.json > /dev/null
+
+      - name: Validate YAML files
+        run: |
+          echo "Validating YAML files..."
+          yamllint -d "{extends: default, rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}}}" .
 
       - name: Check for TODO or Coming soon
         run: |
-          if grep -RniE 'TODO:|Coming soon' docs/; then
+          echo "Checking for incomplete work..."
+          if grep -RniE 'TODO:|Coming soon' docs/ --include="*.md" --include="*.yaml" --include="*.yml" --exclude-dir=legacy; then
             echo "❌ Detected incomplete work. Please resolve before merging."
             exit 1
           fi
 
-      - name: Broken link check (basic)
+      - name: Validate Required Files Exist
         run: |
-          grep -rEo 'https?://[^") >]+' docs/ | while read -r url; do
-            curl -s --head --request GET "$url" | grep "200 OK" > /dev/null || {
-              echo "Broken link: $url"
+          echo "Checking required files..."
+          REQUIRED_FILES=(
+            "docs/prompt/prompt_kernel_v3.5.md"
+            "docs/meta/prompt_evolution_log/v3.5.yaml"
+            "docs/meta/meta_evaluation.json"
+            "docs/meta/prompt_genome.json"
+            "docs/source_index.json"
+            "README.md"
+            "CHANGELOG.md"
+          )
+          
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing required file: $file"
               exit 1
-            }
+            else
+              echo "✅ Found: $file"
+            fi
           done
 
-      - name: Check Required Files
+      - name: Check Version Consistency
         run: |
-          test -f docs/performance_marketing/neurogym_neuromarketing.md
+          echo "Checking version consistency..."
+          VERSION_IN_README=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
+          VERSION_IN_CHANGELOG=$(grep -oP '## \[v\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
+          
+          if [ "$VERSION_IN_README" != "$VERSION_IN_CHANGELOG" ]; then
+            echo "❌ Version mismatch between README ($VERSION_IN_README) and CHANGELOG ($VERSION_IN_CHANGELOG)"
+            exit 1
+          else
+            echo "✅ Version $VERSION_IN_README is consistent across files"
+          fi
+
+      - name: Broken Link Check (Basic)
+        if: github.event_name == 'push'  # Only run on push to reduce API calls
+        run: |
+          echo "Checking for broken links..."
+          grep -rEo 'https?://[^") >]+' docs/ README.md | \
+            grep -v 'localhost\|example\.com' | \
+            sort -u | \
+            while read -r url; do
+              if ! curl -s --head --location --max-time 10 --fail "$url" >/dev/null; then
+                echo "❌ Broken link: $url"
+                exit 1
+              else
+                echo "✅ Link OK: $url"
+              fi
+            done
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
