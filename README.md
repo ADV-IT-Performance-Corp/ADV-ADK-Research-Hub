@@ -1,12 +1,12 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.0-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.1-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.0)
+## 🚀 Key Features (v3.5.1)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
@@ -28,9 +28,10 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ### Project Management
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
+- [Golden Prompt Examples](tests/golden_prompts/README.md) - Sample regression prompts
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (V3.5.0)
+## 📂 Repository Structure (V3.5.1)
 
 ```
 .
@@ -52,6 +53,10 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 │   └── source_index.json       # Reference index
 ├── tests/                       # Test specifications
 │   └── test_o3_context.json    # Context validation
+├── agent_system_adk/            # Agent scaffolding package
+│   ├── src/                    # Core and agent classes
+│   └── config/                 # Settings and prompt files
+├── requirements.txt            # Python dependencies
 ├── CHANGELOG.md                # Version history
 └── README.md                   # Project overview
     │   ├── mckinsey_ai_marketing.md
@@ -69,7 +74,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.4
+### For O3 Deep Research V3.5.1
 Reference this repository in your prompts using:
 
 ```
@@ -80,7 +85,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
+ - docs/prompt/prompt_kernel_v3.5.md  # Core prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
@@ -108,6 +113,15 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 
 # Check for TODOs
 grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .
+```
+
+### Local Environment Setup
+Use Python 3.10+ and install requirements:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### For Developers
