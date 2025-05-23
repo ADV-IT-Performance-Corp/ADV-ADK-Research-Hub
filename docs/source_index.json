@@ -1,24 +1,24 @@
 {
   "sources": [
     {
-      "name": "O3 Deep Research v3.5.0",
+      "name": "O3 Deep Research v3.5.1",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
-      "tags": ["o3", "prompt-kernel", "v3.5.0", "research", "latest"],
-      "version": "3.5.0",
+      "tags": ["o3", "prompt-kernel", "v3.5.1", "research", "latest"],
+      "version": "3.5.1",
       "type": "core"
     },
     {
       "name": "Prompt Evolution v3.5",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
-      "tags": ["prompt-evolution", "v3.5.0", "meta"],
-      "version": "3.5.0",
+      "tags": ["prompt-evolution", "v3.5.1", "meta"],
+      "version": "3.5.1",
       "type": "meta"
     },
     {
       "name": "Meta Evaluation Framework",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/meta_evaluation.json",
-      "tags": ["evaluation", "framework", "v3.5.0"],
-      "version": "3.5.0",
+      "tags": ["evaluation", "framework", "v3.5.1"],
+      "version": "3.5.1",
       "type": "evaluation"
     },
     {
@@ -32,7 +32,7 @@
       "name": "Legacy Version Map",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/legacy_map.md",
       "tags": ["legacy", "versioning", "migration"],
-      "version": "3.5.0",
+      "version": "3.5.1",
       "type": "documentation"
     },
     {
@@ -144,7 +144,7 @@
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-22",
-    "version": "3.5.0"
+    "last_updated": "2025-05-23",
+    "version": "3.5.1"
   }
 }
