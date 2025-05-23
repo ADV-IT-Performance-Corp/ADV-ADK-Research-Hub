@@ -1,0 +1,10 @@
+# Default settings for O3 agent system
+version: 3.5.1
+agents:
+  - ResearchAgent
+  - ContentAgent
+  - CampaignAgent
+  - EngagementAgent
+  - OptimizationAgent
+  - AnalyticsAgent
+  - ConfigAgent
