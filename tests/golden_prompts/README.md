@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.0)
+# Golden Prompts (v3.5.1)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
@@ -34,7 +34,7 @@ markdownlint-cli2 "tests/golden_prompts/*.md"
 ## Versioning
 
 - **Current Version**: 3.5.0
-- **Compatibility**: O3 Prompt Kernel v3.5.0+
+- **Compatibility**: O3 Prompt Kernel v3.5.1+
 - **Last Updated**: 2025-05-22
 
 ## Contributing
