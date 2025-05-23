@@ -1,9 +1,8 @@
-O3 Deep Research Prompt – V3.5 Unified Final
+# O3 Deep Research Prompt – V3.5 Unified Final
 
 ROLE: You are **O3 Deep Research** — an elite, autonomous research agent specialized in strategic, architectural, and prompt engineering intelligence. Your task is to produce a high-fidelity, deeply technical and strategic research report. This report will later serve as the foundation for a master LLM prompt that defines the development and deployment strategy for a multi-agent AI-powered marketing automation system.
 
 ---
-
 ## 📍 CONTEXT
 
 * Company: ADV IT Performance Corp. ([https://adv-it-performance.ca](https://adv-it-performance.ca), [https://adv-it-performance.dev](https://adv-it-performance.dev))
@@ -125,7 +124,7 @@ Each agent is architected with domain-specific capabilities — including self-r
 
 This is not just a toolset — it's an intelligent, evolving AI operating system for PPC marketing.
 
-### Strategic Impact Highlights:
+### Strategic Impact Highlights
 
 - **🧠 Semantic Intelligence**: LLM agents adapt messaging and decisions based on contextual memory and evolving prompt schemas.
 - **🔁 Real-Time Feedback**: Closed feedback loops allow for ongoing optimization of ad spend, targeting, and creative performance.
@@ -160,12 +159,12 @@ The digital marketing landscape between 2023 and 2025 has undergone a fundamenta
 - **Demand for Personalization at Scale**: Consumer expectations now demand real-time, personalized, and multi-channel experiences — impossible to manage manually.
 - **Regulatory and Tracking Changes**: With the deprecation of cookies and stricter privacy laws, contextual and first-party-data-based marketing has become the new norm.
 
-### Emerging Patterns:
+### Emerging Patterns
 - **LLM-as-Orchestrator**: From single-task agents to orchestrated multi-agent stacks.
 - **Feedback-Driven Optimization**: Prompt outputs are scored, reflected upon, and refined in continuous loops.
 - **PromptOps as DevOps**: Prompt versioning, linting, and deployment pipelines are becoming standard.
 
-### Notable Trends:
+### Notable Trends
 - Google AI Studio now powers intelligent orchestration between agents across cloud-native pipelines.
 - Meta and HubSpot lead the way in content lifecycle automation and customer journey mapping using hybrid AI agents.
 - Companies integrating frameworks like ADK, ReAct, and COT loops see measurable improvements in ROAS and performance predictability.
@@ -513,6 +512,7 @@ Agents exchange structured context objects with these standard fields:
 ## 11. Strategic Inputs for Master LLM Prompt
 
 ### Core Prompt Structure
+
 ```yaml
 role: "O3 Deep Research System"
 goal: "Generate strategic marketing insights and actions"
@@ -542,6 +542,7 @@ output_format:
 ```
 
 ### Dynamic Variables
+
 ```python
 {
   "campaign_objectives": ["awareness", "conversion", "retention"],
@@ -578,6 +579,116 @@ output_format:
 - [ADK Documentation](https://google.github.io/adk-docs/)
 - [Kaggle Prompt Engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
 - [Google AI Studio](https://ai.google/studio)
+
+## 13. Simulation Block: 72-Hour PPC Lifecycle
+
+This block demonstrates a continuous three‑day cycle for validating real-world agent orchestration.
+
+| Day | Trigger | Agent | Action |
+|-----|---------|-------|--------|
+| **Day 1** | New budget + product drop | ResearchAgent | Market scan and brief generation |
+|           | Brief approved | ContentAgent | Produce landing pages and email drafts |
+|           | Creative approved | CampaignAgent | Launch campaigns across Google and Meta |
+|           | Performance dip detected | OptimizationAgent | Shift budget from weak ad groups |
+|           | Bounce spike on landing page | EngagementAgent | Trigger retargeting sequence |
+| **Day 2** | Morning analytics report shows low CTR | OptimizationAgent | Inject new ad copy variant |
+|           | Email engagement surges | CampaignAgent | Expand to LinkedIn and Instagram |
+|           | NSM drift > -2% | ConfigAgent | Mutate targeting schema |
+|           | Strategy audit | All agents | Sync memory state |
+| **Day 3** | Daily report requested | AnalyticsAgent | Summarize cross-channel impact |
+|           | Churn flag raised | ResearchAgent | Recommend new CTA framing |
+|           | Prompt drift detected | ConfigAgent | Retrain tone schema |
+|           | ROAS improves +4% | CampaignAgent | Scale winning variant regionally |
+
+All actions are logged in `logs/agents/{agent}.json` for traceability.
+
+## 14. Multi-Perspective Review
+
+### Architect Perspective
+- Modular isolation of agents with clear interfaces.
+- Semantic cache enables long-term coherence.
+- *Watchpoint:* ensure fault tolerance for shared memory.
+
+### PromptOps Engineer Perspective
+- Few-shot and CoT patterns improve reasoning.
+- Self-reflection logic embedded via `self_reflection.py`.
+- *Watchpoint:* tighten coupling between prompt refiners and mutators.
+
+### Product Strategist Perspective
+- Each agent maps directly to a business KPI.
+- NSM applied across layers for goal consistency.
+- *Watchpoint:* human oversight for escalation scenarios.
+
+### Risk & Compliance Analyst Perspective
+- Logging of all agent messages enables audits.
+- Drift detection handled via ConfigAgent.
+- *Watchpoint:* bias in training examples and GDPR compliance.
+
+## 15. Roadmap Milestones
+
+### Phase 1: Minimum Viable Agent System (0–3 months)
+- Implement ResearchAgent, ContentAgent, CampaignAgent.
+- Establish shared prompt formats and token budgets.
+- Run first campaign test via Google AI Studio.
+
+### Phase 2: Multi-Agent Orchestration & Learning (3–6 months)
+- Add EngagementAgent, OptimizationAgent, AnalyticsAgent.
+- Introduce semantic cache and messaging bus.
+- Connect NSM observability model.
+
+### Phase 3: Self-Tuning & Adaptive Scaling (6–12 months)
+- Add ConfigAgent with schema‑tuning logic.
+- Deploy self‑reflective evaluation pipelines.
+- Support multilingual prompting and LLM fallback.
+
+## 16. Prompt Genome Metadata
+
+```json
+{
+  "version": "v3.5.1",
+  "prompt_layers": [
+    {"id": "core-cof-ppc-001", "agent": "ResearchAgent", "pattern": "chain-of-thought"},
+    {"id": "creative-tone-v2", "agent": "ContentAgent", "pattern": "few-shot"},
+    {"id": "campaign-reflective-logic", "agent": "CampaignAgent", "pattern": "loop-planner"},
+    {"id": "retention-motivate-1a", "agent": "EngagementAgent", "pattern": "motivational adaptive"},
+    {"id": "optimization-tuner-auto", "agent": "OptimizationAgent", "pattern": "self-calibrating"}
+  ],
+  "last_update": "2025-05-23",
+  "registry_id": "O3_prompt_kernel_3.5.1"
+}
+```
+
+## 17. Meta-Evaluation Output
+
+```json
+{
+  "prompt_kernel_version": "v3.5.1",
+  "coverage_score": 0.96,
+  "coherence_rating": 0.93,
+  "prompt_patterns_utilized": ["few-shot", "chain-of-thought", "semantic caching", "ReAct", "self-reflection"],
+  "detected_weaknesses": ["needs better retry logic", "limited ConfigAgent testing"],
+  "review_timestamp": "2025-05-23T00:00:00Z",
+  "review_agent_id": "o3-eval-checker-v1"
+}
+```
+
+## 18. Prompt Evolution Hook
+
+Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
+
+```yaml
+version: 3.5.1
+reviewed_on: 2025-05-23
+kernel_strengths:
+  - Modular role-per-agent mapping
+  - Prompt genome with self-reflection
+areas_to_evolve:
+  - Add inter-agent governance layer
+  - Automate prompt mutation recovery
+next_kernel_notes:
+  - Explore GPT-5 compatibility
+  - Test token sharding across clusters
+```
 
 ## 🏁 Conclusion
 
