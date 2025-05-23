@@ -43,12 +43,12 @@ This document outlines the key differences and migration path from version 3.4.1
 
 ### 3. Evaluation Framework
 
-#### Added
+#### Additional Items
 - `meta_evaluation.json` for tracking metrics
 - Automated scoring system
 - Performance benchmarks
 
-#### Modified
+#### Further Modifications
 - Evaluation criteria for multi-agent scenarios
 - Scoring methodology
 
@@ -60,7 +60,7 @@ This document outlines the key differences and migration path from version 3.4.1
 - Link checking
 - Version consistency verification
 
-#### Updated
+#### Additional Updates
 - Workflow triggers
 - Error reporting
 - Notification system
@@ -96,9 +96,11 @@ This document outlines the key differences and migration path from version 3.4.1
 In case of issues, follow these steps to rollback to v3.4.1:
 
 1. Revert Git commit:
+
    ```bash
    git revert <commit-hash>
    ```
+
 2. Restore configuration files
 3. Update environment variables
 4. Notify stakeholders

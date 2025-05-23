@@ -23,7 +23,7 @@ Key files to reference:
   - `google_insights_summary.md`
   - `ibm_ai_learning.md` *(coming soon)*
 
-### Supplementary external references:
+### Supplementary external references
 - [Google Cloud Docs](https://cloud.google.com/docs)  
 - [Google Cloud Tutorials](https://cloud.google.com/docs/tutorials?doctype=quickstart)  
 - [Vertex AI Platform](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform)  
