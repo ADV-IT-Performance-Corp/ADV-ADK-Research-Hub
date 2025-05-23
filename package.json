@@ -1,0 +1,6 @@
+{
+  "name": "adk-validation",
+  "version": "1.0.0",
+  "description": "CI helpers for ADK repo",
+  "dependencies": {}
+}

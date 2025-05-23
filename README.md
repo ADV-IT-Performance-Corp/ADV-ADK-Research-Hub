@@ -1,18 +1,25 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.0-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.1-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.0)
+## 🚀 Key Features (v3.5.1)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
 - **Self-Improving Architecture**: Built-in feedback loops and memory systems
+
 - **Enterprise-Grade CI/CD**: Automated validation and deployment pipelines
 - **Comprehensive Documentation**: Clear guidelines and evolution tracking
+
+## Quick Start
+1. Install Python 3.10+ and Node.js.
+2. Run `npm install -g markdownlint-cli2` and `sudo apt-get install jq yamllint`.
+3. Execute `scripts/validate_golden_prompts.sh` to verify prompts.
+
 
 ## 📚 Documentation
 
@@ -20,6 +27,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
+- [Golden Prompt Examples](tests/golden_prompts/README.md) - Regression prompts used in CI
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
@@ -30,60 +38,19 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (V3.5.0)
-
+## 📂 Repository Structure (V3.5.1)
 ```
 .
-├── .github/                     # GitHub configurations
-│   └── workflows/               # CI/CD workflows
-│       └── validate_repo.yml    # Repository validation
-├── docs/                        # Documentation
-│   ├── prompt/                  # Prompt engineering
-│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
-│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
-│   ├── meta/                    # System metadata
-│   │   ├── prompt_evolution_log/ # Version history
-│   │   │   └── v3.5.yaml       # v3.5 evolution log
-│   │   ├── meta_evaluation.json # Evaluation framework
-│   │   └── release_checklist_v3.5.md
-│   ├── performance_marketing/   # Marketing strategies
-│   ├── RESEARCH_GOALS.md        # Research objectives
-│   ├── METHODOLOGY.md          # Research methodology
-│   └── source_index.json       # Reference index
-├── tests/                       # Test specifications
-│   └── test_o3_context.json    # Context validation
-├── CHANGELOG.md                # Version history
-└── README.md                   # Project overview
-    │   ├── mckinsey_ai_marketing.md
-    │   ├── neurogym_neuromarketing.md
-    │   └── reforge_growth_loops.md
-    ├── meta/                    # Meta-level documentation
-    │   ├── prompt_genome.json   # Prompt lineage and evolution
-    │   └── meta_evaluation_template.md  # Evaluation framework
-    ├── prompt/                  # Core prompt definitions
-    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
-    │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
-    └── simulations/             # Simulation scenarios
-        └── 72hr_campaign_sim.md # 72-hour PPC simulation
-```
-
-## 🚀 Quick Start
-
-### For O3 Deep Research V3.4
-Reference this repository in your prompts using:
-
-```
-📘 EXTERNAL KNOWLEDGE CONTEXT:
-Use GitHub repository: https://github.com/DanCanadian/ADK
-
-Key references:
-- docs/ADK_quickstart.md
-- docs/adk_docs_snapshot.md
-- docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
-- docs/performance_marketing/*.md
-- docs/meta/prompt_genome.json  # Version and lineage tracking
-- docs/source_index.json
+├── .github/                     # GitHub configs
+│   └── workflows/               # CI workflows
+├── agent_system_adk/            # Agent scaffolding package
+│   ├── src/                     # Core modules and agents
+│   └── config/                  # Settings and prompts
+├── docs/                        # Documentation and metadata
+├── tests/                       # Golden prompts and fixtures
+├── scripts/                     # Utility scripts
+├── CHANGELOG.md
+└── README.md
 ```
 
 ## 🛠️ CI/CD Validation
@@ -213,3 +180,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Prompt Reference
 - [O3 Deep Research Prompt](docs/o3_deep_research_prompt.md) — The full V3 instruction set for launching O3 Deep Research analysis.
+```
