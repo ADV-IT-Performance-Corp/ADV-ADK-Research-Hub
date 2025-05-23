@@ -9,4 +9,5 @@ Act as a research agent coordinating with campaign and memory agents to optimize
 
 ### 🔁 NOTES
 Prompt Kernel: v3.5
-Tags: multi-agent coordination, ReAct
+
+**Tags:** multi-agent coordination, ReAct

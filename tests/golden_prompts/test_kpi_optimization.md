@@ -9,4 +9,4 @@ Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS p
 
 ### 🔁 NOTES
 Prompt Kernel: v3.5  
-Tags: funnel segmentation, CTR optimization, content targeting
+**Tags:** KPI optimization, content strategy, content targeting

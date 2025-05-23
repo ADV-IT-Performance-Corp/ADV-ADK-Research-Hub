@@ -9,4 +9,4 @@ What insights can be retrieved from past performance data to improve this quarte
 
 ### 🔁 NOTES
 Prompt Kernel: v3.5
-Tags: memory access, reflection loop, performance learning
+**Tags:** memory retrieval, meta-reflection loop, performance learning
