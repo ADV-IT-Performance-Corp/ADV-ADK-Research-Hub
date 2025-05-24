@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.1] — 2025-05-23
+
+### ✨ Enhancements
+- Added simulation and evaluation sections to prompt kernel
+- Updated metadata to version 3.5.1
+- Updated README version badges
+
 ---
 
 ## [v3.5.0] — 2025-05-22
