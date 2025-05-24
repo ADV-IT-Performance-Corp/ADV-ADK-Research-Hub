@@ -15,9 +15,9 @@ Golden prompts are used to:
 
 | File | Purpose | Key Features Tested |
 |------|---------|-------------------|
-| `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | - Agent communication<br>- ReAct-style reasoning<br>- Feedback loops |
-| `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | - Memory access<br>- Reflection loops<br>- Performance learning |
-| `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | - KPI tracking<br>- Content strategy<br>- Performance optimization |
+| `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | - Agent communication; - ReAct-style reasoning; - Feedback loops |
+| `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | - Memory access; - Reflection loops; - Performance learning |
+| `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | - KPI tracking; - Content strategy; - Performance optimization |
 
 ## Usage
 

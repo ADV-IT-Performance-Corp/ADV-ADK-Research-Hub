@@ -1,6 +1,7 @@
+---
 name: CI Validate O3 Repo v3.5.0
 
-on:
+"on":
   pull_request:
   push:
     branches:
@@ -40,12 +41,13 @@ jobs:
       - name: Validate YAML files
         run: |
           echo "Validating YAML files..."
-          yamllint -d "{extends: default, rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}}}" .
+          yamllint -d "{extends: default, rules: {line-length: {max: 120}}}" .
 
       - name: Check for TODO or Coming soon
         run: |
           echo "Checking for incomplete work..."
-          if grep -RniE 'TODO:|Coming soon' docs/ --include="*.md" --include="*.yaml" --include="*.yml" --exclude-dir=legacy; then
+          if grep -RniE 'TODO:|Coming soon' docs/ --include="*.md"
+            --include="*.yaml" --include="*.yml" --exclude-dir=legacy; then
             echo "❌ Detected incomplete work. Please resolve before merging."
             exit 1
           fi
@@ -65,7 +67,7 @@ jobs:
             "tests/golden_prompts/test_memory_reflection.md"
             "tests/golden_prompts/test_kpi_optimization.md"
           )
-          
+
           for file in "${REQUIRED_FILES[@]}"; do
             if [ ! -f "$file" ]; then
               echo "❌ Missing required file: $file"
@@ -80,7 +82,7 @@ jobs:
           echo "Checking version consistency..."
           VERSION_IN_README=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
           VERSION_IN_CHANGELOG=$(grep -oP '## \[v\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
-          
+
           if [ "$VERSION_IN_README" != "$VERSION_IN_CHANGELOG" ]; then
             echo "❌ Version mismatch between README ($VERSION_IN_README) and CHANGELOG ($VERSION_IN_CHANGELOG)"
             exit 1
@@ -93,7 +95,7 @@ jobs:
           echo "Validating golden prompts..."
           for file in tests/golden_prompts/*.md; do
             echo "🔍 Validating $file"
-            
+
             # Check required sections
             for section in "INPUT" "EXPECTED" "NOTES"; do
               if ! grep -q "^### .$section" "$file"; then
@@ -101,19 +103,19 @@ jobs:
                 exit 1
               fi
             done
-            
+
             # Check for required tags
             if ! grep -q "^\*\*Tags:\*\*" "$file"; then
               echo "❌ Missing or incorrectly formatted Tags in $file. Expected format: **Tags:** value1, value2"
               exit 1
             fi
-            
+
             # Check for version compatibility
             if ! grep -q "v3\.5" "$file"; then
               echo "❌ Version not specified or incorrect in $file"
               exit 1
             fi
-            
+
             echo "✅ $file is valid"
           done
 

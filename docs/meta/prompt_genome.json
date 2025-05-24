@@ -1,127 +1,24 @@
 {
   "prompt_genome": {
     "version": "1.2",
-    "last_updated": "2025-05-23",
+    "last_updated": "2025-05-25",
     "prompts": [
       {
-        "id": "o3-deep-research-v3.5.1",
-        "name": "O3 Deep Research V3.5.1",
+        "id": "o3-deep-research-v3.5.3",
+        "name": "O3 Deep Research V3.5.3",
         "description": "Advanced core prompt with multi-agent coordination, ReAct patterns, and enhanced CI validation",
         "created_at": "2025-05-22",
         "status": "active",
         "components": [
-          {
-            "type": "role_definition",
-            "version": "1.2"
-          },
-          {
-            "type": "context_definition",
-            "version": "1.4"
-          },
-          {
-            "type": "objective_spec",
-            "version": "2.3"
-          },
-          {
-            "type": "structure_definition",
-            "version": "3.2"
-          },
-          {
-            "type": "evaluation_framework",
-            "version": "1.3"
-          },
-          {
-            "type": "ci_validation",
-            "version": "1.1"
-          },
-          {
-            "type": "multi_agent_coordination",
-            "version": "1.0"
-          },
-          {
-            "type": "react_patterns",
-            "version": "1.0"
-          }
-        ],
-        "dependencies": [
-          "adk-docs",
-          "kaggle-prompt-engineering",
-          "performance-marketing-framework",
-          "google-cloud",
-          "ai-studio",
-          "react-patterns",
-          "multi-agent-systems"
-        ],
-        "file_path": "docs/prompt/prompt_kernel_v3.5.md",
-        "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
-        "evaluation_framework": "docs/meta/meta_evaluation.json"
-      },
-      {
-        "id": "o3-deep-research-v3.4",
-        "name": "O3 Deep Research V3.4 Unified Final",
-        "description": "Enhanced core prompt with extended sources and CI validation for AI-powered marketing automation",
-        "created_at": "2025-05-20",
-        "status": "deprecated",
-        "deprecation_date": "2025-05-22",
-        "deprecation_reason": "Replaced by v3.5 with enhanced multi-agent coordination",
-        "file_path": "legacy/prompt/prompt_kernel_v3.4.md"
-      },
-      {
-        "id": "o3-deep-research-v3.2",
-        "name": "O3 Deep Research V3.2 Unified Final",
-        "description": "Core prompt for generating strategic research reports for AI-powered marketing automation",
-        "created_at": "2025-05-20",
-        "status": "deprecated",
-        "superseded_by": "o3-deep-research-v3.4",
-        "components": [
-          {
-            "type": "role_definition",
-            "version": "1.0"
-          },
-          {
-            "type": "context_definition",
-            "version": "1.2"
-          },
-          {
-            "type": "objective_spec",
-            "version": "2.1"
-          },
-          {
-            "type": "structure_definition",
-            "version": "3.0"
-          },
-          {
-            "type": "evaluation_framework",
-            "version": "1.1"
-          }
-        ],
-        "dependencies": [
-          "adk-docs",
-          "kaggle-prompt-engineering",
-          "performance-marketing-framework"
-        ],
-        "file_path": "docs/prompt/prompt_kernel_v3.md"
+          "base_agent",
+          "semantic_cache",
+          "few_shot_selector",
+          "token_optimizer",
+          "self_reflection"
+        ]
       }
     ],
-    "evaluation_metrics": {
-      "coverage_score": {
-        "description": "Percentage of required topics covered",
-        "target": ">= 95%"
-      },
-      "technical_depth": {
-        "description": "Depth of technical implementation details",
-        "target": "Level 4-5"
-      },
-      "practical_applicability": {
-        "description": "Ease of implementation in real-world scenarios",
-        "target": "High"
-      },
-      "ci_validation": {
-        "description": "Passing status of CI/CD pipeline checks",
-        "target": "100% passing"
-      }
-    },
-    "changelog": [
+    "history": [
       {
         "version": "3.2",
         "date": "2025-05-20",
