@@ -1,4 +1,5 @@
-### 💬 INPUT
+# Memory Reflection Prompt
+## 💬 INPUT
 What insights can be retrieved from past performance data to improve this quarter's PPC planning?
 
 ### ✅ EXPECTED
