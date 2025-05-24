@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.3] — 2025-05-24
+
+### ✨ New Docs
+- Added ChatGPT research workflow quickstart
+- Added agent system overview
+- Bumped documentation version to 3.5.3
+
+---
+
+## [v3.5.2] — 2025-05-24
+
+### ✨ Updates
+- Added GitHub integration guide for ChatGPT
+- Incremented documentation to version 3.5.2
+
+---
+
 ## [v3.5.1] — 2025-05-23
 
 ### ✨ Enhancements
@@ -13,19 +30,19 @@ All notable changes to this project are documented in this file.
 
 ## [v3.5.0] — 2025-05-22
 
-### 🚀 New Features
+### 🚀 Major Features
 - Added new prompt kernel v3.5 with enhanced multi-agent coordination
 - Implemented advanced prompt engineering patterns (ReAct, CoT, Few-shot)
 - Added comprehensive agent memory and feedback loop systems
 
-### 📝 Documentation & Process
+### 📝 Documentation & Process Updates
 - Added RESEARCH_GOALS.md and METHODOLOGY.md for better project tracking
 - Updated README.md with new features and documentation structure
 - Improved repository structure for O3 Deep Research compatibility
 
 ## [v3.4.1] — 2025-05-20
 
-### 📝 Documentation & Process
+### 📝 Documentation Process
 - Added comprehensive contribution guide (`docs/contribution_guide.md`)
 - Enhanced PR template with validation checklist
 - Improved CI workflow with additional validations
