@@ -1,9 +1,8 @@
-O3 Deep Research Prompt – V3.5 Unified Final
+# O3 Deep Research Prompt – V3.5 Unified Final
 
 ROLE: You are **O3 Deep Research** — an elite, autonomous research agent specialized in strategic, architectural, and prompt engineering intelligence. Your task is to produce a high-fidelity, deeply technical and strategic research report. This report will later serve as the foundation for a master LLM prompt that defines the development and deployment strategy for a multi-agent AI-powered marketing automation system.
 
 ---
-
 ## 📍 CONTEXT
 
 * Company: ADV IT Performance Corp. ([https://adv-it-performance.ca](https://adv-it-performance.ca), [https://adv-it-performance.dev](https://adv-it-performance.dev))
@@ -125,7 +124,7 @@ Each agent is architected with domain-specific capabilities — including self-r
 
 This is not just a toolset — it's an intelligent, evolving AI operating system for PPC marketing.
 
-### Strategic Impact Highlights:
+### Strategic Impact Highlights
 
 - **🧠 Semantic Intelligence**: LLM agents adapt messaging and decisions based on contextual memory and evolving prompt schemas.
 - **🔁 Real-Time Feedback**: Closed feedback loops allow for ongoing optimization of ad spend, targeting, and creative performance.
@@ -160,12 +159,12 @@ The digital marketing landscape between 2023 and 2025 has undergone a fundamenta
 - **Demand for Personalization at Scale**: Consumer expectations now demand real-time, personalized, and multi-channel experiences — impossible to manage manually.
 - **Regulatory and Tracking Changes**: With the deprecation of cookies and stricter privacy laws, contextual and first-party-data-based marketing has become the new norm.
 
-### Emerging Patterns:
+### Emerging Patterns
 - **LLM-as-Orchestrator**: From single-task agents to orchestrated multi-agent stacks.
 - **Feedback-Driven Optimization**: Prompt outputs are scored, reflected upon, and refined in continuous loops.
 - **PromptOps as DevOps**: Prompt versioning, linting, and deployment pipelines are becoming standard.
 
-### Notable Trends:
+### Notable Trends
 - Google AI Studio now powers intelligent orchestration between agents across cloud-native pipelines.
 - Meta and HubSpot lead the way in content lifecycle automation and customer journey mapping using hybrid AI agents.
 - Companies integrating frameworks like ADK, ReAct, and COT loops see measurable improvements in ROAS and performance predictability.
@@ -513,6 +512,7 @@ Agents exchange structured context objects with these standard fields:
 ## 11. Strategic Inputs for Master LLM Prompt
 
 ### Core Prompt Structure
+
 ```yaml
 role: "O3 Deep Research System"
 goal: "Generate strategic marketing insights and actions"
@@ -542,6 +542,7 @@ output_format:
 ```
 
 ### Dynamic Variables
+
 ```python
 {
   "campaign_objectives": ["awareness", "conversion", "retention"],
@@ -603,22 +604,26 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ## 14. Multi-Perspective Review
 
-**Architect Perspective**
+=======
+### Architect Perspective
 - Modular isolation of agents with clear interfaces.
 - Semantic cache enables long-term coherence.
 - *Watchpoint:* ensure fault tolerance for shared memory.
 
-**PromptOps Engineer Perspective**
+=======
+### PromptOps Engineer Perspective
 - Few-shot and CoT patterns improve reasoning.
 - Self-reflection logic embedded via `self_reflection.py`.
 - *Watchpoint:* tighten coupling between prompt refiners and mutators.
 
-**Product Strategist Perspective**
+=======
+### Product Strategist Perspective
 - Each agent maps directly to a business KPI.
 - NSM applied across layers for goal consistency.
 - *Watchpoint:* human oversight for escalation scenarios.
 
-**Risk & Compliance Analyst Perspective**
+=======
+### Risk & Compliance Analyst Perspective
 - Logging of all agent messages enables audits.
 - Drift detection handled via ConfigAgent.
 - *Watchpoint:* bias in training examples and GDPR compliance.

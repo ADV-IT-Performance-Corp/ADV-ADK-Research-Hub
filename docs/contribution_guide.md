@@ -18,7 +18,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - `docs/meta/`: Prompt genome + evaluation metadata
 - `docs/performance_marketing/`: Research inputs (Google, Meta, NeuroGym, Reforge...)
 
-## 🚨 CI Will Block PRs If:
+## 🚨 CI Will Block PRs If
 - Missing required `.md` files (e.g., NeuroGym or Reforge)
 - `prompt_genome.json` lacks current version
 - Broken external links
