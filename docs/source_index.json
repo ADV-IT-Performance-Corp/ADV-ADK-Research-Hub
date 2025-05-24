@@ -1,150 +1,301 @@
 {
   "sources": [
     {
-      "name": "O3 Deep Research v3.5.1",
+      "name": "O3 Deep Research v3.5.3",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
-      "tags": ["o3", "prompt-kernel", "v3.5.1", "research", "latest"],
-      "version": "3.5.1",
+      "tags": [
+        "o3",
+        "prompt-kernel",
+        "v3.5.3",
+        "research",
+        "latest"
+      ],
+      "version": "3.5.3",
       "type": "core"
     },
     {
       "name": "Prompt Evolution v3.5",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
-      "tags": ["prompt-evolution", "v3.5.1", "meta"],
-      "version": "3.5.1",
+      "tags": [
+        "prompt-evolution",
+        "v3.5.3",
+        "meta"
+      ],
+      "version": "3.5.3",
       "type": "meta"
     },
     {
       "name": "Meta Evaluation Framework",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/meta_evaluation.json",
-      "tags": ["evaluation", "framework", "v3.5.1"],
-      "version": "3.5.1",
+      "tags": [
+        "evaluation",
+        "framework",
+        "v3.5.3"
+      ],
+      "version": "3.5.3",
       "type": "evaluation"
     },
     {
       "name": "Version Diff v3.4.1 to v3.5.0",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.4.1_to_v3.5.0.md",
-      "tags": ["migration", "v3.5.0", "changelog"],
+      "tags": [
+        "migration",
+        "v3.5.0",
+        "changelog"
+      ],
       "version": "3.5.0",
       "type": "documentation"
     },
     {
       "name": "Legacy Version Map",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/legacy_map.md",
-      "tags": ["legacy", "versioning", "migration"],
+      "tags": [
+        "legacy",
+        "versioning",
+        "migration"
+      ],
       "version": "3.5.1",
       "type": "documentation"
     },
     {
       "name": "ADK Quickstart",
       "link": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart",
-      "tags": ["adk", "google", "agents"],
+      "tags": [
+        "adk",
+        "google",
+        "agents"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "Google ADK Docs",
       "link": "https://google.github.io/adk-docs/",
-      "tags": ["adk", "architecture", "modules"],
+      "tags": [
+        "adk",
+        "architecture",
+        "modules"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "Kaggle Prompt Engineering",
       "link": "https://www.kaggle.com/whitepaper-prompt-engineering",
-      "tags": ["prompting", "few-shot", "react", "cot"],
+      "tags": [
+        "prompting",
+        "few-shot",
+        "react",
+        "cot"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "IBM AI Learning",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/ibm_ai_learning.md",
-      "tags": ["ibm", "governance", "trust", "ai-ethics"],
+      "tags": [
+        "ibm",
+        "governance",
+        "trust",
+        "ai-ethics"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "Google Gemini API",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/gemini_api_docs.md",
-      "tags": ["google", "gemini", "cloud-ai", "multimodal"],
+      "tags": [
+        "google",
+        "gemini",
+        "cloud-ai",
+        "multimodal"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "OpenAI API Reference",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/openai_api_docs.md",
-      "tags": ["openai", "function-calling", "rag"],
+      "tags": [
+        "openai",
+        "function-calling",
+        "rag"
+      ],
       "version": "1.0.0"
     },
     {
       "name": "Microsoft AI Builder",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/microsoft_ai_builder.md",
-      "tags": ["microsoft", "power-platform", "automation"]
+      "tags": [
+        "microsoft",
+        "power-platform",
+        "automation"
+      ]
     },
     {
       "name": "NVIDIA Optimizations",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/nvidia_optimizations.md",
-      "tags": ["nvidia", "gpu", "inference", "tensorrt"]
+      "tags": [
+        "nvidia",
+        "gpu",
+        "inference",
+        "tensorrt"
+      ]
     },
     {
       "name": "AMD Developer AI",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/amd_developer_ai.md",
-      "tags": ["amd", "rocm", "ai-acceleration"]
+      "tags": [
+        "amd",
+        "rocm",
+        "ai-acceleration"
+      ]
     },
     {
       "name": "Vertex AI Platform",
       "link": "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
-      "tags": ["google", "vertex-ai", "ml-platform", "deployment"]
+      "tags": [
+        "google",
+        "vertex-ai",
+        "ml-platform",
+        "deployment"
+      ]
     },
     {
       "name": "Gemini on Google Cloud",
       "link": "https://cloud.google.com/gemini/docs",
-      "tags": ["google", "gemini", "cloud", "ai"]
+      "tags": [
+        "google",
+        "gemini",
+        "cloud",
+        "ai"
+      ]
     },
     {
       "name": "OpenAI Platform Docs",
       "link": "https://platform.openai.com/docs/overview",
-      "tags": ["openai", "llm", "tools", "api"]
+      "tags": [
+        "openai",
+        "llm",
+        "tools",
+        "api"
+      ]
     },
     {
       "name": "IBM Developer – AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
-      "tags": ["ibm", "ai", "sdk", "enterprise"]
+      "tags": [
+        "ibm",
+        "ai",
+        "sdk",
+        "enterprise"
+      ]
     },
     {
       "name": "Microsoft AI Builder",
       "link": "https://learn.microsoft.com/en-us/ai-builder/",
-      "tags": ["microsoft", "ai-builder", "enterprise", "automation"]
+      "tags": [
+        "microsoft",
+        "ai-builder",
+        "enterprise",
+        "automation"
+      ]
     },
     {
       "name": "NVIDIA Developer Docs",
       "link": "https://docs.nvidia.com/",
-      "tags": ["nvidia", "gpu", "ai-hardware", "performance"]
+      "tags": [
+        "nvidia",
+        "gpu",
+        "ai-hardware",
+        "performance"
+      ]
     },
     {
       "name": "AMD AI Developer Hub",
       "link": "https://www.amd.com/en/developer.html",
-      "tags": ["amd", "ai", "hardware", "development"]
+      "tags": [
+        "amd",
+        "ai",
+        "hardware",
+        "development"
+      ]
     },
     {
       "name": "McKinsey AI in Marketing",
       "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-360-degree-look-at-ai-in-marketing-sales-and-customer-service",
-      "tags": ["mckinsey", "ai", "strategy", "marketing"]
+      "tags": [
+        "mckinsey",
+        "ai",
+        "strategy",
+        "marketing"
+      ]
     },
     {
       "name": "NeuroGym by John Assaraf",
       "link": "https://www.myneurogym.com/",
-      "tags": ["neuromarketing", "attention", "motivation", "assaraf"]
+      "tags": [
+        "neuromarketing",
+        "attention",
+        "motivation",
+        "assaraf"
+      ]
     },
     {
       "name": "Reforge Growth Systems",
       "link": "https://www.reforge.com/",
-      "tags": ["growth", "loop", "retention", "balfour", "experimentation"]
+      "tags": [
+        "growth",
+        "loop",
+        "retention",
+        "balfour",
+        "experimentation"
+      ]
     },
     {
       "name": "O3 Release Checklist",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/release_checklist_v3.5.md",
-      "tags": ["o3", "release", "checklist", "process"]
+      "tags": [
+        "o3",
+        "release",
+        "checklist",
+        "process"
+      ]
+    },
+    {
+      "name": "GitHub Integration Guide",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/github_chatgpt_integration.md",
+      "tags": [
+        "chatgpt",
+        "github",
+        "integration"
+      ],
+      "version": "3.5.3",
+      "type": "documentation"
+    },
+    {
+      "name": "ChatGPT Research Workflow",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/chatgpt_research_workflow.md",
+      "tags": [
+        "chatgpt",
+        "workflow",
+        "validation"
+      ],
+      "version": "3.5.3",
+      "type": "documentation"
+    },
+    {
+      "name": "Agent System Overview",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/agent_system_overview.md",
+      "tags": [
+        "agents",
+        "overview",
+        "modules"
+      ],
+      "version": "3.5.3",
+      "type": "documentation"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-23",
-    "version": "3.5.1"
+    "last_updated": "2025-05-25",
+    "version": "3.5.3"
   }
 }
