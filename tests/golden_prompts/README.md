@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.0)
+# Golden Prompts (v3.5.3)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
@@ -15,6 +15,7 @@ Golden prompts are used to:
 
 | File | Purpose | Key Features Tested |
 |------|---------|-------------------|
+<!-- markdownlint-disable MD033 -->
 | `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | - Agent communication<br>- ReAct-style reasoning<br>- Feedback loops |
 | `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | - Memory access<br>- Reflection loops<br>- Performance learning |
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | - KPI tracking<br>- Content strategy<br>- Performance optimization |
@@ -33,9 +34,9 @@ markdownlint-cli2 "tests/golden_prompts/*.md"
 
 ## Versioning
 
-- **Current Version**: 3.5.0
-- **Compatibility**: O3 Prompt Kernel v3.5.0+
-- **Last Updated**: 2025-05-22
+- **Current Version**: 3.5.3
+- **Compatibility**: O3 Prompt Kernel v3.5.3+
+- **Last Updated**: 2025-05-24
 
 ## Contributing
 

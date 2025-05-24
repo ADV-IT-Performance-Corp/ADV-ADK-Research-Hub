@@ -645,7 +645,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "version": "v3.5.1",
+  "version": "v3.5.3",
   "prompt_layers": [
     {"id": "core-cof-ppc-001", "agent": "ResearchAgent", "pattern": "chain-of-thought"},
     {"id": "creative-tone-v2", "agent": "ContentAgent", "pattern": "few-shot"},
@@ -653,8 +653,8 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
     {"id": "retention-motivate-1a", "agent": "EngagementAgent", "pattern": "motivational adaptive"},
     {"id": "optimization-tuner-auto", "agent": "OptimizationAgent", "pattern": "self-calibrating"}
   ],
-  "last_update": "2025-05-23",
-  "registry_id": "O3_prompt_kernel_3.5.1"
+  "last_update": "2025-05-24",
+  "registry_id": "O3_prompt_kernel_3.5.3"
 }
 ```
 
@@ -662,7 +662,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "prompt_kernel_version": "v3.5.1",
+  "prompt_kernel_version": "v3.5.3",
   "coverage_score": 0.96,
   "coherence_rating": 0.93,
   "prompt_patterns_utilized": ["few-shot", "chain-of-thought", "semantic caching", "ReAct", "self-reflection"],
@@ -677,7 +677,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
 
 ```yaml
-version: 3.5.1
+version: 3.5.3
 reviewed_on: 2025-05-23
 kernel_strengths:
   - Modular role-per-agent mapping

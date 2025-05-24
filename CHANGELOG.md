@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.3] — 2025-05-24
+
+### 📘 Documentation
+- Added **ChatGPT Research Workflow** quickstart
+- Added **Agent System Overview** for module mapping
+- Bumped documentation and metadata to version 3.5.3
+
+---
+
+## [v3.5.2] — 2025-05-24
+
+### ✨ Updates
+- Added GitHub integration guide for ChatGPT
+- Incremented documentation to version 3.5.2
+
+---
+
 ## [v3.5.1] — 2025-05-23
 
 ### ✨ Enhancements
@@ -18,14 +35,14 @@ All notable changes to this project are documented in this file.
 - Implemented advanced prompt engineering patterns (ReAct, CoT, Few-shot)
 - Added comprehensive agent memory and feedback loop systems
 
-### 📝 Documentation & Process
+### 📝 Documentation
 - Added RESEARCH_GOALS.md and METHODOLOGY.md for better project tracking
 - Updated README.md with new features and documentation structure
 - Improved repository structure for O3 Deep Research compatibility
 
 ## [v3.4.1] — 2025-05-20
 
-### 📝 Documentation & Process
+### 📝 Docs & Process
 - Added comprehensive contribution guide (`docs/contribution_guide.md`)
 - Enhanced PR template with validation checklist
 - Improved CI workflow with additional validations
@@ -45,7 +62,7 @@ All notable changes to this project are documented in this file.
 - Added CI validation framework for prompt quality assurance
 - Extended source integration with industry-leading marketing AI platforms
 
-### 🚀 New Features
+### 🚀 New Features (v3.4)
 - Added `prompt/prompt_kernel_v3.4.md` with V3.4 Unified Final prompt
 - Enhanced `meta/prompt_genome.json` with version tracking and CI integration
 - Added comprehensive CI validation requirements in `.github/workflows/validate_repo.yml`
