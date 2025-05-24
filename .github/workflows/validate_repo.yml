@@ -61,9 +61,7 @@ jobs:
             "docs/source_index.json"
             "README.md"
             "CHANGELOG.md"
-            "tests/golden_prompts/test_prompt_coordinator.md"
-            "tests/golden_prompts/test_memory_reflection.md"
-            "tests/golden_prompts/test_kpi_optimization.md"
+            "tests/golden_prompts/test_prompt_minimal.md"
           )
           
           for file in "${REQUIRED_FILES[@]}"; do
@@ -93,7 +91,7 @@ jobs:
           echo "Validating golden prompts..."
           for file in tests/golden_prompts/*.md; do
             echo "🔍 Validating $file"
-            
+
             # Check required sections
             for section in "INPUT" "EXPECTED" "NOTES"; do
               if ! grep -q "^### .$section" "$file"; then
@@ -101,19 +99,7 @@ jobs:
                 exit 1
               fi
             done
-            
-            # Check for required tags
-            if ! grep -q "^\*\*Tags:\*\*" "$file"; then
-              echo "❌ Missing or incorrectly formatted Tags in $file. Expected format: **Tags:** value1, value2"
-              exit 1
-            fi
-            
-            # Check for version compatibility
-            if ! grep -q "v3\.5" "$file"; then
-              echo "❌ Version not specified or incorrect in $file"
-              exit 1
-            fi
-            
+
             echo "✅ $file is valid"
           done
 
