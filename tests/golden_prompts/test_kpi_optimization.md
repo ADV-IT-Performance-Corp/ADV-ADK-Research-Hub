@@ -1,4 +1,6 @@
-### 💬 INPUT
+# Test: KPI Optimization
+
+## 💬 INPUT
 Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
 
 ### ✅ EXPECTED

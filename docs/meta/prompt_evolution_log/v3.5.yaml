@@ -1,5 +1,5 @@
 ---
-version: 3.5.1
+version: 3.5.2
 released: 2025-05-23
 supersedes: 3.4.1
 repo: https://github.com/DanCanadian/ADK
@@ -12,6 +12,9 @@ features:
   - Modular agent coordination
   - CI-ready prompt kernel
   - Chain-of-thought + ReAct
+  - GitHub integration guide
+notes:
+  - Version bump to 3.5.2
 origin:
   - file: prompt_kernel_v3.4.md
   - commits: [4a46185, 30d24e0, 004dc91]
