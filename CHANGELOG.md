@@ -2,6 +2,21 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.3] — 2025-05-25
+
+### ✨ Updates
+- Added Agent System Overview with module map and agent roles
+- Added ChatGPT Research Workflow quickstart
+- Documentation and metadata bumped to version 3.5.3
+
+## [v3.5.2] — 2025-05-24
+
+### ✨ Updates
+- Added GitHub integration guide for ChatGPT
+- Incremented documentation to version 3.5.2
+
+---
+
 ## [v3.5.1] — 2025-05-23
 
 ### ✨ Enhancements
