@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.3] — 2025-05-25
+
+### ✨ Enhancements
+- Added Agent System Overview with module map and agent roles
+- Bumped documentation version to 3.5.3
+
+---
+
 ## [v3.5.2] — 2025-05-24
 
 ### ✨ Updates

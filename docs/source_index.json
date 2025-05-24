@@ -10,7 +10,7 @@
         "research",
         "latest"
       ],
-      "version": "3.5.2",
+      "version": "3.5.3",
       "type": "core"
     },
     {
@@ -267,13 +267,24 @@
         "github",
         "integration"
       ],
-      "version": "3.5.2",
+      "version": "3.5.3",
+      "type": "documentation"
+    },
+    {
+      "name": "Agent System Overview",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/agent_system_overview.md",
+      "tags": [
+        "architecture",
+        "agents",
+        "overview"
+      ],
+      "version": "3.5.3",
       "type": "documentation"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-24",
-    "version": "3.5.2"
+    "last_updated": "2025-05-25",
+    "version": "3.5.3"
   }
 }
