@@ -1,6 +1,6 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.3-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.2-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
@@ -31,6 +31,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
+
 
 ## 📂 Repository Structure (V3.5.3)
 
