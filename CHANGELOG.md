@@ -1,6 +1,24 @@
 # 📓 CHANGELOG.md — O3 Deep Research Repository
 
 All notable changes to this project are documented in this file.
+<!-- markdownlint-disable MD024 -->
+
+## [v3.5.3] — 2025-05-25
+
+### ✨ Enhancements
+- Added Agent System Overview with module map and agent roles
+- Added GitHub integration guide for ChatGPT
+- Bumped documentation version to 3.5.3
+
+---
+
+## [v3.5.2] — 2025-05-24
+
+### ✨ Updates
+- Added GitHub integration guide for ChatGPT
+- Incremented documentation to version 3.5.2
+
+---
 
 ## [v3.5.1] — 2025-05-23
 
