@@ -1,6 +1,6 @@
 ---
-version: 3.5.1
-released: 2025-05-23
+version: 3.5.3
+released: 2025-05-24
 supersedes: 3.4.1
 repo: https://github.com/DanCanadian/ADK
 prompt_genome_id: pe-v3.5-repo-linked
@@ -12,6 +12,10 @@ features:
   - Modular agent coordination
   - CI-ready prompt kernel
   - Chain-of-thought + ReAct
+  - GitHub integration guide
+  - ChatGPT research workflow
+notes:
+  - Version bump to 3.5.3
 origin:
   - file: prompt_kernel_v3.4.md
   - commits: [4a46185, 30d24e0, 004dc91]
