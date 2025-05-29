@@ -77,7 +77,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.4
+### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
 ```
@@ -88,7 +88,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
@@ -108,8 +108,8 @@ This repository includes GitHub Actions workflows that automatically validate:
 To run validations locally:
 
 ```bash
-# Install dependencies
-npm install -g markdownlint-cli2
+# Install dependencies (one time)
+./scripts/setup_env.sh
 
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
