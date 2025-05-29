@@ -97,11 +97,14 @@ jobs:
         run: |
           echo "Validating golden prompts..."
           for file in tests/golden_prompts/*.md; do
+            if [ "$(basename "$file")" = "README.md" ]; then
+              continue
+            fi
             echo "🔍 Validating $file"
 
             # Check required sections
             for section in "INPUT" "EXPECTED" "NOTES"; do
-              if ! grep -q "^### .$section" "$file"; then
+              if ! grep -q "^### $section" "$file"; then
                 echo "❌ Missing section: $section in $file"
                 exit 1
               fi
