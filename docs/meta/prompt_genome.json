@@ -139,5 +139,11 @@
         ]
       }
     ]
-  }
+  },
+  "versions": [
+    {
+      "tag": "v3.4",
+      "notes": "placeholder"
+    }
+  ]
 }
