@@ -1,13 +1,13 @@
 # Source Code Examples
 
-This directory contains minimal agent implementations used for testing and
-documentation purposes.
+This directory contains simple agent examples used for testing and documentation
+purposes.
 
-- `sample_agent.py` – a toy example that echoes user input.
-- `base_agent.py` – simple base class for agents.
-- `research_agent.py` – gathers competitive intel.
-- `content_agent.py` – produces short content outlines.
-- `campaign_agent.py` – drafts campaign plans.
+- `sample_agent.py` – toy `EchoAgent` that repeats a message.
+- `base_agent.py` – minimal base class shared by other examples.
+- `research_agent.py` – stub that returns a short research note.
+- `content_agent.py` – stub that returns a generated content snippet.
+- `mcp_server.py` – demo orchestrator that routes tasks to the sample agents.
 
-These stubs demonstrate how individual agent modules could be structured in the
-full O3 Deep Research system.
+These files are intentionally lightweight to show how agents might interact in
+the larger O3 Deep Research system.

@@ -3,8 +3,8 @@ set -euo pipefail
 
 echo "Validating golden prompts..."
 for file in tests/golden_prompts/*.md; do
-  # Skip the README file which provides documentation only
-  if [[ $(basename "$file") == "README.md" ]]; then
+  # Skip the directory README which is documentation only
+  if [[ "$(basename "$file")" == "README.md" ]]; then
     continue
   fi
   echo "Checking $file"
