@@ -35,6 +35,8 @@ ROLE: You are **O3 Deep Research** — an elite, autonomous research agent speci
 
 Use this GitHub repository as your structured source of truth: [https://github.com/DanCanadian/ADK](https://github.com/DanCanadian/ADK)
 
+For instructions on referencing this repository from new prompts, see [integration_guide_o3.md](../integration_guide_o3.md).
+
 Supplementary files:
 - `neurogym_neuromarketing.md` — behavior-triggered prompt design
 - `reforge_growth_loops.md` — experimentation, growth loop and retention framework
@@ -218,6 +220,7 @@ This section defines the role, scope, and specialization of each core agent in t
 - **Memory Use**: Longitudinal logs, reporting schemas.
 
 ### 🔹 ConfigAgent
+See [ConfigAgent Overview](../config_agent_overview.md) for schema examples and test guidance.
 - **Function**: Tune prompt settings, adjust weights, test routing configurations.
 - **Triggers**: Prompt drift, version update, or explicit tuning task.
 - **Outputs**: Updated schema, score matrix, prompt diffs.

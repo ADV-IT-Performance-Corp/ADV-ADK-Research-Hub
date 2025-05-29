@@ -280,6 +280,17 @@
       ],
       "version": "3.5.3",
       "type": "documentation"
+    },
+    {
+      "name": "ConfigAgent Overview",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/config_agent_overview.md",
+      "tags": [
+        "config",
+        "schema",
+        "testing"
+      ],
+      "version": "3.5.3",
+      "type": "documentation"
     }
   ],
   "metadata": {

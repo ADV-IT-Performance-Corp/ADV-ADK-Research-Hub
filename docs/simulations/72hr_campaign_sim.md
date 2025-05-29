@@ -47,3 +47,19 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 2. Update agent training data
 3. Adjust model parameters
 4. Document learnings for future campaigns
+
+## Example Timestamped Logs
+
+```
+[2025-05-20T08:00Z] ResearchAgent -> trend_alert: "Rising interest in automation tools"
+[2025-05-20T09:00Z] ContentAgent -> creative_update: "Landing page V2 deployed"
+[2025-05-20T14:00Z] OptimizationAgent -> budget_shift: -$500 from AdGroupA to AdGroupB
+[2025-05-21T10:30Z] AnalyticsAgent -> performance_ping: CTR down 2% on Meta Ads
+```
+
+## Failure Scenarios & Recovery Steps
+| Time | Scenario | Affected Agent | Recovery Action |
+|------|----------|---------------|-----------------|
+| Day 1 - 16:00 | API timeout while updating bids | CampaignAgent | Retry with exponential backoff; alert OptimizationAgent |
+| Day 2 - 08:30 | Memory sync lag | AnalyticsAgent | Trigger heartbeat check; reload latest metrics from cache |
+| Day 3 - 12:15 | Prompt drift detected | ConfigAgent | Roll back to last stable schema and run test suite |
