@@ -1,6 +1,6 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.2-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.3-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
@@ -21,6 +21,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
+- [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 
 ### Research & Methodology
@@ -33,46 +34,29 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Changelog](CHANGELOG.md) - Version history and changes
 
 
-## 📂 Repository Structure (V3.5.3)
+## 📂 Repository Structure (v3.5.3)
 
 ```
 .
-├── .github/                     # GitHub configurations
-│   └── workflows/               # CI/CD workflows
-│       └── validate_repo.yml    # Repository validation
-├── docs/                        # Documentation
-│   ├── prompt/                  # Prompt engineering
-│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
-│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
-│   ├── meta/                    # System metadata
-│   │   ├── prompt_evolution_log/ # Version history
-│   │   │   └── v3.5.yaml       # v3.5 evolution log
-│   │   ├── meta_evaluation.json # Evaluation framework
-│   │   └── release_checklist_v3.5.md
-│   ├── performance_marketing/   # Marketing strategies
-│   ├── RESEARCH_GOALS.md        # Research objectives
-│   ├── METHODOLOGY.md          # Research methodology
-│   └── source_index.json       # Reference index
-├── tests/                       # Test specifications
-│   └── test_o3_context.json    # Context validation
-├── CHANGELOG.md                # Version history
-└── README.md                   # Project overview
-    │   ├── mckinsey_ai_marketing.md
-    │   ├── neurogym_neuromarketing.md
-    │   └── reforge_growth_loops.md
-    ├── meta/                    # Meta-level documentation
-    │   ├── prompt_genome.json   # Prompt lineage and evolution
-    │   └── meta_evaluation_template.md  # Evaluation framework
-    ├── prompt/                  # Core prompt definitions
-    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
-    │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
-    └── simulations/             # Simulation scenarios
-        └── 72hr_campaign_sim.md # 72-hour PPC simulation
+├── .github/               # GitHub configuration and workflows
+│   └── workflows/
+├── docs/                  # Project documentation
+│   ├── prompt/            # Prompt engineering docs
+│   ├── meta/              # Metadata and release notes
+│   ├── performance_marketing/
+│   ├── RESEARCH_GOALS.md
+│   ├── METHODOLOGY.md
+│   └── source_index.json
+├── tests/                 # Test specifications
+│   └── golden_prompts/    # Prompt validation cases
+├── AGENTS.md              # ChatGPT usage rules
+├── CHANGELOG.md           # Version history
+└── README.md              # Project overview
 ```
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.4
+### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
 ```
@@ -83,7 +67,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
@@ -147,72 +131,3 @@ Key references:
 - docs/performance_marketing/ — Marketing automation strategies
 ```
 
-## 📚 Repository Structure
-
-```
-.
-├── docs/                           # Documentation root
-│   ├── ADK_quickstart.md           # Google ADK quickstart guide
-│   ├── adk_docs_snapshot.md        # Core ADK documentation
-│   ├── integration_guide_o3.md     # O3 Deep Research integration
-│   ├── kaggle_prompt_engineering_summary.md
-│   └── performance_marketing/      # Marketing resources
-│       ├── google_insights_summary.md
-│       ├── hubspot_ai_automation.md
-│       ├── mckinsey_ai_marketing.md
-│       ├── meta_ai_strategy.md
-│       ├── neurogym_neuromarketing.md
-│       ├── reforge_growth_loops.md
-│       ├── skai_roi_optimization.md
-│       └── smartly_creative_ai.md
-├── .gitattributes                  # Git configuration
-└── README.md                      # This file
-```
-
-## 🔍 Source Index
-
-All sources are indexed in `docs/source_index.json` with tags for easy reference:
-
-- ADK & Architecture
-- Prompt Engineering
-- Neuromarketing & Growth
-- Marketing Automation
-- AI Strategy
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 References
-
-### Core References
-- [Google ADK Documentation](https://google.github.io/adk-docs/)
-- [Vertex AI Agent Development Kit](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/overview)
-- [Kaggle Prompt Engineering Whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)
-
-### Extended Source Integration
-- [Think with Google](https://www.thinkwithgoogle.com/)
-- [Meta Ads AI](https://www.facebook.com/business/ads)
-- [HubSpot AI](https://blog.hubspot.com/marketing/ai-marketing-strategy)
-- [Skai AI Marketing](https://www.skai.io/blog)
-- [Smartly Creative AI](https://www.smartly.io/resources)
-- [McKinsey AI Insights](https://www.mckinsey.com/featured-insights/artificial-intelligence)
-- [NeuroGym](https://www.myneurogym.com/)
-- [Reforge Growth Systems](https://www.reforge.com/)
-- [OpenAI Platform](https://platform.openai.com/)
-- [Google Cloud AI](https://cloud.google.com/ai)
-- [Google Cloud Docs](https://cloud.google.com/docs)
-- [IBM Developer AI](https://developer.ibm.com/technologies/artificial-intelligence/)
-- [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
-- [IBM Technology YouTube](https://www.youtube.com/@IBMTechnology)
-
-### Prompt Reference
-- [O3 Deep Research Prompt](docs/o3_deep_research_prompt.md) — The full V3 instruction set for launching O3 Deep Research analysis.
