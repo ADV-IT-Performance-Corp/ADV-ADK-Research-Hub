@@ -51,3 +51,13 @@ When adding new golden prompts:
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
 - [Testing Guidelines](./../../docs/TESTING.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
+
+### 💬 INPUT
+Placeholder example request.
+
+### ✅ EXPECTED
+Placeholder expected behavior.
+
+### 🔁 NOTES
+Prompt Kernel: v3.5
+**Tags:** golden prompts, placeholder
