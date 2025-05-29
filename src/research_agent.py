@@ -2,12 +2,10 @@ from base_agent import BaseAgent
 
 
 class ResearchAgent(BaseAgent):
-    """Example agent that synthesizes research notes."""
+    """Example agent that returns a simple research note."""
 
-    def __init__(self) -> None:
-        super().__init__("ResearchAgent")
+    def __init__(self, name: str = "ResearchAgent") -> None:
+        super().__init__(name)
 
     def run(self, query: str) -> str:
-        # Placeholder logic for demonstration purposes
-        notes = f"Researching: {query}"
-        return f"{self.name}: {notes}"
+        return f"{self.name} researched: {query}"

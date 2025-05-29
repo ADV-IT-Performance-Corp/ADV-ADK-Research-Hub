@@ -29,8 +29,12 @@ agent_system_adk/
 ├── config/
 │   ├── settings.yaml
 │   └── prompts/
-└── tests/
+└─ tests/
 ```
+
+Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
+`src/` directory for reference. These stubs demonstrate the minimal interface
+used by more advanced agents.
 
 ## Agent Functional Mapping
 

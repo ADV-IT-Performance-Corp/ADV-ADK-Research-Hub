@@ -1,9 +1,9 @@
 class BaseAgent:
-    """Minimal base class for agents used in examples."""
+    """Base class for simple agents."""
 
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str = "BaseAgent") -> None:
         self.name = name
 
     def run(self, message: str) -> str:
-        """Default implementation simply echoes the message."""
-        return f"{self.name}: {message}"
+        """Process a message and return a response."""
+        raise NotImplementedError("Subclasses must implement run()")
