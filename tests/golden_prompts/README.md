@@ -51,3 +51,14 @@ When adding new golden prompts:
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
 - [Testing Guidelines](./../../docs/TESTING.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
+
+### -INPUT
+n/a
+
+### -EXPECTED
+n/a
+
+### -NOTES
+This file describes the golden prompt tests.
+
+**Tags:** docs
