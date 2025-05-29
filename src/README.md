@@ -1,9 +1,11 @@
 # Source Code Examples
 
-This directory contains minimal agent implementations used for documentation and testing.
+This directory contains simple agent examples used in documentation and tests.
 
-- `base_agent.py` – shared base class for simple agents
-- `sample_agent.py` – toy example that echoes user input
-- `research_agent.py` – stub agent that returns placeholder research results
+- `sample_agent.py` – echoes a provided message.
+- `base_agent.py` – common superclass for agents.
+- `research_agent.py` – returns a short research summary.
+- `content_agent.py` – suggests content topics.
+- `campaign_agent.py` – prints a mock campaign plan.
 
-Additional agents can be added following this pattern to experiment with the O3 Deep Research workflow.
+These stubs illustrate the basic structure of an agent so new contributors can build their own.

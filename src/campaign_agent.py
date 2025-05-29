@@ -2,14 +2,15 @@ from base_agent import BaseAgent
 
 
 class CampaignAgent(BaseAgent):
-    """Agent for planning basic campaign steps."""
+    """Example agent that plans a marketing campaign."""
 
     def __init__(self) -> None:
-        super().__init__("CampaignAgent")
+        super().__init__(name="CampaignAgent")
 
     def run(self, product: str) -> str:
-        """Return a simple campaign plan summary."""
-        return (
-            f"{self.name} drafted a campaign plan for '{product}', "
-            "covering channels and timing."
-        )
+        return f"{self.name} plans a campaign for {product}"
+
+
+if __name__ == "__main__":
+    agent = CampaignAgent()
+    print(agent.run("new SaaS"))

@@ -1,17 +1,20 @@
 # Utility Scripts
 
-This directory contains helper scripts for local development.
+Two helper scripts streamline validation and development:
 
-- `setup_env.sh` installs markdownlint, jq, and yamllint so you can run checks locally.
+* `setup_env.sh` – Installs Node.js, markdownlint, `jq`, and `yamllint` so local
+  checks match CI. Run once after cloning:
 
   ```bash
   ./scripts/setup_env.sh
   ```
 
-- `validate_golden_prompts.sh` validates the golden prompt files.
+
+* `validate_golden_prompts.sh` – Ensures each prompt test contains the required
+  `INPUT`, `EXPECTED`, and `NOTES` sections and includes version tags:
 
   ```bash
   bash scripts/validate_golden_prompts.sh
   ```
 
-These steps mirror the CI pipeline to help ensure consistency.
+Both scripts exit non‑zero on failure so they can be used in automation.

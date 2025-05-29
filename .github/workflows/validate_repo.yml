@@ -97,7 +97,9 @@ jobs:
         run: |
           echo "Validating golden prompts..."
           for file in tests/golden_prompts/*.md; do
-            [ "$(basename "$file")" = "README.md" ] && continue
+            if [[ $(basename "$file") == "README.md" ]]; then
+              continue
+            fi
             echo "🔍 Validating $file"
 
             # Check required sections

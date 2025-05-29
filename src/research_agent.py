@@ -1,18 +1,14 @@
-try:
-    from .base_agent import BaseAgent
-except ImportError:  # Fallback for running as a script
-    from base_agent import BaseAgent
+from base_agent import BaseAgent
 
 
 class ResearchAgent(BaseAgent):
-    """Basic research agent stub."""
+    """Example agent that returns a research summary."""
 
-    def __init__(self, name: str = "ResearchAgent") -> None:
-        super().__init__(name)
+    def __init__(self) -> None:
+        super().__init__(name="ResearchAgent")
 
     def run(self, query: str) -> str:
-        """Return a placeholder research result."""
-        return f"{self.name} results for '{query}'"
+        return f"{self.name} researched: {query}"
 
 
 if __name__ == "__main__":
