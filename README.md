@@ -23,6 +23,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
+- [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
@@ -55,7 +56,10 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 │   ├── METHODOLOGY.md          # Research methodology
 │   └── source_index.json       # Reference index
 ├── tests/                       # Test specifications
-│   └── test_o3_context.json    # Context validation
+│   ├── golden_prompts/         # Prompt-based unit tests
+│   └── context/                # Context validation data
+├── src/                         # Application code (future)
+├── scripts/                     # Helper scripts
 ├── CHANGELOG.md                # Version history
 └── README.md                   # Project overview
     │   ├── mckinsey_ai_marketing.md
@@ -146,29 +150,6 @@ Key references:
 - docs/adk_docs_snapshot.md — Core ADK modules and architecture
 - docs/kaggle_prompt_engineering_summary.md — Advanced prompt patterns
 - docs/performance_marketing/ — Marketing automation strategies
-```
-
-## 📚 Repository Structure
-
-```
-.
-├── docs/                           # Documentation root
-│   ├── ADK_quickstart.md           # Google ADK quickstart guide
-│   ├── adk_docs_snapshot.md        # Core ADK documentation
-│   ├── integration_guide_o3.md     # O3 Deep Research integration
-│   ├── kaggle_prompt_engineering_summary.md
-│   └── performance_marketing/      # Marketing resources
-│       ├── google_insights_summary.md
-│       ├── hubspot_ai_automation.md
-│       ├── mckinsey_ai_marketing.md
-│       ├── meta_ai_strategy.md
-│       ├── neurogym_neuromarketing.md
-│       ├── reforge_growth_loops.md
-│       ├── skai_roi_optimization.md
-│       └── smartly_creative_ai.md
-├── .gitattributes                  # Git configuration
-└── README.md                      # This file
-```
 
 ## 🔍 Source Index
 
