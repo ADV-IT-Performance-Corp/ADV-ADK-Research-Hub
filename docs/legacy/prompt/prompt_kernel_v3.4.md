@@ -90,7 +90,7 @@ Answer the foundational research question:
 
 ---
 
-## 🧠 THINK LIKE:
+## 🧠 THINK LIKE
 
 * **Systems Architect** — design robust, modular, and scalable agent flows
 * **PromptOps Engineer** — enforce pattern reuse, token optimization, and lifecycle alignment

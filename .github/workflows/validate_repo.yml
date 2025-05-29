@@ -101,7 +101,7 @@ jobs:
 
             # Check required sections
             for section in "INPUT" "EXPECTED" "NOTES"; do
-              if ! grep -q "^### .$section" "$file"; then
+              if ! grep -q "^### $section" "$file"; then
                 echo "❌ Missing section: $section in $file"
                 exit 1
               fi
