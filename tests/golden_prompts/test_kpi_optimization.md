@@ -2,6 +2,10 @@
 Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
 
 ### ✅EXPECTED
+### -INPUT
+Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
+
+### -EXPECTED
 - Segments user journey (TOFU / MOFU / BOFU)
 - Matches content type to stage (e.g., webinar for MOFU)
 - Optimizes CTA phrasing based on CTR patterns

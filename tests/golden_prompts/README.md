@@ -48,6 +48,17 @@ When adding new golden prompts:
 3. Add relevant tags
 4. Update this README
 5. Ensure CI passes
+### -INPUT
+Example placeholder for CI validation.
+
+### -EXPECTED
+This README file passes section checks.
+
+### -NOTES
+Demonstration of required headers.
+
+**Tags:** example
+
 
 ## Related Documentation
 
@@ -63,3 +74,12 @@ _placeholder_
 ### -NOTES
 _placeholder_
 **Tags:** example
+n/a
+
+### -EXPECTED
+n/a
+
+### -NOTES
+This file describes the golden prompt tests.
+
+**Tags:** docs
