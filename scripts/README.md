@@ -9,6 +9,7 @@ Two helper scripts streamline validation and development:
   ./scripts/setup_env.sh
   ```
 
+
 * `validate_golden_prompts.sh` – Ensures each prompt test contains the required
   `INPUT`, `EXPECTED`, and `NOTES` sections and includes version tags:
 
