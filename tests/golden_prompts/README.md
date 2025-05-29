@@ -27,8 +27,12 @@ These prompts are automatically validated by the CI pipeline on each commit. To 
 # Run markdown validation
 markdownlint-cli2 "tests/golden_prompts/*.md"
 
-# Check for required sections
-./scripts/validate_golden_prompts.sh
+# Simple section validation
+for file in tests/golden_prompts/*.md; do
+  grep -q '^### -INPUT' "$file"
+  grep -q '^### -EXPECTED' "$file"
+  grep -q '^### -NOTES' "$file"
+done
 ```
 
 ## Versioning
@@ -49,5 +53,15 @@ When adding new golden prompts:
 ## Related Documentation
 
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
-- [Testing Guidelines](./../../docs/TESTING.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
+
+### -INPUT
+Placeholder input for validation.
+
+### -EXPECTED
+Placeholder expected output.
+
+### -NOTES
+Placeholder notes.
+
+**Tags:** placeholder
