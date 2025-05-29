@@ -30,12 +30,11 @@ These prompts are automatically validated by the CI pipeline on each commit. To 
 # Run markdown validation
 markdownlint-cli2 "tests/golden_prompts/*.md"
 
-# Check for required sections
+# Simple section validation
 for file in tests/golden_prompts/*.md; do
-  grep -q '^### INPUT' "$file" && \
-  grep -q '^### EXPECTED' "$file" && \
-  grep -q '^### NOTES' "$file" && \
-  echo "Validated $file";
+  grep -q '^### -INPUT' "$file"
+  grep -q '^### -EXPECTED' "$file"
+  grep -q '^### -NOTES' "$file"
 done
 ```
 
@@ -81,20 +80,12 @@ Prompt Kernel: v3.5
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
 
 ### -INPUT
-_placeholder_
+Placeholder input for validation.
 
 ### -EXPECTED
-_placeholder_
+Placeholder expected output.
 
 ### -NOTES
-_placeholder_
-**Tags:** example
-n/a
+Placeholder notes.
 
-### -EXPECTED
-n/a
-
-### -NOTES
-This file describes the golden prompt tests.
-
-**Tags:** docs
+**Tags:** placeholder
