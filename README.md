@@ -51,6 +51,43 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ├── CHANGELOG.md           # Version history
 └── README.md              # Project overview
 
+```
+.
+├── .github/                     # GitHub configurations
+│   └── workflows/               # CI/CD workflows
+│       └── validate_repo.yml    # Repository validation
+├── docs/                        # Documentation
+│   ├── prompt/                  # Prompt engineering
+│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
+│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
+│   ├── meta/                    # System metadata
+│   │   ├── prompt_evolution_log/ # Version history
+│   │   │   └── v3.5.yaml       # v3.5 evolution log
+│   │   ├── meta_evaluation.json # Evaluation framework
+│   │   └── release_checklist_v3.5.md
+│   ├── performance_marketing/   # Marketing strategies
+│   ├── RESEARCH_GOALS.md        # Research objectives
+│   ├── METHODOLOGY.md          # Research methodology
+│   └── source_index.json       # Reference index
+├── tests/                       # Test specifications
+│   └── test_o3_context.json    # Context validation
+├── scripts/                     # Helper scripts
+│   ├── setup_env.sh            # Install local tooling
+│   └── validate_golden_prompts.sh  # Golden prompt checker
+├── CHANGELOG.md                # Version history
+└── README.md                   # Project overview
+    │   ├── mckinsey_ai_marketing.md
+    │   ├── neurogym_neuromarketing.md
+    │   └── reforge_growth_loops.md
+    ├── meta/                    # Meta-level documentation
+    │   ├── prompt_genome.json   # Prompt lineage and evolution
+    │   └── meta_evaluation_template.md  # Evaluation framework
+    ├── prompt/                  # Core prompt definitions
+    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
+    │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
+    └── simulations/             # Simulation scenarios
+        └── 72hr_campaign_sim.md # 72-hour PPC simulation
+```
 
 ## 🚀 Quick Start
 
@@ -64,7 +101,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.5.md  # Core v3.5 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
