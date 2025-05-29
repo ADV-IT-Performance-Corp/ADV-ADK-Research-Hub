@@ -1,7 +1,3 @@
-### 💬INPUT
-Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
-
-### ✅EXPECTED
 ### -INPUT
 Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS product, considering user funnel stages.
 
@@ -11,6 +7,6 @@ Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS p
 - Optimizes CTA phrasing based on CTR patterns
 - Shows alignment with `Prompt Kernel v3.5` architecture map
 
-### 🔁NOTES
+### -NOTES
 Prompt Kernel: v3.5  
 **Tags:** KPI optimization, content strategy, content targeting

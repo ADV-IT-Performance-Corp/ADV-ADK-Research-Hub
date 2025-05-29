@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.0)
+# Golden Prompts (v3.5.3)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
@@ -31,12 +31,17 @@ These prompts are automatically validated by the CI pipeline on each commit. To 
 markdownlint-cli2 "tests/golden_prompts/*.md"
 
 # Check for required sections
-./scripts/validate_golden_prompts.sh
+for file in tests/golden_prompts/*.md; do
+  grep -q '^### INPUT' "$file" && \
+  grep -q '^### EXPECTED' "$file" && \
+  grep -q '^### NOTES' "$file" && \
+  echo "Validated $file";
+done
 ```
 
 ## Versioning
 
-- **Current Version**: 3.5.0
+- **Current Version**: 3.5.3
 - **Compatibility**: O3 Prompt Kernel v3.5.0+
 - **Last Updated**: 2025-05-22
 
@@ -59,6 +64,16 @@ Demonstration of required headers.
 
 **Tags:** example
 
+
+### -INPUT
+N/A
+
+### -EXPECTED
+N/A
+
+### -NOTES
+Prompt Kernel: v3.5
+**Tags:** documentation
 
 ## Related Documentation
 
