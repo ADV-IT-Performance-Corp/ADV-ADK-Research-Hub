@@ -280,36 +280,11 @@
       ],
       "version": "3.5.4",
       "type": "documentation"
-    },
-    {
-      "name": "ConfigAgent Overview",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/config_agent_overview.md",
-      "tags": ["config", "schema", "v3.5"],
-      "version": "3.5.4",
-      "type": "documentation"
-    },
-    {
-      "name": "GovernanceAgent Concept",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/governance_agent_overview.md",
-      "tags": ["governance", "compliance", "v3.5"],
-      "version": "3.5.4",
-      "type": "documentation"
-    },
-    {
-      "name": "ConfigAgent Overview",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/config_agent_overview.md",
-      "tags": [
-        "config",
-        "schema",
-        "testing"
-      ],
-      "version": "3.5.3",
-      "type": "documentation"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-29",
+    "last_updated": "2025-05-25",
     "version": "3.5.4"
   }
 }

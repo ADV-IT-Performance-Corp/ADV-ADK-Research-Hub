@@ -1,14 +1,11 @@
 ---
-version: 3.5.3
-releases:
-  - tag: v3.5.1
-    date: 2025-05-23
-    summary: Added simulation and evaluation sections
-  - tag: v3.5.2
-    date: 2025-05-24
-    summary: Updated GitHub integration and docs
-  - tag: v3.5.3
-    date: 2025-05-25
-    summary: Expanded agent overview and docs cleanup
+version: 3.5.4
+subversions:
+  - tag: 3.5.1
+    summary: initial refinements and CI updates
+  - tag: 3.5.2
+    summary: added integration guide and minor docs
+  - tag: 3.5.3
+    summary: expanded agent overview and simulation docs
 notes:
-  - 'Next step: prepare v4.0 with governance layer and deeper tests.'
+  - 'Version 3.5.4 introduces config mutation tests and governance concept.'

@@ -1,6 +1,6 @@
 # Improvement Notes – 21 May 2025 Doc Review
 
-This note compares the `O3 Deep Research Prompt – V3.5 Unified Final` dated 2025-05-21 with the current repository state (v3.5.3). The goal is to retain strengths from the earlier version while further optimizing the repo.
+This note compares the `O3 Deep Research Prompt – V3.5 Unified Final` dated 2025-05-21 with the current repository state (v3.5.4). The goal is to retain strengths from the earlier version while further optimizing the repo.
 
 ## Key Strengths to Preserve
 - Full lifecycle coverage from research to deployment in the prompt kernel.
@@ -10,7 +10,7 @@ This note compares the `O3 Deep Research Prompt – V3.5 Unified Final` dated 20
 
 ## Opportunities for Enhancement
 1. **Version Tracking**
-   - Integrate explicit release metadata for subversions (v3.5.1–v3.5.3) in `prompt_evolution_log/v3.5.yaml`.
+   - Integrate explicit release metadata for subversions (v3.5.1–v3.5.4) in `prompt_evolution_log/v3.5.yaml`.
    - Document changes between minor versions similar to `version_diff_v3.4.1_to_v3.5.0.md`.
 
 2. **Simulation Coverage**

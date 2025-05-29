@@ -1,14 +1,15 @@
-# Config Adjustment
+# Config Adjustment Validation
 <!-- markdownlint-disable MD001 -->
 
 ### INPUT
-Adjust routing weights for the ContentAgent based on the latest performance metrics. Show the schema diff.
+The ConfigAgent receives a routing weight update and must produce a diff summary. Include schema context and notify via `config_push` message.
 
 ### EXPECTED
-- Presents old vs new routing weights in JSON
-- Notes validation step via ConfigAgent
-- Mentions CI trigger for prompt genome update
+- Shows YAML diff with before/after sections
+- Sends `config_push` notification to other agents
+- References version 3.5.4 in output
 
 ### NOTES
-Prompt Kernel: v3.5
-**Tags:** configuration, schema-diff, governance
+Prompt Kernel: v3.5.4
+
+**Tags:** config-agent, schema-diff

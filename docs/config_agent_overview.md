@@ -1,30 +1,22 @@
 # ConfigAgent Overview
 
-The **ConfigAgent** manages prompt settings, routing weights, and schema updates across all agents. It ensures configuration changes are tested and rolled out safely.
+The **ConfigAgent** manages prompt configuration updates and routing logic across all agents. It ensures that prompt schemas remain consistent and allows for controlled experimentation.
 
-## Responsibilities
-- Monitor prompt drift and update routing tables
-- Validate schema changes against the prompt genome
-- Apply A/B tests for new configurations
+## Key Responsibilities
+- Maintain the prompt genome and track schema changes
+- Apply configuration diffs to agent prompts
+- Validate updates with test suites and golden prompts
+- Notify other agents via `config_push` messages
 
-## Schema Diff Example
+## Example Schema Diff
 
-```json
-{
-  "old": {
-    "routing_weight": 0.5,
-    "tone": "formal"
-  },
-  "new": {
-    "routing_weight": 0.7,
-    "tone": "conversational"
-  }
-}
-
+```yaml
+before:
+  prompt_version: 3.5.4
+  routing_weight: 1
+after:
+  prompt_version: 3.5.4
+  routing_weight: 2
 ```
 
-The ConfigAgent compares versions and triggers validation tests before deployment.
-
-## Related Documentation
-- [Integration Guide](integration_guide_o3.md)
-- [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md)
+This diff indicates a version bump and routing change which must pass `validate_golden_prompts.sh` before rollout.

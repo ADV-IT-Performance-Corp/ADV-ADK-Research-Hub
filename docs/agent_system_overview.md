@@ -48,6 +48,7 @@ used by more advanced agents.
 | EngagementAgent | Email flows, retargeting | Motivator | routing_agent, tone_modeler | Motivational adaptive | Reforge loop scoring |
 | OptimizationAgent | Ad tuning and performance balancing | Calibrator | realtime_feedback, metric_map | Self-calibrating prompt | Metric-weighted ROAS tuning |
 | AnalyticsAgent | Performance tracking and reporting | Interpreter | insight_collector, delta_tracker | Reflective analysis | Periodic summary validation |
+| GovernanceAgent | Compliance and recovery | Supervisor | heartbeat_monitor | Escalation prompts | Policy audit log |
 | ConfigAgent | Prompt config and routing tuning | Adjuster | config_mutator, score_aligner | Schema-driven modifiers | Prompt genome refinement |
 | GovernanceAgent | Compliance monitoring and escalation | Overseer | heartbeat_checker | Policy gate | Alert & retry logic |
 | MCPServer | Orchestration layer across agents | Coordinator | mcp_server, routing_table | Routing prompts | Cross-agent feedback |
@@ -66,14 +67,5 @@ used by more advanced agents.
 - **Phase 2: Multi-Agent Orchestration (3–6 months)** – Introduce EngagementAgent, OptimizationAgent and AnalyticsAgent with shared memory.
 - **Phase 3: Self-Tuning and Scaling (6–12 months)** – Add ConfigAgent and automated prompt evolution across all agents.
 
-> **Diagram Note**: The roadmap and module map were first visualized in the 21 May 2025 prompt kernel. This document condenses those graphics into text for quick reference.
-
-## Inter-Agent Governance
-
-To ensure reliability and compliance, a **GovernanceAgent** oversees critical rules and handles escalation scenarios. This agent monitors heartbeat signals from all active agents and enforces retry policies when failures occur.
-
-### Heartbeat & Retry Logic
-
-1. Each agent emits a heartbeat message via the orchestration bus every five minutes.
-2. The GovernanceAgent records these heartbeats and triggers a retry if an expected signal is missed twice.
-3. Failed prompts are logged with context so ConfigAgent can analyze schema drift.
+## Diagrams
+See architectural diagrams in [prompt kernel](prompt/prompt_kernel_v3.5.md#module-map).
