@@ -32,6 +32,8 @@ agent_system_adk/
 └─ tests/
 ```
 
+_Diagrams from the original 21 May prompt illustrate this layout. See [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md) for visuals._
+
 Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
 `src/` directory for reference. These stubs demonstrate the minimal interface
 used by more advanced agents.
@@ -47,6 +49,7 @@ used by more advanced agents.
 | OptimizationAgent | Ad tuning and performance balancing | Calibrator | realtime_feedback, metric_map | Self-calibrating prompt | Metric-weighted ROAS tuning |
 | AnalyticsAgent | Performance tracking and reporting | Interpreter | insight_collector, delta_tracker | Reflective analysis | Periodic summary validation |
 | ConfigAgent | Prompt config and routing tuning | Adjuster | config_mutator, score_aligner | Schema-driven modifiers | Prompt genome refinement |
+| GovernanceAgent | Compliance monitoring and escalation | Overseer | heartbeat_checker | Policy gate | Alert & retry logic |
 | MCPServer | Orchestration layer across agents | Coordinator | mcp_server, routing_table | Routing prompts | Cross-agent feedback |
 
 ## Development Pipeline

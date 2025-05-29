@@ -3,6 +3,15 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.4] — 2025-05-29
+
+### ✨ Enhancements
+- Added ConfigAgent and GovernanceAgent documentation
+- Expanded simulation logs with failure recovery
+- Updated prompt evolution log with minor versions
+- Added golden prompt for configuration adjustments
+- Introduced `scripts/bump_version.sh` for version management
+
 ## [v3.5.3] — 2025-05-25
 
 ### ✨ Enhancements

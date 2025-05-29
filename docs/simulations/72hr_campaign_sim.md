@@ -47,3 +47,16 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 2. Update agent training data
 3. Adjust model parameters
 4. Document learnings for future campaigns
+
+## Example Log Excerpts
+
+```
+[Day1 14:00] OptimizationAgent shifted $500 from AdGroupA to AdGroupB (low CTR)
+[Day1 18:15] EngagementAgent triggered recovery email sequence
+[Day2 09:20] CampaignAgent API error: rate limit hit -> retry in 5m
+[Day2 09:25] GovernanceAgent alert: CampaignAgent retry succeeded
+[Day3 16:40] ConfigAgent applied schema diff v3.5.2 -> v3.5.3
+
+```
+
+These logs illustrate how agents react to real-time signals and recover from common failures.

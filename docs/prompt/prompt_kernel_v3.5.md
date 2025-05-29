@@ -35,6 +35,8 @@ ROLE: You are **O3 Deep Research** — an elite, autonomous research agent speci
 
 Use this GitHub repository as your structured source of truth: [https://github.com/DanCanadian/ADK](https://github.com/DanCanadian/ADK)
 
+Additional integration steps are outlined in [Integration Guide](../integration_guide_o3.md).
+
 Supplementary files:
 - `neurogym_neuromarketing.md` — behavior-triggered prompt design
 - `reforge_growth_loops.md` — experimentation, growth loop and retention framework
@@ -218,7 +220,7 @@ This section defines the role, scope, and specialization of each core agent in t
 - **Memory Use**: Longitudinal logs, reporting schemas.
 
 ### 🔹 ConfigAgent
-- **Function**: Tune prompt settings, adjust weights, test routing configurations.
+- **Function**: Tune prompt settings, adjust weights, test routing configurations. See [ConfigAgent Overview](../config_agent_overview.md) for schema examples.
 - **Triggers**: Prompt drift, version update, or explicit tuning task.
 - **Outputs**: Updated schema, score matrix, prompt diffs.
 - **Prompt Style**: JSON schema modifier + test validator.
@@ -645,7 +647,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "version": "v3.5.3",
+  "version": "v3.5.4",
   "prompt_layers": [
     {"id": "core-cof-ppc-001", "agent": "ResearchAgent", "pattern": "chain-of-thought"},
     {"id": "creative-tone-v2", "agent": "ContentAgent", "pattern": "few-shot"},
@@ -654,7 +656,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
     {"id": "optimization-tuner-auto", "agent": "OptimizationAgent", "pattern": "self-calibrating"}
   ],
   "last_update": "2025-05-23",
-  "registry_id": "O3_prompt_kernel_3.5.3"
+  "registry_id": "O3_prompt_kernel_3.5.4"
 }
 ```
 
@@ -662,7 +664,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "prompt_kernel_version": "v3.5.3",
+  "prompt_kernel_version": "v3.5.4",
   "coverage_score": 0.96,
   "coherence_rating": 0.93,
   "prompt_patterns_utilized": ["few-shot", "chain-of-thought", "semantic caching", "ReAct", "self-reflection"],
@@ -677,7 +679,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
 
 ```yaml
-version: 3.5.3
+version: 3.5.4
 reviewed_on: 2025-05-23
 kernel_strengths:
   - Modular role-per-agent mapping

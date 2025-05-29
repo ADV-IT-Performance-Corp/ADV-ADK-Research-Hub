@@ -1,4 +1,14 @@
 ---
-version: 3.5.0
+version: 3.5.3
+releases:
+  - tag: v3.5.1
+    date: 2025-05-23
+    summary: Added simulation and evaluation sections
+  - tag: v3.5.2
+    date: 2025-05-24
+    summary: Updated GitHub integration and docs
+  - tag: v3.5.3
+    date: 2025-05-25
+    summary: Expanded agent overview and docs cleanup
 notes:
-  - 'Placeholder entry for v3.5 prompt evolution log.'
+  - 'Next step: prepare v4.0 with governance layer and deeper tests.'
