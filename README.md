@@ -23,6 +23,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
+- [ConfigAgent Overview](docs/config_agent_overview.md) - Schema diffs and test guidance
 - [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology

@@ -1,4 +1,20 @@
 ---
-version: 3.5.0
+version: 3.5
+subversions:
+  - tag: v3.5.1
+    date: 2025-05-23
+    highlights:
+      - Added simulation and evaluation sections to prompt kernel
+      - Updated metadata to version 3.5.1
+  - tag: v3.5.2
+    date: 2025-05-24
+    highlights:
+      - Added GitHub integration guide and minor documentation updates
+      - Incremented version badges to 3.5.2
+  - tag: v3.5.3
+    date: 2025-05-25
+    highlights:
+      - Added Agent System Overview with module map and roles
+      - Bumped documentation version to 3.5.3
 notes:
-  - 'Placeholder entry for v3.5 prompt evolution log.'
+  - Minor releases build on the 3.5.0 architecture without breaking changes
