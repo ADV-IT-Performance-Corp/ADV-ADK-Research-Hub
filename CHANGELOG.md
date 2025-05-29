@@ -1,4 +1,5 @@
 # 📓 CHANGELOG.md — O3 Deep Research Repository
+<!-- markdownlint-disable MD024 -->
 
 All notable changes to this project are documented in this file.
 

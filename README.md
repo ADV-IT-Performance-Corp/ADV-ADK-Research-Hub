@@ -34,7 +34,6 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-
 ## 📂 Repository Structure (v3.5.3)
 ├── .github/               # GitHub configuration and workflows
 │   └── workflows/
@@ -118,6 +117,7 @@ This repository includes GitHub Actions workflows that automatically validate:
 - CHANGELOG format
 
 To run validations locally:
+
 ```bash
 # Install dependencies (one time)
 ./scripts/setup_env.sh
@@ -131,6 +131,7 @@ grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml
 
 ### For Developers
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/adv-ai/o3-deep-research-context.git
    ```

@@ -15,9 +15,9 @@ Golden prompts are used to:
 
 | File | Purpose | Key Features Tested |
 |------|---------|-------------------|
-| `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | - Agent communication<br>- ReAct-style reasoning<br>- Feedback loops |
-| `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | - Memory access<br>- Reflection loops<br>- Performance learning |
-| `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | - KPI tracking<br>- Content strategy<br>- Performance optimization |
+| `test_prompt_coordinator.md` | Validates multi-agent coordination and ReAct patterns | Agent communication; ReAct-style reasoning; Feedback loops |
+| `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | Memory access; Reflection loops; Performance learning |
+| `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | KPI tracking; Content strategy; Performance optimization |
 
 ## Usage
 
@@ -48,28 +48,6 @@ When adding new golden prompts:
 3. Add relevant tags
 4. Update this README
 5. Ensure CI passes
-### -INPUT
-Example placeholder for CI validation.
-
-### -EXPECTED
-This README file passes section checks.
-
-### -NOTES
-Demonstration of required headers.
-
-**Tags:** example
-
-
-### -INPUT
-N/A
-
-### -EXPECTED
-N/A
-
-### -NOTES
-Prompt Kernel: v3.5
-**Tags:** documentation
-
 ## Related Documentation
 
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
@@ -77,15 +55,11 @@ Prompt Kernel: v3.5
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
 
 ### INPUT
-
-Placeholder for validation.
+Explain the purpose of golden prompts.
 
 ### EXPECTED
-
-Placeholder for validation.
+- Overview of how golden prompts ensure stable behavior
 
 ### NOTES
-
-Placeholder for validation.
-
-**Tags:** placeholder
+Prompt Kernel: v3.5
+**Tags:** documentation
