@@ -1,5 +1,5 @@
 ---
-name: CI Validate O3 Repo v3.5.0
+name: CI Validate O3 Repo v3.5.4
 
 on:
   pull_request:

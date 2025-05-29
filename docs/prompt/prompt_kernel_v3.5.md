@@ -37,6 +37,8 @@ nFor repository integration steps see [Integration Guide](../integration_guide_o
 
 Use this GitHub repository as your structured source of truth: [https://github.com/DanCanadian/ADK](https://github.com/DanCanadian/ADK)
 
+Additional integration steps are outlined in [Integration Guide](../integration_guide_o3.md).
+
 Supplementary files:
 - `neurogym_neuromarketing.md` — behavior-triggered prompt design
 - `reforge_growth_loops.md` — experimentation, growth loop and retention framework
@@ -220,7 +222,7 @@ This section defines the role, scope, and specialization of each core agent in t
 - **Memory Use**: Longitudinal logs, reporting schemas.
 
 ### 🔹 ConfigAgent
-- **Function**: Tune prompt settings, adjust weights, test routing configurations.
+- **Function**: Tune prompt settings, adjust weights, test routing configurations. See [ConfigAgent Overview](../config_agent_overview.md) for schema examples.
 - **Triggers**: Prompt drift, version update, or explicit tuning task.
 - **Outputs**: Updated schema, score matrix, prompt diffs.
 - **Prompt Style**: JSON schema modifier + test validator.
