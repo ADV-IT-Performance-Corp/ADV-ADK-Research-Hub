@@ -23,6 +23,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
+- [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
@@ -35,9 +36,6 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 
 ## 📂 Repository Structure (v3.5.3)
-
-```
-.
 ├── .github/               # GitHub configuration and workflows
 │   └── workflows/
 ├── docs/                  # Project documentation
@@ -52,14 +50,12 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ├── AGENTS.md              # ChatGPT usage rules
 ├── CHANGELOG.md           # Version history
 └── README.md              # Project overview
-```
+
 
 ## 🚀 Quick Start
-
 ### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
-```
 📘 EXTERNAL KNOWLEDGE CONTEXT:
 Use GitHub repository: https://github.com/DanCanadian/ADK
 
@@ -71,7 +67,6 @@ Key references:
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
-```
 
 ## 🛠️ CI/CD Validation
 
@@ -85,10 +80,9 @@ This repository includes GitHub Actions workflows that automatically validate:
 - CHANGELOG format
 
 To run validations locally:
-
 ```bash
-# Install dependencies
-npm install -g markdownlint-cli2
+# Install dependencies (one time)
+./scripts/setup_env.sh
 
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
@@ -129,5 +123,3 @@ Key references:
 - docs/adk_docs_snapshot.md — Core ADK modules and architecture
 - docs/kaggle_prompt_engineering_summary.md — Advanced prompt patterns
 - docs/performance_marketing/ — Marketing automation strategies
-```
-

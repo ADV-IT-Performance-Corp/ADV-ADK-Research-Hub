@@ -24,6 +24,9 @@ Golden prompts are used to:
 These prompts are automatically validated by the CI pipeline on each commit. To run validation locally:
 
 ```bash
+# Install dependencies (one time)
+./scripts/setup_env.sh
+
 # Run markdown validation
 markdownlint-cli2 "tests/golden_prompts/*.md"
 
@@ -50,6 +53,17 @@ When adding new golden prompts:
 3. Add relevant tags
 4. Update this README
 5. Ensure CI passes
+### -INPUT
+Example placeholder for CI validation.
+
+### -EXPECTED
+This README file passes section checks.
+
+### -NOTES
+Demonstration of required headers.
+
+**Tags:** example
+
 
 ### -INPUT
 N/A
@@ -65,3 +79,22 @@ Prompt Kernel: v3.5
 
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
+
+### -INPUT
+_placeholder_
+
+### -EXPECTED
+_placeholder_
+
+### -NOTES
+_placeholder_
+**Tags:** example
+n/a
+
+### -EXPECTED
+n/a
+
+### -NOTES
+This file describes the golden prompt tests.
+
+**Tags:** docs

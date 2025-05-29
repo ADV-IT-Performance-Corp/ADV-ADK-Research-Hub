@@ -7,6 +7,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] PR uses the correct template from `.github/pull_request_template.md`
 - [ ] Affected files declared and justified
 - [ ] No placeholder blocks remain
+- [ ] No TODO placeholders or incomplete sections remain
 - [ ] All `.md` files are linted (via markdownlint-cli2)
 - [ ] All links return HTTP 200
 - [ ] Genome version for prompts updated in `prompt_genome.json`
