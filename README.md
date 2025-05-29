@@ -53,6 +53,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 
 ## 🚀 Quick Start
+
 ### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
@@ -63,7 +64,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core v3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
@@ -123,3 +124,52 @@ Key references:
 - docs/adk_docs_snapshot.md — Core ADK modules and architecture
 - docs/kaggle_prompt_engineering_summary.md — Advanced prompt patterns
 - docs/performance_marketing/ — Marketing automation strategies
+```
+
+## 🔍 Source Index
+
+All sources are indexed in `docs/source_index.json` with tags for easy reference:
+
+- ADK & Architecture
+- Prompt Engineering
+- Neuromarketing & Growth
+- Marketing Automation
+- AI Strategy
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 References
+
+### Core References
+- [Google ADK Documentation](https://google.github.io/adk-docs/)
+- [Vertex AI Agent Development Kit](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/overview)
+- [Kaggle Prompt Engineering Whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)
+
+### Extended Source Integration
+- [Think with Google](https://www.thinkwithgoogle.com/)
+- [Meta Ads AI](https://www.facebook.com/business/ads)
+- [HubSpot AI](https://blog.hubspot.com/marketing/ai-marketing-strategy)
+- [Skai AI Marketing](https://www.skai.io/blog)
+- [Smartly Creative AI](https://www.smartly.io/resources)
+- [McKinsey AI Insights](https://www.mckinsey.com/featured-insights/artificial-intelligence)
+- [NeuroGym](https://www.myneurogym.com/)
+- [Reforge Growth Systems](https://www.reforge.com/)
+- [OpenAI Platform](https://platform.openai.com/)
+- [Google Cloud AI](https://cloud.google.com/ai)
+- [Google Cloud Docs](https://cloud.google.com/docs)
+- [IBM Developer AI](https://developer.ibm.com/technologies/artificial-intelligence/)
+- [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
+- [IBM Technology YouTube](https://www.youtube.com/@IBMTechnology)
+
+### Prompt Reference
+- [O3 Deep Research Prompt](docs/o3_deep_research_prompt.md) — The full V3 instruction set for launching O3 Deep Research analysis.

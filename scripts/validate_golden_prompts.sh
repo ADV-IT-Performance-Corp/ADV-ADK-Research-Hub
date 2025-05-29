@@ -1,29 +1,22 @@
-#!/bin/bash
-# Validate golden prompt markdown files
+#!/usr/bin/env bash
 set -e
 
-dir="tests/golden_prompts"
-for file in "$dir"/*.md; do
+for file in tests/golden_prompts/*.md; do
   echo "Validating $file"
-  # Required sections
-  for section in "INPUT" "EXPECTED" "NOTES"; do
-    if ! grep -q "^### .$section" "$file"; then
-      echo "Missing section $section in $file"
+  for section in INPUT EXPECTED NOTES; do
+    if ! grep -q "^### $section" "$file"; then
+      echo "Missing section $section in $file" >&2
       exit 1
     fi
   done
-
-  # Tags line
-  if ! grep -q '^\*\*Tags:\*\*' "$file"; then
-    echo "Missing or incorrectly formatted Tags in $file"
+  if ! grep -q "^\*\*Tags:\*\*" "$file"; then
+    echo "Missing Tags in $file" >&2
     exit 1
   fi
-
-  # Version reference
-  if ! grep -q 'v3\.5' "$file"; then
-    echo "Version not specified or incorrect in $file"
+  if ! grep -q "v3\.5" "$file"; then
+    echo "Version not specified in $file" >&2
     exit 1
   fi
-
-  echo "$file valid"
+  echo "✓ $file valid"
+  echo
 done

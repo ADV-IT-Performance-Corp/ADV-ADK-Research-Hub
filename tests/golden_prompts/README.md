@@ -79,13 +79,13 @@ Prompt Kernel: v3.5
 - [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)
 
-### -INPUT
-Placeholder input for validation.
+### INPUT
+Describe the scenario you want to test.
 
-### -EXPECTED
-Placeholder expected output.
+### EXPECTED
+Outline the expected behavior or output.
 
-### -NOTES
-Placeholder notes.
+### NOTES
+Add any relevant context or version numbers.
 
-**Tags:** placeholder
+**Tags:** example
