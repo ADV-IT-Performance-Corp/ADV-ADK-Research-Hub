@@ -20,7 +20,8 @@ agent_system_adk/
 │   │   ├── engagement_agent.py
 │   │   ├── optimization_agent.py
 │   │   ├── analytics_agent.py
-│   │   └── config_agent.py
+│   │   ├── config_agent.py
+│   │   └── mcp_server.py
 │   └── utils/
 │       ├── api_clients/
 │       ├── data_processors/
@@ -28,8 +29,12 @@ agent_system_adk/
 ├── config/
 │   ├── settings.yaml
 │   └── prompts/
-└── tests/
+└─ tests/
 ```
+
+Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
+`src/` directory for reference. These stubs demonstrate the minimal interface
+used by more advanced agents.
 
 ## Agent Functional Mapping
 
@@ -42,6 +47,7 @@ agent_system_adk/
 | OptimizationAgent | Ad tuning and performance balancing | Calibrator | realtime_feedback, metric_map | Self-calibrating prompt | Metric-weighted ROAS tuning |
 | AnalyticsAgent | Performance tracking and reporting | Interpreter | insight_collector, delta_tracker | Reflective analysis | Periodic summary validation |
 | ConfigAgent | Prompt config and routing tuning | Adjuster | config_mutator, score_aligner | Schema-driven modifiers | Prompt genome refinement |
+| MCPServer | Orchestration layer across agents | Coordinator | mcp_server, routing_table | Routing prompts | Cross-agent feedback |
 
 ## Development Pipeline
 
