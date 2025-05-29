@@ -21,7 +21,7 @@ Key files to reference:
   - `neurogym_neuromarketing.md`
   - `meta_ai_strategy.md`
   - `google_insights_summary.md`
-  - `ibm_ai_learning.md` *(coming soon)*
+  - `ibm_ai_learning.md`
 
 ### Supplementary external references
 - [Google Cloud Docs](https://cloud.google.com/docs)  
