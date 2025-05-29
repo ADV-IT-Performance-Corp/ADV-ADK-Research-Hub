@@ -6,7 +6,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 
 - [ ] PR uses the correct template from `.github/pull_request_template.md`
 - [ ] Affected files declared and justified
-- [ ] No "TODO:" or "Coming soon" blocks remain
+- [ ] No placeholder blocks remain
 - [ ] All `.md` files are linted (via markdownlint-cli2)
 - [ ] All links return HTTP 200
 - [ ] Genome version for prompts updated in `prompt_genome.json`
@@ -22,7 +22,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - Missing required `.md` files (e.g., NeuroGym or Reforge)
 - `prompt_genome.json` lacks current version
 - Broken external links
-- TODOs still present
+- Unresolved placeholders still present
 
 ## 🧪 CI runs automatically on every `push` or `PR`
 
