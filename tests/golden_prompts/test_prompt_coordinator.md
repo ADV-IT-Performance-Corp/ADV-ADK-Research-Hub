@@ -2,6 +2,7 @@
 Act as a research agent coordinating with campaign and memory agents to optimize a digital ad strategy. Include ReAct-style reasoning and trigger a feedback loop.
 
 ### EXPECTED
+
 - Uses ReAct-style prompt chaining (`THOUGHT → ACTION → OBSERVATION`)
 - Shows message from MemoryAgent to refine parameters
 - Campaign strategy includes channel choice + timing

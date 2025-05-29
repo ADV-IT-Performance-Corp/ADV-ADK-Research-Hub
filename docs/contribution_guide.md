@@ -22,7 +22,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - Missing required `.md` files (e.g., NeuroGym or Reforge)
 - `prompt_genome.json` lacks current version
 - Broken external links
-- TODOs still present
+- Placeholder blocks still present
 
 ## 🧪 CI runs automatically on every `push` or `PR`
 

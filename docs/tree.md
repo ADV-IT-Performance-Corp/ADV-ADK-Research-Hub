@@ -6,6 +6,11 @@ ADK/
 ├── .gitignore
 ├── .gitattributes
 ├── LICENSE
+├── src/
+├── scripts/
+├── tests/
+│   ├── golden_prompts/
+│   └── context/
 └── docs/
     ├── ADK_quickstart.md
     ├── adk_docs_snapshot.md

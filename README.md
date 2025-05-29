@@ -23,6 +23,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
+- [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
@@ -34,49 +35,28 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Changelog](CHANGELOG.md) - Version history and changes
 
 
-## 📂 Repository Structure (V3.5.3)
+## 📂 Repository Structure (v3.5.3)
+├── .github/               # GitHub configuration and workflows
+│   └── workflows/
+├── docs/                  # Project documentation
+│   ├── prompt/            # Prompt engineering docs
+│   ├── meta/              # Metadata and release notes
+│   ├── performance_marketing/
+│   ├── RESEARCH_GOALS.md
+│   ├── METHODOLOGY.md
+│   └── source_index.json
+├── tests/                 # Test specifications
+│   └── golden_prompts/    # Prompt validation cases
+├── AGENTS.md              # ChatGPT usage rules
+├── CHANGELOG.md           # Version history
+└── README.md              # Project overview
 
-```
-.
-├── .github/                     # GitHub configurations
-│   └── workflows/               # CI/CD workflows
-│       └── validate_repo.yml    # Repository validation
-├── docs/                        # Documentation
-│   ├── prompt/                  # Prompt engineering
-│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
-│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
-│   ├── meta/                    # System metadata
-│   │   ├── prompt_evolution_log/ # Version history
-│   │   │   └── v3.5.yaml       # v3.5 evolution log
-│   │   ├── meta_evaluation.json # Evaluation framework
-│   │   └── release_checklist_v3.5.md
-│   ├── performance_marketing/   # Marketing strategies
-│   ├── RESEARCH_GOALS.md        # Research objectives
-│   ├── METHODOLOGY.md          # Research methodology
-│   └── source_index.json       # Reference index
-├── tests/                       # Test specifications
-│   └── test_o3_context.json    # Context validation
-├── CHANGELOG.md                # Version history
-└── README.md                   # Project overview
-    │   ├── mckinsey_ai_marketing.md
-    │   ├── neurogym_neuromarketing.md
-    │   └── reforge_growth_loops.md
-    ├── meta/                    # Meta-level documentation
-    │   ├── prompt_genome.json   # Prompt lineage and evolution
-    │   └── meta_evaluation_template.md  # Evaluation framework
-    ├── prompt/                  # Core prompt definitions
-    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
-    │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
-    └── simulations/             # Simulation scenarios
-        └── 72hr_campaign_sim.md # 72-hour PPC simulation
-```
 
 ## 🚀 Quick Start
 
 ### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
-```
 📘 EXTERNAL KNOWLEDGE CONTEXT:
 Use GitHub repository: https://github.com/DanCanadian/ADK
 
@@ -88,7 +68,6 @@ Key references:
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
-```
 
 ## 🛠️ CI/CD Validation
 
@@ -102,10 +81,9 @@ This repository includes GitHub Actions workflows that automatically validate:
 - CHANGELOG format
 
 To run validations locally:
-
 ```bash
-# Install dependencies
-npm install -g markdownlint-cli2
+# Install dependencies (one time)
+./scripts/setup_env.sh
 
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
