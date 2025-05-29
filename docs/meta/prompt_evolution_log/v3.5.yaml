@@ -1,20 +1,14 @@
 ---
-version: 3.5
-subversions:
+version: 3.5.3
+releases:
   - tag: v3.5.1
     date: 2025-05-23
-    highlights:
-      - Added simulation and evaluation sections to prompt kernel
-      - Updated metadata to version 3.5.1
+    summary: Added simulation and evaluation sections
   - tag: v3.5.2
     date: 2025-05-24
-    highlights:
-      - Added GitHub integration guide and minor documentation updates
-      - Incremented version badges to 3.5.2
+    summary: Updated GitHub integration and docs
   - tag: v3.5.3
     date: 2025-05-25
-    highlights:
-      - Added Agent System Overview with module map and roles
-      - Bumped documentation version to 3.5.3
+    summary: Expanded agent overview and docs cleanup
 notes:
-  - Minor releases build on the 3.5.0 architecture without breaking changes
+  - 'Next step: prepare v4.0 with governance layer and deeper tests.'

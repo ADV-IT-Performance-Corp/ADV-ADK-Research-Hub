@@ -1,14 +1,14 @@
-# Config Adjustment Validation
+# Config Adjustment
 <!-- markdownlint-disable MD001 -->
 
 ### INPUT
-Update the routing configuration to use `content_agent_v2` and ensure previous tasks remain unaffected.
+Adjust routing weights for the ContentAgent based on the latest performance metrics. Show the schema diff.
 
 ### EXPECTED
-- Shows YAML diff of routing table.
-- Invokes ConfigAgent self-reflection on schema change.
-- Outputs confirmation of successful validation.
+- Presents old vs new routing weights in JSON
+- Notes validation step via ConfigAgent
+- Mentions CI trigger for prompt genome update
 
 ### NOTES
 Prompt Kernel: v3.5
-**Tags:** config management, schema diff, validation
+**Tags:** configuration, schema-diff, governance

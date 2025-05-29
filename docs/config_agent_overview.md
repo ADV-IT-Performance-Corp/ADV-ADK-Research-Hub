@@ -1,23 +1,30 @@
 # ConfigAgent Overview
 
-The **ConfigAgent** manages prompt configuration and routing rules across the O3 agent ecosystem. It monitors schema drift, applies updates, and triggers test cases to ensure stable operation.
+The **ConfigAgent** manages prompt settings, routing weights, and schema updates across all agents. It ensures configuration changes are tested and rolled out safely.
 
-## Example Schema Diff
+## Responsibilities
+- Monitor prompt drift and update routing tables
+- Validate schema changes against the prompt genome
+- Apply A/B tests for new configurations
 
-```yaml
-# v3.5.2
-routing:
-  research: research_agent_v1
-  content: content_agent_v1
-# v3.5.3
-routing:
-  research: research_agent_v1
-  content: content_agent_v2  # updated tone model
+## Schema Diff Example
+
+```json
+{
+  "old": {
+    "routing_weight": 0.5,
+    "tone": "formal"
+  },
+  "new": {
+    "routing_weight": 0.7,
+    "tone": "conversational"
+  }
+}
+
 ```
 
-## Test Cases
-1. Validate that new routing schemas parse correctly using `yaml.safe_load`.
-2. Ensure backward compatibility by running golden prompts against the previous configuration.
-3. Trigger ConfigAgent's self-reflection loop when a schema diff introduces errors.
+The ConfigAgent compares versions and triggers validation tests before deployment.
 
-For more context on integration, see [integration_guide_o3.md](integration_guide_o3.md).
+## Related Documentation
+- [Integration Guide](integration_guide_o3.md)
+- [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md)

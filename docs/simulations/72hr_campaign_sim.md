@@ -48,18 +48,15 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 3. Adjust model parameters
 4. Document learnings for future campaigns
 
-## Example Timestamped Logs
+## Example Log Excerpts
 
 ```
-[2025-05-20T08:00Z] ResearchAgent -> trend_alert: "Rising interest in automation tools"
-[2025-05-20T09:00Z] ContentAgent -> creative_update: "Landing page V2 deployed"
-[2025-05-20T14:00Z] OptimizationAgent -> budget_shift: -$500 from AdGroupA to AdGroupB
-[2025-05-21T10:30Z] AnalyticsAgent -> performance_ping: CTR down 2% on Meta Ads
+[Day1 14:00] OptimizationAgent shifted $500 from AdGroupA to AdGroupB (low CTR)
+[Day1 18:15] EngagementAgent triggered recovery email sequence
+[Day2 09:20] CampaignAgent API error: rate limit hit -> retry in 5m
+[Day2 09:25] GovernanceAgent alert: CampaignAgent retry succeeded
+[Day3 16:40] ConfigAgent applied schema diff v3.5.2 -> v3.5.3
+
 ```
 
-## Failure Scenarios & Recovery Steps
-| Time | Scenario | Affected Agent | Recovery Action |
-|------|----------|---------------|-----------------|
-| Day 1 - 16:00 | API timeout while updating bids | CampaignAgent | Retry with exponential backoff; alert OptimizationAgent |
-| Day 2 - 08:30 | Memory sync lag | AnalyticsAgent | Trigger heartbeat check; reload latest metrics from cache |
-| Day 3 - 12:15 | Prompt drift detected | ConfigAgent | Roll back to last stable schema and run test suite |
+These logs illustrate how agents react to real-time signals and recover from common failures.
