@@ -3,6 +3,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.4] — 2025-05-29
+
+### ✨ Updates
+- Added ConfigAgent and GovernanceAgent docs
+- Extended 72h simulation with failure recovery
+- Added config adjustment golden prompt
+- Updated version metadata to 3.5.4
+
 ## [v3.5.3] — 2025-05-25
 
 ### ✨ Enhancements

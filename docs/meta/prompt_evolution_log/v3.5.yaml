@@ -1,4 +1,11 @@
 ---
-version: 3.5.0
+version: 3.5.4
+subversions:
+  - tag: 3.5.1
+    summary: initial refinements and CI updates
+  - tag: 3.5.2
+    summary: added integration guide and minor docs
+  - tag: 3.5.3
+    summary: expanded agent overview and simulation docs
 notes:
-  - 'Placeholder entry for v3.5 prompt evolution log.'
+  - 'Version 3.5.4 introduces config mutation tests and governance concept.'

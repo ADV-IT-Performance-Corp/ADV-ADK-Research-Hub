@@ -47,3 +47,11 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 2. Update agent training data
 3. Adjust model parameters
 4. Document learnings for future campaigns
+
+## Failure & Recovery Examples
+
+| Timestamp | Event | Recovery Action |
+|-----------|-------|-----------------|
+| Day 1 14:00 | Ad disapproval on Meta | GovernanceAgent triggers policy audit; CampaignAgent swaps creative |
+| Day 2 09:30 | API timeout fetching metrics | OptimizationAgent retries after 5 minutes and logs warning |
+| Day 3 16:45 | ROAS drop > 20% | ConfigAgent rolls back to previous prompt version and notifies strategist |
