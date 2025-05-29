@@ -1,9 +1,9 @@
 # Source Code Examples
 
-This directory contains minimal agent implementations used for testing and documentation purposes.
+This directory contains minimal agent implementations used for documentation and testing.
 
-- `base_agent.py` – simple abstract base class defining the `run()` interface.
-- `sample_agent.py` – toy example that echoes user input.
-- `research_agent.py` – demonstration agent that returns a mock research note.
+- `base_agent.py` – shared base class for simple agents
+- `sample_agent.py` – toy example that echoes user input
+- `research_agent.py` – stub agent that returns placeholder research results
 
-These stubs illustrate basic structure for building more advanced agents in the O3 Deep Research system.
+Additional agents can be added following this pattern to experiment with the O3 Deep Research workflow.

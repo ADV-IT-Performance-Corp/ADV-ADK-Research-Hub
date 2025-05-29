@@ -3,10 +3,7 @@ set -euo pipefail
 
 echo "Validating golden prompts..."
 for file in tests/golden_prompts/*.md; do
-  # Skip README which contains instructions, not a golden prompt
-  if [ "$(basename "$file")" = "README.md" ]; then
-    continue
-  fi
+  [ "$(basename "$file")" = "README.md" ] && continue
   echo "Checking $file"
   for section in INPUT EXPECTED NOTES; do
     if ! grep -q "^### $section" "$file"; then
