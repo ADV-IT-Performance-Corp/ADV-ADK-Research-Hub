@@ -1,6 +1,6 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.2-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.3-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
@@ -21,6 +21,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
+- [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 
 ### Research & Methodology
@@ -72,7 +73,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.4
+### For O3 Deep Research V3.5
 Reference this repository in your prompts using:
 
 ```
@@ -83,7 +84,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.4.md  # Core V3.4 prompt
+- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
@@ -103,8 +104,8 @@ This repository includes GitHub Actions workflows that automatically validate:
 To run validations locally:
 
 ```bash
-# Install dependencies
-npm install -g markdownlint-cli2
+# Install dependencies (one time)
+./scripts/setup_env.sh
 
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
@@ -145,28 +146,6 @@ Key references:
 - docs/adk_docs_snapshot.md — Core ADK modules and architecture
 - docs/kaggle_prompt_engineering_summary.md — Advanced prompt patterns
 - docs/performance_marketing/ — Marketing automation strategies
-```
-
-## 📚 Repository Structure
-
-```
-.
-├── docs/                           # Documentation root
-│   ├── ADK_quickstart.md           # Google ADK quickstart guide
-│   ├── adk_docs_snapshot.md        # Core ADK documentation
-│   ├── integration_guide_o3.md     # O3 Deep Research integration
-│   ├── kaggle_prompt_engineering_summary.md
-│   └── performance_marketing/      # Marketing resources
-│       ├── google_insights_summary.md
-│       ├── hubspot_ai_automation.md
-│       ├── mckinsey_ai_marketing.md
-│       ├── meta_ai_strategy.md
-│       ├── neurogym_neuromarketing.md
-│       ├── reforge_growth_loops.md
-│       ├── skai_roi_optimization.md
-│       └── smartly_creative_ai.md
-├── .gitattributes                  # Git configuration
-└── README.md                      # This file
 ```
 
 ## 🔍 Source Index
