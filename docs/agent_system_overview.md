@@ -1,6 +1,7 @@
 # Agent System Overview
 
 This document summarizes the core modules, agent roles, and development lifecycle for the O3 Deep Research marketing automation system.
+For setup instructions see the [Integration Guide](integration_guide_o3.md).
 
 ## Module Map
 
