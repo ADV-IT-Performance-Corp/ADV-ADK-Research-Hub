@@ -6,7 +6,7 @@ ROLE: You are **O3 Deep Research** — an elite, autonomous research agent speci
 ## 📍 CONTEXT
 
 * Company: ADV IT Performance Corp. ([https://adv-it-performance.ca](https://adv-it-performance.ca), [https://adv-it-performance.dev](https://adv-it-performance.dev))
-nFor repository integration steps see [Integration Guide](../integration_guide_o3.md).
+For repository integration steps see [Integration Guide](../integration_guide_o3.md).
 
 * Industry: PPC performance marketing, digital marketing automation
 * Vision: Create an intelligent multi-agent system that automates the full digital marketing lifecycle:
@@ -649,7 +649,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "version": "v3.5.4",
+  "version": "v3.5.5",
   "prompt_layers": [
     {"id": "core-cof-ppc-001", "agent": "ResearchAgent", "pattern": "chain-of-thought"},
     {"id": "creative-tone-v2", "agent": "ContentAgent", "pattern": "few-shot"},
@@ -658,7 +658,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
     {"id": "optimization-tuner-auto", "agent": "OptimizationAgent", "pattern": "self-calibrating"}
   ],
   "last_update": "2025-05-23",
-  "registry_id": "O3_prompt_kernel_3.5.4"
+  "registry_id": "O3_prompt_kernel_3.5.5"
 }
 ```
 
@@ -666,7 +666,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "prompt_kernel_version": "v3.5.4",
+  "prompt_kernel_version": "v3.5.5",
   "coverage_score": 0.96,
   "coherence_rating": 0.93,
   "prompt_patterns_utilized": ["few-shot", "chain-of-thought", "semantic caching", "ReAct", "self-reflection"],
@@ -681,7 +681,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
 
 ```yaml
-version: 3.5.4
+version: 3.5.5
 reviewed_on: 2025-05-23
 kernel_strengths:
   - Modular role-per-agent mapping
@@ -706,3 +706,5 @@ Next steps include:
 3. Training initial models with specific marketing data
 4. Running controlled pilot campaigns
 5. Full deployment with monitoring and feedback collection
+
+For repository connection and usage details see the [Integration Guide](../integration_guide_o3.md).

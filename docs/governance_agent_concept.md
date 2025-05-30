@@ -9,3 +9,4 @@ The **GovernanceAgent** is a proposed supervisory layer that monitors agent acti
 - Maintain an audit log for all critical actions
 
 Integration of this agent will strengthen reliability and provide a clear mechanism for recovery during simulation failures.
+For implementation guidance see the [O3 Integration Guide](integration_guide_o3.md).

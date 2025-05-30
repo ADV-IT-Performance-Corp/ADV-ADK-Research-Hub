@@ -1,12 +1,12 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.4-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.5-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.4)
+## 🚀 Key Features (v3.5.5)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
@@ -21,6 +21,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
+- [O3 Integration Guide](docs/integration_guide_o3.md) - Setup and orchestration steps
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
@@ -36,7 +37,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (v3.5.4)
+## 📂 Repository Structure (v3.5.5)
 ├── .github/               # GitHub configuration and workflows
 │   └── workflows/
 ├── docs/                  # Project documentation
