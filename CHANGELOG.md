@@ -3,6 +3,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.7] — 2025-05-31
+
+### ✨ Updates
+- Added `AsyncEventBus` and file-backed persistent memory
+- Introduced heartbeat logic in `GovernanceAgent`
+- Created `Dockerfile` and `cloudrun.yaml` for deployment
+- Added risk and drift mitigation guide and linked in README
+- Bumped source index metadata to 3.5.7
+
+## [v3.5.6] — 2025-05-31
+
+### ✨ Updates
+- Restructured source into `core` utilities and `agents` packages
+- Added event bus and new agent stubs
+- Added configuration directory and updated docs
+- Bumped version metadata to 3.5.6
+
 ## [v3.5.5] — 2025-05-30
 
 ### ✨ Updates

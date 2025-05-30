@@ -1,5 +1,5 @@
 ---
-version: 3.5.5
+version: 3.5.7
 subversions:
   - tag: 3.5.1
     summary: initial refinements and CI updates
@@ -11,5 +11,9 @@ subversions:
     summary: governance agent concept and routing diff tests
   - tag: 3.5.5
     summary: expanded governance docs and added schema diff tests
+  - tag: 3.5.6
+    summary: restructured source tree with core utilities and new agent stubs
+  - tag: 3.5.7
+    summary: async event bus, persistent memory, Docker deployment
 notes:
   - 'Version 3.5.5 expands simulation logs and adds schema diff prompt.'

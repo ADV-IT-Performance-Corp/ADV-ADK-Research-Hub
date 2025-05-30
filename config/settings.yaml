@@ -1,0 +1,5 @@
+# Default configuration for ADK agents
+prompt_version: 3.5.7
+routing_weight: 1
+bus: async
+memory_path: memory.json
