@@ -47,6 +47,17 @@
       "type": "documentation"
     },
     {
+      "name": "Version Diff v3.5.4 to v3.5.5",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
+      "tags": [
+        "migration",
+        "v3.5.5",
+        "changelog"
+      ],
+      "version": "3.5.5",
+      "type": "documentation"
+    },
+    {
       "name": "Legacy Version Map",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/legacy_map.md",
       "tags": [

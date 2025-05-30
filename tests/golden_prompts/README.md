@@ -20,7 +20,7 @@ Golden prompts are used to:
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | KPI tracking; Content strategy; Performance optimization |
 | `test_config_adjustment.md`  | Tests configuration updates and schema diffs | ConfigAgent validation; Self-reflection |
 | `test_config_routing_diff.md` | Validates routing table adjustments | ConfigAgent diff summary; Alert routing |
-| `test_config_schema_diff.md` | Tests schema updates | ConfigAgent validation; YAML diff |
+| `test_config_schema_mutation.md` | Checks schema field changes and migration advice | ConfigAgent schema validation |
 
 ## Usage
 
