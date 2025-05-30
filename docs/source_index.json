@@ -10,7 +10,7 @@
         "research",
         "latest"
       ],
-      "version": "3.5.4",
+      "version": "3.5.5",
       "type": "core"
     },
     {
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "name": "IBM Developer \u2013 AI Technology",
+      "name": "IBM Developer – AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": [
         "ibm",
@@ -278,7 +278,7 @@
         "github",
         "integration"
       ],
-      "version": "3.5.4",
+      "version": "3.5.5",
       "type": "documentation"
     },
     {
@@ -289,7 +289,7 @@
         "agents",
         "overview"
       ],
-      "version": "3.5.4",
+      "version": "3.5.5",
       "type": "documentation"
     },
     {
@@ -658,6 +658,17 @@
       ],
       "last_reviewed": "2025-05-30",
       "type": "external"
+    },
+    {
+      "name": "Version Diff v3.5.4 to v3.5.5",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
+      "tags": [
+        "migration",
+        "v3.5.5",
+        "changelog"
+      ],
+      "version": "3.5.5",
+      "type": "documentation"
     }
   ],
   "metadata": {

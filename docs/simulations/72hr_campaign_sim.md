@@ -52,6 +52,7 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 
 | Timestamp | Event | Recovery Action |
 |-----------|-------|-----------------|
+| Day 1 04:30 | Quota limit reached | GovernanceAgent throttles requests and schedules retry |
 | Day 1 14:00 | Ad disapproval on Meta | GovernanceAgent triggers policy audit; CampaignAgent swaps creative |
 | Day 2 09:30 | API timeout fetching metrics | OptimizationAgent retries after 5 minutes and logs warning |
 | Day 2 17:15 | LinkedIn CTR < 0.5% | OptimizationAgent disables underperforming ad set and reallocates budget |
