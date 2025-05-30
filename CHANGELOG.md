@@ -3,6 +3,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.6] — 2025-05-31
+
+### ✨ Updates
+- Restructured source into `core` utilities and `agents` packages
+- Added event bus and new agent stubs
+- Added configuration directory and updated docs
+- Bumped version metadata to 3.5.6
+
 ## [v3.5.5] — 2025-05-30
 
 ### ✨ Updates
