@@ -1,60 +1,34 @@
-#!/usr/bin/env python3
-"""Regenerate docs/source_index.json from markdown stubs."""
-import json
-import os
-import re
-from datetime import date
+import json, re, datetime
+from pathlib import Path
 
-root = os.path.dirname(os.path.dirname(__file__))
-external_dir = os.path.join(root, 'docs', 'external')
-json_path = os.path.join(root, 'docs', 'source_index.json')
+base = Path('docs/external')
+new_sources = []
+for md in base.rglob('*.md'):
+    content = md.read_text().splitlines()
+    name = content[0].lstrip('# ').strip()
+    url = ''
+    tags = []
+    used_by = []
+    for line in content:
+        if line.startswith('**URL:**'):
+            url = line.split('**URL:**')[1].strip()
+        elif line.startswith('**Relevance:**'):
+            tags = [t.strip() for t in line.split('**Relevance:**')[1].split(',')]
+        elif line.startswith('**Used by Agents:**'):
+            used_by = [a.strip() for a in line.split('**Used by Agents:**')[1].split(',')]
+    new_sources.append({
+        "name": name,
+        "link": url,
+        "tags": tags,
+        "type": "external",
+        "used_by": used_by,
+        "last_reviewed": datetime.date.today().isoformat(),
+    })
 
-pattern_url = re.compile(r"\*\*URL:\*\*\s*(\S+)")
-pattern_relevance = re.compile(r"\*\*Relevance:\*\*\s*(.+)")
-pattern_agents = re.compile(r"\*\*Used by Agents:\*\*\s*(.+)")
-
-sources = []
-for dirpath, _, filenames in os.walk(external_dir):
-    for name in filenames:
-        if not name.endswith('.md'):
-            continue
-        path = os.path.join(dirpath, name)
-        with open(path, 'r') as f:
-            lines = f.read().splitlines()
-        if not lines:
-            continue
-        title = lines[0].lstrip('# ').strip()
-        url = ''
-        relevance = []
-        agents = []
-        for line in lines:
-            m = pattern_url.search(line)
-            if m:
-                url = m.group(1)
-            m = pattern_relevance.search(line)
-            if m:
-                relevance = [t.strip() for t in m.group(1).split(',')]
-            m = pattern_agents.search(line)
-            if m:
-                agents = [a.strip() for a in m.group(1).split(',')]
-        sources.append({
-            "name": title,
-            "link": url,
-            "tags": relevance,
-            "used_by": agents,
-            "type": "external",
-            "last_reviewed": str(date.today())
-        })
-
-with open(json_path) as f:
-    data = json.load(f)
-
-# Remove existing external entries
-core_sources = [s for s in data["sources"] if s.get("type") != "external"]
-
-data["sources"] = core_sources + sources
-data["metadata"]["last_updated"] = str(date.today())
-
-with open(json_path, 'w') as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
-    f.write('\n')
+index_path = Path('docs/source_index.json')
+index = json.loads(index_path.read_text())
+core = [s for s in index["sources"] if s.get("type") != "external"]
+index["sources"] = core + new_sources
+index.setdefault("metadata", {})["last_updated"] = datetime.date.today().isoformat()
+index_path.write_text(json.dumps(index, indent=2) + "\n")
+print(f"Updated {index_path} with {len(new_sources)} external sources")

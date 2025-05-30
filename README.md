@@ -175,6 +175,7 @@ All sources are indexed in `docs/source_index.json` with tags for easy reference
 - Neuromarketing & Growth
 - Marketing Automation
 - AI Strategy
+External stubs are organized under `docs/external/` by category (prompting, devops, integrations, governance).
 
 ## 🤝 Contributing
 

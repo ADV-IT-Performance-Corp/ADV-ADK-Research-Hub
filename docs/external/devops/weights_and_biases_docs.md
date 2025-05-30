@@ -13,3 +13,5 @@ Weights & Biases provides experiment tracking and visualization tools for machin
 
 ## Integration Ideas
 - Integrate W&B runs to track agent optimization trials
+
+See [ConfigAgent Overview](../../config_agent_overview.md) for orchestration examples.

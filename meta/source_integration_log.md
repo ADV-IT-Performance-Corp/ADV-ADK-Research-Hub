@@ -29,11 +29,9 @@ Integrated the following 24 sources into `/docs/source_index.json` and created `
 
 Codex Commit: `feat(sources): added external documentation references`
 
-## [2025-05-30] External Source Restructure
+## [2025-05-30] Source Organization and metadata update
 
-- Moved documentation stubs into `/docs/external/{prompting,devops,memory,governance,analytics}`
-- Added `last_reviewed` metadata for each external source
-- Updated `source_index.json` metadata timestamp
-- Added scripts for source index generation and offline link checks
+- Categorized external sources into subfolders
+- Added automation script and offline link cache
 
-Codex Commit: `feat(docs): organize external references`
+Codex Commit: `feat(docs): organize sources and add automation`

@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "IBM Developer – AI Technology",
+      "name": "IBM Developer \u2013 AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": [
         "ibm",
@@ -282,6 +282,20 @@
       "type": "documentation"
     },
     {
+      "name": "A2A Protocol",
+      "link": "https://github.com/AutogenStudio/autogen",
+      "tags": [
+        "coordination",
+        "orchestration"
+      ],
+      "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "CampaignAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
       "name": "Google Docs API",
       "link": "https://developers.google.com/docs",
       "tags": [
@@ -290,69 +304,11 @@
         "coordination"
       ],
       "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "LangChain Docs",
-      "link": "https://docs.langchain.com",
-      "tags": [
-        "prompting",
-        "coordination",
-        "memory"
+      "used_by": [
+        "ResearchAgent",
+        "ConfigAgent",
+        "ContentAgent"
       ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "OpenAI Cookbook",
-      "link": "https://github.com/openai/openai-cookbook",
-      "tags": [
-        "prompting",
-        "memory",
-        "fallback"
-      ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "Claude API Docs",
-      "link": "https://docs.anthropic.com",
-      "tags": [
-        "prompting",
-        "grounding",
-        "fallback"
-      ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "A2A Protocol",
-      "link": "https://github.com/AutogenStudio/autogen",
-      "tags": [
-        "coordination",
-        "orchestration"
-      ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "n8n Docs",
-      "link": "https://docs.n8n.io",
-      "tags": [
-        "coordination",
-        "automation"
-      ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "MCP Server API",
-      "link": "https://mcp-docs.readthedocs.io/",
-      "tags": [
-        "orchestration",
-        "memory"
-      ],
-      "type": "external",
       "last_reviewed": "2025-05-30"
     },
     {
@@ -363,16 +319,37 @@
         "coordination"
       ],
       "type": "external",
+      "used_by": [
+        "ResearchAgent",
+        "ConfigAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
-      "name": "Vertex AI Grounding",
-      "link": "https://cloud.google.com/vertex-ai/docs/generative-ai/grounding",
+      "name": "TinyML / Edge AI",
+      "link": "https://www.tinyml.org/",
       "tags": [
-        "grounding",
-        "prompting"
+        "adaptive control",
+        "fallback"
       ],
       "type": "external",
+      "used_by": [
+        "OptimizationAgent",
+        "ConfigAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "Apple ML APIs",
+      "link": "https://developer.apple.com/machine-learning/",
+      "tags": [
+        "fallback",
+        "on-device"
+      ],
+      "type": "external",
+      "used_by": [
+        "EngagementAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
@@ -383,6 +360,66 @@
         "performance"
       ],
       "type": "external",
+      "used_by": [
+        "AnalyticsAgent",
+        "OptimizationAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "GDPR Prompting Compliance",
+      "link": "https://gdpr.eu",
+      "tags": [
+        "compliance",
+        "constraints"
+      ],
+      "type": "external",
+      "used_by": [
+        "EngagementAgent",
+        "ConfigAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "AI Fairness 360 Toolkit",
+      "link": "https://aif360.readthedocs.io/",
+      "tags": [
+        "bias",
+        "scoring"
+      ],
+      "type": "external",
+      "used_by": [
+        "AnalyticsAgent",
+        "ConfigAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "n8n Docs",
+      "link": "https://docs.n8n.io",
+      "tags": [
+        "coordination",
+        "automation"
+      ],
+      "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "IntegrationAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "Helm Charts (K8s)",
+      "link": "https://helm.sh/docs/",
+      "tags": [
+        "deployment",
+        "CI/CD"
+      ],
+      "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "Infra"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
@@ -393,16 +430,24 @@
         "performance"
       ],
       "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "CampaignAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
-      "name": "MLflow",
-      "link": "https://mlflow.org/docs/latest/index.html",
+      "name": "MCP Server API",
+      "link": "https://mcp-docs.readthedocs.io/",
       "tags": [
-        "prompt lineage",
-        "tuning"
+        "orchestration",
+        "memory"
       ],
       "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "Infra"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
@@ -414,6 +459,10 @@
         "tuning"
       ],
       "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "AnalyticsAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
@@ -424,36 +473,23 @@
         "coordination"
       ],
       "type": "external",
+      "used_by": [
+        "All agents"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
-      "name": "Helm Charts (K8s)",
-      "link": "https://helm.sh/docs/",
+      "name": "MLflow",
+      "link": "https://mlflow.org/docs/latest/index.html",
       "tags": [
-        "deployment",
-        "CI/CD"
+        "prompt lineage",
+        "tuning"
       ],
       "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "Anthropic Prompting Guide",
-      "link": "https://docs.anthropic.com/claude/prompting-best-practices",
-      "tags": [
-        "prompting",
-        "grounding"
+      "used_by": [
+        "AnalyticsAgent",
+        "OptimizationAgent"
       ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "DeepMind Gopher Prompt Lab",
-      "link": "https://arxiv.org/abs/2202.11382",
-      "tags": [
-        "reflection",
-        "mutation"
-      ],
-      "type": "external",
       "last_reviewed": "2025-05-30"
     },
     {
@@ -463,55 +499,39 @@
         "task grounding"
       ],
       "type": "external",
+      "used_by": [
+        "ResearchAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
-      "name": "CognitiveLoad Design",
-      "link": "https://www.nngroup.com/topic/cognitive-load/",
+      "name": "Vertex AI Grounding",
+      "link": "https://cloud.google.com/vertex-ai/docs/generative-ai/grounding",
       "tags": [
-        "behavioral prompting"
+        "grounding",
+        "prompting"
       ],
       "type": "external",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
       "last_reviewed": "2025-05-30"
     },
     {
-      "name": "TinyML / Edge AI",
-      "link": "https://www.tinyml.org/",
+      "name": "Claude API Docs",
+      "link": "https://docs.anthropic.com",
       "tags": [
-        "adaptive control",
+        "prompting",
+        "grounding",
         "fallback"
       ],
       "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "Apple ML APIs",
-      "link": "https://developer.apple.com/machine-learning/",
-      "tags": [
-        "fallback",
-        "on-device"
+      "used_by": [
+        "ContentAgent",
+        "ConfigAgent",
+        "ResearchAgent"
       ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "AI Fairness 360 Toolkit",
-      "link": "https://aif360.readthedocs.io/",
-      "tags": [
-        "bias",
-        "scoring"
-      ],
-      "type": "external",
-      "last_reviewed": "2025-05-30"
-    },
-    {
-      "name": "GDPR Prompting Compliance",
-      "link": "https://gdpr.eu",
-      "tags": [
-        "compliance",
-        "constraints"
-      ],
-      "type": "external",
       "last_reviewed": "2025-05-30"
     },
     {
@@ -522,6 +542,81 @@
         "scoring"
       ],
       "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "PromptOps"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "DeepMind Gopher Prompt Lab",
+      "link": "https://arxiv.org/abs/2202.11382",
+      "tags": [
+        "reflection",
+        "mutation"
+      ],
+      "type": "external",
+      "used_by": [
+        "CampaignAgent",
+        "ConfigAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "CognitiveLoad Design (NNG)",
+      "link": "https://www.nngroup.com/topic/cognitive-load/",
+      "tags": [
+        "behavioral prompting"
+      ],
+      "type": "external",
+      "used_by": [
+        "EngagementAgent",
+        "ContentAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "Anthropic Prompting Guide",
+      "link": "https://docs.anthropic.com/claude/prompting-best-practices",
+      "tags": [
+        "prompting",
+        "grounding"
+      ],
+      "type": "external",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "LangChain Docs",
+      "link": "https://docs.langchain.com",
+      "tags": [
+        "prompting",
+        "coordination",
+        "memory"
+      ],
+      "type": "external",
+      "used_by": [
+        "ConfigAgent",
+        "ResearchAgent"
+      ],
+      "last_reviewed": "2025-05-30"
+    },
+    {
+      "name": "OpenAI Cookbook",
+      "link": "https://github.com/openai/openai-cookbook",
+      "tags": [
+        "prompting",
+        "memory",
+        "fallback"
+      ],
+      "type": "external",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
       "last_reviewed": "2025-05-30"
     }
   ],
