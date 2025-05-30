@@ -9,4 +9,3 @@
 ## Changed
 - Moved existing agent files under `src/agents/`.
 - Updated repository documentation and version badges to 3.5.6.
-
