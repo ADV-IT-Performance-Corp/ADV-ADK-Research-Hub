@@ -29,8 +29,12 @@ Integrated the following 24 sources into `/docs/source_index.json` and created `
 
 Codex Commit: `feat(sources): added external documentation references`
 
-## [2025-05-30] Update source index schema
-- Added `used_by`, `relevance`, and `description` fields for external sources
-- Updated `last_updated` metadata
-Codex Commit: `chore(docs): enrich source index metadata`
+## [2025-05-30] External Source Organization
 
+- Moved external stubs into `prompting/`, `devops/`, and `governance/` subfolders
+- Added cross links and example code snippets to select stubs
+- Introduced `scripts/update_source_index.py` for automatic JSON regeneration
+- Created `scripts/offline_link_check.sh` with `docs/link_cache.txt`
+- Rebuilt `docs/source_index.json` with `description`, `used_by`, and `last_reviewed` fields
+
+Codex Commit: `feat(docs): organize external sources with automation`

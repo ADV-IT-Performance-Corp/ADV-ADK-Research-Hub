@@ -13,5 +13,3 @@ Anthropic's guide outlines best practices for constructing prompts with Claude, 
 
 ## Integration Ideas
 - Incorporate these patterns into agent prompt templates
-
-See [Prompt Kernel v3.5](../../prompt/prompt_kernel_v3.5.md) for integration patterns.

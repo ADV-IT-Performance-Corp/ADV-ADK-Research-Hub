@@ -13,5 +13,3 @@ IBM's AI Fairness 360 Toolkit provides metrics and algorithms to detect and miti
 
 ## Integration Ideas
 - Integrate bias checks into evaluation pipelines
-
-Related: see [Meta Evaluation Framework](../../meta/meta_evaluation.json).

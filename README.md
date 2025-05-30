@@ -129,6 +129,9 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 
 # Check for TODOs
 grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .
+# Rebuild source index and run offline link check
+python3 scripts/update_source_index.py
+bash scripts/offline_link_check.sh
 ```
 
 ### For Developers
@@ -154,6 +157,7 @@ See [source_index.json](/docs/source_index.json) for a complete list of referenc
 - NVIDIA & AMD Developer Hubs
 - Reforge Growth Systems
 - NeuroGym
+External stubs are organized under `docs/external/` by category: `prompting`, `devops`, and `governance`.
 
 ```text
 EXTERNAL KNOWLEDGE CONTEXT:
@@ -204,6 +208,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Smartly Creative AI](https://www.smartly.io/resources)
 - [McKinsey AI Insights](https://www.mckinsey.com/featured-insights/artificial-intelligence)
 - [NeuroGym](https://www.myneurogym.com/)
+External stubs are organized under `docs/external/` by category: `prompting`, `devops`, and `governance`.
 - [Reforge Growth Systems](https://www.reforge.com/)
 - [OpenAI Platform](https://platform.openai.com/)
 - [Google Cloud AI](https://cloud.google.com/ai)
