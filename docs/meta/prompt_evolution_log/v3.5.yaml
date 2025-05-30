@@ -10,6 +10,6 @@ subversions:
   - tag: 3.5.4
     summary: governance agent concept and routing diff tests
   - tag: 3.5.5
-    summary: expanded simulation logs and schema mutation prompt
+    summary: expanded governance docs and added schema diff tests
 notes:
-  - 'Version 3.5.5 expands simulation logs, formalizes GovernanceAgent details, and adds schema mutation testing.'
+  - 'Version 3.5.5 expands simulation logs and adds schema diff prompt.'

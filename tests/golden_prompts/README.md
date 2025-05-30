@@ -20,7 +20,7 @@ Golden prompts are used to:
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | KPI tracking; Content strategy; Performance optimization |
 | `test_config_adjustment.md`  | Tests configuration updates and schema diffs | ConfigAgent validation; Self-reflection |
 | `test_config_routing_diff.md` | Validates routing table adjustments | ConfigAgent diff summary; Alert routing |
-| `test_config_schema_mutation.md` | Checks schema field changes and migration advice | ConfigAgent schema validation |
+| `test_config_schema_diff.md` | Validates schema mutations | ConfigAgent schema diff; Compatibility warnings |
 
 ## Usage
 
@@ -41,7 +41,7 @@ bash scripts/validate_golden_prompts.sh
 
 - **Current Version**: 3.5.5
 - **Compatibility**: O3 Prompt Kernel v3.5.0+
-- **Last Updated**: 2025-05-22
+- **Last Updated**: 2025-05-30
 
 ## Contributing
 

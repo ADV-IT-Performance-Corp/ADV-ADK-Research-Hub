@@ -1,6 +1,6 @@
 # GovernanceAgent Concept
 
-The **GovernanceAgent** acts as a supervisory layer that monitors all other agents, enforces compliance rules, and handles escalation.
+The **GovernanceAgent** acts as a supervisory layer that monitors all other agents, enforces compliance rules, and handles escalation. For deployment steps consult the [O3 Integration Guide](integration_guide_o3.md).
 
 ## Purpose
 - Track agent heartbeats and trigger alerts on failure
@@ -27,10 +27,5 @@ The GovernanceAgent listens on the same Pub/Sub bus used for inter-agent message
 
 All escalation events are captured in a persistent audit log. Example entries are shown in the [72-hour simulation](simulations/72hr_campaign_sim.md#sample-log-snippet).
 
-### Compliance Checks
-
-Before applying configuration updates, the GovernanceAgent verifies that prompts align with policy and version constraints. If a violation is detected, it blocks deployment and records the incident.
-
-### Heartbeat Interval
-
-Each agent must acknowledge a heartbeat every 5 minutes. Missing two consecutive acknowledgements triggers an automatic restart. If failures persist, the agent is quarantined until a human review is completed.
+### Heartbeat & Recovery Events
+The GovernanceAgent writes timestamped heartbeat acknowledgments to a shared log. Missing heartbeats trigger the retry flow above and are referenced in the simulation logs for clarity.

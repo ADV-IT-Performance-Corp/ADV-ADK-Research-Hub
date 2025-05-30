@@ -1,14 +1,15 @@
 # Version Diff: v3.5.4 → v3.5.5
 
-This document highlights the incremental updates introduced in subversion 3.5.5 of the O3 Deep Research prompt system.
+This document outlines the incremental updates between versions 3.5.4 and 3.5.5 of the O3 Deep Research system.
 
-| Area | v3.5.4 | v3.5.5 | Impact | Priority |
-|------|-------|-------|--------|----------|
-| Simulation | Basic failure table | Added heartbeat and cache recovery examples | Minor | Medium |
-| Governance | Concept only | Formalized heartbeat interval and compliance checks | Minor | Medium |
-| Testing | Routing diff prompt | Added schema mutation prompt | Minor | Low |
-| Documentation | Version 3.5.4 references | Updated to 3.5.5 with integration links | Patch | Low |
+## Key Updates
+- Added schema diff golden prompt for ConfigAgent
+- Expanded GovernanceAgent overview with heartbeat logging details
+- Enhanced 72-hour simulation logs with heartbeat failure example
+- Updated documentation links to reference the O3 Integration Guide
 
-- Expanded log snippets in the 72-hour simulation.
-- Introduced schema mutation test case under golden prompts.
-- Added Compliance checks section to GovernanceAgent overview.
+## Impact
+- **Documentation**: clearer governance setup and simulation tracing
+- **Testing**: new golden prompt ensures schema mutations are validated
+
+No breaking changes were introduced. Systems using v3.5.4 can upgrade seamlessly to v3.5.5.

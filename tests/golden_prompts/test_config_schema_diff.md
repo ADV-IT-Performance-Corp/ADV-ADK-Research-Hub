@@ -2,13 +2,14 @@
 <!-- markdownlint-disable MD001 -->
 
 ### INPUT
-ConfigAgent receives an updated schema for campaign settings. Summarize the diff and confirm validation steps.
+The ConfigAgent receives a new schema with additional fields and modified defaults. Produce a YAML diff and highlight compatibility warnings.
 
 ### EXPECTED
-- Highlights added and removed fields in YAML format
-- Mentions running `validate_golden_prompts.sh`
-- References version 3.5.5
+- Shows added and removed fields in diff format
+- Warns if any required fields are missing
+- Sends `config_push` notification referencing version 3.5.5
 
 ### NOTES
 Prompt Kernel: v3.5.5
+
 **Tags:** config-agent, schema-diff

@@ -6,11 +6,10 @@ All notable changes to this project are documented in this file.
 ## [v3.5.5] — 2025-05-30
 
 ### ✨ Updates
-- Expanded 72h simulation with heartbeat recovery examples
-- Formalized GovernanceAgent compliance checks
-- Added schema mutation golden prompt
-- Cross-linked integration guide in README
-- Updated version metadata to 3.5.5
+- Added schema diff golden prompt for ConfigAgent
+- Expanded GovernanceAgent docs with heartbeat section
+- Extended 72h simulation log entries
+- Updated documentation links and version metadata to 3.5.5
 
 ## [v3.5.4] — 2025-05-29
 
