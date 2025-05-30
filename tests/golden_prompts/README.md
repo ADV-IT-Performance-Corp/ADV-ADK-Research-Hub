@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.4)
+# Golden Prompts (v3.5.5)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
@@ -19,6 +19,8 @@ Golden prompts are used to:
 | `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | Memory access; Reflection loops; Performance learning |
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | KPI tracking; Content strategy; Performance optimization |
 | `test_config_adjustment.md`  | Tests configuration updates and schema diffs | ConfigAgent validation; Self-reflection |
+| `test_config_routing_diff.md` | Validates routing table adjustments | ConfigAgent diff summary; Alert routing |
+| `test_config_schema_diff.md` | Tests schema updates | ConfigAgent validation; YAML diff |
 
 ## Usage
 
@@ -37,7 +39,7 @@ bash scripts/validate_golden_prompts.sh
 
 ## Versioning
 
-- **Current Version**: 3.5.4
+- **Current Version**: 3.5.5
 - **Compatibility**: O3 Prompt Kernel v3.5.0+
 - **Last Updated**: 2025-05-22
 

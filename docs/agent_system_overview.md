@@ -68,4 +68,6 @@ used by more advanced agents.
 - **Phase 3: Self-Tuning and Scaling (6–12 months)** – Add ConfigAgent and automated prompt evolution across all agents.
 
 ## Diagrams
-See architectural diagrams in [prompt kernel](prompt/prompt_kernel_v3.5.md#module-map).
+The 21 May prompt introduced a sequential flow diagram showing Research → Content → Campaign → Optimization → Analytics. See the [prompt kernel](prompt/prompt_kernel_v3.5.md#module-map) for visuals.
+
+For connection instructions refer to the [Integration Guide](integration_guide_o3.md).
