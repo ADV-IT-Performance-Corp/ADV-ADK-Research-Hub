@@ -83,6 +83,6 @@ This repository serves as the knowledge foundation for the O3 Deep Research syst
    - Use the provided structure for consistent output formatting
 
 ## Version Information
-- **Current Version:** 3.0
-- **Last Updated:** 2025-05-20
+- **Current Version:** 3.5.7
+- **Last Updated:** 2025-06-01
 - **Compatibility:** Designed for use with O3 Deep Research V3.0 and above
