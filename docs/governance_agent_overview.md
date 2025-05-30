@@ -26,3 +26,5 @@ The GovernanceAgent listens on the same Pub/Sub bus used for inter-agent message
 3. If no response, retry twice then send an `escalate` message to the strategist
 
 All escalation events are captured in a persistent audit log. Example entries are shown in the [72-hour simulation](simulations/72hr_campaign_sim.md#sample-log-snippet).
+
+For repository setup, see the [Integration Guide](integration_guide_o3.md).

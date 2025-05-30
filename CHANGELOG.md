@@ -3,6 +3,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.5] — 2025-06-01
+
+### ✨ Updates
+- Expanded 72h simulation logs and recovery steps
+- Added config schema diff golden prompt
+- Linked integration guide from governance docs
+- Bumped version metadata and CI workflow to 3.5.5
+
 ## [v3.5.4] — 2025-05-29
 
 ### ✨ Updates
