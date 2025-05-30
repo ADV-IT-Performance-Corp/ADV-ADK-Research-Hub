@@ -1,12 +1,12 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.5-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.6-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.5)
+## 🚀 Key Features (v3.5.6)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
@@ -27,6 +27,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [Documentation Index](docs/tree.md) - Overview of all docs
+- [Risk Mitigation](docs/risk_mitigation.md) - Measures for drift and reliability
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
@@ -37,58 +38,27 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (v3.5.5)
-├── .github/               # GitHub configuration and workflows
+## 📂 Repository Structure (v3.5.6)
+```text
+.
+├── .github/
 │   └── workflows/
-├── docs/                  # Project documentation
-│   ├── prompt/            # Prompt engineering docs
-│   ├── meta/              # Metadata and release notes
+├── src/
+│   ├── core/
+│   └── agents/
+├── config/
+│   └── settings.yaml
+├── docs/
+│   ├── prompt/
+│   ├── meta/
 │   ├── performance_marketing/
 │   ├── RESEARCH_GOALS.md
 │   ├── METHODOLOGY.md
 │   └── source_index.json
-├── tests/                 # Test specifications
-│   └── golden_prompts/    # Prompt validation cases
-├── AGENTS.md              # ChatGPT usage rules
-├── CHANGELOG.md           # Version history
-└── README.md              # Project overview
-
-```
-.
-├── .github/                     # GitHub configurations
-│   └── workflows/               # CI/CD workflows
-│       └── validate_repo.yml    # Repository validation
-├── docs/                        # Documentation
-│   ├── prompt/                  # Prompt engineering
-│   │   ├── prompt_kernel_v3.5.md  # Core prompt (latest)
-│   │   └── prompt_kernel_v3.4.md  # Legacy prompt
-│   ├── meta/                    # System metadata
-│   │   ├── prompt_evolution_log/ # Version history
-│   │   │   └── v3.5.yaml       # v3.5 evolution log
-│   │   ├── meta_evaluation.json # Evaluation framework
-│   │   └── release_checklist_v3.5.md
-│   ├── performance_marketing/   # Marketing strategies
-│   ├── RESEARCH_GOALS.md        # Research objectives
-│   ├── METHODOLOGY.md          # Research methodology
-│   └── source_index.json       # Reference index
-├── tests/                       # Test specifications
-│   └── test_o3_context.json    # Context validation
-├── scripts/                     # Helper scripts
-│   ├── setup_env.sh            # Install local tooling
-│   └── validate_golden_prompts.sh  # Golden prompt checker
-├── CHANGELOG.md                # Version history
-└── README.md                   # Project overview
-    │   ├── mckinsey_ai_marketing.md
-    │   ├── neurogym_neuromarketing.md
-    │   └── reforge_growth_loops.md
-    ├── meta/                    # Meta-level documentation
-    │   ├── prompt_genome.json   # Prompt lineage and evolution
-    │   └── meta_evaluation_template.md  # Evaluation framework
-    ├── prompt/                  # Core prompt definitions
-    │   ├── prompt_kernel_v3.4.md  # V3.4 Unified Final prompt
-    │   └── prompt_kernel_v3.md   # V3.2 (deprecated)
-    └── simulations/             # Simulation scenarios
-        └── 72hr_campaign_sim.md # 72-hour PPC simulation
+├── tests/
+│   └── golden_prompts/
+├── scripts/
+└── README.md
 ```
 
 ## 🚀 Quick Start

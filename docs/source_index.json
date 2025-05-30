@@ -669,11 +669,21 @@
       ],
       "version": "3.5.5",
       "type": "documentation"
+    },
+    {
+      "name": "Risk Mitigation Guide",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/risk_mitigation.md",
+      "tags": [
+        "risk",
+        "governance"
+      ],
+      "version": "3.5.6",
+      "type": "documentation"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-30",
-    "version": "3.5.5"
+    "last_updated": "2025-05-31",
+    "version": "3.5.6"
   }
 }
