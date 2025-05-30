@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # Basic offline link validation using a cached list.
 # Links not in cache are skipped with a warning.
 
