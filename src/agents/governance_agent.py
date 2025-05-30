@@ -1,4 +1,4 @@
-from base_agent import BaseAgent
+from core.base_agent import BaseAgent
 
 class GovernanceAgent(BaseAgent):
     """Prototype agent to monitor other agents and handle escalation."""
