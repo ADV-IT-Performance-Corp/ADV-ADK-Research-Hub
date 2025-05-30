@@ -19,6 +19,7 @@ Golden prompts are used to:
 | `test_memory_reflection.md`  | Tests memory retrieval and meta-reflection capabilities | Memory access; Reflection loops; Performance learning |
 | `test_kpi_optimization.md`   | Validates KPI-driven optimization strategies | KPI tracking; Content strategy; Performance optimization |
 | `test_config_adjustment.md`  | Tests configuration updates and schema diffs | ConfigAgent validation; Self-reflection |
+| `test_config_routing_diff.md` | Validates routing table adjustments | ConfigAgent diff summary; Alert routing |
 
 ## Usage
 
