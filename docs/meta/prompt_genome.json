@@ -1,10 +1,10 @@
 {
   "prompt_genome": {
-    "last_updated": "2025-05-30",
+    "last_updated": "2025-05-31",
     "prompts": [
       {
-        "id": "o3-deep-research-v3.5.5",
-        "name": "O3 Deep Research V3.5.5",
+        "id": "o3-deep-research-v3.5.6",
+        "name": "O3 Deep Research V3.5.6",
         "description": "Advanced core prompt with multi-agent coordination, ReAct patterns, and enhanced CI validation",
         "created_at": "2025-05-22",
         "status": "active",
@@ -144,6 +144,10 @@
     {
       "tag": "v3.4",
       "notes": "placeholder"
+    },
+    {
+      "tag": "v3.5.6",
+      "notes": "core utilities added and agents restructured"
     }
   ]
 }
