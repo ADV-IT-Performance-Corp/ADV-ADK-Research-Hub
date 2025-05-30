@@ -29,9 +29,8 @@ Integrated the following 24 sources into `/docs/source_index.json` and created `
 
 Codex Commit: `feat(sources): added external documentation references`
 
-## [2025-05-30] Source Organization and metadata update
+## [2025-05-30] Update source index schema
+- Added `used_by`, `relevance`, and `description` fields for external sources
+- Updated `last_updated` metadata
+Codex Commit: `chore(docs): enrich source index metadata`
 
-- Categorized external sources into subfolders
-- Added automation script and offline link cache
-
-Codex Commit: `feat(docs): organize sources and add automation`
