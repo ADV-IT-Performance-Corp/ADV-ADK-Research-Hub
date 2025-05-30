@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "IBM Developer – AI Technology",
+      "name": "IBM Developer \u2013 AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": [
         "ibm",
@@ -280,11 +280,344 @@
       ],
       "version": "3.5.4",
       "type": "documentation"
+    },
+    {
+      "name": "Google Docs API",
+      "type": "external",
+      "url": "https://developers.google.com/docs",
+      "description": "Google Docs API enables structured document creation, formatting, and semantic content generation from code. In the context of ADK agent workflows, it can act as both a **semantic memory channel** and **document-based orchestration endpoint**.",
+      "used_by": [
+        "ResearchAgent",
+        "ConfigAgent",
+        "ContentAgent"
+      ],
+      "relevance": [
+        "memory",
+        "grounding",
+        "coordination"
+      ]
+    },
+    {
+      "name": "LangChain Docs",
+      "type": "external",
+      "url": "https://docs.langchain.com",
+      "description": "LangChain provides modular utilities for building language model powered applications. ADK agents can leverage these components for chaining tasks and managing context windows.",
+      "used_by": [
+        "ConfigAgent",
+        "ResearchAgent"
+      ],
+      "relevance": [
+        "prompting",
+        "coordination",
+        "memory"
+      ]
+    },
+    {
+      "name": "OpenAI Cookbook",
+      "type": "external",
+      "url": "https://github.com/openai/openai-cookbook",
+      "description": "The OpenAI Cookbook contains practical examples and code snippets for using OpenAI models effectively. It offers recipes for prompt engineering, embedding usage, and data pipelines.",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
+      "relevance": [
+        "prompting",
+        "memory",
+        "fallback"
+      ]
+    },
+    {
+      "name": "Claude API Docs",
+      "type": "external",
+      "url": "https://docs.anthropic.com",
+      "description": "Official documentation for the Anthropic Claude API, covering endpoints, prompt guidelines, and response formats.",
+      "used_by": [
+        "ContentAgent",
+        "ConfigAgent",
+        "ResearchAgent"
+      ],
+      "relevance": [
+        "prompting",
+        "grounding",
+        "fallback"
+      ]
+    },
+    {
+      "name": "A2A Protocol",
+      "type": "external",
+      "url": "https://github.com/AutogenStudio/autogen",
+      "description": "The A2A (Agent-to-Agent) protocol defines a standard for multi-agent communication and coordination. It enables reliable message passing and task delegation among autonomous agents.",
+      "used_by": [
+        "ConfigAgent",
+        "CampaignAgent"
+      ],
+      "relevance": [
+        "coordination",
+        "orchestration"
+      ]
+    },
+    {
+      "name": "n8n Docs",
+      "type": "external",
+      "url": "https://docs.n8n.io",
+      "description": "n8n is a workflow automation tool with a node-based interface and rich API. Its documentation provides guidelines for integrating external services.",
+      "used_by": [
+        "ConfigAgent",
+        "IntegrationAgent"
+      ],
+      "relevance": [
+        "coordination",
+        "automation"
+      ]
+    },
+    {
+      "name": "MCP Server API",
+      "type": "external",
+      "url": "https://mcp-docs.readthedocs.io/",
+      "description": "The MCP Server API exposes endpoints for storing, retrieving, and managing agent data across distributed services.",
+      "used_by": [
+        "ConfigAgent",
+        "Infra"
+      ],
+      "relevance": [
+        "orchestration",
+        "memory"
+      ]
+    },
+    {
+      "name": "Airtable API",
+      "type": "external",
+      "url": "https://airtable.com/developers/web/api/introduction",
+      "description": "Airtable's API allows structured data storage with spreadsheet-like ease. ADK agents can use it to persist results and share records across workflows.",
+      "used_by": [
+        "ResearchAgent",
+        "ConfigAgent"
+      ],
+      "relevance": [
+        "memory",
+        "coordination"
+      ]
+    },
+    {
+      "name": "Vertex AI Grounding",
+      "type": "external",
+      "url": "https://cloud.google.com/vertex-ai/docs/generative-ai/grounding",
+      "description": "Vertex AI Grounding describes how to anchor generative outputs to trusted data sources using Google Cloud services.",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
+      "relevance": [
+        "grounding",
+        "prompting"
+      ]
+    },
+    {
+      "name": "Amplitude Docs",
+      "type": "external",
+      "url": "https://www.docs.developers.amplitude.com",
+      "description": "Amplitude provides product analytics for measuring user engagement and conversion. Their developer docs outline APIs for ingesting events and querying insights.",
+      "used_by": [
+        "AnalyticsAgent",
+        "OptimizationAgent"
+      ],
+      "relevance": [
+        "analytics",
+        "performance"
+      ]
+    },
+    {
+      "name": "Ray Serve Docs",
+      "type": "external",
+      "url": "https://docs.ray.io/en/latest/serve/",
+      "description": "Ray Serve provides scalable microservice orchestration for deploying machine learning models and agents.",
+      "used_by": [
+        "ConfigAgent",
+        "CampaignAgent"
+      ],
+      "relevance": [
+        "orchestration",
+        "performance"
+      ]
+    },
+    {
+      "name": "MLflow",
+      "type": "external",
+      "url": "https://mlflow.org/docs/latest/index.html",
+      "description": "MLflow is a platform for managing the end-to-end machine learning lifecycle, including experiment tracking and model registry.",
+      "used_by": [
+        "AnalyticsAgent",
+        "OptimizationAgent"
+      ],
+      "relevance": [
+        "prompt lineage",
+        "tuning"
+      ]
+    },
+    {
+      "name": "Weights & Biases Docs",
+      "type": "external",
+      "url": "https://docs.wandb.ai/",
+      "description": "Weights & Biases provides experiment tracking and visualization tools for machine learning and prompt development.",
+      "used_by": [
+        "ConfigAgent",
+        "AnalyticsAgent"
+      ],
+      "relevance": [
+        "CI",
+        "metrics",
+        "tuning"
+      ]
+    },
+    {
+      "name": "FastAPI Docs",
+      "type": "external",
+      "url": "https://fastapi.tiangolo.com/",
+      "description": "FastAPI is a modern web framework for building APIs with Python. It provides asynchronous request handling and automatic documentation.",
+      "used_by": [
+        "All agents"
+      ],
+      "relevance": [
+        "api",
+        "coordination"
+      ]
+    },
+    {
+      "name": "Helm Charts (K8s)",
+      "type": "external",
+      "url": "https://helm.sh/docs/",
+      "description": "Helm is a package manager for Kubernetes that simplifies deployment of complex applications using chart templates.",
+      "used_by": [
+        "ConfigAgent",
+        "Infra"
+      ],
+      "relevance": [
+        "deployment",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Anthropic Prompting Guide",
+      "type": "external",
+      "url": "https://docs.anthropic.com/claude/prompting-best-practices",
+      "description": "Anthropic's guide outlines best practices for constructing prompts with Claude, including chain-of-thought, embedding usage, and framing techniques.",
+      "used_by": [
+        "ResearchAgent",
+        "ContentAgent"
+      ],
+      "relevance": [
+        "prompting",
+        "grounding"
+      ]
+    },
+    {
+      "name": "DeepMind Gopher Prompt Lab",
+      "type": "external",
+      "url": "https://arxiv.org/abs/2202.11382",
+      "description": "The Gopher Prompt Lab paper explores methods for reasoning, scoring, and prompt mutation to achieve better LLM responses.",
+      "used_by": [
+        "CampaignAgent",
+        "ConfigAgent"
+      ],
+      "relevance": [
+        "reflection",
+        "mutation"
+      ]
+    },
+    {
+      "name": "FLAN-T5 Prompt Patterns",
+      "type": "external",
+      "url": "https://github.com/google-research/FLAN",
+      "description": "FLAN-T5 examples highlight cross-task generalization and demonstrate how prompts map to various downstream tasks.",
+      "used_by": [
+        "ResearchAgent"
+      ],
+      "relevance": [
+        "task grounding"
+      ]
+    },
+    {
+      "name": "CognitiveLoad Design",
+      "link": "https://www.nngroup.com/topic/cognitive-load/",
+      "tags": [
+        "behavioral prompting"
+      ],
+      "type": "external"
+    },
+    {
+      "name": "TinyML / Edge AI",
+      "type": "external",
+      "url": "https://www.tinyml.org/",
+      "description": "TinyML explores machine learning techniques for resource-constrained devices, enabling on-device inference and quick adaptation.",
+      "used_by": [
+        "OptimizationAgent",
+        "ConfigAgent"
+      ],
+      "relevance": [
+        "adaptive control",
+        "fallback"
+      ]
+    },
+    {
+      "name": "Apple ML APIs",
+      "type": "external",
+      "url": "https://developer.apple.com/machine-learning/",
+      "description": "Apple's machine learning APIs offer tools for deploying models on iOS and macOS with privacy-focused approaches.",
+      "used_by": [
+        "EngagementAgent"
+      ],
+      "relevance": [
+        "fallback",
+        "on-device"
+      ]
+    },
+    {
+      "name": "AI Fairness 360 Toolkit",
+      "type": "external",
+      "url": "https://aif360.readthedocs.io/",
+      "description": "IBM's AI Fairness 360 Toolkit provides metrics and algorithms to detect and mitigate bias in AI models.",
+      "used_by": [
+        "AnalyticsAgent",
+        "ConfigAgent"
+      ],
+      "relevance": [
+        "bias",
+        "scoring"
+      ]
+    },
+    {
+      "name": "GDPR Prompting Compliance",
+      "type": "external",
+      "url": "https://gdpr.eu",
+      "description": "GDPR resources provide guidelines on data privacy and consent requirements that impact conversational AI and user messaging.",
+      "used_by": [
+        "EngagementAgent",
+        "ConfigAgent"
+      ],
+      "relevance": [
+        "compliance",
+        "constraints"
+      ]
+    },
+    {
+      "name": "OpenPrompt Evaluator",
+      "type": "external",
+      "url": "https://github.com/thunlp/OpenPrompt",
+      "description": "OpenPrompt provides a framework for comparing prompt versions and evaluating language model outputs.",
+      "used_by": [
+        "ConfigAgent",
+        "PromptOps"
+      ],
+      "relevance": [
+        "validation",
+        "scoring"
+      ]
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-05-25",
+    "last_updated": "2025-05-30",
     "version": "3.5.4"
   }
 }
