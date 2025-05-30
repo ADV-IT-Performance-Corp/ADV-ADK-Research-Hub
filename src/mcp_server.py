@@ -8,7 +8,6 @@ from agents.config_agent import ConfigAgent
 from agents.governance_agent import GovernanceAgent
 from core.event_bus import AsyncEventBus
 
-
 class MCPServer:
     def __init__(self) -> None:
         self.bus = AsyncEventBus()

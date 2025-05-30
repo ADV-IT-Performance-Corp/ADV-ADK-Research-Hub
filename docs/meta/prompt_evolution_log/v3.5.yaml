@@ -15,5 +15,6 @@ subversions:
     summary: restructured source tree with core utilities and new agent stubs
   - tag: 3.5.7
     summary: async event bus, persistent memory, Docker deployment
+    summary: added AsyncEventBus, logging utilities and example workflow
 notes:
   - 'Version 3.5.5 expands simulation logs and adds schema diff prompt.'

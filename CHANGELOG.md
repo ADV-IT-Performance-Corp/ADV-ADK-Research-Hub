@@ -12,6 +12,14 @@ All notable changes to this project are documented in this file.
 - Added risk and drift mitigation guide and linked in README
 - Bumped source index metadata to 3.5.7
 
+## [v3.5.7] — 2025-06-01
+
+### ✨ Updates
+- Added `AsyncEventBus` and logging utilities
+- Created `examples/` with a simple workflow script
+- Expanded configuration settings
+- Updated documentation and version metadata to 3.5.7
+
 ## [v3.5.6] — 2025-05-31
 
 ### ✨ Updates

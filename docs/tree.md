@@ -11,6 +11,8 @@ ADK/
 ├── tests/
 │   ├── golden_prompts/
 │   └── context/
+├── examples/
+│   └── simple_workflow.py
 └── docs/
     ├── ADK_quickstart.md
     ├── adk_docs_snapshot.md
@@ -18,6 +20,9 @@ ADK/
     ├── integration_guide_o3.md
     ├── source_index.json
     ├── o3_deep_research_prompt.md
+    ├── meta/
+    │   ├── version_diff_v3.5.6_to_v3.5.7.md
+    │   └── ...
     ├── tree.md
     └── performance_marketing/
         ├── google_insights_summary.md

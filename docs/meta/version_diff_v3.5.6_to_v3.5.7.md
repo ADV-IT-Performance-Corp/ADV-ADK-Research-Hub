@@ -10,3 +10,10 @@
 - GovernanceAgent now tracks heartbeats
 - Updated repository documentation and version badges to 3.5.7
 
+- `AsyncEventBus` for concurrent agent messaging
+- `logger` utility for consistent logs
+- Example workflow in `examples/simple_workflow.py`
+- Expanded `settings.yaml` with logging and bus options
+
+## Changed
+- Updated docs and metadata to version 3.5.7

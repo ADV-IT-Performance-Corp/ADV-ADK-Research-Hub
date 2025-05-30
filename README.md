@@ -9,6 +9,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ## 🚀 Key Features (v3.5.7)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
+- **Asynchronous Event Bus**: Async publish/subscribe layer for agent communication
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
 - **Self-Improving Architecture**: Built-in feedback loops and memory systems
 - **Async Event Bus**: Publish/subscribe communication with asyncio

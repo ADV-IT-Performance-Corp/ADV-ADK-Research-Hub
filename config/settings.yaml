@@ -3,3 +3,6 @@ prompt_version: 3.5.7
 routing_weight: 1
 bus: async
 memory_path: memory.json
+log_level: INFO
+event_bus: async
+max_queue_size: 100

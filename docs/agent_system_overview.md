@@ -39,6 +39,12 @@ Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
 `src/` directory for reference. These stubs demonstrate the minimal interface
 used by more advanced agents.
 
+## Event Bus
+
+Agents communicate through a lightweight publish/subscribe layer. Version 3.5.7
+introduces an **AsyncEventBus** using Python's `asyncio` so agents can handle
+messages concurrently while logging activity for easier debugging.
+
 ## Agent Functional Mapping
 
 | Agent | Business Function | LLM Role | ADK Modules | Prompt Type | Feedback Loop Type |
