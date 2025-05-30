@@ -54,4 +54,22 @@ This document outlines a simulated 72-hour PPC campaign lifecycle to test and va
 |-----------|-------|-----------------|
 | Day 1 14:00 | Ad disapproval on Meta | GovernanceAgent triggers policy audit; CampaignAgent swaps creative |
 | Day 2 09:30 | API timeout fetching metrics | OptimizationAgent retries after 5 minutes and logs warning |
+| Day 2 17:15 | LinkedIn CTR < 0.5% | OptimizationAgent disables underperforming ad set and reallocates budget |
+| Day 3 08:00 | Cost spike detected | CampaignAgent lowers bids and pings GovernanceAgent for review |
 | Day 3 16:45 | ROAS drop > 20% | ConfigAgent rolls back to previous prompt version and notifies strategist |
+| Day 3 20:00 | ContentAgent heartbeat missed | GovernanceAgent restarts agent and logs escalation |
+| Day 3 21:30 | Semantic cache mismatch detected | ConfigAgent refreshes cache; ResearchAgent supplies updated keywords |
+
+See [GovernanceAgent Overview](../governance_agent_overview.md) for escalation logic details.
+
+## Sample Log Snippet
+
+```text
+2025-05-21T14:00Z GovernanceAgent  policy_audit triggered on Meta ad disapproval
+2025-05-22T09:30Z OptimizationAgent retry metrics fetch (attempt=2)
+2025-05-22T17:15Z OptimizationAgent disabled LinkedIn ad set #32 due to low CTR
+2025-05-23T08:00Z CampaignAgent reduced bids by 15% after cost spike
+2025-05-23T16:45Z ConfigAgent restored prompt v3.5.3 and notified strategist
+2025-05-23T20:00Z GovernanceAgent restarted ContentAgent after missed heartbeat
+2025-05-23T21:30Z ConfigAgent flushed semantic cache; ResearchAgent re-supplied keywords
+```

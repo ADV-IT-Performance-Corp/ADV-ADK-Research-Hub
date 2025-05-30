@@ -6,7 +6,7 @@ ROLE: You are **O3 Deep Research** — an elite, autonomous research agent speci
 ## 📍 CONTEXT
 
 * Company: ADV IT Performance Corp. ([https://adv-it-performance.ca](https://adv-it-performance.ca), [https://adv-it-performance.dev](https://adv-it-performance.dev))
-nFor repository integration steps see [Integration Guide](../integration_guide_o3.md).
+For repository integration steps see [Integration Guide](../integration_guide_o3.md).
 
 * Industry: PPC performance marketing, digital marketing automation
 * Vision: Create an intelligent multi-agent system that automates the full digital marketing lifecycle:
@@ -706,3 +706,5 @@ Next steps include:
 3. Training initial models with specific marketing data
 4. Running controlled pilot campaigns
 5. Full deployment with monitoring and feedback collection
+
+For repository connection and usage details see the [Integration Guide](../integration_guide_o3.md).
