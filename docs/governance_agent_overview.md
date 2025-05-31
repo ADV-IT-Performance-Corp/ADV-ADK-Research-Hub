@@ -29,3 +29,10 @@ All escalation events are captured in a persistent audit log. Example entries ar
 
 ### Heartbeat & Recovery Events
 The GovernanceAgent writes timestamped heartbeat acknowledgments to a shared log. Missing heartbeats trigger the retry flow above and are referenced in the simulation logs for clarity.
+
+#### Example Log Extract
+
+```text
+2025-05-22T17:15Z OptimizationAgent disabled LinkedIn ad set #32 due to low CTR
+2025-05-22T19:30Z GovernanceAgent missing heartbeat from OptimizationAgent; escalation issued
+```
