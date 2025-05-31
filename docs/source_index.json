@@ -660,6 +660,17 @@
       "type": "external"
     },
     {
+      "name": "World Agent Integration Blueprint",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/world_agent_integration.md",
+      "tags": [
+        "integration",
+        "event-bus",
+        "v3.5.7"
+      ],
+      "version": "3.5.7",
+      "type": "documentation"
+    },
+    {
       "name": "Version Diff v3.5.4 to v3.5.5",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
       "tags": [
