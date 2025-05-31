@@ -27,6 +27,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
+- [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
 - [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
