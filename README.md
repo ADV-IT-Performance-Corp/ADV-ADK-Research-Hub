@@ -114,6 +114,8 @@ python3 scripts/update_source_index.py
 bash scripts/offline_link_check.sh
 ```
 
+Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
+
 ### For Developers
 1. Clone this repository:
 
