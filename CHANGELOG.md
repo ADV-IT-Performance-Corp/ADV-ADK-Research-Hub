@@ -10,6 +10,7 @@ All notable changes to this project are documented in this file.
 - Created `examples/` with a simple workflow script
 - Expanded configuration settings
 - Updated documentation and version metadata to 3.5.7
+- Added `world_agent_integration.md` integration guide
 
 ## [v3.5.6] — 2025-05-31
 
