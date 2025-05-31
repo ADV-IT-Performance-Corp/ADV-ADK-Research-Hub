@@ -45,6 +45,14 @@ Agents communicate through a lightweight publish/subscribe layer. Version 3.5.7
 introduces an **AsyncEventBus** using Python's `asyncio` so agents can handle
 messages concurrently while logging activity for easier debugging.
 
+Example usage is shown in [examples/simple_workflow.py](../examples/simple_workflow.py):
+
+```python
+event_bus = AsyncEventBus()
+event_bus.subscribe("start_research", handle_research)
+await event_bus.publish("start_research", "email marketing trends")
+```
+
 ## Agent Functional Mapping
 
 | Agent | Business Function | LLM Role | ADK Modules | Prompt Type | Feedback Loop Type |
@@ -55,11 +63,9 @@ messages concurrently while logging activity for easier debugging.
 | EngagementAgent | Email flows, retargeting | Motivator | routing_agent, tone_modeler | Motivational adaptive | Reforge loop scoring |
 | OptimizationAgent | Ad tuning and performance balancing | Calibrator | realtime_feedback, metric_map | Self-calibrating prompt | Metric-weighted ROAS tuning |
 | AnalyticsAgent | Performance tracking and reporting | Interpreter | insight_collector, delta_tracker | Reflective analysis | Periodic summary validation |
-| GovernanceAgent | Compliance and recovery | Supervisor | heartbeat_monitor | Escalation prompts | Policy audit log |
+| GovernanceAgent | Compliance monitoring & escalation | Overseer | heartbeat_monitor | Policy prompts | Alert & retry logic |
 | ConfigAgent | Prompt config and routing tuning | Adjuster | config_mutator, score_aligner | Schema-driven modifiers | Prompt genome refinement |
-| GovernanceAgent | Compliance monitoring and escalation | Overseer | heartbeat_checker | Policy gate | Alert & retry logic |
 | MCPServer | Orchestration layer across agents | Coordinator | mcp_server, routing_table | Routing prompts | Cross-agent feedback |
-| GovernanceAgent | Compliance & escalation | Overseer | governance_module | Policy prompts | Heartbeat monitoring |
 
 ## Development Pipeline
 
