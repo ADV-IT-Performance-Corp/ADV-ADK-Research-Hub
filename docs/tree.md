@@ -34,4 +34,5 @@ ADK/
         ├── neurogym_neuromarketing.md
         └── reforge_growth_loops.md
     ├── config_agent_overview.md
+    ├── world_agent_integration.md
 ```
