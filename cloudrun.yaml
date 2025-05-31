@@ -1,0 +1,13 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: adk-agents
+spec:
+  template:
+    spec:
+      containers:
+      - image: gcr.io/your-project/adk:latest
+        command: ["python", "src/mcp_server.py"]
+        env:
+        - name: SETTINGS_PATH
+          value: /app/config/settings.yaml

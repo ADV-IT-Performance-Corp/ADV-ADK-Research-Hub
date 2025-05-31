@@ -669,6 +669,17 @@
       ],
       "version": "3.5.5",
       "type": "documentation"
+    },
+    {
+      "name": "Risk & Drift Mitigation Guide",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/risk_and_drift_mitigation.md",
+      "tags": [
+        "governance",
+        "risk",
+        "prompt-ops"
+      ],
+      "version": "3.5.7",
+      "type": "documentation"
     }
   ],
   "metadata": {

@@ -181,6 +181,7 @@
     },
     {
       "tag": "v3.5.7",
+      "notes": "async event bus, persistent memory, containerization"
       "notes": "async event bus, logging and example workflow"
     }
   ]

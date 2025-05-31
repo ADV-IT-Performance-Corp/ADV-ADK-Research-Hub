@@ -12,6 +12,10 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - **Asynchronous Event Bus**: Async publish/subscribe layer for agent communication
 - **Advanced Prompt Patterns**: Implements ReAct, Chain-of-Thought, and Few-shot prompting
 - **Self-Improving Architecture**: Built-in feedback loops and memory systems
+- **Async Event Bus**: Publish/subscribe communication with asyncio
+- **Persistent Memory**: File-backed memory store for agent knowledge
+- **Container Ready**: Dockerfile and Cloud Run example for deployment
+- **Risk & Drift Guide**: Documented mitigation strategies
 - **Enterprise-Grade CI/CD**: Automated validation and deployment pipelines
 - **Comprehensive Documentation**: Clear guidelines and evolution tracking
 
@@ -27,6 +31,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
+- [Risk & Drift Mitigation Guide](docs/risk_and_drift_mitigation.md) - Operational safeguards
 - [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
@@ -58,8 +63,6 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ├── tests/
 │   └── golden_prompts/
 ├── scripts/
-├── examples/
-│   └── simple_workflow.py
 └── README.md
 ```
 
@@ -80,10 +83,10 @@ Key references:
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
 
-Run the demo workflow:
-
+### Run via Docker
 ```bash
-python examples/simple_workflow.py
+docker build -t adk .
+docker run --rm adk
 ```
 
 ## 🛠️ CI/CD Validation

@@ -5,16 +5,19 @@ from agents.engagement_agent import EngagementAgent
 from agents.optimization_agent import OptimizationAgent
 from agents.analytics_agent import AnalyticsAgent
 from agents.config_agent import ConfigAgent
-
+from agents.governance_agent import GovernanceAgent
+from core.event_bus import AsyncEventBus
 
 class MCPServer:
     def __init__(self) -> None:
+        self.bus = AsyncEventBus()
         self.research_agent = ResearchAgent()
         self.content_agent = ContentAgent()
         self.engagement_agent = EngagementAgent()
         self.optimization_agent = OptimizationAgent()
         self.analytics_agent = AnalyticsAgent()
         self.config_agent = ConfigAgent()
+        self.governance_agent = GovernanceAgent(self.bus)
 
     def route(self, task: str, payload: str) -> str:
         if task == "research":
@@ -29,6 +32,8 @@ class MCPServer:
             return self.analytics_agent.run(payload)
         if task == "config":
             return self.config_agent.run(payload)
+        if task == "governance":
+            return self.governance_agent.run(payload)
         return f"Unknown task: {task}"
 
 
@@ -40,3 +45,4 @@ if __name__ == "__main__":
     print(server.route("optimize", "CTR"))
     print(server.route("analytics", "daily metrics"))
     print(server.route("config", ""))
+    server.governance_agent.send_heartbeat()
