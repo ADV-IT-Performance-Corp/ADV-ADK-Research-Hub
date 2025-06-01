@@ -293,6 +293,17 @@
       "type": "documentation"
     },
     {
+      "name": "Executive Summary",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/executive_summary.md",
+      "tags": [
+        "overview",
+        "strategy",
+        "summary"
+      ],
+      "version": "3.5.7",
+      "type": "documentation"
+    },
+    {
       "name": "A2A Protocol",
       "link": "https://github.com/AutogenStudio/autogen",
       "description": "The A2A (Agent-to-Agent) protocol defines a standard for multi-agent communication and coordination. It enables reliable message passing and task delegation among autonomous agents.",
