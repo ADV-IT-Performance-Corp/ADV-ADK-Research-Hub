@@ -80,6 +80,8 @@ Key references:
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
+- docs/executive_summary.md  # High-level system overview
+- docs/simulations/72hr_campaign_sim.md  # End-to-end lifecycle example
 
 Run the demo workflow:
 
