@@ -671,6 +671,16 @@
       "type": "documentation"
     },
     {
+      "name": "72-Hour PPC Campaign Simulation",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/simulations/72hr_campaign_sim.md",
+      "tags": [
+        "simulation",
+        "workflow"
+      ],
+      "version": "3.5.7",
+      "type": "documentation"
+    },
+    {
       "name": "Version Diff v3.5.4 to v3.5.5",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
       "tags": [
