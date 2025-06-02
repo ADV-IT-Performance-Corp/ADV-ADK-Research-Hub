@@ -144,7 +144,7 @@ jobs:
               fi
             done
           test -f docs/performance_marketing/reforge_growth_loops.md
-          test -f docs/prompt/prompt_kernel_v3.4.md
+          test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
 
       - name: Refresh Link Cache
