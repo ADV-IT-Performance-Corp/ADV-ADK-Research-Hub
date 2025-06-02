@@ -10,6 +10,6 @@ The ConfigAgent receives a routing weight update and must produce a diff summary
 - References version 3.5.5 in output
 
 ### NOTES
-Prompt Kernel: v3.5.5
+Prompt Kernel: v3.5.7
 
 **Tags:** config-agent, schema-diff

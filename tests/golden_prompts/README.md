@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.5)
+# Golden Prompts (v3.5.7)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
