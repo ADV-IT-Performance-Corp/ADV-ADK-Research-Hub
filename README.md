@@ -115,6 +115,7 @@ python3 scripts/update_source_index.py
 bash scripts/offline_link_check.sh
 python scripts/refresh_link_cache.py
 ```
+- `python scripts/refresh_link_cache.py` refreshes external link status.
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
