@@ -18,3 +18,9 @@ Two helper scripts streamline validation and development:
   ```
 
 Both scripts exit non‑zero on failure so they can be used in automation.
+
+* `refresh_link_cache.py` – Checks external documentation links and updates `docs/link_cache.txt` with the latest HTTP status codes:
+
+  ```bash
+  python scripts/refresh_link_cache.py
+  ```

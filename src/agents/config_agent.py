@@ -1,4 +1,4 @@
-from core.base_agent import BaseAgent
+from ..core.base_agent import BaseAgent
 from pathlib import Path
 import yaml
 

@@ -2,10 +2,13 @@
   "name": "adk-validation",
   "version": "1.0.0",
   "description": "CI helpers for ADK repo",
-  "dependencies": {},
   "scripts": {
     "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "lint:yaml": "yamllint .",
     "lint:json": "jq . somefile.json"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1",
+    "markdownlint-cli2-formatter-junit": "^0.0.13"
   }
 }

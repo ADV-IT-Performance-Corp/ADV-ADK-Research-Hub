@@ -26,6 +26,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
+- [Configuration Settings Reference](docs/config/settings_reference.md) - Details for `settings.yaml`
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
 - [Documentation Index](docs/tree.md) - Overview of all docs
@@ -122,6 +123,9 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
    ```bash
    git clone https://github.com/adv-ai/o3-deep-research-context.git
    ```
+
+2. The current release version is stored in the `VERSION` file and exposed as
+   `src.__version__` for programmatic access.
 
 ## 📚 Core References
 
