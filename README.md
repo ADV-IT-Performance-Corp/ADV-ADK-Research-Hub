@@ -134,6 +134,16 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
 3. The current release version is stored in the `VERSION` file and exposed as
    `src.__version__` for programmatic access.
 
+### Pre-commit
+Install the pre-commit framework and set up the hooks:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Running `pre-commit` will execute markdownlint, yamllint, golden prompt validation, and unit tests.
+
 ## 📚 Core References
 
 - [Google ADK Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
