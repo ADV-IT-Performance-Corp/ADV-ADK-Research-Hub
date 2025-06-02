@@ -1,6 +1,6 @@
 # Default configuration for ADK agents
-prompt_version: 3.5.7
-routing_weight: 1
-log_level: INFO
-event_bus: async
-max_queue_size: 100
+prompt_version: 3.5.7  # prompt kernel version
+routing_weight: 1      # weight for ConfigAgent routing
+log_level: INFO        # default logging level
+event_bus: async       # event bus type (async or sync)
+max_queue_size: 100    # max event queue length

@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/igorshubovych/markdownlint-cli2
+    rev: v0.7.0
+    hooks:
+      - id: markdownlint
+        name: markdownlint
+        entry: markdownlint-cli2
+        language: node
+        pass_filenames: false
+        args: ['docs/**/*.md', '!docs/legacy/**']
+  - repo: local
+    hooks:
+      - id: yamllint
+        name: yamllint
+        entry: bash -c 'yamllint config/settings.yaml $(find docs -name "*.yaml")'
+        language: system
+        pass_filenames: false
+      - id: unit-tests
+        name: unit-tests
+        entry: python -m unittest discover tests
+        language: system
+        pass_filenames: false
