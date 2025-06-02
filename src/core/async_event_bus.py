@@ -1,19 +1,14 @@
 import asyncio
 from collections import defaultdict
-from typing import Awaitable, Callable, TypeAlias
-
-AsyncSubscriber: TypeAlias = Callable[[str], Awaitable[None]]
-
-# Callback type alias for async subscribers
-AsyncSubscriber = Callable[[str], Awaitable[None]]
+from .types import AsyncCallback
 
 class AsyncEventBus:
     """Simple asyncio-based publish/subscribe bus."""
 
     def __init__(self) -> None:
-        self.subscribers: dict[str, list[AsyncSubscriber]] = defaultdict(list)
+        self.subscribers: dict[str, list[AsyncCallback]] = defaultdict(list)
 
-    def subscribe(self, topic: str, callback: AsyncSubscriber) -> None:
+    def subscribe(self, topic: str, callback: AsyncCallback) -> None:
         self.subscribers[topic].append(callback)
 
     async def publish(self, topic: str, message: str) -> None:
