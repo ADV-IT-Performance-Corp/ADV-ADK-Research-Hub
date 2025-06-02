@@ -71,4 +71,5 @@ See [GovernanceAgent Overview](../governance_agent_overview.md) for escalation l
 2025-05-22T19:30Z GovernanceAgent missing heartbeat from OptimizationAgent; escalation issued
 2025-05-23T08:00Z CampaignAgent reduced bids by 15% after cost spike
 2025-05-23T16:45Z ConfigAgent restored prompt v3.5.3 and notified strategist
+2025-05-23T18:00Z GovernanceAgent heartbeat acknowledged for all agents
 ```

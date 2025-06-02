@@ -20,5 +20,14 @@ Amplitude provides product analytics for measuring user engagement and conversio
 ## Example Code
 
 ```python
-# Example placeholder
+import requests
+
+# Send a basic test event
+payload = {
+    "api_key": "YOUR_API_KEY",
+    "events": [
+        {"event_type": "agent_heartbeat", "user_id": "demo"}
+    ]
+}
+requests.post("https://api2.amplitude.com/2/httpapi", json=payload)
 ```
