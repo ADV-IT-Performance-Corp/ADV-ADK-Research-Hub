@@ -20,3 +20,19 @@ after:
 ```
 
 This diff indicates a version bump and routing change which must pass `validate_golden_prompts.sh` before rollout.
+
+### Advanced Diff Example
+
+```yaml
+before:
+  prompt_version: 3.5.5
+  extra_filters:
+    - region: NA
+after:
+  prompt_version: 3.5.6
+  extra_filters:
+    - region: NA
+    - region: EU
+```
+
+Here the ConfigAgent introduces a new filter. The agent should generate a compatibility notice and increment the prompt version accordingly.

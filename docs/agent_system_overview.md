@@ -84,3 +84,4 @@ await event_bus.publish("start_research", "email marketing trends")
 The 21 May prompt introduced a sequential flow diagram showing Research → Content → Campaign → Optimization → Analytics. See the [prompt kernel](prompt/prompt_kernel_v3.5.md#module-map) for visuals.
 
 For connection instructions refer to the [Integration Guide](integration_guide_o3.md).
+Additional design context can be found in the [21 May Improvement Notes](meta/improvement_notes_21May2025.md).
