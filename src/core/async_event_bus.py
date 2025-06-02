@@ -1,6 +1,8 @@
 import asyncio
 from collections import defaultdict
-from typing import Awaitable, Callable
+from typing import Awaitable, Callable, TypeAlias
+
+AsyncSubscriber: TypeAlias = Callable[[str], Awaitable[None]]
 
 # Callback type alias for async subscribers
 AsyncSubscriber = Callable[[str], Awaitable[None]]

@@ -1,7 +1,6 @@
-from typing import Callable
+from typing import Callable, TypeAlias
 
-# Callback type alias for subscribers
-Subscriber = Callable[[str], None]
+Subscriber: TypeAlias = Callable[[str], None]
 
 from .logger import get_logger
 
@@ -9,7 +8,7 @@ from .logger import get_logger
 class EventBus:
     """Very small publish/subscribe bus with basic logging."""
 
-    def __init__(self) -> None
+    def __init__(self) -> None:
         self.subscribers: dict[str, list[Subscriber]] = {}
         self.logger = get_logger(self.__class__.__name__)
 
