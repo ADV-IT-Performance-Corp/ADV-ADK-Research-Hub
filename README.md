@@ -1,12 +1,12 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.7-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.8-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.7)
+## 🚀 Key Features (v3.5.8)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Asynchronous Event Bus**: Async publish/subscribe layer for agent communication
@@ -29,6 +29,9 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Configuration Settings Reference](docs/config/settings_reference.md) - Details for `settings.yaml`
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
+- [Google Ads API Integration](docs/integrations/google_ads_api.md) - Example setup for campaign data
+- [Meta Ads API Integration](docs/integrations/meta_ads_api.md) - Instructions for Meta marketing API
+- [Automated Metrics Pipeline](docs/analytics/metrics_pipeline.md) - Data flow into AnalyticsAgent
 - [Documentation Index](docs/tree.md) - Overview of all docs
 
 ### Research & Methodology
@@ -40,7 +43,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (v3.5.7)
+## 📂 Repository Structure (v3.5.8)
 ```text
 .
 ├── .github/
@@ -53,6 +56,8 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ├── docs/
 │   ├── prompt/
 │   ├── meta/
+│   ├── integrations/
+│   ├── analytics/
 │   ├── performance_marketing/
 │   ├── RESEARCH_GOALS.md
 │   ├── METHODOLOGY.md

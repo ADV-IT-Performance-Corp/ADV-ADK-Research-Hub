@@ -3,6 +3,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.8] — 2025-06-02
+
+### ✨ Updates
+- Added Google Ads and Meta Ads integration docs
+- Introduced metrics pipeline and A/B testing framework
+- Added example ads integration workflow
+- Updated documentation tree and repository structure
+
 ## [v3.5.7] — 2025-06-01
 
 ### ✨ Updates
