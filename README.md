@@ -125,7 +125,13 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
    git clone https://github.com/adv-ai/o3-deep-research-context.git
    ```
 
-2. The current release version is stored in the `VERSION` file and exposed as
+2. Install Python dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. The current release version is stored in the `VERSION` file and exposed as
    `src.__version__` for programmatic access.
 
 ## 📚 Core References
