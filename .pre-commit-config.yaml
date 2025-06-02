@@ -6,13 +6,17 @@ repos:
         name: markdownlint
         entry: markdownlint-cli2
         language: node
-        pass_filenames: false
-        args: ['docs/**/*.md', '!docs/legacy/**']
+        types: [markdown]
   - repo: local
     hooks:
       - id: yamllint
         name: yamllint
-        entry: bash -c 'yamllint config/settings.yaml $(find docs -name "*.yaml")'
+        entry: yamllint
+        language: system
+        types: [yaml]
+      - id: validate-golden-prompts
+        name: validate-golden-prompts
+        entry: bash scripts/validate_golden_prompts.sh
         language: system
         pass_filenames: false
       - id: unit-tests
