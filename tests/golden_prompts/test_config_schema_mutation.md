@@ -7,8 +7,8 @@ ConfigAgent receives a proposed schema change that alters field types. Summarize
 ### EXPECTED
 - Shows before/after schema block with highlights
 - Warns if new fields break backward compatibility
-- Mentions version 3.5.7 in the notification
+- Mentions version 3.5.8 in the notification
 
 ### NOTES
-Prompt Kernel: v3.5.7
+Prompt Kernel: v3.5.8
 **Tags:** config-agent, schema-mutation

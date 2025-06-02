@@ -24,6 +24,13 @@ ADK/
     │   ├── version_diff_v3.5.6_to_v3.5.7.md
     │   └── ...
     ├── tree.md
+    ├── integrations/
+    │   ├── google_ads_api.md
+    │   └── meta_ads_api.md
+    ├── analytics/
+    │   └── metrics_pipeline.md
+    ├── ab_testing_framework.md
+    ├── reporting_dashboard.md
     └── performance_marketing/
         ├── google_insights_summary.md
         ├── meta_ai_strategy.md

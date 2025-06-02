@@ -72,3 +72,6 @@ See [GovernanceAgent Overview](../governance_agent_overview.md) for escalation l
 2025-05-23T08:00Z CampaignAgent reduced bids by 15% after cost spike
 2025-05-23T16:45Z ConfigAgent restored prompt v3.5.3 and notified strategist
 ```
+
+## Expanded Example
+The updated simulation uses `GoogleAdsClient` and `MetaAdsClient` to pull live data. `MetricsCollector` aggregates results so the `ABTestingAgent` can select high-performing creatives during the 72-hour run.

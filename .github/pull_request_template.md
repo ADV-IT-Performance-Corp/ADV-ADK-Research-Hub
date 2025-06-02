@@ -1,7 +1,7 @@
-# 🚀 Pull Request Summary - v3.5.7
+# 🚀 Pull Request Summary - v3.5.8
 
 ## 📋 Description of Changes
-<!-- Briefly describe what this PR implements or fixes for v3.5.7 -->
+<!-- Briefly describe what this PR implements or fixes for v3.5.8 -->
 - [ ] Added new prompt kernel: `docs/prompt/prompt_kernel_v3.5.md`
 - [ ] Added evolution log: `docs/meta/prompt_evolution_log/v3.5.yaml`
 - [ ] Updated meta evaluation: `docs/meta/meta_evaluation.json`
@@ -9,7 +9,7 @@
 
 ---
 
-## 🗂 Affected Files (v3.5.7)
+## 🗂 Affected Files (v3.5.8)
 <!-- Check all that apply -->
 
 ### Core Files
@@ -38,7 +38,7 @@
 - [ ] Added test_memory_reflection.md to `/tests/golden_prompts/`
 - [ ] Added test_kpi_optimization.md to `/tests/golden_prompts/`
 - [ ] CI configured to detect and validate golden prompts
-- [ ] Golden prompts align with v3.5.7 kernel strategy
+- [ ] Golden prompts align with v3.5.8 kernel strategy
 
 ---
 
@@ -60,5 +60,5 @@ Ensure the following items are checked before requesting review:
 
 ### Golden Prompt Details
 - **Test Coverage**: Ensure all major prompt patterns are covered
-- **Version Compatibility**: All prompts are compatible with v3.5.7
+- **Version Compatibility**: All prompts are compatible with v3.5.8
 - **Validation**: CI pipeline includes golden prompt validation
