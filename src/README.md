@@ -22,4 +22,4 @@ src/
 └── mcp_server.py  # Minimal orchestrator
 ```
 
-These stubs illustrate the basic structure of an agent so new contributors can build their own.
+These stubs illustrate the basic agent structure so contributors can extend them as needed.

@@ -1,6 +1,7 @@
 from typing import Callable
 
-EventCallback = Callable[[str], None]
+# Callback type alias for subscribers
+Subscriber = Callable[[str], None]
 
 from .logger import get_logger
 
@@ -8,11 +9,11 @@ from .logger import get_logger
 class EventBus:
     """Very small publish/subscribe bus with basic logging."""
 
-    def __init__(self) -> None:
-        self.subscribers: dict[str, list[EventCallback]] = {}
+    def __init__(self) -> None
+        self.subscribers: dict[str, list[Subscriber]] = {}
         self.logger = get_logger(self.__class__.__name__)
 
-    def subscribe(self, topic: str, callback: EventCallback) -> None:
+    def subscribe(self, topic: str, callback: Subscriber) -> None:
         self.logger.debug("Subscriber added to %s", topic)
         self.subscribers.setdefault(topic, []).append(callback)
 

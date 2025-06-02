@@ -18,6 +18,11 @@ async def handle_optimize(msg: str) -> None:
     logger.info(server.route("analytics", msg))
 
 
+async def handle_optimize(msg: str) -> None:
+    logger.info(server.route("optimization", msg))
+    logger.info(server.route("analytics", msg))
+
+
 event_bus.subscribe("start_research", handle_research)
 event_bus.subscribe("start_optimize", handle_optimize)
 

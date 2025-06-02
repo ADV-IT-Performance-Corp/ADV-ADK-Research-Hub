@@ -147,6 +147,9 @@ jobs:
           test -f docs/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
 
+      - name: Refresh Link Cache
+        run: python scripts/refresh_link_cache.py
+
       - name: Prompt Genome Version Consistency
         run: |
           version=$(jq -r '.versions[] | select(.tag=="v3.4")' docs/meta/prompt_genome.json)

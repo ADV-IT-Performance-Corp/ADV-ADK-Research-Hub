@@ -1,12 +1,10 @@
-"""Expose core classes and project version."""
-
 from pathlib import Path
-
 from .core.base_agent import BaseAgent
 from .agents.sample_agent import EchoAgent
 from .agents.research_agent import ResearchAgent
 
-_root = Path(__file__).resolve().parents[1]
-__version__ = (_root / "VERSION").read_text().strip()
+# Expose library version from VERSION file
+_version_file = Path(__file__).resolve().parent.parent / "VERSION"
+__version__ = _version_file.read_text().strip() if _version_file.exists() else "0.0.0"
 
 __all__ = ["BaseAgent", "EchoAgent", "ResearchAgent"]
