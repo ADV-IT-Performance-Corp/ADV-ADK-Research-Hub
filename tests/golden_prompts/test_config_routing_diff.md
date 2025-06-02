@@ -6,9 +6,9 @@ ConfigAgent receives a new routing table with updated weights. Provide a summary
 
 ### EXPECTED
 - Outputs YAML diff highlighting weight changes
-- Sends `config_push` message noting version 3.5.5
+- Sends `config_push` message noting version 3.5.7
 - Mentions validation checklist
 
 ### NOTES
-Prompt Kernel: v3.5.5
+Prompt Kernel: v3.5.7
 **Tags:** config-agent, routing-diff

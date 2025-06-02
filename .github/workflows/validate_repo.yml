@@ -1,5 +1,5 @@
 ---
-name: CI Validate O3 Repo v3.5.5
+name: CI Validate O3 Repo v3.5.7
 
 on:
   pull_request:
@@ -124,6 +124,9 @@ jobs:
 
             echo "✅ $file is valid"
           done
+
+      - name: Refresh Link Cache
+        run: python scripts/refresh_link_cache.py
 
       - name: Broken Link Check (Basic)
         if: github.event_name == 'push'  # Only run on push to reduce API calls
