@@ -26,6 +26,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
+- [Configuration Settings Reference](docs/config/settings_reference.md) - Details for `settings.yaml`
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
 - [Documentation Index](docs/tree.md) - Overview of all docs
@@ -112,6 +113,7 @@ grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml
 # Rebuild source index and run offline link check
 python3 scripts/update_source_index.py
 bash scripts/offline_link_check.sh
+python scripts/refresh_link_cache.py
 ```
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.

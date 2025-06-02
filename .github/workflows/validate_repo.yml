@@ -1,5 +1,5 @@
 ---
-name: CI Validate O3 Repo v3.5.5
+name: CI Validate O3 Repo v3.5.7
 
 on:
   pull_request:
@@ -143,6 +143,9 @@ jobs:
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
+
+      - name: Refresh Link Cache
+        run: python scripts/refresh_link_cache.py
 
       - name: Prompt Genome Version Consistency
         run: |

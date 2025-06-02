@@ -11,14 +11,30 @@ server = MCPServer()
 
 async def handle_research(msg: str) -> None:
     logger.info(server.route("research", msg))
+    await asyncio.sleep(0.1)
     logger.info(server.route("content", msg))
+
+async def handle_optimize(msg: str) -> None:
+    logger.info(server.route("optimization", msg))
+    await asyncio.sleep(0.1)
+    logger.info(server.route("analytics", msg))
 
 
 event_bus.subscribe("start_research", handle_research)
+event_bus.subscribe("start_optimize", handle_optimize)
+
+async def report_status() -> None:
+    for _ in range(3):
+        await asyncio.sleep(0.05)
+        logger.info("Workflow tick")
 
 
 async def main() -> None:
-    await event_bus.publish("start_research", "email marketing trends")
+    await asyncio.gather(
+        event_bus.publish("start_research", "email marketing trends"),
+        event_bus.publish("start_optimize", "budget allocation"),
+        report_status(),
+    )
 
 
 if __name__ == "__main__":
