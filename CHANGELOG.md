@@ -12,6 +12,10 @@ All notable changes to this project are documented in this file.
 - Updated documentation and version metadata to 3.5.7
 - Added `world_agent_integration.md` integration guide
 - Updated `source_index.json` with `72hr_campaign_sim.md` entry
+- Updated context test to version 3.5.7
+- Added unit tests for core utilities and agents
+- Added `refresh_link_cache.py` script for external link validation
+- Clarified prompt genome status and cleaned documentation
 
 ## [v3.5.6] — 2025-05-31
 

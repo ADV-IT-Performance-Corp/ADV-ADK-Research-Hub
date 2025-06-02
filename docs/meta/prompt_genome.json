@@ -7,8 +7,7 @@
         "name": "O3 Deep Research V3.5.7",
         "description": "Adds asynchronous event bus and logging utilities",
         "created_at": "2025-06-01",
-        "status": "superseded",
-        "superseded_by": "o3-deep-research-v3.5.7",
+        "status": "active",
         "components": [
           {"type": "role_definition", "version": "1.2"},
           {"type": "context_definition", "version": "1.4"},
