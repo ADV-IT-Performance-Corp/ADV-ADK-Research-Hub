@@ -16,6 +16,7 @@ All notable changes to this project are documented in this file.
 - Added unit tests for core utilities and agents
 - Added `refresh_link_cache.py` script for external link validation
 - Clarified prompt genome status and cleaned documentation
+- Added `MetricsCollector` with KPI calculations and docs
 
 ## [v3.5.6] — 2025-05-31
 

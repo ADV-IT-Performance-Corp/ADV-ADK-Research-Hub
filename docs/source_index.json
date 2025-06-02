@@ -690,6 +690,17 @@
       ],
       "version": "3.5.7",
       "type": "documentation"
+    },
+    {
+      "name": "Metrics Pipeline",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/analytics/metrics_pipeline.md",
+      "tags": [
+        "analytics",
+        "kpi",
+        "v3.5.7"
+      ],
+      "version": "3.5.7",
+      "type": "documentation"
     }
   ],
   "metadata": {
