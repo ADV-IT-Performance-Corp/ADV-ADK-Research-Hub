@@ -148,7 +148,7 @@ jobs:
           test -f docs/meta/prompt_genome.json
 
       - name: Refresh Link Cache
-        run: python scripts/refresh_link_cache.py
+        run: python3 scripts/refresh_link_cache.py
 
       - name: Prompt Genome Version Consistency
         run: |

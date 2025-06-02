@@ -1,10 +1,11 @@
 import unittest
-import src
+from src import __version__
 
 class TestVersion(unittest.TestCase):
     def test_version_matches_file(self):
-        with open('VERSION', 'r', encoding='utf-8') as f:
-            self.assertEqual(src.__version__, f.read().strip())
+        with open('VERSION') as vf:
+            file_version = vf.read().strip()
+        self.assertEqual(__version__, file_version)
 
 if __name__ == '__main__':
     unittest.main()

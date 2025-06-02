@@ -40,7 +40,7 @@ bash scripts/validate_golden_prompts.sh
 ## Versioning
 
 - **Current Version**: 3.5.7
-- **Compatibility**: O3 Prompt Kernel v3.5.7+
+- **Compatibility**: O3 Prompt Kernel v3.5.0+
 - **Last Updated**: 2025-05-30
 
 ## Contributing
