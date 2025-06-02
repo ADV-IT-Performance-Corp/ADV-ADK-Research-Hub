@@ -4,6 +4,9 @@ from typing import Awaitable, Callable, TypeAlias
 
 AsyncSubscriber: TypeAlias = Callable[[str], Awaitable[None]]
 
+# Callback type alias for async subscribers
+AsyncSubscriber = Callable[[str], Awaitable[None]]
+
 class AsyncEventBus:
     """Simple asyncio-based publish/subscribe bus."""
 

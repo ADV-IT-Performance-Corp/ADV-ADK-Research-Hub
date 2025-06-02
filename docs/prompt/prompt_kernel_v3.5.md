@@ -681,7 +681,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
 
 ```yaml
-version: 3.5.5
+version: 3.5.7
 reviewed_on: 2025-05-23
 kernel_strengths:
   - Modular role-per-agent mapping
