@@ -11,6 +11,8 @@ All notable changes to this project are documented in this file.
 - Expanded configuration settings
 - Updated documentation and version metadata to 3.5.7
 - Added `world_agent_integration.md` integration guide
+- Added `executive_summary.md` with high-level overview
+- Indexed `72hr_campaign_sim.md` in `source_index.json`
 
 ## [v3.5.6] — 2025-05-31
 

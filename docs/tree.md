@@ -20,6 +20,7 @@ ADK/
     ├── integration_guide_o3.md
     ├── source_index.json
     ├── o3_deep_research_prompt.md
+    ├── executive_summary.md
     ├── meta/
     │   ├── version_diff_v3.5.6_to_v3.5.7.md
     │   └── ...
@@ -35,4 +36,6 @@ ADK/
         └── reforge_growth_loops.md
     ├── config_agent_overview.md
     ├── world_agent_integration.md
+    ├── simulations/
+    │   └── 72hr_campaign_sim.md
 ```
