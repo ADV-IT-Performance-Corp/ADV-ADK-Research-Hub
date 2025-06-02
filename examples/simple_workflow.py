@@ -11,6 +11,7 @@ server = MCPServer()
 
 async def handle_research(msg: str) -> None:
     logger.info(server.route("research", msg))
+    await asyncio.sleep(0.1)
     logger.info(server.route("content", msg))
 
 async def handle_optimize(msg: str) -> None:
