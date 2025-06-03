@@ -23,13 +23,30 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
+        run: npm ci --omit=optional
+
+      - name: Ensure jq and yamllint
         run: |
-          npm install -g markdownlint-cli2
-          sudo apt-get update && sudo apt-get install -y jq yamllint
+          if ! command -v jq >/dev/null; then
+            sudo apt-get update && sudo apt-get install -y jq
+          fi
+          if ! command -v yamllint >/dev/null; then
+            sudo apt-get update && sudo apt-get install -y yamllint
+          fi
 
       - name: Lint Markdown files
-        run: markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
+        run: npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
 
       - name: Validate JSON files
         run: |
@@ -41,10 +58,12 @@ jobs:
       - name: Validate YAML files
         run: |
           echo "Validating YAML files..."
-          yamllint -d '{
-            extends: default,
-            rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}}
-          }' .
+          find . -path ./node_modules -prune -o \(
+            -name '*.yaml' -o -name '*.yml' \) -print0 |
+            xargs -0 yamllint -d '{
+              extends: default,
+              rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}}
+            }'
 
       - name: Check for TODO or Coming soon
         run: |
