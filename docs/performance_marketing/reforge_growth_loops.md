@@ -56,6 +56,7 @@ Agents shouldn't act in isolation — design prompt interfaces that reinforce sy
 - **CampaignAgent Example:** distributes referral codes and tracks signups through UTM events on the AsyncEventBus
 
 ### AsyncEventBus Example
+
 ```python
 from event_bus import AsyncEventBus
 
