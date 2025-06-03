@@ -1,15 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Install Node.js and tools locally
-if ! command -v node >/dev/null; then
+# Install Node.js and tools locally only if missing
+packages=()
+if ! command -v node >/dev/null || ! command -v npm >/dev/null; then
   curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-  apt-get install -y nodejs
+  packages+=(nodejs)
 fi
-npm install -g markdownlint-cli2 >/dev/null
+if ! command -v jq >/dev/null; then
+  packages+=(jq)
+fi
+if ! command -v yamllint >/dev/null; then
+  packages+=(yamllint)
+fi
+if [ ${#packages[@]} -gt 0 ]; then
+  apt-get update -qq
+  apt-get install -y "${packages[@]}" >/dev/null
+fi
 
-# Install jq and yamllint
-apt-get update >/dev/null
-apt-get install -y jq yamllint >/dev/null
+if command -v npm >/dev/null; then
+  npm install -g markdownlint-cli2 >/dev/null
+fi
 
 echo "Environment ready"
