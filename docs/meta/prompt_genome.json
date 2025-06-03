@@ -172,7 +172,7 @@
   "versions": [
     {
       "tag": "v3.4",
-      "notes": "placeholder"
+      "notes": "unified final release with extended sources and CI validation"
     },
     {
       "tag": "v3.5.6",
