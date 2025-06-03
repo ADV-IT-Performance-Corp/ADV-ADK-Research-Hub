@@ -72,3 +72,32 @@ See [GovernanceAgent Overview](../governance_agent_overview.md) for escalation l
 2025-05-23T08:00Z CampaignAgent reduced bids by 15% after cost spike
 2025-05-23T16:45Z ConfigAgent restored prompt v3.5.3 and notified strategist
 ```
+
+## API Integration Examples
+
+These snippets show how agents call the ad platform APIs. Results flow into the
+[metrics pipeline](../analytics/metrics_pipeline.md) and feed the
+[A/B testing framework](../ab_testing_framework.md).
+
+```python
+# Google Ads API sample
+google_client = GoogleAdsClient(config="google-ads.yaml")
+try:
+    report = google_client.fetch_report(customer_id="123-456-7890")
+except Exception as err:  # GoogleAdsException in production
+    logger.error("Google Ads request failed: %s", err)
+    # Continue with cached metrics
+```
+
+```python
+# Meta Ads API sample
+meta_client = MetaAdsClient(access_token="TOKEN")
+try:
+    insights = meta_client.get_insights(account_id="act_987654321")
+except Exception as err:  # MetaAdsError in production
+    logger.warning("Meta Ads request failed: %s", err)
+    # Skip this update but continue optimization loop
+```
+
+**Note:** Handle API errors gracefully so the simulation continues even when a
+request fails.
