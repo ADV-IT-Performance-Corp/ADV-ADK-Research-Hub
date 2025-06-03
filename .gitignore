@@ -49,3 +49,4 @@ ENV/
 ehthumbs.db
 Thumbs.db
 node_modules/
+.venv/
