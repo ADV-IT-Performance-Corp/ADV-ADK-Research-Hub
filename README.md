@@ -147,6 +147,15 @@ pre-commit install
 
 Running `pre-commit` will execute markdownlint, yamllint, golden prompt validation, and unit tests.
 
+### Running Tests Manually
+You can execute the full test suite without the pre-commit hooks:
+
+```bash
+python -m pytest
+```
+
+This runs the agent and core tests defined in `tests/`.
+
 ## 📚 Core References
 
 - [Google ADK Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
