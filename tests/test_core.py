@@ -3,6 +3,11 @@ from src.core.event_bus import EventBus
 from src.core.async_event_bus import AsyncEventBus
 from src.core.metrics import MetricsCollector
 import asyncio
+try:
+    import yaml  # type: ignore
+    YAML_AVAILABLE = True
+except Exception:
+    YAML_AVAILABLE = False
 
 class TestEventBus(unittest.TestCase):
     def test_publish_subscribe(self):
@@ -20,6 +25,44 @@ class TestEventBus(unittest.TestCase):
         bus.subscribe('topic', handler)
         asyncio.run(bus.publish('topic', 'async'))
         self.assertEqual(received, ['async'])
+
+    def test_publish_no_subscribers(self):
+        """Publishing to a topic with no subscribers should not raise."""
+        bus = EventBus()
+        try:
+            bus.publish('empty', 'msg')
+        except Exception as exc:  # pragma: no cover - should not happen
+            self.fail(f"Publish raised unexpectedly: {exc}")
+
+    def test_publish_multiple_exceptions(self):
+        bus = EventBus()
+
+        def bad1(_: str) -> None:
+            raise ValueError('first')
+
+        def bad2(_: str) -> None:
+            raise RuntimeError('second')
+
+        bus.subscribe('topic', bad1)
+        bus.subscribe('topic', bad2)
+
+        with self.assertRaises(ValueError):
+            bus.publish('topic', 'data')
+
+    def test_async_publish_multiple_exceptions(self):
+        bus = AsyncEventBus()
+
+        async def bad1(_: str) -> None:
+            raise ValueError('first')
+
+        async def bad2(_: str) -> None:
+            raise RuntimeError('second')
+
+        bus.subscribe('topic', bad1)
+        bus.subscribe('topic', bad2)
+
+        with self.assertRaises(ValueError):
+            asyncio.run(bus.publish('topic', 'data'))
 
 
 class TestMetricsCollector(unittest.TestCase):
@@ -42,6 +85,25 @@ class TestMetricsCollector(unittest.TestCase):
         self.assertEqual(result['CPC'], 0.0)
         self.assertEqual(result['ConversionRate'], 0.0)
         self.assertEqual(result['ROAS'], 0.0)
+
+
+class TestQueueLimits(unittest.TestCase):
+    def test_async_queue_overflow(self):
+        """Ensure queue overflow raises QueueFull if configured."""
+        if not YAML_AVAILABLE:
+            self.skipTest('yaml library not available')
+
+        settings = yaml.safe_load(open('config/settings.yaml'))
+        max_size = settings.get('max_queue_size')
+        if not max_size:
+            self.skipTest('max_queue_size not configured')
+
+        q = asyncio.Queue(maxsize=max_size)
+        for i in range(max_size):
+            q.put_nowait(i)
+
+        with self.assertRaises(asyncio.QueueFull):
+            q.put_nowait('overflow')
 
 if __name__ == '__main__':
     unittest.main()
