@@ -23,3 +23,11 @@ Both scripts exit non‑zero on failure so they can be used in automation.
   ```bash
   python scripts/refresh_link_cache.py
   ```
+
+* `bump_version.sh` – Bumps all documentation references to a new version and writes
+  the string to the `VERSION` file. If `CHANGELOG.md` contains an `Unreleased`
+  section, it is replaced with the new version and today's date.
+
+  ```bash
+  ./scripts/bump_version.sh 3.5.8
+  ```

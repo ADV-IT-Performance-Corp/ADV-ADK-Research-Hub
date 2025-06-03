@@ -10,4 +10,11 @@ new="$1"
 perl -0pi -e "s/version-${old}/version-${new}/g" README.md
 grep -rl "v${old}" docs | xargs sed -i "s/v${old}/v${new}/g"
 sed -i "s/${old}/${new}/g" docs/source_index.json
+echo "${new}" > VERSION
+
+# Update changelog placeholder if present
+if grep -q "^## \[Unreleased\]" CHANGELOG.md; then
+  today=$(date +%Y-%m-%d)
+  sed -i "0,/^## \[Unreleased\]/s//## [v${new}] — ${today}/" CHANGELOG.md
+fi
 echo "Bumped version from ${old} to ${new}"
