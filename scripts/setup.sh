@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 log() {
   echo -e "\033[1;36m[SETUP]\033[0m $1"

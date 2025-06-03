@@ -15,7 +15,7 @@ if ! command -v yamllint >/dev/null; then
 fi
 if [ ${#packages[@]} -gt 0 ]; then
   apt-get update -qq
-  apt-get install -y "${packages[@]}" >/dev/null
+  DEBIAN_FRONTEND=noninteractive apt-get install -y "${packages[@]}" >/dev/null
 fi
 
 if command -v npm >/dev/null; then
