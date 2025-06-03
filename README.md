@@ -41,6 +41,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Changelog](CHANGELOG.md) - Version history and changes
 
 ## 📂 Repository Structure (v3.5.7)
+
 ```text
 .
 ├── .github/
@@ -113,8 +114,9 @@ grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml
 # Rebuild source index and run offline link check
 python3 scripts/update_source_index.py
 bash scripts/offline_link_check.sh
-python scripts/refresh_link_cache.py
+  python scripts/refresh_link_cache.py
 ```
+
 - `python scripts/refresh_link_cache.py` refreshes external link status.
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.

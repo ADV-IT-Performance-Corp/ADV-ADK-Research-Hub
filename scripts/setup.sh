@@ -8,14 +8,23 @@ log() {
 
 log "🚀 Starting environment setup for ADV-ADK-Research-Hub..."
 
-npm config delete http-proxy || true
-npm config delete https-proxy || true
-npm config delete proxy || true
+# Install base packages only if key tools are missing
+MISSING=false
+for tool in node npm jq yamllint; do
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    MISSING=true
+    break
+  fi
+done
 
-log "Installing base system packages..."
-apt-get update -qq
-DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  curl git python3 python3-pip python3-venv nodejs npm jq yamllint > /dev/null
+if [ "$MISSING" = true ]; then
+  log "Installing base system packages..."
+  apt-get update -qq
+  DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    curl git python3 python3-pip python3-venv nodejs npm jq yamllint > /dev/null
+else
+  log "Required tools already installed, skipping package install."
+fi
 
 log "✅ Node.js version: $(node -v)"
 log "✅ npm version: $(npm -v)"
