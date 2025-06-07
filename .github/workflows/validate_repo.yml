@@ -54,6 +54,7 @@ jobs:
           jq . docs/source_index.json > /dev/null
           jq . docs/meta/prompt_genome.json > /dev/null
           jq . docs/meta/meta_evaluation.json > /dev/null
+          jq . docs/meta/evaluation_results.json > /dev/null
 
       - name: Validate YAML files
         run: |
@@ -82,6 +83,7 @@ jobs:
             "docs/meta/prompt_evolution_log/v3.5.yaml"
             "docs/meta/meta_evaluation.json"
             "docs/meta/prompt_genome.json"
+            "docs/meta/evaluation_results.json"
             "docs/source_index.json"
             "README.md"
             "CHANGELOG.md"

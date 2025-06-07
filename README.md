@@ -137,8 +137,11 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
 
 3. The current release version is stored in the `VERSION` file and exposed as
    `src.__version__` for programmatic access.
-4. After publishing a release, record the evaluation scores in
-   `docs/meta/evaluation_results.json` with the reviewer name and date.
+4. After publishing a release, update `docs/meta/evaluation_results.json`:
+   - Change the `version` field to the new tag (e.g., `3.5.8`).
+   - Fill in the `scores` object after completing the review.
+   - Set the `reviewer` and `date` fields.
+   - Validate the JSON with `jq` before committing.
 
 ### Pre-commit
 Install the pre-commit framework and set up the hooks:

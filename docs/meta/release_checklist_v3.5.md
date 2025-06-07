@@ -23,7 +23,11 @@
 - [ ] Submit through PR using the provided PR template
 
 ## 📈 Evaluation Results
-- [ ] Update `docs/meta/evaluation_results.json` with the new version, scores, reviewer, and date
+- [ ] Edit `docs/meta/evaluation_results.json` after final review:
+  - Bump the `version` field to match the release tag
+  - Enter the finalized `scores`
+  - Add the `reviewer` name and current `date`
+  - Run `jq . docs/meta/evaluation_results.json` to confirm syntax
 
 ## 🧪 Final Test
 - [ ] CI runs and passes successfully
