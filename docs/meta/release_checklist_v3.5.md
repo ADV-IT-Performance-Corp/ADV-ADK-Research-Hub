@@ -22,6 +22,9 @@
 - [ ] Review with human strategist
 - [ ] Submit through PR using the provided PR template
 
+## 📈 Evaluation Results
+- [ ] Update `docs/meta/evaluation_results.json` with the new version, scores, reviewer, and date
+
 ## 🧪 Final Test
 - [ ] CI runs and passes successfully
 - [ ] Ready for `main` branch merge
