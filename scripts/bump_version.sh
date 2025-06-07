@@ -12,8 +12,8 @@ grep -rl "v${old}" docs | xargs sed -i "s/v${old}/v${new}/g"
 sed -i "s/${old}/${new}/g" docs/source_index.json
 echo "${new}" > VERSION
 
-# Update prompt version in settings.yaml
-sed -i "s/^prompt_version: .*/prompt_version: ${new}/" config/settings.yaml
+# Update prompt version in settings.yaml while keeping inline comment
+sed -i "s/^prompt_version:\s*[0-9]\+\.[0-9]\+\.[0-9]\+/prompt_version: ${new}/" config/settings.yaml
 
 # Update meta evaluation if old version referenced without leading 'v'
 if [ -f docs/meta/meta_evaluation.json ]; then
