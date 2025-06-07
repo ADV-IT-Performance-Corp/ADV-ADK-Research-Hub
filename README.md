@@ -21,6 +21,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
+- [Evaluation Results](docs/meta/evaluation_results.json) - Scores recorded for each release
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [O3 Integration Guide](docs/integration_guide_o3.md) - Setup and orchestration steps
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
@@ -136,6 +137,8 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
 
 3. The current release version is stored in the `VERSION` file and exposed as
    `src.__version__` for programmatic access.
+4. After publishing a release, record the evaluation scores in
+   `docs/meta/evaluation_results.json` with the reviewer name and date.
 
 ### Pre-commit
 Install the pre-commit framework and set up the hooks:
