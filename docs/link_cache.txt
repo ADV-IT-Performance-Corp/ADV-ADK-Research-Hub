@@ -4,8 +4,6 @@ https://arxiv.org/abs/2202.11382 0
 https://cloud.google.com/vertex-ai/docs/generative-ai/grounding 0
 https://developer.apple.com/machine-learning/ 0
 https://developers.google.com/docs 0
-https://developers.google.com/docs
-**Relevance:** 0
 https://docs.anthropic.com 0
 https://docs.anthropic.com/claude/prompting-best-practices 0
 https://docs.langchain.com 0
@@ -22,7 +20,5 @@ https://helm.sh/docs/ 0
 https://mcp-docs.readthedocs.io/ 0
 https://mlflow.org/docs/latest/index.html 0
 https://www.docs.developers.amplitude.com 0
-https://www.docs.developers.amplitude.com
-**Relevance:** 0
 https://www.nngroup.com/topic/cognitive-load/ 0
 https://www.tinyml.org/ 0
