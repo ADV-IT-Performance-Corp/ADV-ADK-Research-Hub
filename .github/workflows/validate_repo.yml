@@ -59,9 +59,8 @@ jobs:
         run: |
           echo "Validating YAML files..."
           CONFIG='{ extends: default, rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}} }'
-          find . -path ./node_modules -prune -o \(
-            -name '*.yaml' -o -name '*.yml' \) -print0 |
-            xargs -0 yamllint -d "$CONFIG"
+          find . -path ./node_modules -prune -o \( \
+            -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 yamllint -d "$CONFIG"
 
       - name: Check for TODO, Coming soon, or placeholder
         run: |
