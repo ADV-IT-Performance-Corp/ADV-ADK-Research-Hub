@@ -21,5 +21,14 @@ class TestEvaluation(unittest.TestCase):
         # Only clarity and efficiency weights (0.25 each) should be considered
         self.assertAlmostEqual(score, 4.0)
 
+    def test_no_matching_weights(self):
+        """Metrics with no matching weights should result in a score of 0."""
+        metrics = {
+            "nonexistent": 5,
+            "another": 3,
+        }
+        score = evaluate(metrics)
+        self.assertEqual(score, 0.0)
+
 if __name__ == "__main__":
     unittest.main()
