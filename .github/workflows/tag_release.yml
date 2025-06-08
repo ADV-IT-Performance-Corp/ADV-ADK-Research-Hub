@@ -1,0 +1,34 @@
+name: Tag Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  bump-and-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Bump version
+        id: bump
+        run: |
+          TAG=${GITHUB_REF_NAME}
+          VERSION=${TAG#v}
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          scripts/bump_version.sh "$VERSION"
+
+      - name: Create Release PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: bump version to ${{ steps.bump.outputs.version }}"
+          title: "chore: bump version to ${{ github.ref_name }}"
+          body: |
+            Automated version bump for ${{ github.ref_name }}.
+          branch: "release/${{ github.ref_name }}"
+          base: master
+          labels: release
