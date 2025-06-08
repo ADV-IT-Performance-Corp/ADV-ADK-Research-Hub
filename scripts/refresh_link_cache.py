@@ -15,7 +15,7 @@ def collect_links():
             if not name.endswith('.md'):
                 continue
             with open(os.path.join(dirpath, name), 'r', encoding='utf-8') as f:
-                for match in re.findall(r'https?://[^\s)]+', f.read()):
+                for match in re.findall(r'https?://[^\s)"\',]+', f.read()):
                     links.add(match)
     return sorted(links)
 
