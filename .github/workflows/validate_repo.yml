@@ -171,3 +171,14 @@ jobs:
           else
             echo "✅ prompt_version $SETTINGS_VERSION matches VERSION"
           fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover tests
