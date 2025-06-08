@@ -2,6 +2,7 @@ import unittest
 from src.agents.content_agent import ContentAgent
 from src.agents.analytics_agent import AnalyticsAgent
 from src.agents.ab_testing_agent import AbTestingAgent
+from src.agents.governance_agent import GovernanceAgent
 
 
 class TestExtraAgents(unittest.TestCase):
@@ -24,6 +25,21 @@ class TestExtraAgents(unittest.TestCase):
         }
         result = agent.run(variants)
         self.assertIn('B', result)
+
+    def test_governance_agent_detects_stale_heartbeat(self):
+        agent = GovernanceAgent()
+        agent.record_heartbeat('AnalyticsAgent')
+        # Simulate stale heartbeat
+        agent._heartbeats['AnalyticsAgent'] -= 31
+        result = agent.run('ok')
+        self.assertIn('ALERT', result)
+        self.assertIn('AnalyticsAgent', result)
+
+    def test_governance_agent_no_alert_for_recent_heartbeat(self):
+        agent = GovernanceAgent()
+        agent.record_heartbeat('ContentAgent')
+        result = agent.run('ok')
+        self.assertNotIn('ALERT', result)
 
 
 if __name__ == '__main__':
