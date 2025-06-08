@@ -111,8 +111,8 @@ To run validations locally:
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
 
-# Check for TODOs
-grep -r "TODO\|Coming soon" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .
+# Check for TODOs and placeholders
+grep -r "TODO\|Coming soon\|placeholder" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .
 # Rebuild source index and run offline link check
 python3 scripts/update_source_index.py
 bash scripts/offline_link_check.sh

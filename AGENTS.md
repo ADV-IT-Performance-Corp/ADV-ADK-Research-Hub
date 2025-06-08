@@ -16,7 +16,7 @@ This repository is often used with the ChatGPT GitHub integration. Follow the ru
 Run the same checks that CI performs in `.github/workflows/validate_repo.yml`:
 1. Lint Markdown files with `markdownlint-cli2`.
 2. Validate JSON files using `jq` and YAML files using `yamllint`.
-3. Search for `TODO:` or `Coming soon` in documentation.
+3. Search for `TODO:`, `Coming soon`, or `placeholder` in documentation.
 4. Ensure required files exist and versions are consistent.
 5. Validate the golden prompt files in `tests/golden_prompts/`.
 

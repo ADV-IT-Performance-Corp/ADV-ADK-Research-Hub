@@ -65,10 +65,10 @@ jobs:
               rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}}
             }'
 
-      - name: Check for TODO or Coming soon
+      - name: Check for TODO, Coming soon, or placeholder
         run: |
           echo "Checking for incomplete work..."
-          if grep -RniE 'TODO:|Coming soon' docs/ --include="*.md" --include="*.yaml" \
+          if grep -RniE 'TODO:|Coming soon|placeholder' docs/ --include="*.md" --include="*.yaml" \
             --include="*.yml" --exclude-dir=legacy; then
             echo "❌ Detected incomplete work. Please resolve before merging."
             exit 1
