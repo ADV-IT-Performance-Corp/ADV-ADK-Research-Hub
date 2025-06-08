@@ -181,10 +181,6 @@
     {
       "tag": "v3.5.7",
       "notes": "async event bus, logging and example workflow"
-    },
-    {
-      "tag": "v3.5.7",
-      "notes": "marketing platform integrations and metrics pipeline"
     }
   ]
 }
