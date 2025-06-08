@@ -160,17 +160,35 @@ jobs:
             exit 1
           fi
 
-      - name: Verify prompt_version matches VERSION
+      - name: Verify version consistency across files
         run: |
           echo "Checking prompt_version consistency..."
-          SETTINGS_VERSION=$(grep -oP '^prompt_version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' config/settings.yaml)
           FILE_VERSION=$(tr -d '[:space:]' < VERSION)
+          SETTINGS_VERSION=$(grep -oP '^prompt_version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' config/settings.yaml)
           if [ "$SETTINGS_VERSION" != "$FILE_VERSION" ]; then
             echo "❌ prompt_version mismatch: settings.yaml ($SETTINGS_VERSION) vs VERSION ($FILE_VERSION)"
             exit 1
-          else
-            echo "✅ prompt_version $SETTINGS_VERSION matches VERSION"
           fi
+
+          ACTIVE_COUNT=$(jq -r '.prompt_genome.prompts[] | select(.status=="active") | .id' docs/meta/prompt_genome.json | grep -c "v$FILE_VERSION" || true)
+          if [ "$ACTIVE_COUNT" -eq 0 ]; then
+            echo "❌ No active prompt genome entry matches VERSION $FILE_VERSION"
+            exit 1
+          fi
+
+          CORE_VERSION=$(jq -r '.sources[] | select(.type=="core") | .version' docs/source_index.json | head -1)
+          if [ "$CORE_VERSION" != "$FILE_VERSION" ]; then
+            echo "❌ Core source version mismatch: docs/source_index.json ($CORE_VERSION) vs VERSION ($FILE_VERSION)"
+            exit 1
+          fi
+
+          README_VERSION=$(grep -oP 'Golden Prompts \(v\K[0-9]+\.[0-9]+\.[0-9]+' tests/golden_prompts/README.md | head -1)
+          if [ "$README_VERSION" != "$FILE_VERSION" ]; then
+            echo "❌ Golden Prompts README version ($README_VERSION) does not match VERSION ($FILE_VERSION)"
+            exit 1
+          fi
+
+          echo "✅ All versions match $FILE_VERSION"
 
       - name: Verify evaluation_results version matches VERSION
         run: |
