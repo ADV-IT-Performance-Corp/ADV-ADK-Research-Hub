@@ -145,15 +145,15 @@ jobs:
           done
 
 
+      - name: Refresh Link Cache
+        run: python3 scripts/refresh_link_cache.py
+
       - name: Offline Link Check
         run: |
           bash scripts/offline_link_check.sh
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
-
-      - name: Refresh Link Cache
-        run: python3 scripts/refresh_link_cache.py
 
       - name: Prompt Genome Version Consistency
         run: |
