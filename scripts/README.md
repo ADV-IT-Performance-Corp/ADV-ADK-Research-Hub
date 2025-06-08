@@ -24,6 +24,13 @@ Both scripts exit non‑zero on failure so they can be used in automation.
   python scripts/refresh_link_cache.py
   ```
 
+* `generate_evaluation.py` – Computes a weighted evaluation score from a metrics
+  file and updates `docs/meta/evaluation_results.json`:
+
+  ```bash
+  python scripts/generate_evaluation.py metrics.json
+  ```
+
 * `bump_version.sh` – Bumps all documentation references to a new version and writes
   the string to the `VERSION` file. If `CHANGELOG.md` contains an `Unreleased`
   section, it is replaced with the new version and today's date.
