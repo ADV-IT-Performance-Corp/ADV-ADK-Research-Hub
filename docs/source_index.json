@@ -359,6 +359,18 @@
       "version": "1.0.0"
     },
     {
+      "name": "TikTok Ads API Integration",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/integrations/tiktok_ads_api.md",
+      "tags": [
+        "tiktok",
+        "ads-api",
+        "marketing",
+        "analytics"
+      ],
+      "version": "1.0.0",
+      "type": "integration"
+    },
+    {
       "name": "O3 Release Checklist",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/release_checklist_v3.5.md",
       "tags": [

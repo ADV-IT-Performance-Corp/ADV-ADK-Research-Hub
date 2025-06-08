@@ -24,6 +24,7 @@ Use GitHub repository: https://github.com/DanCanadian/ADK
   - `neurogym_neuromarketing.md`
   - `meta_ai_strategy.md`
   - `google_insights_summary.md`
+  - `integrations/tiktok_ads_api.md`
   - `ibm_ai_learning.md`
   - `gemini_api_docs.md`
   - `openai_api_docs.md`
