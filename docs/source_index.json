@@ -1,12 +1,12 @@
 {
   "sources": [
     {
-      "name": "O3 Deep Research v3.5.1",
+      "name": "O3 Deep Research v3.5.7",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
       "tags": [
         "o3",
         "prompt-kernel",
-        "v3.5.1",
+        "v3.5.7",
         "research",
         "latest"
       ],
@@ -14,14 +14,14 @@
       "type": "core"
     },
     {
-      "name": "Prompt Evolution v3.5",
+      "name": "Prompt Evolution v3.5.7",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
       "tags": [
         "prompt-evolution",
-        "v3.5.1",
+        "v3.5.7",
         "meta"
       ],
-      "version": "3.5.1",
+      "version": "3.5.7",
       "type": "meta"
     },
     {
@@ -30,9 +30,9 @@
       "tags": [
         "evaluation",
         "framework",
-        "v3.5.1"
+        "v3.5.7"
       ],
-      "version": "3.5.1",
+      "version": "3.5.7",
       "type": "evaluation"
     },
     {
@@ -65,7 +65,7 @@
         "versioning",
         "migration"
       ],
-      "version": "3.5.1",
+      "version": "3.5.7",
       "type": "documentation"
     },
     {
