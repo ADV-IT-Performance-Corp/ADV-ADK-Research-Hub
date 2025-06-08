@@ -85,10 +85,11 @@ Key references:
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json
 
-Run the demo workflow:
+Run the demo workflows:
 
 ```bash
 python examples/simple_workflow.py
+python examples/marketing_workflow.py
 ```
 
 ## 🛠️ CI/CD Validation
