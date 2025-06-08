@@ -349,6 +349,16 @@
       "version": "1.0.0"
     },
     {
+      "name": "Performance Marketing Resource Index",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/README.md",
+      "tags": [
+        "marketing",
+        "summary",
+        "directory"
+      ],
+      "version": "1.0.0"
+    },
+    {
       "name": "O3 Release Checklist",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/release_checklist_v3.5.md",
       "tags": [
