@@ -20,12 +20,33 @@ def collect_links():
     return sorted(links)
 
 def check_link(url: str) -> int:
-    request = urllib.request.Request(url, method='HEAD')
+    """Return the HTTP status code for ``url``.
+
+    First issues a ``HEAD`` request. Some servers respond with errors for ``HEAD``
+    requests, so if the status code is 403, 404 or 405 a ``GET`` request is
+    retried using a standard ``User-Agent`` header.
+    """
+
+    request = urllib.request.Request(url, method="HEAD")
     try:
         with urllib.request.urlopen(request, timeout=10) as resp:
             return resp.getcode()
     except urllib.error.HTTPError as e:
-        return e.code
+        code = e.code
+        if code in {403, 404, 405}:
+            get_request = urllib.request.Request(
+                url,
+                method="GET",
+                headers={"User-Agent": "Mozilla/5.0"},
+            )
+            try:
+                with urllib.request.urlopen(get_request, timeout=10) as resp:
+                    return resp.getcode()
+            except urllib.error.HTTPError as e2:
+                return e2.code
+            except Exception:
+                return 0
+        return code
     except Exception:
         return 0
 
