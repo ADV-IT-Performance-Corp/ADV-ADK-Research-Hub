@@ -145,21 +145,9 @@ jobs:
           done
 
 
-      - name: Broken Link Check (Basic)
-        if: github.event_name == 'push'  # Only run on push to reduce API calls
+      - name: Offline Link Check
         run: |
-          echo "Checking for broken links..."
-          grep -rEo 'https?://[^") >]+' docs/ README.md | \
-            grep -v 'localhost\|example\.com' | \
-            sort -u | \
-            while read -r url; do
-              if ! curl -s --head --location --max-time 10 --fail "$url" >/dev/null; then
-                echo "❌ Broken link: $url"
-                exit 1
-              else
-                echo "✅ Link OK: $url"
-              fi
-            done
+          bash scripts/offline_link_check.sh
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
