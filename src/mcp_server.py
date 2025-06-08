@@ -1,10 +1,10 @@
 """Minimal orchestrator that routes tasks to sample agents."""
-from agents.research_agent import ResearchAgent
-from agents.content_agent import ContentAgent
-from agents.engagement_agent import EngagementAgent
-from agents.optimization_agent import OptimizationAgent
-from agents.analytics_agent import AnalyticsAgent
-from agents.config_agent import ConfigAgent
+from .agents.research_agent import ResearchAgent
+from .agents.content_agent import ContentAgent
+from .agents.engagement_agent import EngagementAgent
+from .agents.optimization_agent import OptimizationAgent
+from .agents.analytics_agent import AnalyticsAgent
+from .agents.config_agent import ConfigAgent
 
 
 class MCPServer:
