@@ -7,3 +7,4 @@ The reporting dashboard centralizes campaign metrics for quick review.
 - Generate shareable reports for stakeholders
 - Export metrics to JSON
 - Export metrics to CSV for deeper analysis
+- Track KPIs such as CTR, CPC, ROAS, CLV, CPA and retention rate
