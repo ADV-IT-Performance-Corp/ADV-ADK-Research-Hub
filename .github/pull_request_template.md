@@ -45,7 +45,7 @@
 ## ✅ Validation Checklist
 Ensure the following items are checked before requesting review:
 
-- [ ] No `TODO:` or `Coming soon` remaining
+- [ ] No `TODO:`, `Coming soon`, or `placeholder` remaining
 - [ ] Links (internal/external) validated
 - [ ] `source_index.json` updated if new `.md` was added
 - [ ] `CHANGELOG.md` updated with version bump

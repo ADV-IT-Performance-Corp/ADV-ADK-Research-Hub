@@ -169,7 +169,7 @@ To ensure long-term consistency and prevent regressions, create a GitHub CI work
 * JSON syntax checks for `source_index.json`, `prompt_genome.json`
 * Link health checks
 * Required files checker
-* Auto-fail on "TODO" or "Coming soon" in any file
+* Auto-fail on "TODO", "Coming soon", or "placeholder" in any file
 
 > Bonus: Track all changes in `CHANGELOG.md` per semver (e.g., v3.4.0)
 
