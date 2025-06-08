@@ -7,7 +7,7 @@ if [ ! -f "$CACHE_FILE" ]; then
   echo "Cache file $CACHE_FILE not found" >&2
   exit 1
 fi
-links=$(grep -rhoP 'https?://[^ )]+' docs/external | sort -u)
+links=$(grep -rhoP "https?://[^ )\"\\',]+" docs/external | sort -u)
 for link in $links; do
   status=$(grep -F "$link" "$CACHE_FILE" | head -n 1 | awk '{print $2}')
   if [ -z "$status" ]; then
