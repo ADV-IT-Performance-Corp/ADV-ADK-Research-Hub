@@ -21,6 +21,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
+- [Meta Evaluation Usage](docs/meta/meta_evaluation.md) - How to compute weighted scores
 - [Evaluation Results](docs/meta/evaluation_results.json) - Scores recorded for each release
 - [GitHub Integration Guide](docs/github_chatgpt_integration.md) - Connect this repository to ChatGPT
 - [O3 Integration Guide](docs/integration_guide_o3.md) - Setup and orchestration steps
