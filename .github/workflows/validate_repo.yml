@@ -172,6 +172,18 @@ jobs:
             echo "✅ prompt_version $SETTINGS_VERSION matches VERSION"
           fi
 
+      - name: Verify evaluation_results version matches VERSION
+        run: |
+          echo "Checking evaluation_results.json version..."
+          JSON_VERSION=$(jq -r '.version' docs/meta/evaluation_results.json)
+          FILE_VERSION=$(tr -d '[:space:]' < VERSION)
+          if [ "$JSON_VERSION" != "$FILE_VERSION" ]; then
+            echo "❌ evaluation_results.json version ($JSON_VERSION) does not match VERSION ($FILE_VERSION)"
+            exit 1
+          else
+            echo "✅ evaluation_results.json version matches VERSION"
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
