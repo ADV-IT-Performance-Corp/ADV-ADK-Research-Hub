@@ -1,6 +1,6 @@
-# Integration Guide for O3 Deep Research (V3.2)
+# Integration Guide for O3 Deep Research (V3.5.7)
 
-This guide explains how to use this repository as the external knowledge context for the O3 Deep Research prompt (V3.2 and above).
+This guide explains how to use this repository as the external knowledge context for the O3 Deep Research prompt (V3.5.7 and above).
 
 ## How to Use
 
@@ -16,7 +16,7 @@ Use GitHub repository: https://github.com/DanCanadian/ADK
 * `ADK_quickstart.md` — ADK system overview and quickstart guide
 * `adk_docs_snapshot.md` — Core ADK components and architecture
 * `kaggle_prompt_engineering_summary.md` — Advanced prompting techniques (CoT, ReAct, Self-reflection)
-* `prompt/prompt_kernel_v3.md` — Complete V3.2 Unified Final prompt
+* `prompt/prompt_kernel_v3.5.md` — Complete V3.5.7 Unified Final prompt
 
 ### Performance Marketing
 * `performance_marketing/` — Strategic playbooks and industry models:
