@@ -5,9 +5,9 @@ This document tracks the migration and deprecation of previous versions of the O
 ## Version History
 
 ### Current Version
-- **v3.5.1** (2025-05-23)
+- **v3.5.7** (2025-06-01)
   - Location: `docs/prompt/prompt_kernel_v3.5.md`
-  - Patch update adding simulation and evaluation sections
+  - Patch release with AsyncEventBus, logging utilities, and expanded examples
 - **v3.5.0** (2025-05-22)
   - Location: `docs/prompt/prompt_kernel_v3.5.md`
   - Key Features:
