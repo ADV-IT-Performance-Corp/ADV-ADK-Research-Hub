@@ -165,6 +165,7 @@ This runs the agent and core tests defined in `tests/`.
 - [Google ADK Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
 - [Prompt Engineering Guide](https://www.kaggle.com/whitepaper-prompt-engineering)
 - [Performance Marketing Strategies](/docs/performance_marketing/)
+- [Performance Marketing README](/docs/performance_marketing/README.md)
 
 ## 🔗 External Sources
 
