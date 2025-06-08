@@ -22,3 +22,4 @@ https://developer.apple.com/machine-learning/ 200
 https://aif360.readthedocs.io/ 200
 https://gdpr.eu 200
 https://github.com/thunlp/OpenPrompt 200
+https://api.amplitude.com/2/httpapi", 200
