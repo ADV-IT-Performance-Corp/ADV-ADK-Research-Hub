@@ -24,7 +24,9 @@
 
 ## 📈 Evaluation Results
 - [ ] Update `docs/meta/evaluation_results.json` with the new version, scores, reviewer, and date
+- [ ] Update `evaluation_results.json`
 
 ## 🧪 Final Test
 - [ ] CI runs and passes successfully
+- [ ] Run `scripts/bump_version.sh` and verify version consistency
 - [ ] Ready for `main` branch merge
