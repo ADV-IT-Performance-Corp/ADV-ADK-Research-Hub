@@ -33,6 +33,10 @@ ADK/
         ├── mckinsey_ai_marketing.md
         ├── neurogym_neuromarketing.md
         └── reforge_growth_loops.md
+    ├── integrations/
+        ├── google_ads_api.md
+        ├── meta_ads_api.md
+        └── tiktok_ads_api.md
     ├── config_agent_overview.md
     ├── world_agent_integration.md
 ```
