@@ -38,10 +38,21 @@ def main():
     index_path = os.path.join('docs', 'source_index.json')
     core_sources, meta = collect_existing_core(index_path)
     ext_sources = []
+    names_seen = set()
+    links_seen = set()
     for root, _, files in os.walk(ROOT):
         for fname in files:
-            if fname.endswith('.md'):
-                ext_sources.append(parse_stub(os.path.join(root, fname)))
+            if not fname.endswith('.md'):
+                continue
+            stub = parse_stub(os.path.join(root, fname))
+            name = stub.get('name')
+            link = stub.get('link')
+            if name in names_seen or (link and link in links_seen):
+                continue
+            names_seen.add(name)
+            if link:
+                links_seen.add(link)
+            ext_sources.append(stub)
     meta['last_updated'] = datetime.date.today().isoformat()
     with open(index_path, 'w', encoding='utf-8') as f:
         json.dump({'sources': core_sources + sorted(ext_sources, key=lambda x: x['name']),
