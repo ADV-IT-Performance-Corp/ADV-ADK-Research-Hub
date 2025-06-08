@@ -5,7 +5,14 @@ from src.core.reporting import ReportGenerator
 
 def main() -> None:
     collector = MetricsCollector()
-    collector.add(impressions=1200, clicks=160, cost=80.0, conversions=20, revenue=320.0)
+    collector.add(
+        impressions=1200,
+        clicks=160,
+        cost=80.0,
+        conversions=20,
+        revenue=320.0,
+        returning_customers=8,
+    )
     metrics = collector.collect()
 
     reporter = ReportGenerator()
