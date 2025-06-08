@@ -12,9 +12,9 @@ class GovernanceAgent(BaseAgent):
         super().__init__(name="GovernanceAgent")
         self._heartbeats: Dict[str, float] = {}
 
-    def record_heartbeat(self, agent_name: str) -> None:
+    def record_heartbeat(self, agent_name: str, timestamp: float | None = None) -> None:
         """Record a heartbeat timestamp for another agent."""
-        self._heartbeats[agent_name] = time.time()
+        self._heartbeats[agent_name] = timestamp or time.time()
 
     def run(self, status: str) -> str:
         now = time.time()
