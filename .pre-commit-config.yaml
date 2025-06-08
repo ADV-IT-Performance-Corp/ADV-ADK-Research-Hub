@@ -1,3 +1,4 @@
+---
 repos:
   - repo: https://github.com/igorshubovych/markdownlint-cli2
     rev: v0.7.0

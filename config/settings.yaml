@@ -1,3 +1,4 @@
+---
 # Default configuration for ADK agents
 prompt_version: 3.5.7  # prompt kernel version
 routing_weight: 1      # weight for ConfigAgent routing
