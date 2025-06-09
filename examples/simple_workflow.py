@@ -1,4 +1,5 @@
 """Run a basic workflow using AsyncEventBus and sample agents."""
+
 import asyncio
 from o3research.mcp_server import MCPServer
 from o3research.core import AsyncEventBus, get_logger
@@ -13,6 +14,7 @@ async def handle_research(msg: str) -> None:
     logger.info(server.route("research", msg))
     await asyncio.sleep(0.1)
     logger.info(server.route("content", msg))
+
 
 async def handle_optimize(msg: str) -> None:
     logger.info(server.route("optimize", msg))

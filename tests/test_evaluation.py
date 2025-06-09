@@ -1,6 +1,7 @@
 import unittest
 from o3research.core.evaluation import evaluate
 
+
 class TestEvaluation(unittest.TestCase):
     def test_weighted_score_full(self):
         metrics = {
@@ -29,6 +30,7 @@ class TestEvaluation(unittest.TestCase):
         }
         score = evaluate(metrics)
         self.assertEqual(score, 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
