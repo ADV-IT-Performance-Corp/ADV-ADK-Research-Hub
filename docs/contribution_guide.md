@@ -28,3 +28,16 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 ## 🧪 CI runs automatically on every `push` or `PR`
 
 Check `.github/workflows/validate_repo.yml` for details
+
+## 🔨 Commit Messages
+
+CI enforces specific prefixes (`feat:`, `fix:`, `chore:`, etc.) on every commit.
+Automatic merge commits created by Git will fail this check. When pulling the
+latest `master` into a feature branch, either squash the merge or reword the
+commit so the message starts with an allowed prefix, for example:
+
+```bash
+git commit --amend -m "chore: merge master into feature-X"
+```
+
+This ensures CI passes for merge commits.
