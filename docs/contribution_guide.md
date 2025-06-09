@@ -8,7 +8,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] Affected files declared and justified
 - [ ] No stub sections remain
 - [ ] All `.md` files are linted (via markdownlint-cli2)
-- [ ] All links return HTTP 200
+- [ ] Run `bash scripts/offline_link_check.sh` to verify external links (warn-only by default). Use `STRICT_LINKS=1` or `--strict` to fail on warnings.
 - [ ] Genome version for prompts updated in `prompt_genome.json`
 - [ ] `CHANGELOG.md` contains a descriptive section of updates
 - [ ] `python scripts/generate_evaluation.py tests/sample_metrics.json` run to update evaluation results
