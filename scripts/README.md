@@ -2,7 +2,7 @@
 
 Two helper scripts streamline validation and development:
 
-* `setup_env.sh` – Installs Node.js, markdownlint, `jq`, and `yamllint` so local
+* `setup_env.sh` – Installs Node.js, curl, markdownlint, `jq`, and `yamllint` so local
   checks match CI. Run once after cloning:
 
   ```bash
