@@ -14,6 +14,10 @@ fi
 
 packages=()
 
+if ! command -v curl >/dev/null; then
+  packages+=(curl)
+fi
+
 # Node.js 18 is required
 need_node=false
 if command -v node >/dev/null && command -v npm >/dev/null; then
