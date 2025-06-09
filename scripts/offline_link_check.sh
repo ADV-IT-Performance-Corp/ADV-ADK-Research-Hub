@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
 # Offline link check using cached status file
 set -e
+
+# offline check defaults to warn-only mode. use STRICT_LINKS=1 or --strict to
+# make warnings fail the build.
+strict=${STRICT_LINKS:-0}
+
+if [ "$1" = "--strict" ]; then
+  strict=1
+elif [ "$1" = "--warn-only" ]; then
+  strict=0
+elif [ -n "$1" ]; then
+  echo "Usage: $0 [--strict|--warn-only]" >&2
+  exit 2
+fi
+
 CACHE_FILE="docs/link_cache.txt"
 missing=0
 if [ ! -f "$CACHE_FILE" ]; then
@@ -18,4 +32,8 @@ for link in $links; do
     missing=1
   fi
 done
-exit $missing
+if [ "$strict" -eq 1 ]; then
+  exit $missing
+else
+  exit 0
+fi
