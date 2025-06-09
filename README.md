@@ -57,6 +57,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ├── docs/
 │   ├── prompt/
 │   ├── meta/
+│   │   └── source_integration_log.md
 │   ├── performance_marketing/
 │   ├── RESEARCH_GOALS.md
 │   ├── METHODOLOGY.md

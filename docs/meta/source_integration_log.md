@@ -1,3 +1,5 @@
+# Source Integration Log
+
 ## [2025-05-29] External Source Integration – Prompted by PROMPTFORGE
 
 Integrated the following 24 sources into `/docs/source_index.json` and created `.md` stubs in `/docs/external/`:
