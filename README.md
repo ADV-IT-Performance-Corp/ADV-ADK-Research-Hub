@@ -212,7 +212,8 @@ External stubs are organized under `docs/external/` by category (prompting, devo
 
 1. Fork the repository
 2. Create a feature branch
-3. Commit your changes
+3. Commit your changes using the conventional prefixes (`feat:`, `fix:`, `chore:`, etc.)
+   so CI validates your commit messages
 4. Push to the branch
 5. Create a Pull Request
 
