@@ -1,5 +1,7 @@
 """Example workflow integrating MetricsCollector and ReportGenerator."""
 
+from pathlib import Path
+
 from o3research.core.metrics import MetricsCollector
 from o3research.core.reporting import ReportGenerator
 
@@ -17,7 +19,8 @@ def main() -> None:
     metrics = collector.collect()
 
     reporter = ReportGenerator()
-    reporter.export_csv(metrics, "ads_metrics.csv")
+    output_path = Path("ads_metrics.csv")
+    reporter.export_csv(metrics, output_path)
     print("Metrics exported to ads_metrics.csv")
 
 
