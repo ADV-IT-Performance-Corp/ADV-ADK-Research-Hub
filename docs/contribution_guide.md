@@ -9,9 +9,13 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] No stub sections remain
 - [ ] All `.md` files are linted (via markdownlint-cli2)
 - [ ] Run `bash scripts/offline_link_check.sh` to verify external links (warn-only by default). Use `STRICT_LINKS=1` or `--strict` to fail on warnings.
+- [ ] `bash scripts/check_incomplete_work.sh` shows no to-do markers or temporary filler text in Markdown or YAML docs
+<!-- The script scans for TODO, Coming soon, or placeholder phrases -->
 - [ ] Genome version for prompts updated in `prompt_genome.json`
 - [ ] `CHANGELOG.md` contains a descriptive section of updates
 - [ ] `python scripts/generate_evaluation.py tests/sample_metrics.json` run to update evaluation results
+
+The incomplete work script scans only the `docs/` directory for Markdown and YAML files. JSON files are ignored.
 
 ## 📂 Required File Structure
 
