@@ -58,12 +58,12 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm ci --omit=optional
+        run: npm ci --omit=optional && echo "Node dependencies installed"
 
       # jq and yamllint installed via scripts/setup_env.sh
 
       - name: Lint Markdown files
-        run: npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
+        run: npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**" && echo "Markdown lint passed"
 
       - name: Validate JSON files
         run: |
@@ -71,14 +71,15 @@ jobs:
           jq . docs/source_index.json > /dev/null
           jq . docs/meta/prompt_genome.json > /dev/null
           jq . docs/meta/meta_evaluation.json > /dev/null
+          echo "JSON validation passed"
 
       - name: Validate YAML files
         # Extracted into a script to avoid complex quoting
-        run: bash scripts/validate_yaml.sh
+        run: bash scripts/validate_yaml.sh && echo "YAML lint passed"
 
       - name: Check for TODO, Coming soon, or placeholder
         # Moved to a script for readability
-        run: bash scripts/check_incomplete_work.sh
+        run: bash scripts/check_incomplete_work.sh && echo "TODO check passed"
 
       - name: Validate Required Files Exist
         run: |
@@ -123,6 +124,7 @@ jobs:
               echo "✅ Found: $file"
             fi
           done
+          echo "Required files check passed"
 
       - name: Check Version Consistency
         run: |
@@ -136,13 +138,14 @@ jobs:
           else
             echo "✅ Version $VERSION_IN_README is consistent across files"
           fi
+          echo "Version check passed"
 
       - name: Validate Golden Prompts
-        run: bash scripts/validate_golden_prompts.sh
+        run: bash scripts/validate_golden_prompts.sh && echo "Golden prompts valid"
 
 
       - name: Refresh Link Cache
-        run: python3 scripts/refresh_link_cache.py
+        run: python3 scripts/refresh_link_cache.py && echo "Link cache refreshed"
 
       - name: Offline Link Check
         run: |
@@ -150,6 +153,7 @@ jobs:
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
+          echo "Offline link check passed"
 
       - name: Prompt Genome Version Consistency
         run: |
@@ -158,9 +162,10 @@ jobs:
             echo "Missing v3.4 entry in prompt genome."
             exit 1
           fi
+          echo "Prompt genome version check passed"
 
       - name: Verify version consistency across files
-        run: bash scripts/validate_versions.sh
+        run: bash scripts/validate_versions.sh && echo "Version files in sync"
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -180,15 +185,16 @@ jobs:
           pip install -r requirements.txt
           if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
           pip install -e .
+          echo "Python dependencies installed"
 
       - name: Run flake8
-        run: flake8
+        run: flake8 && echo "flake8 passed"
 
       - name: Run black check
-        run: black --check .
+        run: black --check . && echo "black formatting passed"
 
       - name: Run mypy
-        run: mypy o3research
+        run: mypy o3research && echo "mypy passed"
 
 
       - name: Run unit tests with coverage
@@ -196,6 +202,7 @@ jobs:
           coverage run -m pytest
           coverage xml
           coverage report --fail-under=80
+          echo "Tests passed"
 
       - name: Update evaluation results
-        run: python scripts/generate_evaluation.py tests/sample_metrics.json
+        run: python scripts/generate_evaluation.py tests/sample_metrics.json && echo "Evaluation results updated"
