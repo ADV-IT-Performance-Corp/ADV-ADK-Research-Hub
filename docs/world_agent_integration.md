@@ -8,7 +8,7 @@ This guide outlines how external agents can interface with the ADK repository an
 - Ensure updates remain version-controlled through the Prompt Genome and CI checks.
 
 ## Integration Steps
-1. **Repository Access** — Connect via GitHub or clone the repo locally. Reference key files such as `docs/prompt/prompt_kernel_v3.5.md` and `docs/meta/prompt_genome.json`.
+1. **Repository Access** — Connect via GitHub or clone the repo locally. Reference key files such as `prompt/prompt_kernel_v3.5.md` and `meta/prompt_genome.json`.
 2. **Event Bus Setup** — Publish and subscribe to the AsyncEventBus channels described in [Agent System Overview](agent_system_overview.md). Typical topics include `campaign.launch`, `analysis.report`, `config.update`, and `heartbeat.check`.
 3. **Shared Memory** — Read and write semantic data using the mechanisms in `src/core/semantic_cache.py`. Agents should store embeddings or summaries for reuse by others.
 4. **PromptOps Workflow** — Route any prompt or configuration changes through the ConfigAgent. CI validation ensures that updates are tracked in `prompt_evolution_log/v3.5.yaml`.
