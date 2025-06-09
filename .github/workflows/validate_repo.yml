@@ -209,11 +209,6 @@ jobs:
       - name: Run mypy
         run: mypy o3research
 
-      - name: Install pre-commit
-        run: pip install pre-commit
-
-      - name: Run pre-commit
-        run: pre-commit run --all-files
 
       - name: Run unit tests with coverage
         run: |

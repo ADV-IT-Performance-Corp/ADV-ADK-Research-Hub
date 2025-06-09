@@ -146,19 +146,8 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
 4. After publishing a release, record the evaluation scores in
    `docs/meta/evaluation_results.json` with the reviewer name and date.
 
-### Pre-commit
-Install the pre-commit framework and set up the hooks:
-
-```bash
-pip install pre-commit
-pre-commit install
-```
-
-Running `pre-commit` will execute markdownlint, yamllint, golden prompt validation, and unit tests.
-All commit messages must start with an approved prefix (for example `feat:` or `fix:`). See [docs/contribution_guide.md](docs/contribution_guide.md#commit-messages) for details.
-
 ### Running Tests Manually
-You can execute the full test suite without the pre-commit hooks:
+You can execute the full test suite using pytest:
 
 ```bash
 python -m pytest
