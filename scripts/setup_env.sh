@@ -1,56 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Install Node.js and tools locally only if missing
-SUDO=""
-if [ "$(id -u)" -ne 0 ]; then
-  if command -v sudo >/dev/null 2>&1; then
-    SUDO="sudo"
-  else
-    echo "This script requires root privileges (sudo missing)." >&2
-    exit 1
-  fi
-fi
-
 packages=()
 
-if ! command -v curl >/dev/null; then
-  packages+=(curl)
-fi
-
-# Node.js 18 is required
-need_node=false
-if command -v node >/dev/null && command -v npm >/dev/null; then
-  node_major=$(node -v | sed -E 's/^v([0-9]+).*/\1/')
-  if [ "$node_major" -lt 18 ]; then
-    need_node=true
-  fi
-else
-  need_node=true
-fi
-
-if [ "$need_node" = true ]; then
-  curl -fsSL https://deb.nodesource.com/setup_18.x | $SUDO -E bash -
+# Install Node.js v18 if node is missing
+if ! command -v node >/dev/null 2>&1; then
+  curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
   packages+=(nodejs)
 fi
 
-if ! command -v jq >/dev/null; then
-  packages+=(jq)
+# Ensure jq and yamllint are installed
+for tool in jq yamllint; do
+  command -v "$tool" >/dev/null 2>&1 || packages+=("$tool")
+done
+
+# Install any missing packages
+if [ "${#packages[@]}" -gt 0 ]; then
+  apt-get update -qq
+  apt-get install -y "${packages[@]}" >/dev/null
 fi
 
-if ! command -v yamllint >/dev/null; then
-  packages+=(yamllint)
-fi
-
-if [ ${#packages[@]} -gt 0 ]; then
-  $SUDO apt-get update -qq
-  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y --no-install-recommends "${packages[@]}" >/dev/null
-fi
-
-if command -v npm >/dev/null; then
-  if ! command -v markdownlint-cli2 >/dev/null; then
-    npm install -g markdownlint-cli2 >/dev/null
-  fi
+# Install markdownlint-cli2 globally if npm exists
+if command -v npm >/dev/null 2>&1 && ! command -v markdownlint >/dev/null 2>&1; then
+  npm install -g markdownlint-cli2 >/dev/null
 fi
 
 echo "Environment ready"
