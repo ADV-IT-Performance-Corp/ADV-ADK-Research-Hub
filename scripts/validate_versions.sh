@@ -41,12 +41,22 @@ else
   echo "✅ README.md version matches VERSION"
 fi
 
-JSON_VERSION=$(jq -r '.version' docs/meta/evaluation_results.json)
-if [ "$JSON_VERSION" != "$FILE_VERSION" ]; then
-  echo "❌ evaluation_results.json version $JSON_VERSION does not match VERSION $FILE_VERSION"
+GP_VERSION=$(grep -oP 'Golden Prompts \(v\K[0-9]+\.[0-9]+\.[0-9]+' tests/golden_prompts/README.md | head -1)
+if [ "$GP_VERSION" != "$FILE_VERSION" ]; then
+  echo "❌ Golden Prompts README version $GP_VERSION does not match VERSION $FILE_VERSION"
   errors=1
 else
-  echo "✅ evaluation_results.json version matches VERSION"
+  echo "✅ Golden Prompts README matches VERSION"
+fi
+
+if [ -f docs/meta/evaluation_results.json ]; then
+  JSON_VERSION=$(jq -r '.version' docs/meta/evaluation_results.json)
+  if [ "$JSON_VERSION" != "$FILE_VERSION" ]; then
+    echo "❌ evaluation_results.json version $JSON_VERSION does not match VERSION $FILE_VERSION"
+    errors=1
+  else
+    echo "✅ evaluation_results.json version matches VERSION"
+  fi
 fi
 
 if [ "$errors" -ne 0 ]; then
