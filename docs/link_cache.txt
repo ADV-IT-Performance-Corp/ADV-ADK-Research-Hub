@@ -1,3 +1,4 @@
+# Cached link statuses for offline validation
 https://aif360.readthedocs.io/ 200
 https://airtable.com/developers/web/api/introduction 200
 https://api.amplitude.com/2/httpapi 200
