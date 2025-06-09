@@ -111,6 +111,7 @@ To run validations locally:
 ```bash
 # Install dependencies (one time)
 ./scripts/setup_env.sh
+# Installs Node.js v18.20.0 if missing
 
 # Run markdown linting
 markdownlint-cli2 "**/*.md" "#node_modules"
@@ -164,8 +165,9 @@ docker run --rm o3research
 ```
 
 The image installs the Python and Node.js dependencies and runs
-`examples/simple_workflow.py` by default. Mount your own code or override the
-command to run different workflows.
+`examples/simple_workflow.py` by default. Node.js v18.20.0 is installed during
+the build. Mount your own code or override the command to run different
+workflows.
 
 ## 📚 Core References
 
