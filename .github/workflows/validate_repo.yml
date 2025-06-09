@@ -18,6 +18,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Prepare environment
+        run: bash scripts/setup_env.sh
+
       - name: Validate commit message prefix
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%s)
@@ -46,14 +49,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --omit=optional
 
-      - name: Ensure jq and yamllint
-        run: |
-          if ! command -v jq >/dev/null; then
-            sudo apt-get update && sudo apt-get install -y jq
-          fi
-          if ! command -v yamllint >/dev/null; then
-            sudo apt-get update && sudo apt-get install -y yamllint
-          fi
+      # jq and yamllint installed via scripts/setup_env.sh
 
       - name: Lint Markdown files
         run: npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
