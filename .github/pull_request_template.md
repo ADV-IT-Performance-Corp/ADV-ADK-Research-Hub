@@ -50,7 +50,7 @@ Ensure the following items are checked before requesting review:
 - [ ] `source_index.json` updated if new `.md` was added
 - [ ] `CHANGELOG.md` updated with version bump
 - [ ] PR title follows format: `feat:` `fix:` `chore:` etc.
-- [ ] Merge commits reworded or squashed to include a prefix
+- [ ] Merge commits reworded (e.g., `chore: merge master into feature-X`) or squashed
 - [ ] Golden prompts pass validation checks
 - [ ] All tests are passing
 
