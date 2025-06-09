@@ -1,5 +1,5 @@
 import unittest
-from src import __version__
+from o3research import __version__
 
 class TestVersion(unittest.TestCase):
     def test_version_matches_file(self):

@@ -1,10 +1,10 @@
 """Demonstrate agents collaborating via AsyncEventBus."""
 import asyncio
 
-from src.core import AsyncEventBus, get_logger
-from src.agents.campaign_agent import CampaignAgent
-from src.agents.engagement_agent import EngagementAgent
-from src.agents.analytics_agent import AnalyticsAgent
+from o3research.core import AsyncEventBus, get_logger
+from o3research.agents.campaign_agent import CampaignAgent
+from o3research.agents.engagement_agent import EngagementAgent
+from o3research.agents.analytics_agent import AnalyticsAgent
 
 
 event_bus = AsyncEventBus()

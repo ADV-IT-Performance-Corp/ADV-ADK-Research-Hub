@@ -4,7 +4,7 @@ import importlib.util
 YAML_AVAILABLE = importlib.util.find_spec("yaml") is not None
 
 if YAML_AVAILABLE:
-    from src.mcp_server import MCPServer
+    from o3research.mcp_server import MCPServer
 
 @unittest.skipUnless(YAML_AVAILABLE, "yaml library not available")
 class TestMCPServer(unittest.TestCase):

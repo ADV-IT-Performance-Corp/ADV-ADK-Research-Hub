@@ -1,5 +1,5 @@
 import unittest
-from src.core.evaluation import evaluate
+from o3research.core.evaluation import evaluate
 
 class TestEvaluation(unittest.TestCase):
     def test_weighted_score_full(self):

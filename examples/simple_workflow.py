@@ -1,7 +1,7 @@
 """Run a basic workflow using AsyncEventBus and sample agents."""
 import asyncio
-from src.mcp_server import MCPServer
-from src.core import AsyncEventBus, get_logger
+from o3research.mcp_server import MCPServer
+from o3research.core import AsyncEventBus, get_logger
 
 
 event_bus = AsyncEventBus()

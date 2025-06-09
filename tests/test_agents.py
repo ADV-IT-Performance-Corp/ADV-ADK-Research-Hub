@@ -1,7 +1,7 @@
 import unittest
-from src.agents.research_agent import ResearchAgent
+from o3research.agents.research_agent import ResearchAgent
 try:
-    from src.agents.config_agent import ConfigAgent  # type: ignore
+    from o3research.agents.config_agent import ConfigAgent  # type: ignore
     YAML_AVAILABLE = True
 except Exception:
     YAML_AVAILABLE = False

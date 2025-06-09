@@ -1,7 +1,7 @@
 import unittest
-from src.core.event_bus import EventBus
-from src.core.async_event_bus import AsyncEventBus
-from src.core.metrics import MetricsCollector
+from o3research.core.event_bus import EventBus
+from o3research.core.async_event_bus import AsyncEventBus
+from o3research.core.metrics import MetricsCollector
 import asyncio
 try:
     import yaml  # type: ignore
