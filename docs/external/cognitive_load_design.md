@@ -6,6 +6,7 @@
 
 ## Description
 Nielsen Norman Group's research on cognitive load informs how to design experiences that account for user attention and effort.
+Access to the linked article may occasionally require sign-in, but the guidance remains valuable for prompt design.
 
 ## Use Cases
 - Optimize prompts for minimal cognitive overhead
