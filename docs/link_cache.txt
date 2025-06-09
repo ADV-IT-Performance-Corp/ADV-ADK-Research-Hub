@@ -1,9 +1,9 @@
 # Cached link statuses for offline validation
 https://aif360.readthedocs.io/ 200
 https://airtable.com/developers/web/api/introduction 200
-https://api.amplitude.com/2/httpapi 200
+https://developers.amplitude.com/docs/http-api-v2 200
 https://arxiv.org/abs/2202.11382 200
-https://cloud.google.com/vertex-ai/docs/generative-ai/grounding 200
+https://cloud.google.com/vertex-ai/docs/ 200
 https://developer.apple.com/machine-learning/ 200
 https://developers.google.com/docs 200
 https://docs.anthropic.com 200
@@ -14,13 +14,13 @@ https://docs.ray.io/en/latest/serve/ 200
 https://docs.wandb.ai/ 200
 https://fastapi.tiangolo.com/ 200
 https://gdpr.eu 200
-https://github.com/AutogenStudio/autogen 200
+https://github.com/microsoft/autogen 200
 https://github.com/google-research/FLAN 200
 https://github.com/openai/openai-cookbook 200
 https://github.com/thunlp/OpenPrompt 200
 https://helm.sh/docs/ 200
-https://mcp-docs.readthedocs.io/ 200
+https://mcp.readthedocs.io/en/latest/ 200
 https://mlflow.org/docs/latest/index.html 200
 https://www.docs.developers.amplitude.com 200
-https://www.nngroup.com/topic/cognitive-load/ 200
+https://www.nngroup.com/articles/cognitive-load/ 200
 https://www.tinyml.org/ 200
