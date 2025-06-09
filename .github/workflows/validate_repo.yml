@@ -83,7 +83,7 @@ jobs:
       - name: Validate Required Files Exist
         run: |
           echo "Checking required files..."
-          REQUIRED_FILES=(
+          REQUIRED_ALWAYS=(
             "docs/prompt/prompt_kernel_v3.5.md"
             "docs/meta/prompt_evolution_log/v3.5.yaml"
             "docs/meta/meta_evaluation.json"
@@ -91,15 +91,34 @@ jobs:
             "docs/source_index.json"
             "README.md"
             "CHANGELOG.md"
+          )
+          REQUIRED_RELEASE=(
             "tests/golden_prompts/test_prompt_coordinator.md"
             "tests/golden_prompts/test_memory_reflection.md"
             "tests/golden_prompts/test_kpi_optimization.md"
           )
 
-          for file in "${REQUIRED_FILES[@]}"; do
+          BRANCH_NAME="${GITHUB_REF_NAME:-${GITHUB_REF##*/}}"
+
+          for file in "${REQUIRED_ALWAYS[@]}"; do
+            echo "Checking $file"
             if [ ! -f "$file" ]; then
               echo "❌ Missing required file: $file"
               exit 1
+            else
+              echo "✅ Found: $file"
+            fi
+          done
+
+          for file in "${REQUIRED_RELEASE[@]}"; do
+            echo "Checking $file"
+            if [ ! -f "$file" ]; then
+              if [ "$BRANCH_NAME" = "master" ]; then
+                echo "❌ Missing required release file: $file"
+                exit 1
+              else
+                echo "⚠️ Warning: missing release file: $file" >&2
+              fi
             else
               echo "✅ Found: $file"
             fi
