@@ -247,5 +247,5 @@ External stubs are organized under `docs/external/` by category: `prompting`, `d
 - [IBM AI Learning Path](https://developer.ibm.com/learningpaths/get-started-artificial-intelligence/)
 - [IBM Technology YouTube](https://www.youtube.com/@IBMTechnology)
 
-### Prompt Reference
+### Prompt Reference:
 - [O3 Deep Research Prompt](docs/o3_deep_research_prompt.md) — The full V3 instruction set for launching O3 Deep Research analysis.
