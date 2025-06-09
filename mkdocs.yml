@@ -1,0 +1,19 @@
+---
+site_name: O3 Deep Research Docs
+repo_url: https://github.com/DanCanadian/ADK
+docs_dir: docs
+site_url: https://dancanadian.github.io/ADK/
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - Quickstart: ADK_quickstart.md
+  - Methodology: METHODOLOGY.md
+  - Research Goals: RESEARCH_GOALS.md
+  - Agent System Overview: agent_system_overview.md
+  - Prompt Kernel: prompt/prompt_kernel_v3.5.md
+  - ChatGPT Test: test_chatgpt.md
+  - Meta:
+      - Prompt Evolution Log: meta/prompt_evolution_log/v3.5.yaml
+      - Meta Evaluation: meta/meta_evaluation.md
+      - Evaluation Results: meta/evaluation_results.json
