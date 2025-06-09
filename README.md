@@ -147,13 +147,15 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
    `docs/meta/evaluation_results.json` with the reviewer name and date.
 
 ### Running Tests Manually
-You can execute the full test suite using pytest:
+You can execute the full test suite with coverage to match the CI workflow:
 
 ```bash
-python -m pytest
+coverage run -m pytest
+coverage xml
+coverage report --fail-under=80
 ```
 
-This runs the agent and core tests defined in `tests/`.
+This runs the agent and core tests defined in `tests/` and enforces a coverage threshold.
 
 ### Docker Usage
 You can build a lightweight container image using the provided `Dockerfile`:
