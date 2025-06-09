@@ -9,6 +9,9 @@ Two helper scripts streamline validation and development:
   ./scripts/setup_env.sh
   ```
 
+  The script automatically detects if it is run as root and prefixes
+  `apt-get` commands with `sudo` when necessary.
+
 * `validate_golden_prompts.sh` – Ensures each prompt test contains the required
   `INPUT`, `EXPECTED`, and `NOTES` sections and includes version tags:
 
