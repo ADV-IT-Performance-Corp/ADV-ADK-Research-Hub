@@ -1,0 +1,26 @@
+---
+name: Docker Build
+
+'on':
+  push:
+    paths:
+      - Dockerfile
+      - '**/requirements*.txt'
+      - pyproject.toml
+      - package.json
+      - package-lock.json
+  pull_request:
+    paths:
+      - Dockerfile
+      - '**/requirements*.txt'
+      - pyproject.toml
+      - package.json
+      - package-lock.json
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build image
+        run: docker build -t o3research:ci .
