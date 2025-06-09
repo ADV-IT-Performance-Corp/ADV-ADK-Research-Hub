@@ -31,20 +31,20 @@ Check `.github/workflows/validate_repo.yml` for details
 
 ## 🔨 Commit Messages
 
-CI enforces specific prefixes (`feat:`, `fix:`, `chore:`, etc.) on every commit.
-Automatic merge commits created by Git will fail this check. When pulling the
-latest `master` into a feature branch, either squash the merge or reword the
-commit so the message starts with an allowed prefix, for example:
+CI enforces specific prefixes (`feat:`, `fix:`, `chore:`, etc.) on regular commits.
+Merge commits are automatically skipped by CI, so they will not block a build.
+If you want to keep a merge commit readable, you can reword it with an allowed
+prefix, for example:
 
 ```bash
 git commit --amend -m "chore: merge master into feature-X"
 ```
 
-This ensures CI passes for merge commits.
+This ensures commit history stays readable.
 
-**Note:** Merge commits with messages like `Merge branch 'master'` must be
-reworded (e.g., `chore: merge master into feature-X`) or squashed before
-pushing. Otherwise CI will block the PR.
+**Note:** CI skips prefix checks on merge commits, so they won't block the PR.
+Rewording them with a prefix (e.g., `chore: merge master into feature-X`) is
+still recommended for clarity.
 
 ## 📦 Publishing a New Version
 
