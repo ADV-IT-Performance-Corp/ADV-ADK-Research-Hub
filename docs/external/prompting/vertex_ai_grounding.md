@@ -1,6 +1,6 @@
 # Vertex AI Grounding
 
-**URL:** https://cloud.google.com/vertex-ai/docs/generative-ai/grounding  
+**URL:** https://cloud.google.com/vertex-ai/docs/
 **Relevance:** grounding, prompting  
 **Used by Agents:** ResearchAgent, ContentAgent
 

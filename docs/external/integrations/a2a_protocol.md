@@ -1,6 +1,6 @@
 # A2A Protocol
 
-**URL:** https://github.com/AutogenStudio/autogen  
+**URL:** https://github.com/microsoft/autogen
 **Relevance:** coordination, orchestration  
 **Used by Agents:** ConfigAgent, CampaignAgent
 

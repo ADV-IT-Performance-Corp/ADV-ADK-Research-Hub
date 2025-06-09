@@ -27,7 +27,7 @@ API_KEY = "YOUR_API_KEY"
 events = [{"user_id": "user123", "event_type": "Button Clicked"}]
 
 requests.post(
-    "https://api.amplitude.com/2/httpapi",
+    "https://developers.amplitude.com/docs/http-api-v2",
     headers={"Content-Type": "application/json"},
     data=json.dumps({"api_key": API_KEY, "events": events}),
 )

@@ -1,6 +1,6 @@
 # CognitiveLoad Design (NNG)
 
-**URL:** https://www.nngroup.com/topic/cognitive-load/  
+**URL:** https://www.nngroup.com/articles/cognitive-load/
 **Relevance:** behavioral prompting  
 **Used by Agents:** EngagementAgent, ContentAgent
 

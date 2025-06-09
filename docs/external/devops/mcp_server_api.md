@@ -1,6 +1,6 @@
 # MCP Server API
 
-**URL:** https://mcp-docs.readthedocs.io/  
+**URL:** https://mcp.readthedocs.io/en/latest/
 **Relevance:** orchestration, memory  
 **Used by Agents:** ConfigAgent, Infra
 
