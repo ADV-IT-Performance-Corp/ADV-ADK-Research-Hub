@@ -48,7 +48,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 .
 ├── .github/
 │   └── workflows/
-├── src/
+├── o3research/
 │   ├── core/
 │   └── agents/
 ├── config/
@@ -131,14 +131,15 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
    git clone https://github.com/adv-ai/o3-deep-research-context.git
    ```
 
-2. Install Python dependencies:
+2. Install Python dependencies and the package in editable mode:
 
    ```bash
    pip install -r requirements.txt
+   pip install -e .
    ```
 
 3. The current release version is stored in the `VERSION` file and exposed as
-   `src.__version__` for programmatic access.
+   `o3research.__version__` for programmatic access.
 4. After publishing a release, record the evaluation scores in
    `docs/meta/evaluation_results.json` with the reviewer name and date.
 

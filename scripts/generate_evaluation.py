@@ -15,7 +15,7 @@ except Exception:
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.core.evaluation import evaluate
+from o3research.core.evaluation import evaluate
 
 
 def load_metrics(path: Path) -> dict:

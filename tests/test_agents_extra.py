@@ -1,9 +1,9 @@
 import unittest
 import time
-from src.agents.content_agent import ContentAgent
-from src.agents.analytics_agent import AnalyticsAgent
-from src.agents.ab_testing_agent import AbTestingAgent
-from src.agents.governance_agent import GovernanceAgent
+from o3research.agents.content_agent import ContentAgent
+from o3research.agents.analytics_agent import AnalyticsAgent
+from o3research.agents.ab_testing_agent import AbTestingAgent
+from o3research.agents.governance_agent import GovernanceAgent
 
 
 class TestExtraAgents(unittest.TestCase):

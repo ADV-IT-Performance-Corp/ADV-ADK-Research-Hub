@@ -45,3 +45,21 @@ This ensures CI passes for merge commits.
 **Note:** Merge commits with messages like `Merge branch 'master'` must be
 reworded (e.g., `chore: merge master into feature-X`) or squashed before
 pushing. Otherwise CI will block the PR.
+
+## 📦 Publishing a New Version
+
+1. Update the number in `VERSION` and add an entry to `CHANGELOG.md`.
+2. Commit the changes with an appropriate message (e.g., `chore: release vX.Y.Z`).
+3. Tag the commit and push the tag:
+
+   ```bash
+   git tag vX.Y.Z
+   git push origin vX.Y.Z
+   ```
+
+4. Build and upload the package to PyPI:
+
+   ```bash
+   python -m build
+   twine upload dist/*
+   ```

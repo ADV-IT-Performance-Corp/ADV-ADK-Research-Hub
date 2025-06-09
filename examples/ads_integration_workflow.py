@@ -1,6 +1,6 @@
 """Example workflow integrating MetricsCollector and ReportGenerator."""
-from src.core.metrics import MetricsCollector
-from src.core.reporting import ReportGenerator
+from o3research.core.metrics import MetricsCollector
+from o3research.core.reporting import ReportGenerator
 
 
 def main() -> None:
