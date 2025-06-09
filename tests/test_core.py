@@ -57,17 +57,26 @@ class TestEventBus(unittest.TestCase):
     def test_async_publish_multiple_exceptions(self):
         bus = AsyncEventBus()
 
+        results = []
+
         async def bad1(_: str) -> None:
+            results.append("bad1")
             raise ValueError("first")
 
         async def bad2(_: str) -> None:
+            results.append("bad2")
             raise RuntimeError("second")
 
         bus.subscribe("topic", bad1)
         bus.subscribe("topic", bad2)
 
-        with self.assertRaises(ValueError):
+        with self.assertLogs(bus.logger, level="ERROR") as cm:
             asyncio.run(bus.publish("topic", "data"))
+
+        self.assertEqual(results, ["bad1", "bad2"])
+        self.assertEqual(len(cm.output), 2)
+        self.assertIn("first", cm.output[0])
+        self.assertIn("second", cm.output[1])
 
 
 class TestMetricsCollector(unittest.TestCase):
