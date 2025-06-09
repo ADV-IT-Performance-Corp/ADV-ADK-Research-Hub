@@ -4,7 +4,12 @@ set -euo pipefail
 # Install Node.js and tools locally only if missing
 SUDO=""
 if [ "$(id -u)" -ne 0 ]; then
-  SUDO="sudo"
+  if command -v sudo >/dev/null 2>&1; then
+    SUDO="sudo"
+  else
+    echo "This script requires root privileges (sudo missing)." >&2
+    exit 1
+  fi
 fi
 
 packages=()
