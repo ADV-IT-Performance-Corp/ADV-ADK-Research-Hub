@@ -1,2 +1,4 @@
 mypy
 types-PyYAML
+coverage
+pytest
