@@ -40,7 +40,8 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 - [Methodology](docs/METHODOLOGY.md) - Detailed research approach and tools
 
 ### Project Management
-- [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
+ - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
+   (see checklist; link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
@@ -125,8 +126,13 @@ bash scripts/offline_link_check.sh
 ```
 
 - `python scripts/refresh_link_cache.py` refreshes external link status.
+- Link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`.
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
+
+### Link Validation
+
+Run `bash scripts/offline_link_check.sh` to verify external sources are reachable. Use the optional `--strict` flag (or set `STRICT_LINKS=1`) if you want warnings to fail the build.
 
 ### For Developers
 1. Clone this repository:
