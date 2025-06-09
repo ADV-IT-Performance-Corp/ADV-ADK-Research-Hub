@@ -11,6 +11,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] All links return HTTP 200
 - [ ] Genome version for prompts updated in `prompt_genome.json`
 - [ ] `CHANGELOG.md` contains a descriptive section of updates
+- [ ] `python scripts/generate_evaluation.py tests/sample_metrics.json` run to update evaluation results
 
 ## 📂 Required File Structure
 
