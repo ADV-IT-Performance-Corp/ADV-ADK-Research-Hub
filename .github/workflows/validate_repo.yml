@@ -140,57 +140,8 @@ jobs:
           test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
 
-      - name: Prompt Genome Version Consistency
-        run: |
-          version=$(jq -r '.versions[] | select(.tag=="v3.4")' docs/meta/prompt_genome.json)
-          if [ -z "$version" ]; then
-            echo "Missing v3.4 entry in prompt genome."
-            exit 1
-          fi
-
-      - name: Verify version consistency across files
-        run: |
-          echo "Checking prompt_version consistency..."
-          FILE_VERSION=$(tr -d '[:space:]' < VERSION)
-          SETTINGS_VERSION=$(grep -oP '^prompt_version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' config/settings.yaml)
-          if [ "$SETTINGS_VERSION" != "$FILE_VERSION" ]; then
-            echo "❌ prompt_version mismatch: settings.yaml ($SETTINGS_VERSION) vs VERSION ($FILE_VERSION)"
-            exit 1
-          fi
-
-          ACTIVE_COUNT=$(jq -r '.prompt_genome.prompts[] | select(.status=="active") | .id' \
-            docs/meta/prompt_genome.json | grep -c "v$FILE_VERSION" || true)
-          if [ "$ACTIVE_COUNT" -eq 0 ]; then
-            echo "❌ No active prompt genome entry matches VERSION $FILE_VERSION"
-            exit 1
-          fi
-
-          CORE_VERSION=$(jq -r '.sources[] | select(.type=="core") | .version' docs/source_index.json | head -1)
-          if [ "$CORE_VERSION" != "$FILE_VERSION" ]; then
-            echo "❌ Core source version mismatch: docs/source_index.json ($CORE_VERSION) vs VERSION ($FILE_VERSION)"
-            exit 1
-          fi
-
-          README_VERSION=$(grep -oP 'Golden Prompts \(v\K[0-9]+\.[0-9]+\.[0-9]+' \
-            tests/golden_prompts/README.md | head -1)
-          if [ "$README_VERSION" != "$FILE_VERSION" ]; then
-            echo "❌ Golden Prompts README version ($README_VERSION) does not match VERSION ($FILE_VERSION)"
-            exit 1
-          fi
-
-          echo "✅ All versions match $FILE_VERSION"
-
-      - name: Verify evaluation_results version matches VERSION
-        run: |
-          echo "Checking evaluation_results.json version..."
-          JSON_VERSION=$(jq -r '.version' docs/meta/evaluation_results.json)
-          FILE_VERSION=$(tr -d '[:space:]' < VERSION)
-          if [ "$JSON_VERSION" != "$FILE_VERSION" ]; then
-            echo "❌ evaluation_results.json version ($JSON_VERSION) does not match VERSION ($FILE_VERSION)"
-            exit 1
-          else
-            echo "✅ evaluation_results.json version matches VERSION"
-          fi
+      - name: Validate version consistency
+        run: bash scripts/validate_versions.sh
 
       - name: Set up Python
         uses: actions/setup-python@v4
