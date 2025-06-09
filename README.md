@@ -120,7 +120,11 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 grep -r "TODO\|Coming soon\|placeholder" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" .
 # Rebuild source index and run offline link check
 python3 scripts/update_source_index.py
+# offline check defaults to warn-only mode
 bash scripts/offline_link_check.sh
+# enforce strict behavior with environment variable or flag
+STRICT_LINKS=1 bash scripts/offline_link_check.sh
+bash scripts/offline_link_check.sh --strict
   python scripts/refresh_link_cache.py
 ```
 
