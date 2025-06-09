@@ -9,6 +9,7 @@ This repository is often used with the ChatGPT GitHub integration. Follow the ru
 
 ## ✅ Commit messages and PRs
 - Start commit messages with a short prefix such as `feat:`, `fix:` or `chore:` followed by a concise description.
+- Merge commits are automatically skipped by the commit prefix check.
 - Use the pull request template `.github/pull_request_template.md` and check all relevant boxes.
 - Additional contribution requirements are described in [docs/contribution_guide.md](docs/contribution_guide.md).
 
