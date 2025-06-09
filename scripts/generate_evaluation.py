@@ -6,16 +6,17 @@ import sys
 from datetime import date
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
 try:
     import yaml  # type: ignore
+
     YAML_AVAILABLE = True
 except Exception:
     YAML_AVAILABLE = False
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-
-from o3research.core.evaluation import evaluate
+from o3research.core.evaluation import evaluate  # noqa: E402
 
 
 def load_metrics(path: Path) -> dict:
@@ -44,12 +45,14 @@ def main() -> None:
         results = json.loads(results_path.read_text(encoding="utf-8"))
 
     version = Path("VERSION").read_text(encoding="utf-8").strip()
-    results.update({
-        "version": version,
-        "scores": metrics,
-        "score": score,
-        "date": date.today().isoformat(),
-    })
+    results.update(
+        {
+            "version": version,
+            "scores": metrics,
+            "score": score,
+            "date": date.today().isoformat(),
+        }
+    )
     results.setdefault("reviewer", "Automated")
 
     results_path.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")

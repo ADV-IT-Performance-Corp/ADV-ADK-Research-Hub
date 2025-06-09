@@ -4,7 +4,9 @@ from pathlib import Path
 
 def _load_meta_evaluation() -> dict:
     """Load evaluation metadata from JSON."""
-    path = Path(__file__).resolve().parents[2] / "docs" / "meta" / "meta_evaluation.json"
+    path = (
+        Path(__file__).resolve().parents[2] / "docs" / "meta" / "meta_evaluation.json"
+    )
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -25,7 +27,10 @@ def evaluate(metrics: dict[str, float]) -> float:
     float
         Weighted evaluation score. Returns 0.0 if no weights match.
     """
-    weights = {m["id"]: m.get("weight", 0.0) for m in META_EVALUATION.get("evaluation_metrics", [])}
+    weights = {
+        m["id"]: m.get("weight", 0.0)
+        for m in META_EVALUATION.get("evaluation_metrics", [])
+    }
     weighted_sum = 0.0
     total_weight = 0.0
     for name, score in metrics.items():

@@ -2,6 +2,7 @@ import asyncio
 from collections import defaultdict
 from .types import AsyncCallback
 
+
 class AsyncEventBus:
     """Simple asyncio-based publish/subscribe bus."""
 

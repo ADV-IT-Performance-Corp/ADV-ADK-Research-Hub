@@ -1,4 +1,5 @@
 """Example workflow integrating MetricsCollector and ReportGenerator."""
+
 from o3research.core.metrics import MetricsCollector
 from o3research.core.reporting import ReportGenerator
 

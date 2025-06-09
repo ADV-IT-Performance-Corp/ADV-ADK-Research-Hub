@@ -199,6 +199,12 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
+      - name: Run flake8
+        run: flake8
+
+      - name: Run black check
+        run: black --check .
+
       - name: Install pre-commit
         run: pip install pre-commit
 

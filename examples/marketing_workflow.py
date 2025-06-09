@@ -1,4 +1,5 @@
 """Demonstrate agents collaborating via AsyncEventBus."""
+
 import asyncio
 
 from o3research.core import AsyncEventBus, get_logger

@@ -14,14 +14,16 @@ class MetricsCollector:
         returning_customers: int = 0,
     ) -> None:
         """Add a new set of raw metrics."""
-        self.records.append({
-            "impressions": impressions,
-            "clicks": clicks,
-            "cost": cost,
-            "conversions": conversions,
-            "revenue": revenue,
-            "returning_customers": returning_customers,
-        })
+        self.records.append(
+            {
+                "impressions": impressions,
+                "clicks": clicks,
+                "cost": cost,
+                "conversions": conversions,
+                "revenue": revenue,
+                "returning_customers": returning_customers,
+            }
+        )
 
     def collect(self) -> dict:
         """Return aggregated metrics along with computed KPIs."""
@@ -38,7 +40,9 @@ class MetricsCollector:
         roas = (total_revenue / total_cost) if total_cost else 0.0
         clv = (total_revenue / total_conversions) if total_conversions else 0.0
         cpa = (total_cost / total_conversions) if total_conversions else 0.0
-        retention_rate = (total_returning / total_conversions) if total_conversions else 0.0
+        retention_rate = (
+            (total_returning / total_conversions) if total_conversions else 0.0
+        )
 
         return {
             "impressions": total_impressions,

@@ -6,6 +6,7 @@ YAML_AVAILABLE = importlib.util.find_spec("yaml") is not None
 if YAML_AVAILABLE:
     from o3research.mcp_server import MCPServer
 
+
 @unittest.skipUnless(YAML_AVAILABLE, "yaml library not available")
 class TestMCPServer(unittest.TestCase):
     def setUp(self) -> None:
@@ -36,6 +37,7 @@ class TestMCPServer(unittest.TestCase):
         settings_count = len(self.server.config_agent.load_settings())
         result = self.server.route("config", "")
         self.assertEqual(result, f"ConfigAgent loaded {settings_count} settings")
+
 
 if __name__ == "__main__":
     unittest.main()

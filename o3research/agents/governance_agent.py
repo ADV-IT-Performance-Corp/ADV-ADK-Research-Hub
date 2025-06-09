@@ -5,6 +5,7 @@ from typing import Dict
 
 from ..core.base_agent import BaseAgent
 
+
 class GovernanceAgent(BaseAgent):
     """Prototype agent to monitor other agents and handle escalation."""
 
@@ -23,6 +24,7 @@ class GovernanceAgent(BaseAgent):
             agents = ", ".join(stale)
             return f"{self.name} ALERT: {agents} heartbeat stale"
         return f"{self.name} reviewed status: {status}"
+
 
 if __name__ == "__main__":
     agent = GovernanceAgent()
