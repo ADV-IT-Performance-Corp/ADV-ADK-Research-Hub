@@ -1,5 +1,6 @@
 import csv
 from collections.abc import Iterable, Mapping
+from pathlib import Path
 
 
 class ReportGenerator:
@@ -15,7 +16,9 @@ class ReportGenerator:
         return "\n".join(lines)
 
     def export_csv(
-        self, metrics: Mapping[str, float] | Iterable[Mapping[str, float]], path: str
+        self,
+        metrics: Mapping[str, float] | Iterable[Mapping[str, float]],
+        path: str | Path,
     ) -> None:
         """Write metrics to a CSV file."""
         if isinstance(metrics, Mapping):
@@ -26,7 +29,7 @@ class ReportGenerator:
                 raise ValueError("No metrics to export")
 
         fieldnames = list(rows[0].keys())
-        with open(path, "w", newline="") as f:
+        with Path(path).open("w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
