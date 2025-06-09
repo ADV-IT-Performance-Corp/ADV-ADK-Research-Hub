@@ -1,0 +1,29 @@
+---
+name: Deploy Docs
+
+"on":
+  push:
+    branches: [master]
+    paths:
+      - 'mkdocs.yml'
+      - 'docs/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs
+        run: pip install mkdocs
+
+      - name: Build and Deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force --clean --remote-name origin
