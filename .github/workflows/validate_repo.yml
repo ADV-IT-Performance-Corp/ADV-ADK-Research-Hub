@@ -73,27 +73,12 @@ jobs:
           jq . docs/meta/meta_evaluation.json > /dev/null
 
       - name: Validate YAML files
-        run: |
-          echo "Validating YAML files..."
-          CONFIG='{ extends: default, rules: {line-length: {max: 120, allow-non-breakable-inline-mappings: true}} }'
-          find . -path ./node_modules -prune -o \( \
-            -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 yamllint -d "$CONFIG"
+        # Extracted into a script to avoid complex quoting
+        run: bash scripts/validate_yaml.sh
 
       - name: Check for TODO, Coming soon, or placeholder
-        run: |
-          echo "Checking for incomplete work..."
-          matches=$(grep -RniE '(TODO|Coming soon|placeholder)' docs/ --include="*.md" --include="*.yaml" \
-            --include="*.yml" --exclude-dir=legacy | grep -viE '^\s*```|<!--.*-->')
-          if [ -n "$matches" ]; then
-            echo "$matches"
-            branch=$(git rev-parse --abbrev-ref HEAD)
-            if [ "$branch" = "master" ]; then
-              echo "❌ Detected incomplete work on master. Please resolve before merging."
-              exit 1
-            else
-              echo "⚠️ Incomplete work detected on $branch. Proceeding with warning."
-            fi
-          fi
+        # Moved to a script for readability
+        run: bash scripts/check_incomplete_work.sh
 
       - name: Validate Required Files Exist
         run: |
