@@ -22,5 +22,5 @@ https://helm.sh/docs/ 200
 https://mcp.readthedocs.io/en/latest/ 200
 https://mlflow.org/docs/latest/index.html 200
 https://www.docs.developers.amplitude.com 200
-https://www.nngroup.com/articles/cognitive-load/ 200
+https://www.nngroup.com/topic/cognitive-load/ 200
 https://www.tinyml.org/ 200
