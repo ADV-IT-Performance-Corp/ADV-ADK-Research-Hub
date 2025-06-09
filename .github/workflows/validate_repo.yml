@@ -197,6 +197,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
           pip install -e .
 
       - name: Run flake8
@@ -204,6 +205,9 @@ jobs:
 
       - name: Run black check
         run: black --check .
+
+      - name: Run mypy
+        run: mypy o3research
 
       - name: Install pre-commit
         run: pip install pre-commit

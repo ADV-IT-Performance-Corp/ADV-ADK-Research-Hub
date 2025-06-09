@@ -1,8 +1,11 @@
+from typing import Dict, List, Union
+
+
 class MetricsCollector:
     """Simple metrics collector that aggregates raw counts and computes KPIs."""
 
     def __init__(self) -> None:
-        self.records = []
+        self.records: List[Dict[str, Union[int, float]]] = []
 
     def add(
         self,
@@ -25,7 +28,7 @@ class MetricsCollector:
             }
         )
 
-    def collect(self) -> dict:
+    def collect(self) -> Dict[str, Union[int, float]]:
         """Return aggregated metrics along with computed KPIs."""
         total_impressions = sum(r["impressions"] for r in self.records)
         total_clicks = sum(r["clicks"] for r in self.records)

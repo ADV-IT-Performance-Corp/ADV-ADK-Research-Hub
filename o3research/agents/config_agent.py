@@ -1,6 +1,8 @@
-from ..core.base_agent import BaseAgent
 from pathlib import Path
+from typing import Any, Dict
+
 import yaml
+from ..core.base_agent import BaseAgent
 
 
 class ConfigAgent(BaseAgent):
@@ -10,7 +12,7 @@ class ConfigAgent(BaseAgent):
         super().__init__(name="ConfigAgent")
         self.settings_file = Path(settings_file)
 
-    def load_settings(self) -> dict:
+    def load_settings(self) -> Dict[str, Any]:
         if not self.settings_file.exists():
             return {}
         return yaml.safe_load(self.settings_file.read_text())
