@@ -113,7 +113,8 @@ class TestQueueLimits(unittest.TestCase):
         if not YAML_AVAILABLE:
             self.skipTest('yaml library not available')
 
-        settings = yaml.safe_load(open('config/settings.yaml'))
+        with open('config/settings.yaml', 'r') as f:
+            settings = yaml.safe_load(f)
         max_size = settings.get('max_queue_size')
         if not max_size:
             self.skipTest('max_queue_size not configured')
