@@ -41,3 +41,7 @@ git commit --amend -m "chore: merge master into feature-X"
 ```
 
 This ensures CI passes for merge commits.
+
+**Note:** Merge commits with messages like `Merge branch 'master'` must be
+reworded (e.g., `chore: merge master into feature-X`) or squashed before
+pushing. Otherwise CI will block the PR.
