@@ -205,3 +205,6 @@ jobs:
 
       - name: Run unit tests
         run: python -m unittest discover tests
+
+      - name: Update evaluation results
+        run: python scripts/generate_evaluation.py tests/sample_metrics.json
