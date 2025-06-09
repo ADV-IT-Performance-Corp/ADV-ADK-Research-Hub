@@ -151,6 +151,7 @@ pre-commit install
 ```
 
 Running `pre-commit` will execute markdownlint, yamllint, golden prompt validation, and unit tests.
+All commit messages must start with an approved prefix (for example `feat:` or `fix:`). See [docs/contribution_guide.md](docs/contribution_guide.md#commit-messages) for details.
 
 ### Running Tests Manually
 You can execute the full test suite without the pre-commit hooks:
