@@ -164,6 +164,18 @@ python -m pytest
 
 This runs the agent and core tests defined in `tests/`.
 
+### Docker Usage
+You can build a lightweight container image using the provided `Dockerfile`:
+
+```bash
+docker build -t o3research .
+docker run --rm o3research
+```
+
+The image installs the Python and Node.js dependencies and runs
+`examples/simple_workflow.py` by default. Mount your own code or override the
+command to run different workflows.
+
 ## 📚 Core References
 
 - [Google ADK Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
