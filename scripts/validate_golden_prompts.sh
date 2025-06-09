@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Read the major/minor version prefix from the VERSION file
+VERSION_PREFIX=$(cut -d. -f1-2 VERSION)
+
 echo "Validating golden prompts..."
 for file in tests/golden_prompts/*.md; do
   if [ "$(basename "$file")" = "README.md" ]; then
@@ -17,8 +20,8 @@ for file in tests/golden_prompts/*.md; do
     echo "Missing Tags in $file" >&2
     exit 1
   fi
-  if ! grep -q 'v3\.5' "$file"; then
-    echo "Version not specified in $file" >&2
+  if ! grep -q "v${VERSION_PREFIX}" "$file"; then
+    echo "Version not specified or incorrect in $file" >&2
     exit 1
   fi
   echo "$file is valid"
