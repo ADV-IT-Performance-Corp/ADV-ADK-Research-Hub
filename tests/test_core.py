@@ -2,7 +2,9 @@ import unittest
 from o3research.core.event_bus import EventBus
 from o3research.core.async_event_bus import AsyncEventBus
 from o3research.core.metrics import MetricsCollector
+from o3research.core import get_logger
 import asyncio
+import logging
 
 try:
     import yaml  # type: ignore
@@ -145,6 +147,15 @@ class TestQueueLimits(unittest.TestCase):
 
         with self.assertRaises(asyncio.QueueFull):
             q.put_nowait("overflow")
+
+
+class TestLogger(unittest.TestCase):
+    def test_get_logger_single_instance(self) -> None:
+        logger1 = get_logger("foo")
+        logger2 = get_logger("foo")
+        self.assertIs(logger1, logger2)
+        self.assertEqual(len(logger1.handlers), 1)
+        self.assertEqual(logger1.level, logging.INFO)
 
 
 if __name__ == "__main__":
