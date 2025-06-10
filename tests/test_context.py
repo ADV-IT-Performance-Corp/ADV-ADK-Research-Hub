@@ -28,5 +28,5 @@ class TestContext(unittest.TestCase):
             Context([("a", 1)])
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

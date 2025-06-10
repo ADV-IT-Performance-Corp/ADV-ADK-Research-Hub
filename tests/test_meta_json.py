@@ -26,5 +26,5 @@ class TestPromptGenomeFile(unittest.TestCase):
         self.assertTrue(found, f"Active prompt for version {version} not found")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

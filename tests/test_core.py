@@ -158,5 +158,5 @@ class TestLogger(unittest.TestCase):
         self.assertEqual(logger1.level, logging.INFO)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

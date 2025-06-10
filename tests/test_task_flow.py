@@ -38,5 +38,5 @@ class TestTaskFlow(unittest.TestCase):
             self.assertEqual(flow.pending(), 0)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

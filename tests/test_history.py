@@ -32,5 +32,5 @@ class TestHistory(unittest.TestCase):
             self.assertEqual(str(cm.exception), "History data must be a list")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()
