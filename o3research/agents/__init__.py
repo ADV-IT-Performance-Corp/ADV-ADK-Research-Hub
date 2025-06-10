@@ -3,6 +3,16 @@
 from .agent_registry import register_agent, get_agent, clear_registry
 from .sample_agent import EchoAgent
 from .research_agent import ResearchAgent
+from .marketing_assistant import (
+    ContentAgent,
+    CampaignAgent,
+    EngagementAgent,
+    OptimizationAgent,
+    AnalyticsAgent,
+    ConfigAgent,
+    GovernanceAgent,
+    AbTestingAgent,
+)
 
 __all__ = [
     "register_agent",
@@ -10,4 +20,12 @@ __all__ = [
     "clear_registry",
     "EchoAgent",
     "ResearchAgent",
+    "ContentAgent",
+    "CampaignAgent",
+    "EngagementAgent",
+    "OptimizationAgent",
+    "AnalyticsAgent",
+    "ConfigAgent",
+    "GovernanceAgent",
+    "AbTestingAgent",
 ]
