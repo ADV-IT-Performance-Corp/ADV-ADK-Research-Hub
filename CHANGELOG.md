@@ -1,7 +1,14 @@
 # 📓 CHANGELOG.md — O3 Deep Research Repository
 <!-- markdownlint-disable MD024 -->
 
+
 All notable changes to this project are documented in this file.
+
+## v3.5.x Strict Link Checker Enabled
+- Removed `--warn-only` and `STRICT_LINKS` fallback options
+- Patched/archived dead links across documentation
+- CI link checking now strictly enforced
+- Suppressed npm proxy warnings
 
 ## [v3.5.8] — 2025-06-02
 
