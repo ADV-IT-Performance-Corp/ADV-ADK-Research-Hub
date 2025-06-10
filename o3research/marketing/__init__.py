@@ -8,6 +8,7 @@ from .funnel_planner import FunnelPlannerAgent
 from .creative_prompt_agent import CreativePromptAgent
 from .creative import CreativeAgent
 from .optimizer import PerformanceOptimizer
+from .api_writer import push_campaign
 
 __all__ = [
     "GoogleAdsCampaignAgent",
@@ -18,4 +19,5 @@ __all__ = [
     "CreativePromptAgent",
     "CreativeAgent",
     "PerformanceOptimizer",
+    "push_campaign",
 ]
