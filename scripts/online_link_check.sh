@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
-# Online link check using markdown-link-check
+# Validate external links with markdown-link-check
+# Exits non-zero if any links are broken
 set -euo pipefail
-
-strict=${STRICT_LINKS:-1}
-if [[ "${1:-}" == "--warn-only" ]]; then
-  strict=0
-elif [[ "${1:-}" == "--strict" ]]; then
-  strict=1
-elif [[ -n "${1:-}" ]]; then
-  echo "Usage: $0 [--warn-only|--strict]" >&2
-  exit 2
-fi
 
 if ! npx --no-install markdown-link-check --version >/dev/null 2>&1; then
   echo "markdown-link-check is not installed. Run 'npm ci' first." >&2
@@ -23,15 +14,13 @@ files=$(git ls-files '*.md')
 missing=0
 for file in $files; do
   echo "Checking $file"
-  if ! $mlc -q -c "$config" "$file"; then
+  output="$($mlc --quiet -c "$config" "$file")"
+  echo "$output"
+  if echo "$output" | grep -q '\[✖\]'; then
     echo "Broken links found in $file" >&2
     missing=1
   fi
 done
 
 echo "Online link check completed"
-if [ "$strict" -eq 1 ]; then
-  exit $missing
-else
-  exit 0
-fi
+exit $missing
