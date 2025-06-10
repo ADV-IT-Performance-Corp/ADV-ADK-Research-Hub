@@ -20,6 +20,7 @@ All notable changes to this project are documented in this file.
 - Added `BudgetAllocatorAgent` and ROAS planning guide
 - Implemented prompt observability with telemetry logging for marketing agents
 - Added `CreativeAgent` for simple ad copy suggestions
+- Added `Budgeter` module for cost-based spend allocation
 
 ## [v3.5.6] — 2025-05-31
 
