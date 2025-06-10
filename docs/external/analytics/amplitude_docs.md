@@ -15,7 +15,7 @@ Amplitude provides product analytics for measuring user engagement and conversio
 - Automate data exports for model performance monitoring
 
 ## See Also
-- [Agent System Overview](../agent_system_overview.md)
+- [Agent System Overview](../../agent_system_overview.md)
 
 ## Example Code
 

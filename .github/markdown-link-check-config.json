@@ -9,5 +9,5 @@
   ],
   "replacementPatterns": [],
   "timeout": "20s",
-  "aliveStatusCodes": [200, 206, 429, 503]
+  "aliveStatusCodes": [200, 206, 429, 503, 403]
 }

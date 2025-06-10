@@ -14,7 +14,7 @@ The reporting dashboard centralizes campaign metrics for quick review.
 The `ReportGenerator` utility converts collected metrics into various formats.
 Below is a typical workflow:
 
-1. Gather or compute metrics. The [`MetricsCollector`](../src/core/metrics.py)
+1. Gather or compute metrics. The [`MetricsCollector`](../o3research/core/metrics.py)
    class can help aggregate raw values.
 2. Instantiate the generator:
 
