@@ -3,6 +3,7 @@ from typing import Type, Dict
 from ..marketing.google_ads_agent import GoogleAdsCampaignAgent
 from ..marketing.meta_ads_agent import MetaAdsAgent
 from ..marketing.budget_allocator import BudgetAllocatorAgent
+from ..marketing.budgeter import Budgeter
 from ..marketing.funnel_planner import FunnelPlannerAgent
 from ..marketing.creative_prompt_agent import CreativePromptAgent
 from ..marketing.creative import CreativeAgent
@@ -33,6 +34,7 @@ def clear_registry() -> None:
     register_agent("google_ads", GoogleAdsCampaignAgent)
     register_agent("meta_ads", MetaAdsAgent)
     register_agent("budget_allocator", BudgetAllocatorAgent)
+    register_agent("budgeter", Budgeter)
     register_agent("funnel_planner", FunnelPlannerAgent)
     register_agent("creative_prompt", CreativePromptAgent)
     register_agent("creative", CreativeAgent)
@@ -42,6 +44,7 @@ def clear_registry() -> None:
 register_agent("google_ads", GoogleAdsCampaignAgent)
 register_agent("meta_ads", MetaAdsAgent)
 register_agent("budget_allocator", BudgetAllocatorAgent)
+register_agent("budgeter", Budgeter)
 register_agent("funnel_planner", FunnelPlannerAgent)
 register_agent("creative_prompt", CreativePromptAgent)
 register_agent("creative", CreativeAgent)

@@ -50,6 +50,26 @@ agent = BudgetAllocatorAgent()
 print(agent.run(metrics, target=3, goal="ROAS"))
 ```
 
+Compute spend shares from campaign plans with `Budgeter`:
+
+```python
+from o3research.marketing import Budgeter
+
+plans = {
+    "search": {
+        "plan": "Search campaign",
+        "metrics": {"impressions": 1000, "clicks": 100, "cost": 100.0, "conversions": 10, "revenue": 200.0},
+    },
+    "social": {
+        "plan": "Social campaign",
+        "metrics": {"impressions": 500, "clicks": 50, "cost": 50.0, "conversions": 5, "revenue": 80.0},
+    },
+}
+
+budgeter = Budgeter()
+print(budgeter.allocate(plans))
+```
+
 Plan a marketing funnel with `FunnelPlannerAgent`:
 
 ```python
