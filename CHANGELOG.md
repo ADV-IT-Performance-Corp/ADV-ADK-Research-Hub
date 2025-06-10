@@ -21,6 +21,7 @@ All notable changes to this project are documented in this file.
 - Implemented prompt observability with telemetry logging for marketing agents
 - Added `CreativeAgent` for simple ad copy suggestions
 - Added `Budgeter` module for cost-based spend allocation
+- Added `api_writer` module for Google Ads sandbox integration
 
 ## [v3.5.6] — 2025-05-31
 
