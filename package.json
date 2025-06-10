@@ -8,6 +8,7 @@
     "lint:json": "find . -name '*.json' -not -path './node_modules/*' -exec jq . {} +"
   },
   "devDependencies": {
+    "markdown-link-check": "^3.13.7",
     "markdownlint-cli2": "^0.18.1",
     "markdownlint-cli2-formatter-junit": "^0.0.13"
   }

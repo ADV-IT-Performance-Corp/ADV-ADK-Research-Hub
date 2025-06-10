@@ -46,7 +46,7 @@
 Ensure the following items are checked before requesting review:
 
 - [ ] No `TODO:`, `Coming soon`, or `placeholder` remaining
-- [ ] Links (internal/external) validated
+- [ ] All documentation links pass strict validation
 - [ ] `source_index.json` updated if new `.md` was added
 - [ ] `CHANGELOG.md` updated with version bump
 - [ ] PR title follows format: `feat:` `fix:` `chore:` etc.

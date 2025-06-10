@@ -16,8 +16,8 @@
 
 ## 🔗 Link Integrity
 - [ ] Validate all links using `CI Validate O3 Repo`
-- [ ] Run `bash scripts/online_link_check.sh` (warn-only by default)
-- [ ] Set `STRICT_LINKS=1` or pass `--strict` to fail on warnings
+- [ ] Run `bash scripts/online_link_check.sh` (strict by default)
+- [ ] Use `--warn-only` for a non-failing local check
 - [ ] No broken external references or redirects
 
 ## 🔍 Prompt Review
