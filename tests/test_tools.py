@@ -21,6 +21,14 @@ class TestSanitizeInput(unittest.TestCase):
         with self.assertRaises(ValueError):
             sanitize_input([object()])
 
+    def test_empty_structures(self):
+        self.assertEqual(sanitize_input([]), [])
+        self.assertEqual(sanitize_input({}), {})
+
+    def test_bytes_rejected(self):
+        with self.assertRaises(ValueError):
+            sanitize_input(b"bad")
+
 
 class TestFormatTable(unittest.TestCase):
     def test_format_basic(self):
