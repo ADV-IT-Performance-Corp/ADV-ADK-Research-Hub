@@ -1,5 +1,6 @@
 from typing import Dict, Union
 
+import time
 from ..core.base_agent import BaseAgent
 from .prompt_observability import record_prompt
 
@@ -28,6 +29,7 @@ class BudgetAllocatorAgent(BaseAgent):
         goal:
             Either ``"CPA"`` or ``"ROAS"`` determining how allocations are computed.
         """
+        start = time.perf_counter()
         allocation: Dict[str, float] = {}
         total_spend = 0.0
 
@@ -51,7 +53,14 @@ class BudgetAllocatorAgent(BaseAgent):
             lines.append(f"- {ch}: ${spend}")
         lines.append(f"Daily budget: ${daily_budget}")
         result = "\n".join(lines)
-        record_prompt("budget_allocation", self.name, result)
+        latency = time.perf_counter() - start
+        record_prompt(
+            "budget_allocation",
+            self.name,
+            result,
+            timing=latency,
+            cost=0.0,
+        )
         return result
 
 

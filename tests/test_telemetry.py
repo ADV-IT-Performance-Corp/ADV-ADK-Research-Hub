@@ -18,10 +18,15 @@ class TestTelemetryClient(unittest.TestCase):
         collector = DummyCollector()
         client = TelemetryClient(collector)
         with patch.dict(os.environ, {"TELEMETRY_ENABLED": "1"}):
-            client.log_event({"type": "foo"})
-            self.assertEqual(client.buffer, [{"type": "foo"}])
+            client.log_event({"type": "foo"}, timing=0.5, cost=0.1)
+            self.assertEqual(
+                client.buffer, [{"type": "foo", "timing": 0.5, "cost": 0.1}]
+            )
             client.flush()
-        self.assertEqual(collector.events, [{"type": "foo"}])
+        self.assertEqual(
+            collector.events,
+            [{"type": "foo", "timing": 0.5, "cost": 0.1}],
+        )
         self.assertEqual(client.buffer, [])
 
     def test_logging_disabled(self):
@@ -38,8 +43,14 @@ class TestTelemetryClient(unittest.TestCase):
         collector = DummyCollector()
         client = TelemetryClient(collector)
         with patch.dict(os.environ, {"TELEMETRY_ENABLED": "1"}):
-            client.log_event({"type": "foo"})
-            client.log_event({"type": "bar"})
+            client.log_event({"type": "foo"}, timing=0.1, cost=0.0)
+            client.log_event({"type": "bar"}, timing=0.2, cost=0.0)
             client.flush()
-            self.assertEqual(collector.events, [{"type": "foo"}, {"type": "bar"}])
+            self.assertEqual(
+                collector.events,
+                [
+                    {"type": "foo", "timing": 0.1, "cost": 0.0},
+                    {"type": "bar", "timing": 0.2, "cost": 0.0},
+                ],
+            )
             self.assertEqual(client.buffer, [])

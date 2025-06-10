@@ -27,6 +27,8 @@ class TestApiWriter(unittest.TestCase):
         self.assertEqual(len(events), 2)
         self.assertEqual(events[0]["type"], "request")
         self.assertEqual(events[1]["type"], "response")
+        self.assertIn("timing", events[1])
+        self.assertIn("cost", events[1])
 
 
 if __name__ == "__main__":  # pragma: no cover

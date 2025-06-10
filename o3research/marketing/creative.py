@@ -1,4 +1,5 @@
 from ..core.base_agent import BaseAgent
+import time
 from ..core.telemetry import log_prompt
 
 
@@ -10,6 +11,7 @@ class CreativeAgent(BaseAgent):
 
     def run(self, product: str, audience: str) -> str:  # type: ignore[override]
         """Return short ad copy suggestions for *product* targeting *audience*."""
+        start = time.perf_counter()
         suggestions = [
             f"Unlock productivity with {product} for {audience}",
             f"{audience.capitalize()} excel faster using {product}",
@@ -17,5 +19,12 @@ class CreativeAgent(BaseAgent):
         ]
         lines = ["Creative suggestions:"] + [f"- {s}" for s in suggestions]
         result = "\n".join(lines)
-        log_prompt("creative_suggestions", self.name, len(result.split()))
+        latency = time.perf_counter() - start
+        log_prompt(
+            "creative_suggestions",
+            self.name,
+            len(result.split()),
+            timing=latency,
+            cost=0.0,
+        )
         return result
