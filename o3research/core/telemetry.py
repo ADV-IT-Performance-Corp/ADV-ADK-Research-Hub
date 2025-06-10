@@ -9,8 +9,22 @@ class TelemetryClient:
         self.collector = collector
         self._buffer: List[Dict[str, Any]] = []
 
-    def log_event(self, event: Dict[str, Any]) -> None:
-        """Add *event* to the buffer if telemetry is enabled."""
+    def log_event(
+        self,
+        event: Dict[str, Any],
+        *,
+        timing: float | None = None,
+        cost: float | None = None,
+    ) -> None:
+        """Add *event* to the buffer if telemetry is enabled.
+
+        Optional ``timing`` and ``cost`` values are inserted into the event
+        dictionary when provided.
+        """
+        if timing is not None:
+            event["timing"] = timing
+        if cost is not None:
+            event["cost"] = cost
         if os.environ.get("TELEMETRY_ENABLED") == "1":
             self._buffer.append(event)
 
@@ -44,12 +58,19 @@ def get_prompt_client() -> "TelemetryClient":
     return _prompt_client
 
 
-def log_prompt(prompt_id: str, agent_name: str, tokens: int) -> None:
-    """Record a prompt event with token count."""
+def log_prompt(
+    prompt_id: str,
+    agent_name: str,
+    tokens: int,
+    *,
+    timing: float | None = None,
+    cost: float | None = None,
+) -> None:
+    """Record a prompt event with token count and optional metrics."""
     event = {
         "type": "prompt",
         "prompt_id": prompt_id,
         "agent_name": agent_name,
         "tokens": tokens,
     }
-    _prompt_client.log_event(event)
+    _prompt_client.log_event(event, timing=timing, cost=cost)

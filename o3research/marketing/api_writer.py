@@ -1,4 +1,5 @@
 import logging
+import time
 from typing import Any, Dict, List
 
 from google.ads.googleads.client import GoogleAdsClient  # type: ignore[import]
@@ -48,6 +49,7 @@ def push_campaign(plan: Dict[str, Any]) -> str:
             "payload": {"name": campaign.name},
         }
     )
+    start = time.perf_counter()
     try:
         response = campaign_service.mutate_campaigns(
             customer_id=plan.get("customer_id", "000-000-0000"),
@@ -57,15 +59,23 @@ def push_campaign(plan: Dict[str, Any]) -> str:
         resource_names: List[str] = [
             result.resource_name for result in response.results
         ]
+        latency = time.perf_counter() - start
         telemetry.log_event(
             {
                 "type": "response",
                 "results": resource_names,
-            }
+            },
+            timing=latency,
+            cost=0.0,
         )
         telemetry.flush()
         return resource_names[0]
     except GoogleAdsException as exc:  # pragma: no cover - network errors
-        telemetry.log_event({"type": "error", "message": str(exc)})
+        latency = time.perf_counter() - start
+        telemetry.log_event(
+            {"type": "error", "message": str(exc)},
+            timing=latency,
+            cost=0.0,
+        )
         telemetry.flush()
         raise
