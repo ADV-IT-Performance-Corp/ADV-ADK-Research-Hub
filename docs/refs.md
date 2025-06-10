@@ -13,6 +13,7 @@ This page lists third-party documentation frequently referenced by ADK agents.
 ## Google
 - [Vertex AI documentation](https://cloud.google.com/vertex-ai/docs/)
 - [Google Docs API](https://developers.google.com/docs)
+- [Google Ads API](https://developers.google.com/google-ads/api)
 - [FLAN model repository](https://github.com/google-research/FLAN)
 
 ## LangChain
