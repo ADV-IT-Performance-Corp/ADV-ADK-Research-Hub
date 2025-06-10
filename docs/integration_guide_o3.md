@@ -8,7 +8,7 @@ When invoking the O3 prompt, include this reference block in your initial instru
 
 ```
 📘 EXTERNAL KNOWLEDGE CONTEXT:
-Use GitHub repository: https://github.com/adv-ai/o3-deep-research-context
+Use GitHub repository: https://github.com/adv-ai/ADV-ADK-Research-Hub/
 
 ## Core Reference Files
 

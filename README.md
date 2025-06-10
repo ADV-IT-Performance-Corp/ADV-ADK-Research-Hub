@@ -2,8 +2,8 @@
 
 [![O3 Version](https://img.shields.io/badge/version-3.5.8-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![CI/CD](https://github.com/adv-ai/o3-deep-research-context/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/adv-ai/o3-deep-research-context/actions)
-[![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)](https://github.com/adv-ai/o3-deep-research-context/actions)
+![CI/CD](https://img.shields.io/github/actions/workflow/status/adv-ai/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
+![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
@@ -18,7 +18,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 📚 Documentation
 
-Hosted online at [https://adv-ai.github.io/o3-deep-research-context/](https://adv-ai.github.io/o3-deep-research-context/).
+Hosted online at [https://adv-ai.github.io/ADV-ADK-Research-Hub/](https://adv-ai.github.io/ADV-ADK-Research-Hub/).
 ### Core Documentation
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
@@ -81,7 +81,7 @@ Hosted online at [https://adv-ai.github.io/o3-deep-research-context/](https://ad
 Reference this repository in your prompts using:
 
 📘 EXTERNAL KNOWLEDGE CONTEXT:
-Use GitHub repository: https://github.com/adv-ai/o3-deep-research-context
+Use GitHub repository: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
 
 Key references:
 - docs/ADK_quickstart.md
@@ -138,7 +138,7 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/adv-ai/o3-deep-research-context.git
+   git clone https://github.com/adv-ai/ADV-ADK-Research-Hub.git
    ```
 
 2. Install Python dependencies and the package in editable mode:
@@ -179,12 +179,12 @@ workflows.
 
 - [Google ADK Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
 - [Prompt Engineering Guide](https://www.kaggle.com/whitepaper-prompt-engineering)
-- [Performance Marketing Strategies](/docs/performance_marketing/)
-- [Performance Marketing README](/docs/performance_marketing/README.md)
+- [Performance Marketing Strategies](docs/performance_marketing/)
+- [Performance Marketing README](docs/performance_marketing/README.md)
 
 ## 🔗 External Sources
 
-See [source_index.json](/docs/source_index.json) for a complete list of referenced external sources including:
+See [source_index.json](docs/source_index.json) for a complete list of referenced external sources including:
 - Google Cloud & Vertex AI
 - OpenAI Platform
 - IBM Developer Resources
@@ -196,7 +196,7 @@ External stubs are organized under `docs/external/` by category: `prompting`, `d
 
 ```text
 EXTERNAL KNOWLEDGE CONTEXT:
-Repository: https://github.com/adv-ai/o3-deep-research-context
+Repository: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
 
 Key references:
 - docs/ADK_quickstart.md — Official ADK patterns and quickstart
@@ -233,7 +233,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Core References
 - [Google ADK Documentation](https://google.github.io/adk-docs/)
-- [Vertex AI Agent Development Kit](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/overview)
+- Vertex AI Agent Development Kit documentation
 - [Kaggle Prompt Engineering Whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)
 
 ### Extended Source Integration
