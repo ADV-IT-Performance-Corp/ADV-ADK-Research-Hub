@@ -4,6 +4,7 @@ from .logger import get_logger
 from .reporting import ReportGenerator
 from .task_flow import TaskFlow
 from .executor import Executor
+from .history import History
 from .command_dispatch import (
     register_handler,
     dispatch,
@@ -19,6 +20,7 @@ __all__ = [
     "ReportGenerator",
     "TaskFlow",
     "Executor",
+    "History",
     "TelemetryClient",
     "register_handler",
     "dispatch",
