@@ -7,6 +7,7 @@ from .budgeter import Budgeter
 from .funnel_planner import FunnelPlannerAgent
 from .creative_prompt_agent import CreativePromptAgent
 from .creative import CreativeAgent
+from .optimizer import PerformanceOptimizer
 
 __all__ = [
     "GoogleAdsCampaignAgent",
@@ -16,4 +17,5 @@ __all__ = [
     "FunnelPlannerAgent",
     "CreativePromptAgent",
     "CreativeAgent",
+    "PerformanceOptimizer",
 ]
