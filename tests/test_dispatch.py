@@ -33,6 +33,12 @@ class TestCommandDispatch(unittest.TestCase):
         result = dispatch("ping")
         self.assertEqual(result, "Unknown command: ping")
 
+    def test_register_handler_duplicate(self) -> None:
+        """Registering the same command twice should raise KeyError."""
+        register_handler("ping", lambda: "ok")
+        with self.assertRaisesRegex(KeyError, "Handler already registered for ping"):
+            register_handler("ping", lambda: "duplicate")
+
 
 if __name__ == "__main__":
     unittest.main()
