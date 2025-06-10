@@ -99,3 +99,5 @@ python examples/marketing_workflow.py
 
 The marketing workflow showcases `GoogleAdsCampaignAgent` and
 `BudgetAllocatorAgent` coordinating via the async event bus.
+For insight into how prompts are logged during execution, see
+[analytics/prompt_observability.md](analytics/prompt_observability.md).

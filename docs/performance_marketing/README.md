@@ -69,3 +69,4 @@ print(agent.run("smartwatch", "athlete"))
 ```
 
 To log prompts for debugging, set the environment variable `PROMPT_OBSERVABILITY=1` before running any agent.
+See the [Prompt Observability guide](../analytics/prompt_observability.md) for details on how the logging pipeline works.
