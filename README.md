@@ -41,7 +41,7 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 
 ### Project Management
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
-  (see checklist; link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
+  (see checklist; link checker warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
@@ -121,7 +121,7 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 bash scripts/check_incomplete_work.sh
 # Rebuild source index and run online link check
 python3 scripts/update_source_index.py
-# offline check defaults to warn-only mode
+# link check defaults to warn-only mode
 bash scripts/online_link_check.sh
 # enforce strict behavior with environment variable or flag
 STRICT_LINKS=1 bash scripts/online_link_check.sh
