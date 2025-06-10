@@ -14,7 +14,7 @@ All notable changes to this project are documented in this file.
 - Updated `source_index.json` with `72hr_campaign_sim.md` entry
 - Updated context test to version 3.5.7
 - Added unit tests for core utilities and agents
-- Added `refresh_link_cache.py` script for external link validation
+- Removed offline link cache scripts in favor of online validation
 - Clarified prompt genome status and cleaned documentation
 - Added `MetricsCollector` with KPI calculations and docs
 - Added `BudgetAllocatorAgent` and ROAS planning guide

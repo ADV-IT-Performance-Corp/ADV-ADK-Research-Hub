@@ -40,3 +40,10 @@ Codex Commit: `feat(sources): added external documentation references`
 - Rebuilt `docs/source_index.json` with `description`, `used_by`, and `last_reviewed` fields
 
 Codex Commit: `feat(docs): organize external sources with automation`
+
+## [2025-06-10] Link Checker Update
+
+- Deprecated offline link cache approach
+- Removed `scripts/offline_link_check.sh` and `scripts/refresh_link_cache.py`
+- Added `scripts/online_link_check.sh` using `markdown-link-check`
+- Updated CI to run the new online link check
