@@ -5,6 +5,7 @@ from .meta_ads_agent import MetaAdsAgent
 from .budget_allocator import BudgetAllocatorAgent
 from .funnel_planner import FunnelPlannerAgent
 from .creative_prompt_agent import CreativePromptAgent
+from .creative import CreativeAgent
 
 __all__ = [
     "GoogleAdsCampaignAgent",
@@ -12,4 +13,5 @@ __all__ = [
     "BudgetAllocatorAgent",
     "FunnelPlannerAgent",
     "CreativePromptAgent",
+    "CreativeAgent",
 ]

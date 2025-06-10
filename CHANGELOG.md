@@ -19,6 +19,7 @@ All notable changes to this project are documented in this file.
 - Added `MetricsCollector` with KPI calculations and docs
 - Added `BudgetAllocatorAgent` and ROAS planning guide
 - Implemented prompt observability with telemetry logging for marketing agents
+- Added `CreativeAgent` for simple ad copy suggestions
 
 ## [v3.5.6] — 2025-05-31
 
