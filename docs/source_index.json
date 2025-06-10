@@ -349,6 +349,17 @@
       "version": "1.0.0"
     },
     {
+      "name": "ROAS-Driven Budget Allocation",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/budget_allocation.md",
+      "tags": [
+        "budget",
+        "allocation",
+        "roas",
+        "planning"
+      ],
+      "version": "1.0.0"
+    },
+    {
       "name": "Performance Marketing Resource Index",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/README.md",
       "tags": [

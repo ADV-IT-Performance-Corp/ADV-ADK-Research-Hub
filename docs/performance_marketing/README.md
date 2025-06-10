@@ -12,6 +12,7 @@ This directory compiles research notes and strategies for data-driven advertisin
 - `reforge_growth_loops.md`
 - `skai_roi_optimization.md`
 - `smartly_creative_ai.md`
+- `budget_allocation.md`
 
 ## Usage
 

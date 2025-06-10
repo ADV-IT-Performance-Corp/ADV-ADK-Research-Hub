@@ -2,6 +2,7 @@ from typing import Type, Dict
 
 from ..marketing.google_ads_agent import GoogleAdsCampaignAgent
 from ..marketing.meta_ads_agent import MetaAdsAgent
+from ..marketing.budget_allocator import BudgetAllocatorAgent
 
 # simple registry mapping names to agent classes
 _AGENT_REGISTRY: Dict[str, Type] = {}
@@ -28,8 +29,10 @@ def clear_registry() -> None:
     # re-register built-in agents
     register_agent("google_ads", GoogleAdsCampaignAgent)
     register_agent("meta_ads", MetaAdsAgent)
+    register_agent("budget_allocator", BudgetAllocatorAgent)
 
 
 # register default agents
 register_agent("google_ads", GoogleAdsCampaignAgent)
 register_agent("meta_ads", MetaAdsAgent)
+register_agent("budget_allocator", BudgetAllocatorAgent)
