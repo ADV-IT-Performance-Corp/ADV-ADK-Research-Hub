@@ -124,17 +124,15 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 bash scripts/check_incomplete_work.sh
 # Rebuild source index and run online link check
 python3 scripts/update_source_index.py
-# run link check in strict mode (default)
+# run link check (fails on dead links)
 bash scripts/online_link_check.sh
-# allow warnings without failing the build
-bash scripts/online_link_check.sh --warn-only
 ```
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
 ### Link Validation
 
-Run `bash scripts/online_link_check.sh` to verify external sources are reachable. The script fails on broken links by default. Use `--warn-only` if you only want warnings.
+Run `bash scripts/online_link_check.sh` to verify external sources are reachable. The command exits with an error if any link is dead.
 
 ### For Developers
 1. Clone this repository:

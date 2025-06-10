@@ -8,7 +8,7 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] Affected files declared and justified
 - [ ] No stub sections remain
 - [ ] All `.md` files are linted (via markdownlint-cli2)
-- [ ] Run `bash scripts/online_link_check.sh` to verify external links (strict by default). Use `--warn-only` for a non-failing check during debugging.
+- [ ] Run `bash scripts/online_link_check.sh` to verify external links. The command fails if any link is unreachable.
 - [ ] `bash scripts/check_incomplete_work.sh` shows no to-do markers or temporary filler text in Markdown or YAML docs
 <!-- The script scans for TODO, Coming soon, or placeholder phrases -->
 - [ ] Genome version for prompts updated in `prompt_genome.json`
