@@ -1,4 +1,5 @@
 from ..core.base_agent import BaseAgent
+from .prompt_observability import record_prompt
 
 
 class CreativePromptAgent(BaseAgent):
@@ -19,4 +20,6 @@ class CreativePromptAgent(BaseAgent):
             f"See your vision come alive with {product}, {persona}!",
         ]
         lines = ["Ad copy variants:"] + [f"- {v}" for v in variants] + [f"(See {ref})"]
-        return "\n".join(lines)
+        result = "\n".join(lines)
+        record_prompt("creative_prompt_variants", self.name, result)
+        return result

@@ -24,3 +24,32 @@ class TelemetryClient:
     def buffer(self) -> List[Dict[str, Any]]:
         """Return a copy of the current event buffer."""
         return list(self._buffer)
+
+
+# -- Prompt Observability Helpers -------------------------------------------------
+
+# Global telemetry client used for prompt logging. The default collector simply
+# ignores events until configured by the application or tests.
+_prompt_client = TelemetryClient(lambda _event: None)
+
+
+def configure_prompt_collector(collector: Callable[[Dict[str, Any]], None]) -> None:
+    """Set the collector for prompt telemetry events."""
+    global _prompt_client
+    _prompt_client = TelemetryClient(collector)
+
+
+def get_prompt_client() -> "TelemetryClient":
+    """Return the global prompt telemetry client."""
+    return _prompt_client
+
+
+def log_prompt(prompt_id: str, agent_name: str, tokens: int) -> None:
+    """Record a prompt event with token count."""
+    event = {
+        "type": "prompt",
+        "prompt_id": prompt_id,
+        "agent_name": agent_name,
+        "tokens": tokens,
+    }
+    _prompt_client.log_event(event)

@@ -18,6 +18,7 @@ All notable changes to this project are documented in this file.
 - Clarified prompt genome status and cleaned documentation
 - Added `MetricsCollector` with KPI calculations and docs
 - Added `BudgetAllocatorAgent` and ROAS planning guide
+- Implemented prompt observability with telemetry logging for marketing agents
 
 ## [v3.5.6] — 2025-05-31
 
