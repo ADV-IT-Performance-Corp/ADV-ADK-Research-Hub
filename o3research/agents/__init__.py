@@ -13,6 +13,7 @@ from .marketing_assistant import (
     GovernanceAgent,
     AbTestingAgent,
 )
+from .api_writer_agent import ApiWriterAgent
 
 __all__ = [
     "register_agent",
@@ -28,4 +29,5 @@ __all__ = [
     "ConfigAgent",
     "GovernanceAgent",
     "AbTestingAgent",
+    "ApiWriterAgent",
 ]
