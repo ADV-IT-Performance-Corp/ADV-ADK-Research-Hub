@@ -5,6 +5,7 @@ from .core.task_flow import TaskFlow
 from .core.executor import Executor
 from .core.prompt_gen import get_prompt, DEFAULT_PROMPT
 from .core.prompt_manager import PromptManager
+from .core.context import Context
 
 import pathlib
 
@@ -22,5 +23,6 @@ __all__ = [
     "get_prompt",
     "DEFAULT_PROMPT",
     "PromptManager",
+    "Context",
     "__version__",
 ]
