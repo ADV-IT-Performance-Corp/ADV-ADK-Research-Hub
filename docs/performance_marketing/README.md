@@ -13,6 +13,8 @@ This directory compiles research notes and strategies for data-driven advertisin
 - `skai_roi_optimization.md`
 - `smartly_creative_ai.md`
 - `budget_allocation.md`
+- `ppc_growth_loops.md`
+- `ltv_models.md`
 
 ## Usage
 
