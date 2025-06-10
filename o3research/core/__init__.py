@@ -4,7 +4,13 @@ from .logger import get_logger
 from .reporting import ReportGenerator
 from .task_flow import TaskFlow
 from .executor import Executor
-from .command_dispatch import register_handler, dispatch, remove_handler, clear_handlers
+from .command_dispatch import (
+    register_handler,
+    dispatch,
+    remove_handler,
+    clear_handlers,
+)
+from .telemetry import TelemetryClient
 
 __all__ = [
     "EventBus",
@@ -13,6 +19,7 @@ __all__ = [
     "ReportGenerator",
     "TaskFlow",
     "Executor",
+    "TelemetryClient",
     "register_handler",
     "dispatch",
     "remove_handler",
