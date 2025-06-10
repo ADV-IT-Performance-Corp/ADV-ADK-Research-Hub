@@ -2,8 +2,8 @@
 
 [![O3 Version](https://img.shields.io/badge/version-3.5.8-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
-[![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)](https://github.com/DanCanadian/ADK/actions)
+[![CI/CD](https://github.com/adv-ai/o3-deep-research-context/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/adv-ai/o3-deep-research-context/actions)
+[![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)](https://github.com/adv-ai/o3-deep-research-context/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
@@ -18,7 +18,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 📚 Documentation
 
-Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github.io/ADK/).
+Hosted online at [https://adv-ai.github.io/o3-deep-research-context/](https://adv-ai.github.io/o3-deep-research-context/).
 ### Core Documentation
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
@@ -81,7 +81,7 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 Reference this repository in your prompts using:
 
 📘 EXTERNAL KNOWLEDGE CONTEXT:
-Use GitHub repository: https://github.com/DanCanadian/ADK
+Use GitHub repository: https://github.com/adv-ai/o3-deep-research-context
 
 Key references:
 - docs/ADK_quickstart.md
@@ -198,7 +198,7 @@ External stubs are organized under `docs/external/` by category: `prompting`, `d
 
 ```text
 EXTERNAL KNOWLEDGE CONTEXT:
-Repository: https://github.com/DanCanadian/ADK
+Repository: https://github.com/adv-ai/o3-deep-research-context
 
 Key references:
 - docs/ADK_quickstart.md — Official ADK patterns and quickstart

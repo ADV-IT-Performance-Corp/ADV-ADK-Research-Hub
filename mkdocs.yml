@@ -1,8 +1,8 @@
 ---
 site_name: O3 Deep Research Docs
-repo_url: https://github.com/DanCanadian/ADK
+repo_url: https://github.com/adv-ai/o3-deep-research-context
 docs_dir: docs
-site_url: https://dancanadian.github.io/ADK/
+site_url: https://adv-ai.github.io/o3-deep-research-context/
 theme:
   name: readthedocs
 nav:

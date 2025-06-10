@@ -2,7 +2,7 @@
   "sources": [
     {
       "name": "O3 Deep Research v3.5.8",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/prompt/prompt_kernel_v3.5.md",
       "tags": [
         "o3",
         "prompt-kernel",
@@ -15,7 +15,7 @@
     },
     {
       "name": "Prompt Evolution v3.5.7",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/prompt_evolution_log/v3.5.yaml",
       "tags": [
         "prompt-evolution",
         "v3.5.7",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Meta Evaluation Framework",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/meta_evaluation.json",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/meta_evaluation.json",
       "tags": [
         "evaluation",
         "framework",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Version Diff v3.4.1 to v3.5.0",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.4.1_to_v3.5.0.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/version_diff_v3.4.1_to_v3.5.0.md",
       "tags": [
         "migration",
         "v3.5.0",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Version Diff v3.5.4 to v3.5.5",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
       "tags": [
         "migration",
         "v3.5.5",
@@ -59,7 +59,7 @@
     },
     {
       "name": "Legacy Version Map",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/legacy_map.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/legacy_map.md",
       "tags": [
         "legacy",
         "versioning",
@@ -101,7 +101,7 @@
     },
     {
       "name": "IBM AI Learning",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/ibm_ai_learning.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/ibm_ai_learning.md",
       "tags": [
         "ibm",
         "governance",
@@ -112,7 +112,7 @@
     },
     {
       "name": "Google Gemini API",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/gemini_api_docs.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/gemini_api_docs.md",
       "tags": [
         "google",
         "gemini",
@@ -123,7 +123,7 @@
     },
     {
       "name": "OpenAI API Reference",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/openai_api_docs.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/openai_api_docs.md",
       "tags": [
         "openai",
         "function-calling",
@@ -133,7 +133,7 @@
     },
     {
       "name": "Microsoft AI Builder",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/microsoft_ai_builder.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/microsoft_ai_builder.md",
       "tags": [
         "microsoft",
         "power-platform",
@@ -142,7 +142,7 @@
     },
     {
       "name": "NVIDIA Optimizations",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/nvidia_optimizations.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/nvidia_optimizations.md",
       "tags": [
         "nvidia",
         "gpu",
@@ -152,7 +152,7 @@
     },
     {
       "name": "AMD Developer AI",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/amd_developer_ai.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/amd_developer_ai.md",
       "tags": [
         "amd",
         "rocm",
@@ -262,7 +262,7 @@
     },
     {
       "name": "Google Performance Marketing Insights",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/google_insights_summary.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/google_insights_summary.md",
       "tags": [
         "google",
         "automation",
@@ -273,7 +273,7 @@
     },
     {
       "name": "HubSpot AI Automation Framework",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/hubspot_ai_automation.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/hubspot_ai_automation.md",
       "tags": [
         "hubspot",
         "automation",
@@ -284,7 +284,7 @@
     },
     {
       "name": "McKinsey AI in Marketing Strategy",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/mckinsey_ai_marketing.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/mckinsey_ai_marketing.md",
       "tags": [
         "mckinsey",
         "ai-strategy",
@@ -295,7 +295,7 @@
     },
     {
       "name": "Meta AI Marketing Strategy",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/meta_ai_strategy.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/meta_ai_strategy.md",
       "tags": [
         "meta",
         "ad-optimization",
@@ -306,7 +306,7 @@
     },
     {
       "name": "NeuroGym Neuromarketing Principles",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/neurogym_neuromarketing.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/neurogym_neuromarketing.md",
       "tags": [
         "neuromarketing",
         "psychology",
@@ -317,7 +317,7 @@
     },
     {
       "name": "Reforge Growth Loops",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/reforge_growth_loops.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/reforge_growth_loops.md",
       "tags": [
         "growth",
         "experimentation",
@@ -328,7 +328,7 @@
     },
     {
       "name": "Skai ROI Optimization Framework",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/skai_roi_optimization.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/skai_roi_optimization.md",
       "tags": [
         "skai",
         "roi",
@@ -339,7 +339,7 @@
     },
     {
       "name": "Smartly Creative AI Optimization",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/smartly_creative_ai.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/smartly_creative_ai.md",
       "tags": [
         "smartly",
         "creative",
@@ -350,7 +350,7 @@
     },
     {
       "name": "ROAS-Driven Budget Allocation",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/budget_allocation.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/budget_allocation.md",
       "tags": [
         "budget",
         "allocation",
@@ -361,7 +361,7 @@
     },
     {
       "name": "PPC Growth Loops",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/ppc_growth_loops.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/ppc_growth_loops.md",
       "tags": [
         "ppc",
         "growth",
@@ -372,7 +372,7 @@
     },
     {
       "name": "Customer Lifetime Value Models",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/ltv_models.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/ltv_models.md",
       "tags": [
         "ltv",
         "customer-value",
@@ -383,7 +383,7 @@
     },
     {
       "name": "Performance Marketing Resource Index",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/README.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/performance_marketing/README.md",
       "tags": [
         "marketing",
         "summary",
@@ -393,7 +393,7 @@
     },
     {
       "name": "TikTok Ads API Integration",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/integrations/tiktok_ads_api.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/integrations/tiktok_ads_api.md",
       "tags": [
         "tiktok",
         "ads-api",
@@ -405,7 +405,7 @@
     },
     {
       "name": "O3 Release Checklist",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/release_checklist_v3.5.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/release_checklist_v3.5.md",
       "tags": [
         "o3",
         "release",
@@ -415,7 +415,7 @@
     },
     {
       "name": "GitHub Integration Guide",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/github_chatgpt_integration.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/github_chatgpt_integration.md",
       "tags": [
         "chatgpt",
         "github",
@@ -426,7 +426,7 @@
     },
     {
       "name": "Agent System Overview",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/agent_system_overview.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/agent_system_overview.md",
       "tags": [
         "architecture",
         "agents",
@@ -437,7 +437,7 @@
     },
     {
       "name": "World Agent Integration Blueprint",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/world_agent_integration.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/world_agent_integration.md",
       "tags": [
         "integration",
         "event-bus",
@@ -448,7 +448,7 @@
     },
     {
       "name": "72-Hour PPC Campaign Simulation",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/simulations/72hr_campaign_sim.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/simulations/72hr_campaign_sim.md",
       "tags": [
         "simulation",
         "workflow"
@@ -458,7 +458,7 @@
     },
     {
       "name": "Version Diff v3.5.4 to v3.5.5",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/meta/version_diff_v3.5.4_to_v3.5.5.md",
       "tags": [
         "migration",
         "v3.5.5",
@@ -469,7 +469,7 @@
     },
     {
       "name": "Metrics Pipeline",
-      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/analytics/metrics_pipeline.md",
+      "link": "https://github.com/adv-ai/o3-deep-research-context/blob/main/docs/analytics/metrics_pipeline.md",
       "tags": [
         "analytics",
         "kpi",

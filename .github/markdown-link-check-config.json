@@ -4,18 +4,10 @@
       "pattern": "^http://localhost"
     },
     {
-      "pattern": "^https://github.com/DanCanadian/ADK"
-    },
-    {
       "pattern": "^#"
     }
   ],
-  "replacementPatterns": [
-    {
-      "pattern": "^/",
-      "replacement": "https://github.com/DanCanadian/ADK/"
-    }
-  ],
+  "replacementPatterns": [],
   "timeout": "20s",
   "aliveStatusCodes": [200, 206, 429, 503]
 }
