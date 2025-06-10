@@ -12,3 +12,14 @@ This directory compiles research notes and strategies for data-driven advertisin
 - `reforge_growth_loops.md`
 - `skai_roi_optimization.md`
 - `smartly_creative_ai.md`
+
+## Usage
+
+Use `GoogleAdsCampaignAgent` to quickly create a campaign outline:
+
+```python
+from o3research.marketing import GoogleAdsCampaignAgent
+
+agent = GoogleAdsCampaignAgent()
+print(agent.run("example offer"))
+```
