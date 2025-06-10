@@ -2,6 +2,7 @@ from .core.base_agent import BaseAgent
 from .agents.sample_agent import EchoAgent
 from .agents.research_agent import ResearchAgent
 from .core.task_flow import TaskFlow
+from .core.executor import Executor
 
 import pathlib
 
@@ -10,4 +11,11 @@ with (_BASE_DIR / "VERSION").open() as vf:
     __version__ = vf.read().strip()
 
 
-__all__ = ["BaseAgent", "EchoAgent", "ResearchAgent", "TaskFlow", "__version__"]
+__all__ = [
+    "BaseAgent",
+    "EchoAgent",
+    "ResearchAgent",
+    "TaskFlow",
+    "Executor",
+    "__version__",
+]
