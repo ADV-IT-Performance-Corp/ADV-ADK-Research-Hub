@@ -44,7 +44,7 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 
 ### Project Management
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
-  (see checklist; link checker warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
+  (see checklist; CI fails if the online link check reports errors)
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
@@ -124,18 +124,17 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 bash scripts/check_incomplete_work.sh
 # Rebuild source index and run online link check
 python3 scripts/update_source_index.py
-# link check defaults to warn-only mode
+# run link check in strict mode (default)
 bash scripts/online_link_check.sh
-# enforce strict behavior with environment variable or flag
-STRICT_LINKS=1 bash scripts/online_link_check.sh
-bash scripts/online_link_check.sh --strict
+# allow warnings without failing the build
+bash scripts/online_link_check.sh --warn-only
 ```
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
 ### Link Validation
 
-Run `bash scripts/online_link_check.sh` to verify external sources are reachable. Use the optional `--strict` flag (or set `STRICT_LINKS=1`) if you want warnings to fail the build.
+Run `bash scripts/online_link_check.sh` to verify external sources are reachable. The script fails on broken links by default. Use `--warn-only` if you only want warnings.
 
 ### For Developers
 1. Clone this repository:

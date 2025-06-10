@@ -2,22 +2,28 @@
 # Online link check using markdown-link-check
 set -euo pipefail
 
-strict=${STRICT_LINKS:-0}
-if [[ "${1:-}" == "--strict" ]]; then
-  strict=1
-elif [[ "${1:-}" == "--warn-only" ]]; then
+strict=${STRICT_LINKS:-1}
+if [[ "${1:-}" == "--warn-only" ]]; then
   strict=0
+elif [[ "${1:-}" == "--strict" ]]; then
+  strict=1
 elif [[ -n "${1:-}" ]]; then
-  echo "Usage: $0 [--strict|--warn-only]" >&2
+  echo "Usage: $0 [--warn-only|--strict]" >&2
   exit 2
 fi
+
+if ! npx --no-install markdown-link-check --version >/dev/null 2>&1; then
+  echo "markdown-link-check is not installed. Run 'npm ci' first." >&2
+  exit 1
+fi
+mlc="npx --no-install markdown-link-check"
 
 config=".github/markdown-link-check-config.json"
 files=$(git ls-files '*.md')
 missing=0
 for file in $files; do
   echo "Checking $file"
-  if ! npx markdown-link-check -q -c "$config" "$file"; then
+  if ! $mlc -q -c "$config" "$file"; then
     echo "Broken links found in $file" >&2
     missing=1
   fi

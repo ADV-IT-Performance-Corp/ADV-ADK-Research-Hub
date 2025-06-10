@@ -21,11 +21,13 @@ Two helper scripts streamline validation and development:
 
 Both scripts exit non‑zero on failure so they can be used in automation.
 
-* `online_link_check.sh` – Validates external links using `markdown-link-check`:
+* `online_link_check.sh` – Validates external links using `markdown-link-check` (strict by default):
 
-  ```bash
-  bash scripts/online_link_check.sh
-  ```
+```bash
+bash scripts/online_link_check.sh
+# or locally ignore failures
+bash scripts/online_link_check.sh --warn-only
+```
 
 * `generate_evaluation.py` – Computes a weighted evaluation score from a metrics
   file and updates `docs/meta/evaluation_results.json`:
