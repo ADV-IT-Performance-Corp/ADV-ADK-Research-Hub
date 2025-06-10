@@ -9,6 +9,7 @@ from ..analytics_agent import AnalyticsAgent
 from ..config_agent import ConfigAgent
 from ..governance_agent import GovernanceAgent
 from ..ab_testing_agent import AbTestingAgent
+from .planner import PlannerAgent
 
 __all__ = [
     "ResearchAgent",
@@ -20,4 +21,5 @@ __all__ = [
     "ConfigAgent",
     "GovernanceAgent",
     "AbTestingAgent",
+    "PlannerAgent",
 ]
