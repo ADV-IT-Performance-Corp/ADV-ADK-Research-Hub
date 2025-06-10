@@ -14,5 +14,5 @@ class TestConfigAgentMissingFile(unittest.TestCase):
             self.assertEqual(agent.run(""), "ConfigAgent loaded 0 settings")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

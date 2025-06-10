@@ -39,5 +39,5 @@ class TestMCPServer(unittest.TestCase):
         self.assertEqual(result, f"ConfigAgent loaded {settings_count} settings")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

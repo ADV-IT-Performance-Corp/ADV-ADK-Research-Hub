@@ -20,5 +20,5 @@ class TestPromptGen(unittest.TestCase):
         self.assertEqual(result, "custom")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

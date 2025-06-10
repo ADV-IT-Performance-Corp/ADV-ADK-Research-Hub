@@ -9,5 +9,5 @@ class TestVersion(unittest.TestCase):
         self.assertEqual(__version__, file_version)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

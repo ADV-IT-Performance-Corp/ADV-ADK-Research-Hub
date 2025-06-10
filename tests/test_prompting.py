@@ -19,5 +19,5 @@ class TestPromptManager(unittest.TestCase):
         self.assertEqual(result, history)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

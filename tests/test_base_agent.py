@@ -16,5 +16,5 @@ class TestBaseAgent(unittest.TestCase):
         self.assertEqual(str(cm.exception), "")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

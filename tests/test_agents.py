@@ -25,5 +25,5 @@ class TestAgents(unittest.TestCase):
         self.assertTrue(result.startswith("ConfigAgent loaded"))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

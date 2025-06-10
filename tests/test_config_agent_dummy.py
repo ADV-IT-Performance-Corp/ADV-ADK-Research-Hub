@@ -30,5 +30,5 @@ class TestConfigAgentWithDummyYAML(unittest.TestCase):
             importlib.reload(config_agent)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

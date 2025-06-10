@@ -25,5 +25,5 @@ class TestAgentRegistry(unittest.TestCase):
             get_agent("missing")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()
