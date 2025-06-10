@@ -40,8 +40,8 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 - [Methodology](docs/METHODOLOGY.md) - Detailed research approach and tools
 
 ### Project Management
- - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
-   (see checklist; link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
+- [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
+  (see checklist; link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`)
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
