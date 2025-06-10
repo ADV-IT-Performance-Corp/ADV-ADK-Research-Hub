@@ -360,6 +360,28 @@
       "version": "1.0.0"
     },
     {
+      "name": "PPC Growth Loops",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/ppc_growth_loops.md",
+      "tags": [
+        "ppc",
+        "growth",
+        "loops",
+        "automation"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "name": "Customer Lifetime Value Models",
+      "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/ltv_models.md",
+      "tags": [
+        "ltv",
+        "customer-value",
+        "budget",
+        "allocation"
+      ],
+      "version": "1.0.0"
+    },
+    {
       "name": "Performance Marketing Resource Index",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/performance_marketing/README.md",
       "tags": [
