@@ -87,3 +87,15 @@ This repository serves as the knowledge foundation for the O3 Deep Research syst
 - **Current Version:** 3.5.7
 - **Last Updated:** 2025-06-01
 - **Compatibility:** Designed for use with O3 Deep Research V3.0 and above
+
+## Running Example Workflows
+
+Execute the reference scripts to see the agents in action:
+
+```bash
+python examples/simple_workflow.py
+python examples/marketing_workflow.py
+```
+
+The marketing workflow showcases `GoogleAdsCampaignAgent` and
+`BudgetAllocatorAgent` coordinating via the async event bus.
