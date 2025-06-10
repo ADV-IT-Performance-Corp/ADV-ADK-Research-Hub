@@ -21,6 +21,11 @@ Golden prompts are used to:
 | `test_config_adjustment.md`  | Tests configuration updates and schema diffs | ConfigAgent validation; Self-reflection |
 | `test_config_routing_diff.md` | Validates routing table adjustments | ConfigAgent diff summary; Alert routing |
 | `test_config_schema_diff.md` | Validates schema mutations | ConfigAgent schema diff; Compatibility warnings |
+| `test_campaign_planning.md` | Generates cross-channel campaign plan | Budget allocation; Multi-channel sequencing |
+| `test_summary_by_channel.md` | Summarizes performance metrics by channel | Channel-level KPIs; Quick insights |
+| `test_top_segment_budget.md` | Creates budget plan for highest-performing segment | Segment analysis; ROI focus |
+| `test_creative_generation.md` | Produces new ad creative examples | Image/copy combos; Brand consistency |
+| `test_sandbox_push.md` | Validates sandbox environment push | ConfigAgent sandbox trigger; No production impact |
 
 ## Usage
 
