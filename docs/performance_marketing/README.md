@@ -15,6 +15,9 @@ This directory compiles research notes and strategies for data-driven advertisin
 - `budget_allocation.md`
 - `ppc_growth_loops.md`
 - `ltv_models.md`
+- `assistant_architecture.md`
+- `api_integration.md`
+- `prompt_usage_examples.md`
 
 ## Usage
 
@@ -86,6 +89,15 @@ from o3research.marketing import CreativePromptAgent
 
 agent = CreativePromptAgent()
 print(agent.run("smartwatch", "athlete"))
+```
+
+Push a campaign plan to the Google Ads API sandbox using `push_campaign`:
+
+```python
+from o3research.marketing import push_campaign
+
+plan = {"name": "Sandbox Campaign", "customer_id": "123-456-7890"}
+print(push_campaign(plan))
 ```
 
 To log prompts for debugging, set the environment variable `PROMPT_OBSERVABILITY=1` before running any agent.

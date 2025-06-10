@@ -34,6 +34,9 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
 - [Documentation Index](docs/tree.md) - Overview of all docs
+- [Performance Marketing Assistant Architecture](docs/performance_marketing/assistant_architecture.md)
+- [Marketing API Integration](docs/performance_marketing/api_integration.md)
+- [Prompt Usage Examples](docs/performance_marketing/prompt_usage_examples.md)
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
