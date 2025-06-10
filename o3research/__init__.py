@@ -3,6 +3,7 @@ from .agents.sample_agent import EchoAgent
 from .agents.research_agent import ResearchAgent
 from .core.task_flow import TaskFlow
 from .core.executor import Executor
+from .core.prompt_gen import get_prompt, DEFAULT_PROMPT
 
 import pathlib
 
@@ -17,5 +18,7 @@ __all__ = [
     "ResearchAgent",
     "TaskFlow",
     "Executor",
+    "get_prompt",
+    "DEFAULT_PROMPT",
     "__version__",
 ]
