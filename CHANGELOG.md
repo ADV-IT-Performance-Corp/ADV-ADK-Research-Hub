@@ -3,6 +3,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.5.8] — 2025-06-02
+
+### ✨ Updates
+- Added `MarketingAssistant` module for campaign optimization
+- Added `push_campaign` API integration for marketing platforms
+- Updated documentation and version metadata to 3.5.8
+
 ## [v3.5.7] — 2025-06-01
 
 ### ✨ Updates
