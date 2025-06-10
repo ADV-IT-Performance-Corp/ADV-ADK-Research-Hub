@@ -1,16 +1,16 @@
 {
   "sources": [
     {
-      "name": "O3 Deep Research v3.5.7",
+      "name": "O3 Deep Research v3.5.8",
       "link": "https://github.com/DanCanadian/ADK/blob/main/docs/prompt/prompt_kernel_v3.5.md",
       "tags": [
         "o3",
         "prompt-kernel",
-        "v3.5.7",
+        "v3.5.8",
         "research",
         "latest"
       ],
-      "version": "3.5.7",
+      "version": "3.5.8",
       "type": "core"
     },
     {
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "name": "IBM Developer \u2013 AI Technology",
+      "name": "IBM Developer – AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": [
         "ibm",

@@ -1,13 +1,13 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.7-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-3.5.8-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI/CD](https://github.com/DanCanadian/ADK/actions/workflows/validate_repo.yml/badge.svg)](https://github.com/DanCanadian/ADK/actions)
 [![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)](https://github.com/DanCanadian/ADK/actions)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
-## 🚀 Key Features (v3.5.7)
+## 🚀 Key Features (v3.5.8)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Asynchronous Event Bus**: Async publish/subscribe layer for agent communication
@@ -48,7 +48,7 @@ Hosted online at [https://dancanadian.github.io/ADK/](https://dancanadian.github
 - [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 
-## 📂 Repository Structure (v3.5.7)
+## 📂 Repository Structure (v3.5.8)
 
 ```text
 .
