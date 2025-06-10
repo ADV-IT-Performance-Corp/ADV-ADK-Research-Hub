@@ -39,6 +39,12 @@ class TestEventBus(unittest.TestCase):
         except Exception as exc:  # pragma: no cover - should not happen
             self.fail(f"Publish raised unexpectedly: {exc}")
 
+    def test_async_publish_no_subscribers(self) -> None:
+        """Async publish should silently succeed when there are no subscribers."""
+        bus = AsyncEventBus()
+        with self.assertNoLogs(bus.logger, level="DEBUG"):
+            asyncio.run(bus.publish("empty", "msg"))
+
     def test_publish_multiple_exceptions(self):
         bus = EventBus()
 
