@@ -12,4 +12,3 @@ Outline an Advantage+ campaign for a new product using Meta Ads.
 ### NOTES
 Prompt Kernel: v3.5.7
 **Tags:** meta ads, advantage+
-

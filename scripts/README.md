@@ -21,10 +21,10 @@ Two helper scripts streamline validation and development:
 
 Both scripts exit non‑zero on failure so they can be used in automation.
 
-* `refresh_link_cache.py` – Checks external documentation links and updates `docs/link_cache.txt` with the latest HTTP status codes:
+* `online_link_check.sh` – Validates external links using `markdown-link-check`:
 
   ```bash
-  python scripts/refresh_link_cache.py
+  bash scripts/online_link_check.sh
   ```
 
 * `generate_evaluation.py` – Computes a weighted evaluation score from a metrics

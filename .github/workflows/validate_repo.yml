@@ -144,16 +144,13 @@ jobs:
         run: bash scripts/validate_golden_prompts.sh && echo "Golden prompts valid"
 
 
-      - name: Refresh Link Cache
-        run: python3 scripts/refresh_link_cache.py && echo "Link cache refreshed"
-
-      - name: Offline Link Check
+      - name: Online Link Check
         run: |
-          bash scripts/offline_link_check.sh --warn-only
+          bash scripts/online_link_check.sh --warn-only
           test -f docs/performance_marketing/reforge_growth_loops.md
           test -f docs/legacy/prompt/prompt_kernel_v3.4.md
           test -f docs/meta/prompt_genome.json
-          echo "Offline link check passed"
+          echo "Link check passed"
 
       - name: Prompt Genome Version Consistency
         run: |

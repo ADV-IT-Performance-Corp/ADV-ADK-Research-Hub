@@ -119,24 +119,20 @@ markdownlint-cli2 "**/*.md" "#node_modules"
 
 # Check docs for TODOs and placeholders
 bash scripts/check_incomplete_work.sh
-# Rebuild source index and run offline link check
+# Rebuild source index and run online link check
 python3 scripts/update_source_index.py
 # offline check defaults to warn-only mode
-bash scripts/offline_link_check.sh
+bash scripts/online_link_check.sh
 # enforce strict behavior with environment variable or flag
-STRICT_LINKS=1 bash scripts/offline_link_check.sh
-bash scripts/offline_link_check.sh --strict
-  python scripts/refresh_link_cache.py
+STRICT_LINKS=1 bash scripts/online_link_check.sh
+bash scripts/online_link_check.sh --strict
 ```
-
-- `python scripts/refresh_link_cache.py` refreshes external link status.
-- Link cache warnings are logged but do not fail the build unless `STRICT_LINKS=1`.
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
 ### Link Validation
 
-Run `bash scripts/offline_link_check.sh` to verify external sources are reachable. Use the optional `--strict` flag (or set `STRICT_LINKS=1`) if you want warnings to fail the build.
+Run `bash scripts/online_link_check.sh` to verify external sources are reachable. Use the optional `--strict` flag (or set `STRICT_LINKS=1`) if you want warnings to fail the build.
 
 ### For Developers
 1. Clone this repository:
@@ -196,7 +192,7 @@ See [source_index.json](/docs/source_index.json) for a complete list of referenc
 - NVIDIA & AMD Developer Hubs
 - Reforge Growth Systems
 - NeuroGym
-External stubs are organized under `docs/external/` by category: `prompting`, `devops`, and `governance`.
+External stubs are organized under `docs/external/` by category: `prompting`, `devops`, and `governance`. A short list of common external docs is available in [docs/refs.md](docs/refs.md).
 
 ```text
 EXTERNAL KNOWLEDGE CONTEXT:
