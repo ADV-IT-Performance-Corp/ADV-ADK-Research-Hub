@@ -11,7 +11,12 @@ from .command_dispatch import (
     remove_handler,
     clear_handlers,
 )
-from .telemetry import TelemetryClient
+from .telemetry import (
+    TelemetryClient,
+    configure_prompt_collector,
+    get_prompt_client,
+    log_prompt,
+)
 
 __all__ = [
     "EventBus",
@@ -22,6 +27,9 @@ __all__ = [
     "Executor",
     "History",
     "TelemetryClient",
+    "configure_prompt_collector",
+    "get_prompt_client",
+    "log_prompt",
     "register_handler",
     "dispatch",
     "remove_handler",

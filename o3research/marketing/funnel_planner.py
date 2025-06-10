@@ -1,4 +1,5 @@
 from ..core.base_agent import BaseAgent
+from .prompt_observability import record_prompt
 
 
 class FunnelPlannerAgent(BaseAgent):
@@ -24,7 +25,9 @@ class FunnelPlannerAgent(BaseAgent):
             f"  - Primary CTA: {bofu_action}",
             f"(See {ref})",
         ]
-        return "\n".join(lines)
+        result = "\n".join(lines)
+        record_prompt("funnel_plan", self.name, result)
+        return result
 
 
 if __name__ == "__main__":  # pragma: no cover

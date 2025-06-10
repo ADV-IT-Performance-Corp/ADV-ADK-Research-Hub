@@ -1,4 +1,5 @@
 from ..core.base_agent import BaseAgent
+from .prompt_observability import record_prompt
 
 
 class MetaAdsAgent(BaseAgent):
@@ -16,6 +17,7 @@ class MetaAdsAgent(BaseAgent):
             "- Enable audience expansion to find high-value buyers\n"
             f"(See {summary_ref})"
         )
+        record_prompt("meta_ads_plan", self.name, plan)
         return plan
 
 

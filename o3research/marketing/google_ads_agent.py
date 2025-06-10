@@ -1,4 +1,5 @@
 from ..core.base_agent import BaseAgent
+from .prompt_observability import record_prompt
 
 
 class GoogleAdsCampaignAgent(BaseAgent):
@@ -17,6 +18,7 @@ class GoogleAdsCampaignAgent(BaseAgent):
             "- Ads: enable cross-channel attribution\n"
             f"(See {summary_ref})"
         )
+        record_prompt("google_ads_plan", self.name, plan)
         return plan
 
 

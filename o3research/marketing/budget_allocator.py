@@ -1,6 +1,7 @@
 from typing import Dict, Union
 
 from ..core.base_agent import BaseAgent
+from .prompt_observability import record_prompt
 
 
 class BudgetAllocatorAgent(BaseAgent):
@@ -49,7 +50,9 @@ class BudgetAllocatorAgent(BaseAgent):
         for ch, spend in allocation.items():
             lines.append(f"- {ch}: ${spend}")
         lines.append(f"Daily budget: ${daily_budget}")
-        return "\n".join(lines)
+        result = "\n".join(lines)
+        record_prompt("budget_allocation", self.name, result)
+        return result
 
 
 if __name__ == "__main__":  # pragma: no cover
