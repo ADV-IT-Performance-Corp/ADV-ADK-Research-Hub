@@ -9,7 +9,7 @@ Your task is to generate a **simulation-driven, self-aware research report**. Th
 ## 📘 EXTERNAL KNOWLEDGE CONTEXT
 
 Use this GitHub repository as your structured source of truth:  
-🔗 https://github.com/DanCanadian/ADK
+🔗 https://github.com/adv-ai/o3-deep-research-context
 
 Key files to reference:
 

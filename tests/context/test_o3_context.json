@@ -1,6 +1,6 @@
 {
   "test": "O3 Context Validation",
-  "repo": "https://github.com/DanCanadian/ADK",
+  "repo": "https://github.com/adv-ai/o3-deep-research-context",
   "required_files": [
     "docs/o3_deep_research_prompt.md",
     "docs/source_index.json",
