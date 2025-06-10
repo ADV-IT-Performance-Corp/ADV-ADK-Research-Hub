@@ -26,3 +26,46 @@ from o3research.marketing import GoogleAdsCampaignAgent
 agent = GoogleAdsCampaignAgent()
 print(agent.run("example offer"))
 ```
+
+Use `MetaAdsAgent` to generate a Meta Advantage+ plan:
+
+```python
+from o3research.marketing import MetaAdsAgent
+
+agent = MetaAdsAgent()
+print(agent.run("new product"))
+```
+
+Allocate spend across channels with `BudgetAllocatorAgent`:
+
+```python
+from o3research.marketing import BudgetAllocatorAgent
+
+metrics = {
+    "search": {"conversions": 50, "revenue": 2000},
+    "social": {"conversions": 20, "revenue": 900},
+}
+
+agent = BudgetAllocatorAgent()
+print(agent.run(metrics, target=3, goal="ROAS"))
+```
+
+Plan a marketing funnel with `FunnelPlannerAgent`:
+
+```python
+from o3research.marketing import FunnelPlannerAgent
+
+agent = FunnelPlannerAgent()
+print(agent.run("software", "lead"))
+```
+
+Create short ad copy using `CreativePromptAgent`:
+
+```python
+from o3research.marketing import CreativePromptAgent
+
+agent = CreativePromptAgent()
+print(agent.run("smartwatch", "athlete"))
+```
+
+To log prompts for debugging, set the environment variable `PROMPT_OBSERVABILITY=1` before running any agent.
