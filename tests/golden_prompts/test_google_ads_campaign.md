@@ -10,5 +10,5 @@ Generate a simple Google Ads campaign outline for a new product launch.
 - Mentions cross-channel attribution setup
 
 ### NOTES
-Prompt Kernel: v3.5.7
+Prompt Kernel: v3.5.8
 **Tags:** google ads, campaign plan
