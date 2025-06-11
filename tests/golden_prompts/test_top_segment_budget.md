@@ -10,5 +10,5 @@ Create a budget plan focused on the highest-performing customer segment.
 - Notes potential scaling limits
 
 ### NOTES
-Prompt Kernel: v3.5.7
+Prompt Kernel: v3.5.8
 **Tags:** budget planning, segment focus

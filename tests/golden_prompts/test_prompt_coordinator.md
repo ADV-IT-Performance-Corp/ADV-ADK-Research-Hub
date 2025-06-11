@@ -12,6 +12,6 @@ Act as a research agent coordinating with campaign and memory agents to optimize
 - Ends with meta-reflection and optimization loop
 
 ### NOTES
-Prompt Kernel: v3.5.7
+Prompt Kernel: v3.5.8
 
 **Tags:** multi-agent coordination, ReAct

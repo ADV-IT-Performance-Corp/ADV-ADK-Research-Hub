@@ -1,4 +1,4 @@
-# Golden Prompts (v3.5.7)
+# Golden Prompts (v3.5.8)
 
 This directory contains reference prompts for validating the O3 Prompt Kernel architecture. These golden prompts serve as test cases to ensure the system behaves as expected across different scenarios.
 
@@ -44,7 +44,7 @@ bash scripts/validate_golden_prompts.sh
 
 ## Versioning
 
-- **Current Version**: 3.5.7
+- **Current Version**: 3.5.8
 - **Compatibility**: O3 Prompt Kernel v3.5.0+
 - **Last Updated**: 2025-05-30
 
