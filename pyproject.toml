@@ -17,7 +17,7 @@ include = ["o3research*"]
 exclude = ["node_modules*", "config*"]
 
 [project.urls]
-Homepage = "https://github.com/adv-ai/o3-deep-research-context"
+Homepage = "https://github.com/ADV-IT-Performance-Corp/o3-deep-research-context"
 
 [tool.setuptools.dynamic]
 version = {file = "VERSION"}

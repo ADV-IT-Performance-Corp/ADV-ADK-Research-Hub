@@ -35,7 +35,7 @@ For repository integration steps see [Integration Guide](../integration_guide_o3
 
 ## 📘 EXTERNAL KNOWLEDGE CONTEXT
 
-Use this GitHub repository as your structured source of truth: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
+Use this GitHub repository as your structured source of truth: `https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/`
 
 Additional integration steps are outlined in [Integration Guide](../integration_guide_o3.md).
 
