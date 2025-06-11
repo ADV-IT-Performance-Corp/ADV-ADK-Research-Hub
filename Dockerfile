@@ -1,5 +1,12 @@
 FROM python:3.11-slim
 
+# Optional proxy build arguments
+ARG http_proxy
+ARG https_proxy
+# Export them as environment variables so tools inherit connectivity settings
+ENV http_proxy=$http_proxy \
+    https_proxy=$https_proxy
+
 # Install Node.js for markdown lint tasks
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl gnupg && \
     curl -fsSL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource.sh && \
