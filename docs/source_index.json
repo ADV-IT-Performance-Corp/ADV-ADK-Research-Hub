@@ -190,7 +190,7 @@
       ]
     },
     {
-      "name": "IBM Developer – AI Technology",
+      "name": "IBM Developer \u2013 AI Technology",
       "link": "https://developer.ibm.com/technologies/artificial-intelligence/",
       "tags": [
         "ibm",
@@ -480,7 +480,7 @@
     },
     {
       "name": "A2A Protocol",
-      "link": "https://github.com/AutogenStudio/autogen",
+      "link": "https://github.com/microsoft/autogen",
       "description": "The A2A (Agent-to-Agent) protocol defines a standard for multi-agent communication and coordination. It enables reliable message passing and task delegation among autonomous agents.",
       "used_by": [
         "ConfigAgent",
@@ -490,7 +490,7 @@
         "coordination",
         "orchestration"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -505,7 +505,7 @@
         "bias",
         "scoring"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -520,7 +520,7 @@
         "memory",
         "coordination"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -535,7 +535,7 @@
         "analytics",
         "performance"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -550,7 +550,7 @@
         "prompting",
         "grounding"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -564,7 +564,7 @@
         "fallback",
         "on-device"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -581,12 +581,12 @@
         "grounding",
         "fallback"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
       "name": "CognitiveLoad Design (NNG)",
-      "link": "https://www.nngroup.com/topic/cognitive-load/",
+      "link": "https://www.nngroup.com/articles/cognitive-load/",
       "description": "Nielsen Norman Group's research on cognitive load informs how to design experiences that account for user attention and effort.",
       "used_by": [
         "EngagementAgent",
@@ -596,7 +596,7 @@
         "behavioral",
         "prompting"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -611,7 +611,7 @@
         "reflection",
         "mutation"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -625,7 +625,7 @@
         "task",
         "grounding"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -640,7 +640,7 @@
         "api",
         "coordination"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -655,7 +655,7 @@
         "compliance",
         "constraints"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -672,7 +672,7 @@
         "grounding",
         "coordination"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -687,7 +687,7 @@
         "deployment",
         "CI/CD"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -703,12 +703,12 @@
         "coordination",
         "memory"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
       "name": "MCP Server API",
-      "link": "https://mcp-docs.readthedocs.io/",
+      "link": "https://mcp.readthedocs.io/en/latest/",
       "description": "The MCP Server API exposes endpoints for storing, retrieving, and managing agent data across distributed services.",
       "used_by": [
         "ConfigAgent",
@@ -718,7 +718,7 @@
         "orchestration",
         "memory"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -734,7 +734,7 @@
         "lineage",
         "tuning"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -750,7 +750,7 @@
         "memory",
         "fallback"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -765,7 +765,7 @@
         "validation",
         "scoring"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -780,7 +780,7 @@
         "orchestration",
         "performance"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -796,12 +796,12 @@
         "control",
         "fallback"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
       "name": "Vertex AI Grounding",
-      "link": "https://cloud.google.com/vertex-ai/docs/generative-ai/grounding",
+      "link": "https://cloud.google.com/vertex-ai/docs/",
       "description": "Vertex AI Grounding describes how to anchor generative outputs to trusted data sources using Google Cloud services.",
       "used_by": [
         "ResearchAgent",
@@ -811,7 +811,7 @@
         "grounding",
         "prompting"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -827,7 +827,7 @@
         "metrics",
         "tuning"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     },
     {
@@ -842,13 +842,13 @@
         "coordination",
         "automation"
       ],
-      "last_reviewed": "2025-06-08",
+      "last_reviewed": "2025-06-11",
       "type": "external"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-06-08",
+    "last_updated": "2025-06-11",
     "version": "3.5.8"
   }
 }

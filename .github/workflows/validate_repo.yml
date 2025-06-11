@@ -153,6 +153,28 @@ jobs:
       - name: Validate Golden Prompts
         run: bash scripts/validate_golden_prompts.sh && echo "Golden prompts valid"
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+          pip install -e .
+          echo "Python dependencies installed"
+
+      - name: Update source index
+        run: python scripts/update_source_index.py
 
       - name: Online Link Check
         run: |
@@ -174,25 +196,6 @@ jobs:
       - name: Verify version consistency across files
         run: bash scripts/validate_versions.sh && echo "Version files in sync"
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Cache pip
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
-          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
-          pip install -e .
-          echo "Python dependencies installed"
 
       - name: Run flake8
         run: flake8 && echo "flake8 passed"
