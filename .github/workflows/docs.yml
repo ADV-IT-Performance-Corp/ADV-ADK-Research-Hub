@@ -23,6 +23,9 @@ jobs:
       - name: Install MkDocs
         run: pip install mkdocs
 
+      - name: Build docs
+        run: mkdocs build --strict
+
       - name: Build and Deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
