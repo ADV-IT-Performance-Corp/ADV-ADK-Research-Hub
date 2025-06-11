@@ -30,6 +30,28 @@ if [ "${#packages[@]}" -gt 0 ]; then
   apt-get install -y "${packages[@]}" >/dev/null
 fi
 
+# Remove any npm proxy configuration and clear related environment variables
+if command -v npm >/dev/null 2>&1; then
+  npm config delete proxy || true
+  npm config delete http-proxy || true
+  npm config delete https-proxy || true
+fi
+unset npm_config_proxy npm_config_http_proxy npm_config_https_proxy \
+  http_proxy https_proxy HTTP_PROXY HTTPS_PROXY
+
+# Propagate cleared variables to subsequent CI steps
+if [ -n "${GITHUB_ENV:-}" ]; then
+  {
+    echo "npm_config_proxy="
+    echo "npm_config_http_proxy="
+    echo "npm_config_https_proxy="
+    echo "http_proxy="
+    echo "https_proxy="
+    echo "HTTP_PROXY="
+    echo "HTTPS_PROXY="
+  } >> "$GITHUB_ENV"
+fi
+
 # Install markdownlint-cli2 globally if npm exists
 if command -v npm >/dev/null 2>&1 && ! command -v markdownlint >/dev/null 2>&1; then
   npm install -g markdownlint-cli2 >/dev/null
