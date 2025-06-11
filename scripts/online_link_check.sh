@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Validate external links with markdown-link-check
-# Exits non-zero if any links are broken
+# Validate external HTTP/HTTPS links using markdown-link-check.
+# This complements markdownlint and mkdocs which only check formatting and
+# internal anchors. Exits non-zero if any links are unreachable.
 set -euo pipefail
 
 if ! npx --no-install markdown-link-check --version >/dev/null 2>&1; then
