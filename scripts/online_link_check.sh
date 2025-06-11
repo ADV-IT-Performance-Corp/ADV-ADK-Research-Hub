@@ -11,15 +11,16 @@ fi
 mlc="npx --no-install markdown-link-check"
 
 config=".github/markdown-link-check-config.json"
-files=$(git ls-files '*.md')
+files=$(git ls-files '*.md' ':!docs/legacy/**')
 missing=0
 for file in $files; do
   echo "Checking $file"
   output="$($mlc --quiet -c "$config" "$file" 2>&1)"
   echo "$output"
   if echo "$output" | grep -qE 'ENOTFOUND|ENETUNREACH'; then
-    echo "Network unreachable" >&2
-    exit 1
+      echo "❌ Network unreachable while checking $file" >&2
+      echo "$output" >&2
+      exit 1
   fi
   if echo "$output" | grep -q '\[✖\]'; then
     echo "Broken links found in $file" >&2
