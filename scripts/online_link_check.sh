@@ -15,8 +15,12 @@ files=$(git ls-files '*.md')
 missing=0
 for file in $files; do
   echo "Checking $file"
-  output="$($mlc --quiet -c "$config" "$file")"
+  output="$($mlc --quiet -c "$config" "$file" 2>&1)"
   echo "$output"
+  if echo "$output" | grep -qE 'ENOTFOUND|ENETUNREACH'; then
+    echo "Network unreachable" >&2
+    exit 1
+  fi
   if echo "$output" | grep -q '\[✖\]'; then
     echo "Broken links found in $file" >&2
     missing=1
