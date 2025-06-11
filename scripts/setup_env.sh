@@ -27,7 +27,7 @@ done
 # Install any missing packages
 if [ "${#packages[@]}" -gt 0 ]; then
   apt-get update -qq
-  apt-get install -y "${packages[@]}" >/dev/null
+  DEBIAN_FRONTEND=noninteractive apt-get install -y "${packages[@]}" >/dev/null
 fi
 
 # Remove any npm proxy configuration and clear related environment variables
