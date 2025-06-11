@@ -18,7 +18,6 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 📚 Documentation
 
-Hosted online at [https://ADV-IT-Performance-Corp.github.io/ADV-ADK-Research-Hub/](https://ADV-IT-Performance-Corp.github.io/ADV-ADK-Research-Hub/).
 ### Core Documentation
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
