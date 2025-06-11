@@ -1,8 +1,8 @@
 ---
 site_name: O3 Deep Research Docs
-repo_url: https://github.com/ADV-IT-Performance-Corp/o3-deep-research-context
+repo_url: https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub
 docs_dir: docs
-site_url: https://ADV-IT-Performance-Corp.github.io/o3-deep-research-context/
+site_url: https://ADV-IT-Performance-Corp.github.io/ADV-ADK-Research-Hub/
 theme:
   name: readthedocs
 nav:
