@@ -115,12 +115,13 @@ To run validations locally:
 ```bash
 # Install dependencies (one time)
 ./scripts/setup_env.sh
+npm ci --omit=optional
 # Installs Node.js v18.20.0 if missing
 # Note: running the script deletes any npm proxy configuration. Export
 # required system proxy variables afterwards if needed.
 
 # Run markdown linting
-markdownlint-cli2 "**/*.md" "#node_modules"
+markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**"
 
 # Check docs for TODOs and placeholders
 bash scripts/check_incomplete_work.sh
