@@ -6,37 +6,36 @@ For setup instructions see the [Integration Guide](integration_guide_o3.md).
 ## Module Map
 
 ```
-agent_system_adk/
-├── src/
-│   ├── core/
-│   │   ├── base_agent.py
-│   │   ├── semantic_cache.py
-│   │   ├── few_shot_selector.py
-│   │   ├── token_optimizer.py
-│   │   └── self_reflection.py
-│   ├── agents/
-│   │   ├── research_agent.py
-│   │   ├── content_agent.py
-│   │   ├── campaign_agent.py
-│   │   ├── engagement_agent.py
-│   │   ├── optimization_agent.py
-│   │   ├── analytics_agent.py
-│   │   ├── config_agent.py
-│   │   └── mcp_server.py
-│   └── utils/
-│       ├── api_clients/
-│       ├── data_processors/
-│       └── monitoring/
-├── config/
+o3research/
+├── core/
+│   ├── base_agent.py
+│   ├── semantic_cache.py
+│   ├── few_shot_selector.py
+│   ├── token_optimizer.py
+│   └── self_reflection.py
+├── agents/
+│   ├── research_agent.py
+│   ├── content_agent.py
+│   ├── campaign_agent.py
+│   ├── engagement_agent.py
+│   ├── optimization_agent.py
+│   ├── analytics_agent.py
+│   ├── config_agent.py
+│   └── mcp_server.py
+├── utils/
+│   ├── api_clients/
+│   ├── data_processors/
+│   └── monitoring/
+config/
 │   ├── settings.yaml
 │   └── prompts/
-└─ tests/
+tests/
 ```
 
 _Diagrams from the original 21 May prompt illustrate this layout. See [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md) for visuals._
 
 Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
-`src/` directory for reference. These stubs demonstrate the minimal interface
+`o3research/` directory for reference. These stubs demonstrate the minimal interface
 used by more advanced agents.
 
 ## Event Bus

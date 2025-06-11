@@ -89,33 +89,32 @@ BEGIN_COT
 
 END_COT
 
-## 📁 MODULE MAP: agent_system_adk/
+## 📁 MODULE MAP: o3research/
 
 ```
-agent_system_adk/
-├── src/
-│   ├── core/
-│   │   ├── base_agent.py
-│   │   ├── semantic_cache.py
-│   │   ├── few_shot_selector.py
-│   │   ├── token_optimizer.py
-│   │   └── self_reflection.py
-│   ├── agents/
-│   │   ├── research_agent.py
-│   │   ├── content_agent.py
-│   │   ├── campaign_agent.py
-│   │   ├── engagement_agent.py
-│   │   ├── optimization_agent.py
-│   │   ├── analytics_agent.py
-│   │   └── config_agent.py
-│   └── utils/
-│       ├── api_clients/
-│       ├── data_processors/
-│       └── monitoring/
-├── config/
+o3research/
+├── core/
+│   ├── base_agent.py
+│   ├── semantic_cache.py
+│   ├── few_shot_selector.py
+│   ├── token_optimizer.py
+│   └── self_reflection.py
+├── agents/
+│   ├── research_agent.py
+│   ├── content_agent.py
+│   ├── campaign_agent.py
+│   ├── engagement_agent.py
+│   ├── optimization_agent.py
+│   ├── analytics_agent.py
+│   └── config_agent.py
+├── utils/
+│   ├── api_clients/
+│   ├── data_processors/
+│   └── monitoring/
+config/
 │   ├── settings.yaml
 │   └── prompts/
-└── tests/
+tests/
 ```
 
 ## ✅ 1. Executive Summary
@@ -346,7 +345,7 @@ This section outlines the full lifecycle of agent creation and evolution within 
 - Agent-to-agent routing specs
 
 **Activities:**
-- Push to `agent_system_adk/src/agents/`
+- Push to `o3research/agents/`
 - Register in orchestration layer (e.g., AI Studio config)
 - Monitor via CI + `monitoring/` logs
 
