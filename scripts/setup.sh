@@ -48,6 +48,8 @@ fi
 
 if [ -f package.json ]; then
   log "Installing Node.js dependencies..."
+  HTTP_PROXY= http_proxy= HTTPS_PROXY= https_proxy= \
+  npm_config_http_proxy= npm_config_https_proxy= npm_config_proxy= \
   npm ci --omit=optional || npm install
 else
   log "⚠️ No package.json found — skipping Node.js installation."
