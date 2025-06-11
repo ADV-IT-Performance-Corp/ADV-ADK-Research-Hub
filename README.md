@@ -115,7 +115,7 @@ To run validations locally:
 # Install dependencies (one time)
 ./scripts/setup_env.sh
 npm ci --omit=optional
-# Installs Node.js v18.20.0 if missing
+# Installs Node.js 18.x if missing
 # Note: running the script deletes any npm proxy configuration. Export
 # required system proxy variables afterwards if needed.
 
@@ -173,7 +173,7 @@ docker run --rm o3research
 ```
 
 The image installs the Python and Node.js dependencies and runs
-`examples/simple_workflow.py` by default. Node.js v18.20.0 is installed during
+`examples/simple_workflow.py` by default. Node.js 18.x is installed during
 the build. Mount your own code or override the command to run different
 workflows.
 

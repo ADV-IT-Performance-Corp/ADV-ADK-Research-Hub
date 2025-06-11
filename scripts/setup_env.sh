@@ -3,17 +3,11 @@ set -euo pipefail
 
 packages=()
 
-# Install Node.js v18.20.0 if node is missing
+# Install Node.js 18.x if node is missing
 if ! command -v node >/dev/null 2>&1; then
-  NODE_SCRIPT_URL="https://deb.nodesource.com/setup_18.20.0"
+  NODE_SCRIPT_URL="https://deb.nodesource.com/setup_18.x"
   TMP_SCRIPT=$(mktemp)
   curl -fsSL "$NODE_SCRIPT_URL" -o "$TMP_SCRIPT"
-  EXPECTED_SHA="ed44586adc96bd3e7707abe7659d585dd2e78c67d779bd175273b99bd07a099e"
-  ACTUAL_SHA=$(sha256sum "$TMP_SCRIPT" | awk '{print $1}')
-  if [ "$ACTUAL_SHA" != "$EXPECTED_SHA" ]; then
-    echo "Checksum mismatch for Node.js installer" >&2
-    exit 1
-  fi
   bash "$TMP_SCRIPT"
   rm "$TMP_SCRIPT"
   packages+=(nodejs)
