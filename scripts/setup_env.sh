@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Preserve existing proxy settings so they can be restored after npm steps
+ORIG_HTTP_PROXY="${http_proxy-}"
+ORIG_HTTPS_PROXY="${https_proxy-}"
+ORIG_HTTP_PROXY_UPPER="${HTTP_PROXY-}"
+ORIG_HTTPS_PROXY_UPPER="${HTTPS_PROXY-}"
+
 packages=()
 
 # Install Node.js 18.x if node is missing
@@ -33,22 +39,28 @@ fi
 unset npm_config_proxy npm_config_http_proxy npm_config_https_proxy \
   http_proxy https_proxy HTTP_PROXY HTTPS_PROXY
 
+# Install markdownlint-cli2 globally if npm exists
+if command -v npm >/dev/null 2>&1 && ! command -v markdownlint >/dev/null 2>&1; then
+  npm install -g markdownlint-cli2 >/dev/null
+fi
+
+# Restore saved proxy variables so later commands inherit them
+export http_proxy="$ORIG_HTTP_PROXY"
+export https_proxy="$ORIG_HTTPS_PROXY"
+export HTTP_PROXY="$ORIG_HTTP_PROXY_UPPER"
+export HTTPS_PROXY="$ORIG_HTTPS_PROXY_UPPER"
+
 # Propagate cleared variables to subsequent CI steps
 if [ -n "${GITHUB_ENV:-}" ]; then
   {
     echo "npm_config_proxy="
     echo "npm_config_http_proxy="
     echo "npm_config_https_proxy="
-    echo "http_proxy="
-    echo "https_proxy="
-    echo "HTTP_PROXY="
-    echo "HTTPS_PROXY="
+    echo "http_proxy=$http_proxy"
+    echo "https_proxy=$https_proxy"
+    echo "HTTP_PROXY=$HTTP_PROXY"
+    echo "HTTPS_PROXY=$HTTPS_PROXY"
   } >> "$GITHUB_ENV"
-fi
-
-# Install markdownlint-cli2 globally if npm exists
-if command -v npm >/dev/null 2>&1 && ! command -v markdownlint >/dev/null 2>&1; then
-  npm install -g markdownlint-cli2 >/dev/null
 fi
 
 echo "Environment ready"
