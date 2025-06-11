@@ -16,6 +16,9 @@ where = ["."]
 include = ["o3research*"]
 exclude = ["node_modules*", "config*"]
 
+[tool.setuptools]
+include-package-data = true
+
 [project.urls]
 Homepage = "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub"
 
