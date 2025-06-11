@@ -2,7 +2,7 @@
 
 [![O3 Version](https://img.shields.io/badge/version-3.5.8-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-![CI/CD](https://img.shields.io/github/actions/workflow/status/adv-ai/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
+![CI/CD](https://img.shields.io/github/actions/workflow/status/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
 ![Coverage](https://img.shields.io/badge/coverage-81%25-brightgreen)
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
@@ -18,7 +18,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 📚 Documentation
 
-Hosted online at [https://adv-ai.github.io/ADV-ADK-Research-Hub/](https://adv-ai.github.io/ADV-ADK-Research-Hub/).
+Hosted online at [https://ADV-IT-Performance-Corp.github.io/ADV-ADK-Research-Hub/](https://ADV-IT-Performance-Corp.github.io/ADV-ADK-Research-Hub/).
 ### Core Documentation
 - [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
 - [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
@@ -81,7 +81,7 @@ Hosted online at [https://adv-ai.github.io/ADV-ADK-Research-Hub/](https://adv-ai
 Reference this repository in your prompts using:
 
 📘 EXTERNAL KNOWLEDGE CONTEXT:
-Use GitHub repository: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
+Use GitHub repository: `https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/`
 
 Key references:
 - docs/ADK_quickstart.md
@@ -138,7 +138,7 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/adv-ai/ADV-ADK-Research-Hub.git
+   git clone https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub.git
    ```
 
 2. Install Python dependencies and the package in editable mode:
@@ -196,7 +196,7 @@ External stubs are organized under `docs/external/` by category: `prompting`, `d
 
 ```text
 EXTERNAL KNOWLEDGE CONTEXT:
-Repository: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
+Repository: `https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/`
 
 Key references:
 - docs/ADK_quickstart.md — Official ADK patterns and quickstart

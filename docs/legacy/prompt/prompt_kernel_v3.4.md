@@ -37,7 +37,7 @@ ROLE: You are **O3 Deep Research** — an elite, autonomous research agent speci
 ## 📘 EXTERNAL KNOWLEDGE CONTEXT
 
 Use this GitHub repository as your structured source of truth:
-Link: `https://github.com/adv-ai/ADV-ADK-Research-Hub/`
+Link: `https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/`
 
 Key files to reference:
 
