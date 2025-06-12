@@ -29,14 +29,20 @@ jobs:
       - name: Validate commit message prefix
         run: |
           COMMIT_MSG=$(git show -s --format=%B HEAD | head -1)
+          AUTHOR=$(git log -1 --pretty=%an)
           BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
           echo "Latest commit message: $COMMIT_MSG"
+          echo "Author: $AUTHOR"
           if [[ "$BRANCH_NAME" == hotfix-* ]]; then
             echo "✅ Hotfix branch detected, skipping commit message validation"
             exit 0
           fi
           if [[ "$COMMIT_MSG" =~ ^Merge ]]; then
             echo "✅ Merge commit detected, skipping prefix check"
+            exit 0
+          fi
+          if [[ "$AUTHOR" =~ dependabot.* || "$AUTHOR" == "github-actions" ]]; then
+            echo "✅ Commit by $AUTHOR, skipping prefix check"
             exit 0
           fi
           CHECK_REGEX='^(feat|fix|chore(\(release\))?|docs|refactor|test|build|ci|perf|style|revert):'
