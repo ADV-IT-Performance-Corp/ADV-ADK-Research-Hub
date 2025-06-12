@@ -12,10 +12,10 @@ The **ConfigAgent** manages prompt configuration updates and routing logic acros
 
 ```yaml
 before:
-  prompt_version: 3.5.7
+  prompt_version: 3.5.8
   routing_weight: 1
 after:
-  prompt_version: 3.5.7
+  prompt_version: 3.5.8
   routing_weight: 2
 ```
 
