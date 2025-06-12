@@ -1,0 +1,5 @@
+{
+  "project_id": "<GCP_PROJECT>",
+  "region": "us-central1",
+  "entry_point": "o3research"
+}
