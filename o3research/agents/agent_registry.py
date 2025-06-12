@@ -1,4 +1,5 @@
 from typing import Type, Dict
+
 __version__ = "3.5.9"
 
 from ..marketing.google_ads_agent import GoogleAdsCampaignAgent
@@ -10,6 +11,7 @@ from ..marketing.creative_prompt_agent import CreativePromptAgent
 from ..marketing.creative import CreativeAgent
 from ..marketing.landing_page_agent import LandingPageAgent
 from ..marketing.lead_capture_agent import LeadCaptureAgent
+from .prompt_to_plan_agent import PromptToPlanAgent
 
 # simple registry mapping names to agent classes
 _AGENT_REGISTRY: Dict[str, Type] = {}
@@ -43,6 +45,7 @@ def clear_registry() -> None:
     register_agent("creative", CreativeAgent)
     register_agent("landing_page", LandingPageAgent)
     register_agent("lead_capture", LeadCaptureAgent)
+    register_agent("prompt_to_plan", PromptToPlanAgent)
 
 
 # register default agents
@@ -55,3 +58,4 @@ register_agent("creative_prompt", CreativePromptAgent)
 register_agent("creative", CreativeAgent)
 register_agent("landing_page", LandingPageAgent)
 register_agent("lead_capture", LeadCaptureAgent)
+register_agent("prompt_to_plan", PromptToPlanAgent)

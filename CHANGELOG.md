@@ -21,6 +21,11 @@ All notable changes to this project are documented in this file.
 - Added multi-client orchestration script and docs
 - Introduced `client_workflow.yaml` template with project and credential fields
 
+## [v3.5.11] — 2025-06-05
+
+### ✨ Updates
+- Added strategy prompt template and prompt tuning modules
+
 ## [v3.5.8] — 2025-06-02
 
 ### ✨ Updates

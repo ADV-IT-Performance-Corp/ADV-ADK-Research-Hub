@@ -1,0 +1,1 @@
+"""Stub google.ads package."""
