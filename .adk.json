@@ -1,5 +1,8 @@
 {
   "project_id": "<GCP_PROJECT>",
   "region": "us-central1",
-  "entry_point": "o3research"
+  "entry_point": "o3research",
+  "flow": "flows/marketing_flow.yaml",
+  "runtime_config": "config/vertex_ai.yaml",
+  "service_account": "<SERVICE_ACCOUNT_EMAIL>"
 }
