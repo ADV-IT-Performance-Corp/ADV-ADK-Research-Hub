@@ -5,7 +5,7 @@ import time
 from typing import Mapping, Any
 from urllib import request
 
-__version__ = "3.5.9"
+__version__ = "3.5.10"
 
 
 def sync_to_crm(

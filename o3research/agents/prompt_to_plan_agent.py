@@ -1,7 +1,7 @@
 from google.adk import Agent
 from ..core.telemetry import log_prompt
 
-__version__ = "3.5.9"
+__version__ = "3.5.10"
 
 
 class PromptToPlanAgent(Agent):

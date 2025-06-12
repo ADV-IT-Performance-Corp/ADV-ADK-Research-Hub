@@ -1,6 +1,6 @@
 """Agent package initialization."""
 
-__version__ = "3.5.9"
+__version__ = "3.5.10"
 
 from .agent_registry import register_agent, get_agent, clear_registry
 from .sample_agent import EchoAgent

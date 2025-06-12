@@ -30,7 +30,7 @@ def main():
 
     meta_content = (
         "---\n"
-        f"description: Guidance for {name.replace('_',' ')}\n"
+        f"description: Guidance for {name.replace('_', ' ')}\n"
         "adk_agent_type: marketing_assistant\n"
         "input_schema: generic\n"
         "output_contract: standard\n"
