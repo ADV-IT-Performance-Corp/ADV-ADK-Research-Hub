@@ -15,6 +15,8 @@ from o3research.agents.analytics_agent import AnalyticsAgent
 class MarketingFlowAgent(Agent):
     """Simple flow agent executing marketing steps sequentially."""
 
+    model_config = {"extra": "allow"}
+
     def __init__(self) -> None:
         super().__init__(name="MarketingFlowAgent")
         self.campaign_agent = CampaignAgent()
