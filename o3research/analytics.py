@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Mapping, Optional
 
+from google.cloud import bigquery  # type: ignore
+
 from google.oauth2.credentials import Credentials  # type: ignore
 from google_auth_oauthlib.flow import InstalledAppFlow  # type: ignore
 from google.auth.transport.requests import Request  # type: ignore
@@ -13,6 +15,20 @@ from .core.reporting import ReportGenerator
 
 
 SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
+
+
+class BigQueryMetricsSink:
+    """Write metrics to a BigQuery table."""
+
+    def __init__(self, table_id: str, client: bigquery.Client | None = None) -> None:
+        self.table_id = table_id
+        self.client = client or bigquery.Client()
+
+    def write(self, metrics: Mapping[str, float]) -> None:
+        """Insert *metrics* into the configured table."""
+        errors = self.client.insert_rows_json(self.table_id, [dict(metrics)])
+        if errors:  # pragma: no cover - error path hard to trigger in tests
+            raise RuntimeError(f"Failed to insert rows: {errors}")
 
 
 class GA4Client:
@@ -90,7 +106,11 @@ class GA4Client:
 
 
 def compute_kpis(
-    client: GA4Client, start_date: str, end_date: str
+    client: GA4Client,
+    start_date: str,
+    end_date: str,
+    *,
+    sink: Optional[BigQueryMetricsSink] = None,
 ) -> Mapping[str, float]:
     """Fetch metrics using *client* and compute KPIs."""
     metrics = client.fetch_metrics(start_date, end_date)
@@ -103,14 +123,28 @@ def compute_kpis(
         revenue=float(metrics.get("revenue", 0.0)),
         returning_customers=int(metrics.get("returning_customers", 0)),
     )
-    return collector.collect()
+    kpis = collector.collect()
+    if sink:
+        sink.write(kpis)
+    return kpis
 
 
-def generate_report(client: GA4Client, start_date: str, end_date: str) -> str:
+def generate_report(
+    client: GA4Client,
+    start_date: str,
+    end_date: str,
+    *,
+    sink: Optional[BigQueryMetricsSink] = None,
+) -> str:
     """Return a Markdown report of KPIs fetched from GA4."""
-    kpis = compute_kpis(client, start_date, end_date)
+    kpis = compute_kpis(client, start_date, end_date, sink=sink)
     reporter = ReportGenerator()
     return reporter.to_markdown(kpis)
 
 
-__all__ = ["GA4Client", "compute_kpis", "generate_report"]
+__all__ = [
+    "GA4Client",
+    "BigQueryMetricsSink",
+    "compute_kpis",
+    "generate_report",
+]
