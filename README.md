@@ -133,6 +133,13 @@ bash scripts/online_link_check.sh
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
+## Deploying on Vertex AI
+See docs/vertex_ai_quickstart.md for setup steps.
+
+### Using Codex CLI
+Run `codex run` to execute workflows locally or in CI.
+
+
 ### Link Validation
 
 Run `bash scripts/online_link_check.sh` to verify external sources are reachable. The command exits with an error if any link is dead.
