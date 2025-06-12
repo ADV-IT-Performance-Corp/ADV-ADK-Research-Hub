@@ -4,6 +4,30 @@ import json
 import os
 import re
 import datetime
+import sys
+
+MAX_BYTES = 1600
+
+
+class _LimitedIO:
+    def __init__(self, stream, limit=MAX_BYTES):
+        self.stream = stream
+        self.remaining = limit
+
+    def write(self, data):
+        if self.remaining <= 0:
+            return
+        encoded = data.encode(self.stream.encoding or "utf-8", errors="replace")
+        chunk = encoded[: self.remaining]
+        self.stream.buffer.write(chunk)
+        self.remaining -= len(chunk)
+
+    def flush(self):
+        self.stream.flush()
+
+
+sys.stdout = _LimitedIO(sys.stdout)
+sys.stderr = _LimitedIO(sys.stderr)
 
 ROOT = os.path.join("docs", "external")
 

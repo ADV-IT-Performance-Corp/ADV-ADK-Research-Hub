@@ -3,6 +3,9 @@
 # This complements markdownlint and mkdocs which only check formatting and
 # internal anchors. Exits non-zero if any links are unreachable.
 set -euo pipefail
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 if ! npx --no-install markdown-link-check --version >/dev/null 2>&1; then
   echo "markdown-link-check is not installed. Run 'npm ci' first." >&2

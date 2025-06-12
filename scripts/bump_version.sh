@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Bump version across docs
 set -e
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 if [ -z "$1" ]; then
   echo "Usage: $0 <new_version>" >&2
   exit 1

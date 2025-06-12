@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Extracted from the CI workflow to avoid quoting errors
 set -euo pipefail
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 FILE_VERSION=$(tr -d '[:space:]' < VERSION)
 

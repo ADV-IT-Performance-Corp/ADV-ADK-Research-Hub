@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 # Preserve existing proxy settings so they can be restored after npm steps
 ORIG_HTTP_PROXY="${http_proxy-}"

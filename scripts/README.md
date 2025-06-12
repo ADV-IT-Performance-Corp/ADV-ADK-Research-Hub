@@ -2,6 +2,8 @@
 
 Two helper scripts streamline validation and development:
 
+All scripts automatically cap their output at 1600 bytes via `head -c 1600` to keep CI logs brief.
+
 * `setup_env.sh` – Installs Node.js, curl, markdownlint, `jq`, and `yamllint` so local
   checks match CI. Run once after cloning:
 

@@ -238,3 +238,13 @@ jobs:
         run: python scripts/generate_evaluation.py tests/sample_metrics.json && echo "Evaluation results updated"
       - name: Codex validation
         run: codex validate
+      - name: Verify script output limit
+        run: |
+          for s in scripts/*.sh scripts/*.py; do
+            echo "Checking $s"
+            if ! grep -q 'head -c 1600' "$s" && ! grep -q 'limit_output' "$s"; then
+              echo "❌ Missing output limit in $s" >&2
+              exit 1
+            fi
+          done
+          echo "Script output limit enforced"
