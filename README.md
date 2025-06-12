@@ -136,6 +136,7 @@ Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large 
 ## Deploying on Vertex AI
 See docs/vertex_ai_quickstart.md for setup steps.
 
+* Example config: `config/vertex_ai.yaml`
 ### Using Codex CLI
 Run `codex run` to execute workflows locally or in CI.
 
