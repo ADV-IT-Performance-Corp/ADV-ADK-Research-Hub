@@ -479,6 +479,16 @@
       "type": "documentation"
     },
     {
+      "name": "Quick Start Assistant Demo",
+      "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/README.md#-quick-start",
+      "tags": [
+        "quickstart",
+        "demo"
+      ],
+      "version": "3.5.9",
+      "type": "documentation"
+    },
+    {
       "name": "A2A Protocol",
       "link": "https://github.com/microsoft/autogen",
       "description": "The A2A (Agent-to-Agent) protocol defines a standard for multi-agent communication and coordination. It enables reliable message passing and task delegation among autonomous agents.",
