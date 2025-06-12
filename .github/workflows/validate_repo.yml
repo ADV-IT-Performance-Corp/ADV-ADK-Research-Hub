@@ -79,7 +79,9 @@ jobs:
       # jq and yamllint installed via scripts/setup_env.sh
 
       - name: Lint Markdown files
-        run: npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**" && echo "Markdown lint passed"
+        run: |
+          npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**" "prompt_catalog/**/*.md"
+          echo "Markdown lint passed"
 
       - name: Validate JSON files
         run: |
@@ -183,6 +185,9 @@ jobs:
 
       - name: Update source index
         run: python scripts/update_source_index.py
+
+      - name: Validate prompt catalog
+        run: python scripts/validate_prompt_catalog.py
 
       - name: Online Link Check
         run: |
