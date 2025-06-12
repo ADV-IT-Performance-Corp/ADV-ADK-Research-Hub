@@ -173,6 +173,15 @@ sample code. The guide demonstrates launching
 `flows/marketing_flow.yaml` with the Google ADK.
 
 * Example config: `config/vertex_ai.yaml`
+* Environment variables sample: `config/vertex_config.yaml`
+
+### Launching Campaigns with Vertex AI
+1. Export `VERTEX_PROJECT_ID`, `VERTEX_CREDENTIALS`, and `VERTEX_REGION`.
+2. Run:
+```bash
+python examples/vertex_workflow.py
+```
+
 ### Using Codex CLI
 Run `codex run` to execute workflows locally or in CI.
 ### Link Validation

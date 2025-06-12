@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from google.oauth2.credentials import Credentials  # type: ignore
+
 __version__ = "3.5.9"
 from google.oauth2 import service_account  # type: ignore
 from google_auth_oauthlib.flow import InstalledAppFlow  # type: ignore
