@@ -15,6 +15,12 @@ All notable changes to this project are documented in this file.
 - Updated packaging to include `marketing_assistant` modules
 - Bumped version metadata to 3.5.9
 
+## [v3.5.10] — 2025-06-04
+
+### ✨ Updates
+- Added multi-client orchestration script and docs
+- Introduced `client_workflow.yaml` template with project and credential fields
+
 ## [v3.5.8] — 2025-06-02
 
 ### ✨ Updates
