@@ -2,18 +2,33 @@
 
 Summary of Google ADK steps for running agents on Vertex AI.
 
-* Enable Vertex AI APIs
-* Configure service account permissions
-* Deploy the agent with `gcloud ai agents deploy`
+## Setup Steps
 
-## Deploying the marketing flow
+1. **Enable required APIs**:
 
-1. Update `.adk.json` with your project ID and service account.
-2. Run:
+   ```bash
+   gcloud services enable \
+       aiplatform.googleapis.com \
+       cloudbuild.googleapis.com
+   ```
+
+2. **Create a service account** and grant Vertex AI roles:
+
+   ```bash
+   gcloud iam service-accounts create adk-agent
+   gcloud projects add-iam-policy-binding <PROJECT_ID> \
+       --member="serviceAccount:adk-agent@<PROJECT_ID>.iam.gserviceaccount.com" \
+       --role="roles/aiplatform.user"
+   ```
+
+3. **Update `.adk.json`** with your project ID, region, and service account.
+   Defaults are provided in `config/vertex_ai.yaml`.
+
+4. **Deploy the flow**:
 
    ```bash
    gcloud ai agents deploy --config .adk.json
    ```
 
-   This will use `flows/marketing_flow.yaml` as the active flow.
-3. The GitHub Actions workflow `deploy_vertex_ai.yml` can automate this step when changes are pushed.
+   This uses `flows/marketing_flow.yaml` by default. The GitHub Actions workflow
+   `deploy_vertex_ai.yml` can automate deployment on push.

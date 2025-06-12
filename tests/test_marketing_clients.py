@@ -28,8 +28,8 @@ sys.modules["googleapiclient.discovery"].build = MagicMock()
 
 import marketing_assistant.google_ads_client  # noqa: E402
 import marketing_assistant.ga_client  # noqa: E402
-from marketing_assistant.google_ads_client import GoogleAdsClient
-from marketing_assistant.ga_client import GAClient
+from marketing_assistant.google_ads_client import GoogleAdsClient  # noqa: E402
+from marketing_assistant.ga_client import GAClient  # noqa: E402
 
 
 class TestGoogleAdsClient(unittest.TestCase):
@@ -60,7 +60,8 @@ class TestGoogleAdsClient(unittest.TestCase):
         self.assertEqual(result, [{"id": "1"}])
 
     @patch(
-        "marketing_assistant.google_ads_client.service_account.Credentials.from_service_account_file"
+        "marketing_assistant.google_ads_client.service_account."
+        "Credentials.from_service_account_file"
     )
     def test_load_service_account_credentials(self, mock_from_file):
         cred = MagicMock()
@@ -126,7 +127,8 @@ class TestGAClient(unittest.TestCase):
         self.assertEqual(result, [{"metric": "value"}])
 
     @patch(
-        "marketing_assistant.ga_client.service_account.Credentials.from_service_account_file"
+        "marketing_assistant.ga_client.service_account."
+        "Credentials.from_service_account_file"
     )
     def test_load_service_account_credentials(self, mock_from_file):
         cred = MagicMock()
