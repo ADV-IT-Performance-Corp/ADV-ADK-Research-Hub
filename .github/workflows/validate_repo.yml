@@ -222,3 +222,5 @@ jobs:
 
       - name: Update evaluation results
         run: python scripts/generate_evaluation.py tests/sample_metrics.json && echo "Evaluation results updated"
+      - name: Codex validation
+        run: codex validate
