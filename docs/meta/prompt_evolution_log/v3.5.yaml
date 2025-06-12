@@ -13,6 +13,8 @@ subversions:
     summary: expanded governance docs and added schema diff tests
   - tag: 3.5.6
     summary: restructured source tree with core utilities and new agent stubs
+  - tag: 3.5.7
+    summary: added AsyncEventBus, logging utilities and example workflow
   - tag: 3.5.8
     summary: added AsyncEventBus, logging utilities and example workflow
 notes:
