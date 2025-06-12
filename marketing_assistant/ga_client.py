@@ -11,7 +11,10 @@ SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
 
 
 class GAClient:
-    """Simplified Google Analytics Data API client using OAuth 2.0 or a service account."""
+    """Simplified Google Analytics Data API client.
+
+    Supports OAuth 2.0 or a service account for authentication.
+    """
 
     def __init__(
         self,
