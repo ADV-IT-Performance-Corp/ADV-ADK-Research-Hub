@@ -7,6 +7,8 @@ from ..marketing.budgeter import Budgeter
 from ..marketing.funnel_planner import FunnelPlannerAgent
 from ..marketing.creative_prompt_agent import CreativePromptAgent
 from ..marketing.creative import CreativeAgent
+from ..marketing.landing_page_agent import LandingPageAgent
+from ..marketing.lead_capture_agent import LeadCaptureAgent
 
 # simple registry mapping names to agent classes
 _AGENT_REGISTRY: Dict[str, Type] = {}
@@ -38,6 +40,8 @@ def clear_registry() -> None:
     register_agent("funnel_planner", FunnelPlannerAgent)
     register_agent("creative_prompt", CreativePromptAgent)
     register_agent("creative", CreativeAgent)
+    register_agent("landing_page", LandingPageAgent)
+    register_agent("lead_capture", LeadCaptureAgent)
 
 
 # register default agents
@@ -48,3 +52,5 @@ register_agent("budgeter", Budgeter)
 register_agent("funnel_planner", FunnelPlannerAgent)
 register_agent("creative_prompt", CreativePromptAgent)
 register_agent("creative", CreativeAgent)
+register_agent("landing_page", LandingPageAgent)
+register_agent("lead_capture", LeadCaptureAgent)

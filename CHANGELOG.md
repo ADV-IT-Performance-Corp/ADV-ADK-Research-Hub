@@ -16,6 +16,8 @@ All notable changes to this project are documented in this file.
 - Added `MarketingAssistant` module for campaign optimization
 - Added `push_campaign` API integration for marketing platforms
 - Updated documentation and version metadata to 3.5.8
+- Added `LandingPageAgent` and `LeadCaptureAgent`
+- Documented landing page and lead capture prompts
 
 ## [v3.5.7] — 2025-06-01
 

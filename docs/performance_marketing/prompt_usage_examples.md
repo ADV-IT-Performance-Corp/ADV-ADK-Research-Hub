@@ -19,3 +19,21 @@ from o3research.marketing import FunnelPlannerAgent
 agent = FunnelPlannerAgent()
 print(agent.run("software", "lead"))
 ```
+
+## LandingPageAgent
+
+```python
+from o3research.marketing import LandingPageAgent
+
+agent = LandingPageAgent()
+print(agent.run("analytics tool", "increase efficiency"))
+```
+
+## LeadCaptureAgent
+
+```python
+from o3research.marketing import LeadCaptureAgent
+
+agent = LeadCaptureAgent()
+print(agent.run("email form"))
+```

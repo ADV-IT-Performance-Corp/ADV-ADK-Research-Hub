@@ -15,6 +15,8 @@ This directory compiles research notes and strategies for data-driven advertisin
 - `budget_allocation.md`
 - `ppc_growth_loops.md`
 - `ltv_models.md`
+- `landing_page_content.md`
+- `lead_capture_techniques.md`
 - `assistant_architecture.md`
 - `api_integration.md`
 - `prompt_usage_examples.md`
