@@ -1,5 +1,6 @@
 import time
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from .prompt_observability import record_prompt
 
 
@@ -11,6 +12,7 @@ class LeadCaptureAgent(Agent):
 
     def run(self, method: str) -> str:  # type: ignore[override]
         """Return steps for capturing leads using *method*."""
+        start_run(self.name)
         start = time.perf_counter()
         ref = "docs/performance_marketing/lead_capture_techniques.md lines 6-14"
         lines = [
@@ -23,4 +25,5 @@ class LeadCaptureAgent(Agent):
         result = "\n".join(lines)
         latency = time.perf_counter() - start
         record_prompt("lead_capture", self.name, result, timing=latency, cost=0.0)
+        finish_run(self.name)
         return result

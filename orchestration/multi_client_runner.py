@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any, Dict
 
 import yaml
+from o3research.lifecycle import finish_run, start_run
 
 CLIENTS_DIR = Path(__file__).resolve().parent.parent / "config" / "clients"
 FLOW_FILE = Path(__file__).resolve().parent.parent / "flows" / "client_workflow.yaml"
@@ -33,7 +34,11 @@ def run_workflow(settings: Dict[str, Any]) -> None:
             credentials=credentials,
             region=region,
         )
-        runner.run()
+        start_run("MultiClientRunner")
+        try:
+            runner.run()
+        finally:
+            finish_run("MultiClientRunner")
     except Exception as exc:  # pragma: no cover - optional path
         print(f"Falling back to local workflow: {exc}")
         runpy.run_module("examples.simple_workflow", run_name="__main__")

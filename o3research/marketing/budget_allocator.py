@@ -2,6 +2,7 @@ from typing import Dict, Union
 
 import time
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from .prompt_observability import record_prompt
 
 
@@ -29,6 +30,7 @@ class BudgetAllocatorAgent(Agent):
         goal:
             Either ``"CPA"`` or ``"ROAS"`` determining how allocations are computed.
         """
+        start_run(self.name)
         start = time.perf_counter()
         allocation: Dict[str, float] = {}
         total_spend = 0.0
@@ -54,6 +56,7 @@ class BudgetAllocatorAgent(Agent):
         lines.append(f"Daily budget: ${daily_budget}")
         result = "\n".join(lines)
         latency = time.perf_counter() - start
+        latency = time.perf_counter() - start
         record_prompt(
             "budget_allocation",
             self.name,
@@ -61,6 +64,7 @@ class BudgetAllocatorAgent(Agent):
             timing=latency,
             cost=0.0,
         )
+        finish_run(self.name)
         return result
 
 

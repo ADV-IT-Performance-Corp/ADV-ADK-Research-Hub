@@ -6,6 +6,7 @@ import time
 from typing import Dict
 
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from pydantic import ConfigDict
 
 
@@ -22,12 +23,16 @@ class GovernanceAgent(Agent):
         self._heartbeats[agent_name] = timestamp or time.time()
 
     def run(self, status: str) -> str:
-        now = time.time()
-        stale = [name for name, ts in self._heartbeats.items() if now - ts > 30]
-        if stale:
-            agents = ", ".join(stale)
-            return f"{self.name} ALERT: {agents} heartbeat stale"
-        return f"{self.name} reviewed status: {status}"
+        start_run(self.name)
+        try:
+            now = time.time()
+            stale = [name for name, ts in self._heartbeats.items() if now - ts > 30]
+            if stale:
+                agents = ", ".join(stale)
+                return f"{self.name} ALERT: {agents} heartbeat stale"
+            return f"{self.name} reviewed status: {status}"
+        finally:
+            finish_run(self.name)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 
 __version__ = "3.5.10"
 
@@ -10,7 +11,11 @@ class CampaignAgent(Agent):
         super().__init__(name="CampaignAgent")
 
     def run(self, product: str) -> str:
-        return f"{self.name} plans a campaign for {product}"
+        start_run(self.name)
+        try:
+            return f"{self.name} plans a campaign for {product}"
+        finally:
+            finish_run(self.name)
 
 
 if __name__ == "__main__":

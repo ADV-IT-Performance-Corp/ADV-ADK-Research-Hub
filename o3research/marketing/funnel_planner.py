@@ -1,5 +1,6 @@
 import time
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from .prompt_observability import record_prompt
 
 
@@ -11,6 +12,7 @@ class FunnelPlannerAgent(Agent):
 
     def run(self, product_type: str, goal: str) -> str:  # type: ignore[override]
         """Return funnel stages for the given product and goal."""
+        start_run(self.name)
         start = time.perf_counter()
         ref = "docs/performance_marketing/reforge_growth_loops.md lines 9-25"
         goal_lower = goal.lower()
@@ -29,6 +31,7 @@ class FunnelPlannerAgent(Agent):
         ]
         result = "\n".join(lines)
         latency = time.perf_counter() - start
+        latency = time.perf_counter() - start
         record_prompt(
             "funnel_plan",
             self.name,
@@ -36,6 +39,7 @@ class FunnelPlannerAgent(Agent):
             timing=latency,
             cost=0.0,
         )
+        finish_run(self.name)
         return result
 
 

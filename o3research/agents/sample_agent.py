@@ -9,7 +9,13 @@ class EchoAgent:
 
     def run(self, message: str) -> str:
         """Return a formatted echo response."""
-        return f"{self.name}: {message}"
+        from o3research.lifecycle import finish_run, start_run
+
+        start_run(self.name)
+        try:
+            return f"{self.name}: {message}"
+        finally:
+            finish_run(self.name)
 
 
 if __name__ == "__main__":

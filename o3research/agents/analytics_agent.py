@@ -1,4 +1,5 @@
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 
 __version__ = "3.5.10"
 
@@ -10,4 +11,8 @@ class AnalyticsAgent(Agent):
         super().__init__(name="AnalyticsAgent")
 
     def run(self, data: str) -> str:
-        return f"{self.name} analyzed data: {data}"
+        start_run(self.name)
+        try:
+            return f"{self.name} analyzed data: {data}"
+        finally:
+            finish_run(self.name)

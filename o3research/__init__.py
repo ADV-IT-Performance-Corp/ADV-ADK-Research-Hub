@@ -1,4 +1,4 @@
-from .core.base_agent import Agent
+from google.adk import Agent
 from .agents.sample_agent import EchoAgent
 from .agents.research_agent import ResearchAgent
 from .core.task_flow import TaskFlow

@@ -1,5 +1,6 @@
 import time
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from .prompt_observability import record_prompt
 
 
@@ -11,6 +12,7 @@ class GoogleAdsCampaignAgent(Agent):
 
     def run(self, offer: str) -> str:
         """Return a basic campaign plan for the given product or offer."""
+        start_run(self.name)
         start = time.perf_counter()
         summary_ref = "docs/performance_marketing/google_insights_summary.md lines 8-21"
         plan = (
@@ -22,6 +24,7 @@ class GoogleAdsCampaignAgent(Agent):
         )
         latency = time.perf_counter() - start
         record_prompt("google_ads_plan", self.name, plan, timing=latency, cost=0.0)
+        finish_run(self.name)
         return plan
 
 
