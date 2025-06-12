@@ -179,6 +179,7 @@ sample code. The guide demonstrates launching
 ### Launching Campaigns with Vertex AI
 1. Export `VERTEX_PROJECT_ID`, `VERTEX_CREDENTIALS`, and `VERTEX_REGION`.
 2. Run:
+
 ```bash
 python examples/vertex_workflow.py
 ```
