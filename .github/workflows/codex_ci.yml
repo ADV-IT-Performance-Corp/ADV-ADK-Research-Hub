@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pip install openai-codex-cli
+      - run: pip install --quiet --progress-bar off openai-codex-cli
+        env:
+          PIP_ROOT_USER_ACTION: ignore
       - run: codex ci

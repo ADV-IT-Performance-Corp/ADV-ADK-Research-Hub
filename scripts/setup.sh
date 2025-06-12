@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+export PIP_ROOT_USER_ACTION=ignore
 
 log() {
   echo -e "\033[1;36m[SETUP]\033[0m $1"
@@ -40,8 +41,8 @@ if [ -f requirements.txt ]; then
   log "Setting up Python virtual environment..."
   python3 -m venv .venv
   source .venv/bin/activate
-  pip install --upgrade pip
-  pip install -r requirements.txt
+  pip install --quiet --progress-bar off --upgrade pip
+  pip install --quiet --progress-bar off -r requirements.txt
 else
   log "⚠️ No requirements.txt found — skipping Python setup."
 fi
