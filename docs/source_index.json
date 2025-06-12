@@ -490,7 +490,7 @@
         "coordination",
         "orchestration"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -505,7 +505,7 @@
         "bias",
         "scoring"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -520,7 +520,7 @@
         "memory",
         "coordination"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -535,7 +535,7 @@
         "analytics",
         "performance"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -550,7 +550,7 @@
         "prompting",
         "grounding"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -564,7 +564,7 @@
         "fallback",
         "on-device"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -581,7 +581,7 @@
         "grounding",
         "fallback"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -596,7 +596,7 @@
         "behavioral",
         "prompting"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -611,7 +611,7 @@
         "reflection",
         "mutation"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -625,7 +625,7 @@
         "task",
         "grounding"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -640,7 +640,7 @@
         "api",
         "coordination"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -655,7 +655,7 @@
         "compliance",
         "constraints"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -672,7 +672,7 @@
         "grounding",
         "coordination"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -687,7 +687,7 @@
         "deployment",
         "CI/CD"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -703,7 +703,7 @@
         "coordination",
         "memory"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -718,7 +718,7 @@
         "orchestration",
         "memory"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -734,7 +734,7 @@
         "lineage",
         "tuning"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -750,7 +750,7 @@
         "memory",
         "fallback"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -765,7 +765,7 @@
         "validation",
         "scoring"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -780,7 +780,7 @@
         "orchestration",
         "performance"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -796,7 +796,7 @@
         "control",
         "fallback"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -811,7 +811,7 @@
         "grounding",
         "prompting"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -827,7 +827,7 @@
         "metrics",
         "tuning"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     },
     {
@@ -842,13 +842,13 @@
         "coordination",
         "automation"
       ],
-      "last_reviewed": "2025-06-11",
+      "last_reviewed": "2025-06-12",
       "type": "external"
     }
   ],
   "metadata": {
     "include_web": true,
-    "last_updated": "2025-06-11",
+    "last_updated": "2025-06-12",
     "version": "3.5.8"
   }
 }
