@@ -1,4 +1,5 @@
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 
 __version__ = "3.5.10"
 
@@ -10,7 +11,11 @@ class ContentAgent(Agent):
         super().__init__(name="ContentAgent")
 
     def run(self, topic: str) -> str:
-        return f"{self.name} suggests a blog post about '{topic}'"
+        start_run(self.name)
+        try:
+            return f"{self.name} suggests a blog post about '{topic}'"
+        finally:
+            finish_run(self.name)
 
 
 if __name__ == "__main__":

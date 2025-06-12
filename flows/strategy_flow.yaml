@@ -1,0 +1,13 @@
+# Strategy planning flow executed on Vertex AI
+---
+steps:
+  - agent: ResearchAgent
+    description: Analyze audience and competitors
+  - agent: CampaignAgent
+    description: Outline channel strategy
+  - agent: ContentAgent
+    description: Draft messaging
+  - agent: BudgetAllocatorAgent
+    description: Recommend spend based on CTR and conversions
+  - agent: AnalyticsAgent
+    description: Define measurement approach

@@ -1,4 +1,5 @@
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 
 __version__ = "3.5.10"
 from typing import Dict, Any
@@ -17,13 +18,17 @@ class AbTestingAgent(Agent):
         Conversion rate is computed as conversions / clicks. A rate of 0 is used
         if clicks is 0.
         """
-        best_variant = None
-        best_rate = -1.0
-        for name, metrics in variants.items():
-            clicks = metrics.get("clicks", 0)
-            conversions = metrics.get("conversions", 0)
-            rate = conversions / clicks if clicks else 0.0
-            if rate > best_rate:
-                best_rate = rate
-                best_variant = name
-        return f"{self.name} selected {best_variant}"
+        start_run(self.name)
+        try:
+            best_variant = None
+            best_rate = -1.0
+            for name, metrics in variants.items():
+                clicks = metrics.get("clicks", 0)
+                conversions = metrics.get("conversions", 0)
+                rate = conversions / clicks if clicks else 0.0
+                if rate > best_rate:
+                    best_rate = rate
+                    best_variant = name
+            return f"{self.name} selected {best_variant}"
+        finally:
+            finish_run(self.name)

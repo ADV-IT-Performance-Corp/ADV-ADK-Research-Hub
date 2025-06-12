@@ -5,6 +5,7 @@ from typing import Any, Dict
 
 import yaml
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 from pydantic import ConfigDict
 
 
@@ -22,5 +23,9 @@ class ConfigAgent(Agent):
         return yaml.safe_load(self.settings_file.read_text())
 
     def run(self, _: str) -> str:
-        settings = self.load_settings()
-        return f"{self.name} loaded {len(settings)} settings"
+        start_run(self.name)
+        try:
+            settings = self.load_settings()
+            return f"{self.name} loaded {len(settings)} settings"
+        finally:
+            finish_run(self.name)

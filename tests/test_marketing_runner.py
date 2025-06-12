@@ -5,7 +5,7 @@ from google.genai import types
 from google.adk.events.event import Event
 from typing import cast
 
-from o3research.core.base_agent import Agent
+from google.adk import Agent
 from o3research.agents.campaign_agent import CampaignAgent
 from o3research.marketing import BudgetAllocatorAgent
 from o3research.agents.engagement_agent import EngagementAgent

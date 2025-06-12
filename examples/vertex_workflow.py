@@ -38,7 +38,13 @@ def main() -> None:
         credentials=settings["credentials"],
         region=settings["region"],
     )
-    runner.run()
+    from o3research.lifecycle import finish_run, start_run
+
+    start_run("VertexWorkflow")
+    try:
+        runner.run()
+    finally:
+        finish_run("VertexWorkflow")
 
 
 if __name__ == "__main__":  # pragma: no cover

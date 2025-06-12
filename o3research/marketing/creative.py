@@ -1,4 +1,5 @@
 from google.adk import Agent
+from o3research.lifecycle import finish_run, start_run
 import time
 from ..core.telemetry import log_prompt
 
@@ -11,6 +12,7 @@ class CreativeAgent(Agent):
 
     def run(self, product: str, audience: str) -> str:  # type: ignore[override]
         """Return short ad copy suggestions for *product* targeting *audience*."""
+        start_run(self.name)
         start = time.perf_counter()
         suggestions = [
             f"Unlock productivity with {product} for {audience}",
@@ -27,4 +29,5 @@ class CreativeAgent(Agent):
             timing=latency,
             cost=0.0,
         )
+        finish_run(self.name)
         return result
