@@ -2,9 +2,12 @@ import unittest
 
 from o3research.marketing import PerformanceOptimizer
 from o3research.agents import ApiWriterAgent
+from pydantic import ConfigDict
 
 
 class DummyWriter(ApiWriterAgent):
+    model_config = ConfigDict(extra="allow")
+
     def __init__(self) -> None:
         super().__init__()
         self.last_message = None

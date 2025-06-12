@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class EngagementAgent(BaseAgent):
+class EngagementAgent(Agent):
     """Agent that handles customer engagement tasks."""
 
     def __init__(self) -> None:

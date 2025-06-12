@@ -2,10 +2,12 @@ from pathlib import Path
 from typing import Any, Dict
 
 import yaml
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
+from pydantic import ConfigDict
 
 
-class ConfigAgent(BaseAgent):
+class ConfigAgent(Agent):
+    model_config = ConfigDict(extra="allow")
     """Agent that applies configuration updates."""
 
     def __init__(self, settings_file: str = "config/settings.yaml") -> None:

@@ -1,9 +1,9 @@
 import time
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 from .prompt_observability import record_prompt
 
 
-class GoogleAdsCampaignAgent(BaseAgent):
+class GoogleAdsCampaignAgent(Agent):
     """Generate a simple Google Ads campaign plan."""
 
     def __init__(self) -> None:

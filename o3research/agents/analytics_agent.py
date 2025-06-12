@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class AnalyticsAgent(BaseAgent):
+class AnalyticsAgent(Agent):
     """Agent that reports campaign KPIs."""
 
     def __init__(self) -> None:

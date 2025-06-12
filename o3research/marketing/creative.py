@@ -1,9 +1,9 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 import time
 from ..core.telemetry import log_prompt
 
 
-class CreativeAgent(BaseAgent):
+class CreativeAgent(Agent):
     """Provide short creative ad suggestions."""
 
     def __init__(self) -> None:

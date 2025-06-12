@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class CampaignAgent(BaseAgent):
+class CampaignAgent(Agent):
     """Example agent that plans a marketing campaign."""
 
     def __init__(self) -> None:

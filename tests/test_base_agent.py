@@ -1,8 +1,8 @@
 import unittest
-from o3research.core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class DummyAgent(BaseAgent):
+class DummyAgent(Agent):
     """Trivial subclass without overriding run."""
 
     pass
@@ -11,9 +11,8 @@ class DummyAgent(BaseAgent):
 class TestBaseAgent(unittest.TestCase):
     def test_run_not_implemented(self):
         agent = DummyAgent(name="dummy")
-        with self.assertRaises(NotImplementedError) as cm:
+        with self.assertRaises(AttributeError):
             agent.run("msg")
-        self.assertEqual(str(cm.exception), "")
 
 
 if __name__ == "__main__":  # pragma: no cover

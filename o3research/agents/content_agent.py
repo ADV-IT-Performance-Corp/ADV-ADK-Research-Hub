@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class ContentAgent(BaseAgent):
+class ContentAgent(Agent):
     """Example agent that suggests content ideas."""
 
     def __init__(self) -> None:

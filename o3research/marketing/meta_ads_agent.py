@@ -1,9 +1,9 @@
 import time
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 from .prompt_observability import record_prompt
 
 
-class MetaAdsAgent(BaseAgent):
+class MetaAdsAgent(Agent):
     """Generate a Meta Advantage+ style campaign plan."""
 
     def __init__(self) -> None:
