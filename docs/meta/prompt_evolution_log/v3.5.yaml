@@ -16,6 +16,6 @@ subversions:
   - tag: 3.5.7
     summary: added AsyncEventBus, logging utilities and example workflow
   - tag: 3.5.8
-    summary: added AsyncEventBus, logging utilities and example workflow
+    summary: added MarketingAssistant module and push_campaign API integration
 notes:
   - 'Version 3.5.5 expands simulation logs and adds schema diff prompt.'
