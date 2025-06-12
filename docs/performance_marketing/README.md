@@ -104,3 +104,5 @@ print(push_campaign(plan))
 
 To log prompts for debugging, set the environment variable `PROMPT_OBSERVABILITY=1` before running any agent.
 See the [Prompt Observability guide](../analytics/prompt_observability.md) for details on how the logging pipeline works.
+
+For an end-to-end example, follow the [Quick Start section](../../README.md#-quick-start) in the repository root.

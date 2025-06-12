@@ -99,6 +99,16 @@ python examples/simple_workflow.py
 python examples/marketing_workflow.py
 ```
 
+### Run the Assistant Script
+
+Execute a single end-to-end run with:
+
+```bash
+python assistant.py
+```
+
+The script prints a campaign summary after completing the workflow.
+
 ### Importing Google ADK agents
 
 All marketing modules inherit from `google.adk.Agent`. Import the base class and
