@@ -34,7 +34,7 @@ tests/
 
 _Diagrams from the original 21 May prompt illustrate this layout. See [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md) for visuals._
 
-Example skeletons of `BaseAgent` and `ResearchAgent` are provided in the
+Example skeletons of `google.adk.Agent` and `ResearchAgent` are provided in the
 `o3research/` directory for reference. These stubs demonstrate the minimal interface
 used by more advanced agents.
 

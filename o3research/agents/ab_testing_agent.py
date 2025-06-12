@@ -1,8 +1,8 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 from typing import Dict, Any
 
 
-class AbTestingAgent(BaseAgent):
+class AbTestingAgent(Agent):
     """Agent that selects the best performing variant."""
 
     def __init__(self) -> None:

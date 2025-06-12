@@ -3,10 +3,12 @@ from __future__ import annotations
 import time
 from typing import Dict
 
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
+from pydantic import ConfigDict
 
 
-class GovernanceAgent(BaseAgent):
+class GovernanceAgent(Agent):
+    model_config = ConfigDict(extra="allow")
     """Prototype agent to monitor other agents and handle escalation."""
 
     def __init__(self) -> None:

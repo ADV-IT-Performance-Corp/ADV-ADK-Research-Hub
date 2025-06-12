@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class OptimizationAgent(BaseAgent):
+class OptimizationAgent(Agent):
     """Agent that tunes campaign parameters based on metrics."""
 
     def __init__(self) -> None:

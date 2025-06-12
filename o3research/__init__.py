@@ -1,4 +1,4 @@
-from .core.base_agent import BaseAgent
+from .core.base_agent import Agent
 from .agents.sample_agent import EchoAgent
 from .agents.research_agent import ResearchAgent
 from .core.task_flow import TaskFlow
@@ -15,7 +15,7 @@ with (_BASE_DIR / "VERSION").open() as vf:
 
 
 __all__ = [
-    "BaseAgent",
+    "Agent",
     "EchoAgent",
     "ResearchAgent",
     "TaskFlow",

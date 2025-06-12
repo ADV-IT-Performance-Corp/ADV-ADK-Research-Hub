@@ -1,18 +1,13 @@
-from typing import Any
+"""Wrapper around google.adk.Agent with relaxed field handling."""
+
+from google.adk import Agent as ADKAgent
+from pydantic import ConfigDict
 
 
-class BaseAgent:
-    """Base class for simple agents used in examples.
+class Agent(ADKAgent):
+    """Project base agent using the ADK Agent class."""
 
-    Subclasses must implement :py:meth:`run`.
-    """
+    model_config = ConfigDict(extra="allow")
 
-    def __init__(self, name: str) -> None:
-        self.name = name
 
-    def run(self, message: Any) -> str:
-        """Return a textual response.
-
-        Subclasses should override this.
-        """
-        raise NotImplementedError
+__all__ = ["Agent"]

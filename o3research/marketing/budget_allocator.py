@@ -1,11 +1,11 @@
 from typing import Dict, Union
 
 import time
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 from .prompt_observability import record_prompt
 
 
-class BudgetAllocatorAgent(BaseAgent):
+class BudgetAllocatorAgent(Agent):
     """Allocate budget across channels based on performance goals."""
 
     def __init__(self) -> None:

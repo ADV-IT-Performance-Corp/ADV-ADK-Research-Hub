@@ -1,8 +1,8 @@
-from ...core.base_agent import BaseAgent
+from google.adk import Agent
 from ...core.telemetry import log_prompt
 
 
-class PlannerAgent(BaseAgent):
+class PlannerAgent(Agent):
     """Create a basic multi-channel marketing campaign plan."""
 
     def __init__(self) -> None:

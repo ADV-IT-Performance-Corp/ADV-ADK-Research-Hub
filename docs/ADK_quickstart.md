@@ -11,7 +11,7 @@ The ADK helps build modular, scalable agents that can:
 - Use caching, token optimization, and reflection loops
 
 ## Key Concepts
-- `BaseAgent`: interface for all agents
+- `google.adk.Agent`: interface for all agents
 - `semantic_cache`: stores recent prompts + responses
 - `token_optimizer`: trims prompt tokens to stay efficient
 - `few_shot_selector`: selects best few-shot examples

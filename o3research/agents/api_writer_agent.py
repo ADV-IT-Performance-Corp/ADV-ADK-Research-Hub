@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class ApiWriterAgent(BaseAgent):
+class ApiWriterAgent(Agent):
     """Agent that sends suggestions to an external API."""
 
     def __init__(self) -> None:

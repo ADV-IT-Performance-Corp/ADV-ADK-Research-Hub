@@ -1,9 +1,9 @@
 import time
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 from .prompt_observability import record_prompt
 
 
-class FunnelPlannerAgent(BaseAgent):
+class FunnelPlannerAgent(Agent):
     """Create a simple marketing funnel with actions for each stage."""
 
     def __init__(self) -> None:

@@ -16,7 +16,7 @@ class TestMCPServerUnknown(unittest.TestCase):
 
     def test_route_known_and_unknown_tasks(self) -> None:
         with patch.object(
-            self.server.research_agent,
+            type(self.server.research_agent),
             "run",
             return_value="r",
         ) as mock_research:
@@ -25,7 +25,7 @@ class TestMCPServerUnknown(unittest.TestCase):
             mock_research.assert_called_once_with(self.payload)
 
         with patch.object(
-            self.server.content_agent,
+            type(self.server.content_agent),
             "run",
             return_value="c",
         ) as mock_content:
@@ -34,7 +34,7 @@ class TestMCPServerUnknown(unittest.TestCase):
             mock_content.assert_called_once_with(self.payload)
 
         with patch.object(
-            self.server.engagement_agent,
+            type(self.server.engagement_agent),
             "run",
             return_value="e",
         ) as mock_engagement:
@@ -43,7 +43,7 @@ class TestMCPServerUnknown(unittest.TestCase):
             mock_engagement.assert_called_once_with(self.payload)
 
         with patch.object(
-            self.server.optimization_agent,
+            type(self.server.optimization_agent),
             "run",
             return_value="o",
         ) as mock_optimize:
@@ -52,7 +52,7 @@ class TestMCPServerUnknown(unittest.TestCase):
             mock_optimize.assert_called_once_with(self.payload)
 
         with patch.object(
-            self.server.analytics_agent,
+            type(self.server.analytics_agent),
             "run",
             return_value="a",
         ) as mock_analytics:
@@ -61,7 +61,7 @@ class TestMCPServerUnknown(unittest.TestCase):
             mock_analytics.assert_called_once_with(self.payload)
 
         with patch.object(
-            self.server.config_agent,
+            type(self.server.config_agent),
             "run",
             return_value="cfg",
         ) as mock_config:

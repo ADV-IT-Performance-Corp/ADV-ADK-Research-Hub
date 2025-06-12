@@ -1,7 +1,7 @@
-from ..core.base_agent import BaseAgent
+from google.adk import Agent
 
 
-class ResearchAgent(BaseAgent):
+class ResearchAgent(Agent):
     """Example agent that returns a research summary."""
 
     def __init__(self) -> None:
