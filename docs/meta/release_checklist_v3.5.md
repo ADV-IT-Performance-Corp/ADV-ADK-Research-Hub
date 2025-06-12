@@ -30,4 +30,5 @@
 ## 🧪 Final Test
 - [ ] CI runs and passes successfully
 - [ ] Run `scripts/bump_version.sh` and verify version consistency
+- [ ] Confirm all agent modules define `__version__` matching the root `VERSION`
 - [ ] Ready for `main` branch merge

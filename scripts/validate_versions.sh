@@ -46,6 +46,17 @@ else
   echo "✅ README.md version matches VERSION"
 fi
 
+# agent modules must define the same version
+for mod in $(grep -rl "__version__ =" o3research/agents marketing_assistant); do
+  MOD_VERSION=$(grep -oP '__version__\s*=\s*"\K[0-9]+\.[0-9]+\.[0-9]+' "$mod")
+  if [ "$MOD_VERSION" != "$FILE_VERSION" ]; then
+    echo "❌ $mod has $MOD_VERSION but VERSION is $FILE_VERSION"
+    errors=1
+  else
+    echo "✅ $mod version matches VERSION"
+  fi
+done
+
 # evaluation_results.json should reflect the release version
 JSON_VERSION=$(jq -r '.version' docs/meta/evaluation_results.json)
 if [ "$JSON_VERSION" != "$FILE_VERSION" ]; then

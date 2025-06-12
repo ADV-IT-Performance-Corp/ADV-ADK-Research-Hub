@@ -1,4 +1,5 @@
 from google.adk import Agent
+__version__ = "3.5.9"
 from typing import Dict, Any
 
 
