@@ -4,7 +4,7 @@ from typing import Mapping, Any
 
 from google.adk import Agent
 
-__version__ = "3.5.9"
+__version__ = "3.5.10"
 
 
 class LeadScoringAgent(Agent):
