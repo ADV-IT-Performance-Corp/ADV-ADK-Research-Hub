@@ -173,10 +173,12 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install Python dependencies
+        env:
+          PIP_ROOT_USER_ACTION: ignore
         run: |
-          pip install -r requirements.txt
-          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
-          pip install -e .
+          pip install --quiet --progress-bar off -r requirements.txt
+          if [ -f requirements-dev.txt ]; then pip install --quiet --progress-bar off -r requirements-dev.txt; fi
+          pip install --quiet --progress-bar off -e .
           echo "Python dependencies installed"
 
       - name: Update source index
@@ -221,8 +223,10 @@ jobs:
           echo "Tests passed"
 
       - name: Generate coverage badge
+        env:
+          PIP_ROOT_USER_ACTION: ignore
         run: |
-          pip install coverage-badge
+          pip install --quiet --progress-bar off coverage-badge
           coverage-badge -o coverage.svg -f
 
       - name: Update evaluation results
