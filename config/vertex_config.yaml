@@ -1,0 +1,6 @@
+---
+# Vertex AI runtime configuration
+# Environment variables can override these defaults
+project_id: "${VERTEX_PROJECT_ID}"
+credentials: "${VERTEX_CREDENTIALS}"
+region: "${VERTEX_REGION:-us-central1}"

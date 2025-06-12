@@ -1,4 +1,5 @@
 from pathlib import Path
+
 __version__ = "3.5.9"
 from typing import Any, Dict
 
