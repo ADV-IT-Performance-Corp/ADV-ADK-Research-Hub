@@ -175,12 +175,8 @@ sample code. The guide demonstrates launching
 * Example config: `config/vertex_ai.yaml`
 ### Using Codex CLI
 Run `codex run` to execute workflows locally or in CI.
-
-
 ### Link Validation
-
 Run `bash scripts/online_link_check.sh` to verify external sources are reachable. The command exits with an error if any link is dead.
-
 ### For Developers
 1. Clone this repository:
 

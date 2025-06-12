@@ -1,3 +1,6 @@
+__version__ = "3.5.9"
+
+
 class EchoAgent:
     """Simple agent that echoes received messages."""
 

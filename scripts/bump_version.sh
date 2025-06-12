@@ -12,6 +12,10 @@ grep -rl "v${old}" docs | xargs sed -i "s/v${old}/v${new}/g"
 sed -i "s/${old}/${new}/g" docs/source_index.json
 echo "${new}" > VERSION
 
+# Update agent module versions
+grep -rl "__version__ =" o3research/agents marketing_assistant \
+  | xargs sed -i "s/__version__ = \"${old}\"/__version__ = \"${new}\"/g"
+
 # Update prompt version in settings.yaml
 sed -i "s/^prompt_version: .*/prompt_version: ${new}/" config/settings.yaml
 
