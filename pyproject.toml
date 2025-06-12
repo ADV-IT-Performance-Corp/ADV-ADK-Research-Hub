@@ -15,7 +15,7 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["o3research*"]
+include = ["o3research*", "marketing_assistant*"]
 exclude = ["node_modules*", "config*"]
 
 [tool.setuptools]

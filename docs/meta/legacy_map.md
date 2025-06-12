@@ -5,7 +5,7 @@ This document tracks the migration and deprecation of previous versions of the O
 ## Version History
 
 ### Current Version
-- **v3.5.8** (2025-06-02)
+- **v3.5.9** (2025-06-02)
   - Location: `docs/prompt/prompt_kernel_v3.5.md`
   - Patch release with MarketingAssistant, API integration, and expanded examples
 - **v3.5.0** (2025-05-22)
