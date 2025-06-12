@@ -9,3 +9,9 @@ steps:
     description: Engage leads
   - agent: AnalyticsAgent
     description: Analyze performance
+  - agent: LeadScoringAgent
+    description: Score captured leads
+    optional: true
+  - function: sync_to_crm
+    description: Sync leads to CRM
+    optional: true
