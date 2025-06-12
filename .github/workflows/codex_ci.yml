@@ -1,0 +1,12 @@
+---
+name: Codex CI
+"on":
+  pull_request:
+
+jobs:
+  codex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip install openai-codex-cli
+      - run: codex ci
