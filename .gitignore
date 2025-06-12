@@ -54,3 +54,8 @@ node_modules/
 .coverage
 coverage.xml
 .mypy_cache/
+
+# Codex
+.codex/
+adk_state/
+
