@@ -8,6 +8,7 @@ theme:
 nav:
   - Home: index.md
   - Quickstart: ADK_quickstart.md
+  - Vertex AI Quickstart: vertex_ai_quickstart.md
   - Methodology: METHODOLOGY.md
   - Research Goals: RESEARCH_GOALS.md
   - Agent System Overview: agent_system_overview.md
