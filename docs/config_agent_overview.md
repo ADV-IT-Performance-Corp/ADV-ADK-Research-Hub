@@ -12,11 +12,11 @@ The **ConfigAgent** manages prompt configuration updates and routing logic acros
 
 ```yaml
 before:
-  prompt_version: 3.5.8
+  prompt_version: 3.5.7
   routing_weight: 1
 after:
   prompt_version: 3.5.8
   routing_weight: 2
 ```
 
-This diff indicates a version bump and routing change which must pass `validate_golden_prompts.sh` before rollout.
+This diff shows a version bump from 3.5.7 to 3.5.8 alongside a routing change. Always verify that version numbers remain consistent across README, CHANGELOG, and metadata before running `validate_golden_prompts.sh`.
