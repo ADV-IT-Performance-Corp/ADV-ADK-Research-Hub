@@ -1,0 +1,4 @@
+---
+name: ADV-ADK-Research-Hub
+cloud: vertex-ai
+ci_workflow: codex_ci.yml
