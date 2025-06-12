@@ -8,6 +8,11 @@ be compared against content production cost.
 1. Agents call `record_prompt()` after creating a prompt.
 2. The helper computes token usage and logs via the telemetry client.
 3. Aggregated prompt counts allow correlation with paid media KPIs.
+4. Call `TelemetryClient.flush()` to emit any buffered events to the collector.
+
+Set the environment variables `TELEMETRY_ENABLED=1` and `PROMPT_OBSERVABILITY=1`
+to enable logging. See [telemetry.py](../../o3research/core/telemetry.py) for the
+implementation details.
 
 Using these metrics alongside ad spend data clarifies how prompt volume impacts
 customer acquisition cost and overall return on ad spend.
