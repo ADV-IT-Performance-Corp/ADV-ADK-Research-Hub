@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from google.oauth2.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account  # type: ignore
 from google_auth_oauthlib.flow import InstalledAppFlow  # type: ignore
 from google.auth.transport.requests import Request  # type: ignore
 from googleapiclient.discovery import build  # type: ignore
@@ -10,21 +11,37 @@ SCOPES = ["https://www.googleapis.com/auth/adwords"]
 
 
 class GoogleAdsClient:
-    """Simplified Google Ads API client using OAuth 2.0."""
+    """Simplified Google Ads API client using OAuth 2.0 or a service account."""
 
-    def __init__(self, credentials_file: str, token_file: str) -> None:
+    def __init__(
+        self,
+        credentials_file: str,
+        token_file: str,
+        service_account_file: Optional[str] = None,
+    ) -> None:
         self.credentials_file = credentials_file
         self.token_file = token_file
+        self.service_account_file = service_account_file
         self.creds: Optional[Credentials] = None
         self._service = None
         self._load_credentials()
 
     def _load_credentials(self) -> None:
+        if self.service_account_file:
+            self.creds = service_account.Credentials.from_service_account_file(
+                self.service_account_file, scopes=SCOPES
+            )
+            return
+
         token_path = Path(self.token_file)
         if token_path.exists():
             self.creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
         if not self.creds or not self.creds.valid:
-            if self.creds and self.creds.expired and self.creds.refresh_token:
+            if (
+                self.creds
+                and self.creds.expired
+                and getattr(self.creds, "refresh_token", None)
+            ):
                 self.creds.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
@@ -45,10 +62,10 @@ class GoogleAdsClient:
     def refresh_token(self) -> None:
         if not self.creds:
             raise RuntimeError("Credentials not loaded")
-        if self.creds.expired and self.creds.refresh_token:
+        if self.creds.expired:
             self.creds.refresh(Request())
-            assert self.creds is not None
-            Path(self.token_file).write_text(self.creds.to_json())
+            if getattr(self.creds, "refresh_token", None):
+                Path(self.token_file).write_text(self.creds.to_json())
 
     def list_campaigns(
         self, customer_id: str, page_size: int = 100
