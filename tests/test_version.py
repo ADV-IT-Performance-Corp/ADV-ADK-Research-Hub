@@ -21,12 +21,16 @@ class TestVersion(unittest.TestCase):
             "google.adk": ModuleType("google.adk"),
             "google.oauth2": ModuleType("google.oauth2"),
             "google.oauth2.credentials": ModuleType("google.oauth2.credentials"),
-            "google.oauth2.service_account": ModuleType("google.oauth2.service_account"),
+            "google.oauth2.service_account": ModuleType(
+                "google.oauth2.service_account"
+            ),
             "google_auth_oauthlib": ModuleType("google_auth_oauthlib"),
             "google_auth_oauthlib.flow": ModuleType("google_auth_oauthlib.flow"),
             "google.auth": ModuleType("google.auth"),
             "google.auth.transport": ModuleType("google.auth.transport"),
-            "google.auth.transport.requests": ModuleType("google.auth.transport.requests"),
+            "google.auth.transport.requests": ModuleType(
+                "google.auth.transport.requests"
+            ),
             "googleapiclient": ModuleType("googleapiclient"),
             "googleapiclient.discovery": ModuleType("googleapiclient.discovery"),
         }
