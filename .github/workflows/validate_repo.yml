@@ -220,6 +220,11 @@ jobs:
           coverage report --fail-under=80
           echo "Tests passed"
 
+      - name: Generate coverage badge
+        run: |
+          pip install coverage-badge
+          coverage-badge -o coverage.svg -f
+
       - name: Update evaluation results
         run: python scripts/generate_evaluation.py tests/sample_metrics.json && echo "Evaluation results updated"
       - name: Codex validation
