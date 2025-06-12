@@ -1,0 +1,2 @@
+class GoogleAdsException(Exception):
+    pass
