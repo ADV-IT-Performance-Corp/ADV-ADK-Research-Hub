@@ -99,6 +99,30 @@ python examples/simple_workflow.py
 python examples/marketing_workflow.py
 ```
 
+### Importing Google ADK agents
+
+All marketing modules inherit from `google.adk.Agent`. Import the base class and
+ADK runners when extending or testing agents:
+
+```python
+from google.adk import Agent
+from google.adk.runners import InMemoryRunner
+
+from o3research.marketing import CampaignAgent
+
+class DemoAgent(Agent):
+    def run(self, product: str) -> str:
+        helper = CampaignAgent()
+        return helper.run(product)
+
+agent = DemoAgent(name="demo")
+runner = InMemoryRunner(agent)
+```
+
+The ADK flow in [flows/marketing_flow.yaml](flows/marketing_flow.yaml) executes
+`CampaignAgent`, `BudgetAllocatorAgent`, `EngagementAgent`, and `AnalyticsAgent`
+sequentially to automate campaign planning on Vertex AI.
+
 ## 🛠️ CI/CD Validation
 
 This repository includes GitHub Actions workflows that automatically validate:
@@ -134,7 +158,9 @@ bash scripts/online_link_check.sh
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 
 ## Deploying on Vertex AI
-See docs/vertex_ai_quickstart.md for setup steps.
+See [docs/vertex_ai_quickstart.md](docs/vertex_ai_quickstart.md) for setup steps and
+sample code. The guide demonstrates launching
+`flows/marketing_flow.yaml` with the Google ADK.
 
 * Example config: `config/vertex_ai.yaml`
 ### Using Codex CLI
