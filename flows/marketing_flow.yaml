@@ -1,0 +1,11 @@
+# Marketing flow executed on Vertex AI
+---
+steps:
+  - agent: CampaignAgent
+    description: Plan a campaign
+  - agent: BudgetAllocatorAgent
+    description: Allocate budget
+  - agent: EngagementAgent
+    description: Engage leads
+  - agent: AnalyticsAgent
+    description: Analyze performance
