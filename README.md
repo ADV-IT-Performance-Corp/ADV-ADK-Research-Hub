@@ -166,6 +166,7 @@ bash scripts/online_link_check.sh
 ```
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
+All helper scripts pipe their output through `head -c 1600` so CI logs remain concise.
 
 ## Deploying on Vertex AI
 See [docs/vertex_ai_quickstart.md](docs/vertex_ai_quickstart.md) for setup steps and

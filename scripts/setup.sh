@@ -2,6 +2,9 @@
 
 set -e
 export PIP_ROOT_USER_ACTION=ignore
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 log() {
   echo -e "\033[1;36m[SETUP]\033[0m $1"

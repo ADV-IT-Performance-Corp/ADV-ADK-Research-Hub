@@ -2,6 +2,9 @@
 # Fail CI if documentation contains unfinished sections.
 # Extracted from the CI workflow to avoid quoting pitfalls.
 set -euo pipefail
+# shellcheck source=ci_utils.sh
+source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 echo "Checking for incomplete work..."
 matches=$(grep -RniE '(TODO|Coming soon|placeholder)' docs/ prompt_catalog/ \

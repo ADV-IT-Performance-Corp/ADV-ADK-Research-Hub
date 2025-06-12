@@ -4,6 +4,7 @@ set -x
 
 # shellcheck source=ci_utils.sh
 source "$(dirname "$0")/ci_utils.sh"
+limit_output
 
 # Read the major/minor version prefix from the VERSION file
 VERSION_PREFIX=$(cut -d. -f1-2 VERSION)
