@@ -4,7 +4,7 @@
 set -euo pipefail
 
 echo "Checking for incomplete work..."
-matches=$(grep -RniE '(TODO|Coming soon|placeholder)' docs/ --include="*.md" --include="*.yaml" --include="*.yml" --exclude-dir=legacy | grep -viE '^\s*```|<!--.*-->')
+matches=$(grep -RniE '(TODO|Coming soon|placeholder)' docs/ --include="*.md" --include="*.yaml" --include="*.yml" --exclude-dir=legacy | grep -viE '^\s*```|<!--.*-->' || true)
 if [ -n "$matches" ]; then
   echo "$matches"
   branch=$(git rev-parse --abbrev-ref HEAD)
