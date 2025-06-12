@@ -1,0 +1,10 @@
+---
+description: Guidance for b2c growth
+adk_agent_type: marketing_assistant
+input_schema: generic
+output_contract: standard
+language: "en"
+version: 1.0
+access_level: public
+encryption_required: false
+last_updated: 2025-06-05
