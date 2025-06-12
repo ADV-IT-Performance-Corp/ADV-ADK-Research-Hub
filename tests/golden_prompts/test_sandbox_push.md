@@ -10,5 +10,5 @@ Push the latest configuration to the sandbox environment without affecting produ
 - Returns success acknowledgment
 
 ### NOTES
-Prompt Kernel: v3.5.8
+Prompt Kernel: v3.5.9
 **Tags:** sandbox deploy, config-agent

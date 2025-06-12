@@ -39,5 +39,5 @@ bash scripts/online_link_check.sh
   section, it is replaced with the new version and today's date.
 
   ```bash
-  ./scripts/bump_version.sh 3.5.8
+  ./scripts/bump_version.sh 3.5.9
   ```

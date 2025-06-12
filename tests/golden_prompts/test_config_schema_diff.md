@@ -7,9 +7,9 @@ The ConfigAgent receives a new schema with additional fields and modified defaul
 ### EXPECTED
 - Shows added and removed fields in diff format
 - Warns if any required fields are missing
-- Sends `config_push` notification referencing version 3.5.8
+- Sends `config_push` notification referencing version 3.5.9
 
 ### NOTES
-Prompt Kernel: v3.5.8
+Prompt Kernel: v3.5.9
 
 **Tags:** config-agent, schema-diff

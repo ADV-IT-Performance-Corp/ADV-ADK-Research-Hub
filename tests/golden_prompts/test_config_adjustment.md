@@ -7,9 +7,9 @@ The ConfigAgent receives a routing weight update and must produce a diff summary
 ### EXPECTED
 - Shows YAML diff with before/after sections
 - Sends `config_push` notification to other agents
-- References version 3.5.8 in output
+- References version 3.5.9 in output
 
 ### NOTES
-Prompt Kernel: v3.5.8
+Prompt Kernel: v3.5.9
 
 **Tags:** config-agent, schema-diff

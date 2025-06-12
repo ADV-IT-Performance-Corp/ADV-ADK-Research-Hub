@@ -10,5 +10,5 @@ Design a simple marketing funnel for a SaaS offering focused on lead generation.
 - References growth loops research
 
 ### NOTES
-Prompt Kernel: v3.5.8
+Prompt Kernel: v3.5.9
 **Tags:** funnel planning, growth loops

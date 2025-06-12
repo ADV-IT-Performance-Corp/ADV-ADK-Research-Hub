@@ -10,6 +10,12 @@ All notable changes to this project are documented in this file.
 - CI link checking now strictly enforced
 - Suppressed npm proxy warnings
 
+## [v3.5.9] — 2025-06-03
+
+### 🛠 Maintenance
+- Updated packaging to include `marketing_assistant` modules
+- Bumped version metadata to 3.5.9
+
 ## [v3.5.8] — 2025-06-02
 
 ### ✨ Updates
