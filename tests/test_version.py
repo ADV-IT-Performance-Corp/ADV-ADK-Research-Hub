@@ -1,8 +1,15 @@
 import unittest
 import sys
+from pathlib import Path
 from types import ModuleType
 from unittest.mock import MagicMock
-from o3research import __version__
+
+# Ensure the repository root is importable when run as a script
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from o3research import __version__  # noqa: E402
 
 
 class TestVersion(unittest.TestCase):
@@ -33,6 +40,10 @@ class TestVersion(unittest.TestCase):
             ),
             "googleapiclient": ModuleType("googleapiclient"),
             "googleapiclient.discovery": ModuleType("googleapiclient.discovery"),
+            "google.ads": ModuleType("google.ads"),
+            "google.ads.googleads": ModuleType("google.ads.googleads"),
+            "google.ads.googleads.client": ModuleType("google.ads.googleads.client"),
+            "google.ads.googleads.errors": ModuleType("google.ads.googleads.errors"),
         }
         modules["google.adk"].Agent = object
         modules["google.oauth2.credentials"].Credentials = MagicMock()
@@ -40,6 +51,8 @@ class TestVersion(unittest.TestCase):
         modules["google_auth_oauthlib.flow"].InstalledAppFlow = MagicMock()
         modules["google.auth.transport.requests"].Request = MagicMock()
         modules["googleapiclient.discovery"].build = MagicMock()
+        modules["google.ads.googleads.client"].GoogleAdsClient = MagicMock()
+        modules["google.ads.googleads.errors"].GoogleAdsException = MagicMock()
         for name, mod in modules.items():
             sys.modules.setdefault(name, mod)
 

@@ -1,10 +1,25 @@
 import runpy
 from pathlib import Path
+from types import ModuleType
 from unittest.mock import patch
+import sys
 
 
 def test_test_version_executes_main():
     called = {"value": False}
+
+    # Provide stub google modules so imports work without dependencies
+    stubs = {
+        "google": ModuleType("google"),
+        "google.ads": ModuleType("google.ads"),
+        "google.ads.googleads": ModuleType("google.ads.googleads"),
+        "google.ads.googleads.client": ModuleType("google.ads.googleads.client"),
+        "google.ads.googleads.errors": ModuleType("google.ads.googleads.errors"),
+    }
+    stubs["google.ads.googleads.client"].GoogleAdsClient = object
+    stubs["google.ads.googleads.errors"].GoogleAdsException = Exception
+    for name, mod in stubs.items():
+        sys.modules.setdefault(name, mod)
 
     def dummy():
         called["value"] = True

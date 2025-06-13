@@ -6,6 +6,7 @@ This repository is often used with the ChatGPT GitHub integration. Follow the ru
 - Most documentation lives in the `docs/` directory. The `README.md` provides an overview and links.
 - When citing a file, reference the relative path (for example `docs/github_chatgpt_integration.md`) and include line numbers where relevant.
 - For instructions on connecting this repository to ChatGPT see `docs/github_chatgpt_integration.md`.
+- A Build Assistant skeleton lives in `agents/build_assistant/`.
 
 ## ✅ Commit messages and PRs
 - Start commit messages with a short prefix such as `feat:`, `fix:` or `chore:` followed by a concise description.

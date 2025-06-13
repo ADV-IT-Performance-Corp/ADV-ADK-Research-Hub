@@ -50,6 +50,8 @@ class TestMultiClientRunner(unittest.TestCase):
         # Remove stub modules to trigger fallback path
         sys.modules.pop("google.adk.runners", None)
         sys.modules.pop("google.adk", None)
+        sys.modules.pop("o3research", None)
+        sys.modules.pop("o3research.lifecycle", None)
 
         with TemporaryDirectory() as tmpdir:
             cfg_path = Path(tmpdir) / "client.yaml"
