@@ -18,6 +18,9 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] Source `shell_config.sh` to enable project aliases and consistent output
 - [ ] Ensure no line in your logs or docs exceeds **1600 bytes**
 
+### Terminal Setup
+Source `shell_config.sh` before running any scripts. It defines aliases that trim output to the 1600-byte CI limit.
+
 The incomplete work script scans only the `docs/` directory for Markdown and YAML files. JSON files are ignored.
 
 ## 📂 Required File Structure

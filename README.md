@@ -100,6 +100,9 @@ python examples/simple_workflow.py
 python examples/marketing_workflow.py
 ```
 
+### Terminal Setup
+Before running any commands, source `shell_config.sh` to load helper aliases. The script also truncates command output to the 1600-byte CI limit.
+
 ### Run the Assistant Script
 
 Execute a single end-to-end run with:
@@ -211,6 +214,7 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
    ```bash
    source shell_config.sh
    ```
+
    The script disables colored `grep`, limits `find` output to the first
    200 characters, and resets the terminal width so lines stay within the
    1600-byte CI limit.
