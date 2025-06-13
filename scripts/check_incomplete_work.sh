@@ -7,9 +7,9 @@ source "$(dirname "$0")/ci_utils.sh"
 limit_output
 
 echo "Checking for incomplete work..."
-matches=$(grep -RniE '(TODO|Coming soon|placeholder)' docs/ prompt_catalog/ \
+matches=$("$(dirname "$0")/safe_grep.sh" -RniE '(TODO|Coming soon|placeholder)' docs/ prompt_catalog/ \
   --include="*.md" --include="*.yaml" --include="*.yml" --exclude-dir=legacy 2>/dev/null \
-  | grep -viE '^\s*```|<!--.*-->' || true)
+  | "$(dirname "$0")/safe_grep.sh" -viE '^\s*```|<!--.*-->' || true)
 if [ -n "$matches" ]; then
   echo "$matches"
   branch=$(git rev-parse --abbrev-ref HEAD)

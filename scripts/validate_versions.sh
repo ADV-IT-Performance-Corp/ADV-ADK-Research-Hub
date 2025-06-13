@@ -14,7 +14,7 @@ echo "VERSION file => $FILE_VERSION"
 errors=0
 
 # settings.yaml must reference the same prompt version
-SETTINGS_VERSION=$(grep -oP '^prompt_version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' config/settings.yaml)
+SETTINGS_VERSION=$("$(dirname "$0")/safe_grep.sh" -oP '^prompt_version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' config/settings.yaml)
 if [ "$SETTINGS_VERSION" != "$FILE_VERSION" ]; then
   echo "❌ settings.yaml has $SETTINGS_VERSION but VERSION is $FILE_VERSION"
   errors=1
@@ -23,7 +23,7 @@ else
 fi
 
 # ensure the prompt genome has an active entry for this version
-ACTIVE_COUNT=$(jq -r '.prompt_genome.prompts[] | select(.status=="active") | .id' docs/meta/prompt_genome.json | grep -c "v$FILE_VERSION" || true)
+ACTIVE_COUNT=$(jq -r '.prompt_genome.prompts[] | select(.status=="active") | .id' docs/meta/prompt_genome.json | "$(dirname "$0")/safe_grep.sh" -c "v$FILE_VERSION" || true)
 if [ "$ACTIVE_COUNT" -eq 0 ]; then
   echo "❌ No active prompt_genome entry for version $FILE_VERSION"
   errors=1
@@ -41,7 +41,7 @@ else
 fi
 
 # confirm README badge matches
-README_VERSION=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
+README_VERSION=$("$(dirname "$0")/safe_grep.sh" -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
 if [ "$README_VERSION" != "$FILE_VERSION" ]; then
   echo "❌ README.md version $README_VERSION does not match VERSION $FILE_VERSION"
   errors=1
@@ -50,8 +50,8 @@ else
 fi
 
 # agent modules must define the same version
-for mod in $(grep -rl "__version__ =" o3research/agents marketing_assistant); do
-  MOD_VERSION=$(grep -oP '__version__\s*=\s*"\K[0-9]+\.[0-9]+\.[0-9]+' "$mod")
+for mod in $("$(dirname "$0")/safe_grep.sh" -rl "__version__ =" o3research/agents marketing_assistant); do
+  MOD_VERSION=$("$(dirname "$0")/safe_grep.sh" -oP '__version__\s*=\s*"\K[0-9]+\.[0-9]+\.[0-9]+' "$mod")
   if [ "$MOD_VERSION" != "$FILE_VERSION" ]; then
     echo "❌ $mod has $MOD_VERSION but VERSION is $FILE_VERSION"
     errors=1

@@ -20,12 +20,12 @@ for file in $files; do
   echo "Checking $file"
   output="$($mlc --quiet -c "$config" "$file" 2>&1)"
   echo "$output"
-  if echo "$output" | grep -qE 'ENOTFOUND|ENETUNREACH'; then
+  if echo "$output" | "$(dirname "$0")/safe_grep.sh" -qE 'ENOTFOUND|ENETUNREACH'; then
       echo "❌ Network unreachable while checking $file" >&2
       echo "$output" >&2
       exit 1
   fi
-  if echo "$output" | grep -q '\[✖\]'; then
+  if echo "$output" | "$(dirname "$0")/safe_grep.sh" -q '\[✖\]'; then
     echo "Broken links found in $file" >&2
     missing=1
   fi
