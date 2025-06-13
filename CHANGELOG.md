@@ -3,6 +3,11 @@
 
 All notable changes to this project are documented in this file.
 
+## [v4.0.0] — 2025-06-13
+
+### 🚀 Major Release
+- Upgraded agents and docs to version 4.0.0
+
 ## v3.5.x Strict Link Checker Enabled
 - Removed `--warn-only` and `STRICT_LINKS` fallback options
 - Patched/archived dead links across documentation

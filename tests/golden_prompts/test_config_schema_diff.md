@@ -10,6 +10,6 @@ The ConfigAgent receives a new schema with additional fields and modified defaul
 - Sends `config_push` notification referencing version 3.5.10
 
 ### NOTES
-Prompt Kernel: v3.5.10
+Prompt Kernel: v4.0.0
 
 **Tags:** config-agent, schema-diff

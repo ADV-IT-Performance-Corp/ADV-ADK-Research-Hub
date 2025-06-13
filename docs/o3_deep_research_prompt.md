@@ -115,5 +115,5 @@ BEGIN_COT
 ---
 
 Created by: `PromptForge`
-Prompt version: `v3.5.10`
+Prompt version: `v4.0.0`
 Last updated: `2025-06-01`

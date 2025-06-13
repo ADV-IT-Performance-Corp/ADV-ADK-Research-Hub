@@ -3,8 +3,8 @@
   "last_updated": "2025-06-03",
   "prompts": [
       {
-        "id": "o3-deep-research-v3.5.10",
-        "name": "O3 Deep Research V3.5.10",
+        "id": "o3-deep-research-v4.0.0",
+        "name": "O3 Deep Research V4.0.0",
         "description": "Packaging update for marketing assistant module",
         "created_at": "2025-06-03",
         "status": "active",

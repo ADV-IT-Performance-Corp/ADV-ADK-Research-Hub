@@ -1,6 +1,6 @@
 ---
 # Default configuration for ADK agents
-prompt_version: 3.5.10  # prompt kernel version
+prompt_version: 4.0.0
 routing_weight: 1      # weight for ConfigAgent routing
 log_level: INFO        # default logging level
 event_bus: async       # event bus type (async or sync)

@@ -10,5 +10,5 @@ Generate three ad copy lines for a productivity app targeting busy professionals
 - Provides multiple short variants
 
 ### NOTES
-Prompt Kernel: v3.5.10
+Prompt Kernel: v4.0.0
 **Tags:** creative, copywriting

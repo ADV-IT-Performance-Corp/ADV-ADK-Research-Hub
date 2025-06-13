@@ -1,6 +1,6 @@
 from typing import Type, Dict
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 
 from ..marketing.google_ads_agent import GoogleAdsCampaignAgent
 from ..marketing.meta_ads_agent import MetaAdsAgent

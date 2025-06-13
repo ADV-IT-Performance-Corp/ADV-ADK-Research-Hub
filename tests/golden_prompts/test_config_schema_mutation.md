@@ -10,5 +10,5 @@ ConfigAgent receives a proposed schema change that alters field types. Summarize
 - Mentions version 3.5.10 in the notification
 
 ### NOTES
-Prompt Kernel: v3.5.10
+Prompt Kernel: v4.0.0
 **Tags:** config-agent, schema-mutation

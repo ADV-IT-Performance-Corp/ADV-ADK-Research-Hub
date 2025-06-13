@@ -10,5 +10,5 @@ Generate image and copy ideas for a playful product teaser campaign.
 - Ensures tone aligns with brand guidelines
 
 ### NOTES
-Prompt Kernel: v3.5.10
+Prompt Kernel: v4.0.0
 **Tags:** creative generation, brand-aligned

@@ -1,27 +1,27 @@
 {
   "sources": [
     {
-      "name": "O3 Deep Research v3.5.10",
+      "name": "O3 Deep Research v4.0.0",
       "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/prompt/prompt_kernel_v4.md",
       "tags": [
         "o3",
         "prompt-kernel",
-        "v3.5.10",
+        "v4.0.0",
         "research",
         "latest"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "core"
     },
     {
-      "name": "Prompt Evolution v3.5.10",
+      "name": "Prompt Evolution v4.0.0",
       "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/meta/prompt_evolution_log/v4.yaml",
       "tags": [
         "prompt-evolution",
-        "v3.5.10",
+        "v4.0.0",
         "meta"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "meta"
     },
     {
@@ -30,9 +30,9 @@
       "tags": [
         "evaluation",
         "framework",
-        "v3.5.10"
+        "v4.0.0"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "evaluation"
     },
     {
@@ -54,7 +54,7 @@
         "v3.5.5",
         "changelog"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -65,7 +65,7 @@
         "versioning",
         "migration"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -421,7 +421,7 @@
         "github",
         "integration"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -432,7 +432,7 @@
         "agents",
         "overview"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -441,9 +441,9 @@
       "tags": [
         "integration",
         "event-bus",
-        "v3.5.10"
+        "v4.0.0"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -453,7 +453,7 @@
         "simulation",
         "workflow"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -464,7 +464,7 @@
         "v3.5.5",
         "changelog"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -473,9 +473,9 @@
       "tags": [
         "analytics",
         "kpi",
-        "v3.5.10"
+        "v4.0.0"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -485,7 +485,7 @@
         "quickstart",
         "demo"
       ],
-      "version": "3.5.10",
+      "version": "4.0.0",
       "type": "documentation"
     },
     {
@@ -859,6 +859,6 @@
   "metadata": {
     "include_web": true,
     "last_updated": "2025-06-13",
-    "version": "3.5.10"
+    "version": "4.0.0"
   }
 }
