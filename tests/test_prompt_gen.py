@@ -12,9 +12,10 @@ class TestPromptGen(unittest.TestCase):
         self.assertEqual(result, DEFAULT_PROMPT)
 
     def test_custom_prompt_from_file(self):
-        with patch.object(Path, "exists", return_value=True), patch.object(
-            Path, "read_text", return_value="custom"
-        ) as read_mock:
+        with (
+            patch.object(Path, "exists", return_value=True),
+            patch.object(Path, "read_text", return_value="custom") as read_mock,
+        ):
             result = get_prompt(Path("file.txt"))
             read_mock.assert_called_once_with(encoding="utf-8")
         self.assertEqual(result, "custom")

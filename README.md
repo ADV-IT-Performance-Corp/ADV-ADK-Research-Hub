@@ -201,14 +201,16 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
    git clone https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub.git
    ```
 
-2. Install Python dependencies and the package in editable mode:
+2. Ensure **Python&nbsp;3.11** is installed.
+
+3. Install Python dependencies and the package in editable mode:
 
    ```bash
    pip install -r requirements.txt
    pip install -e .
    ```
 
-3. Source the provided shell configuration to enable consistent aliases and
+4. Source the provided shell configuration to enable consistent aliases and
    terminal settings:
 
    ```bash
@@ -218,9 +220,9 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
    The script disables colored `grep`, limits `find` output to the first
    200 characters, and resets the terminal width so lines stay within the
    1600-byte CI limit.
-4. The current release version is stored in the `VERSION` file and exposed as
+5. The current release version is stored in the `VERSION` file and exposed as
    `o3research.__version__` for programmatic access.
-5. After publishing a release, record the evaluation scores in
+6. After publishing a release, record the evaluation scores in
    `docs/meta/evaluation_results.json` with the reviewer name and date.
 
 ### Running Tests Manually

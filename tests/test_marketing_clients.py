@@ -42,9 +42,10 @@ class TestGoogleAdsClient(unittest.TestCase):
         search.execute.return_value = {"results": [{"id": "1"}]}
         mock_build.return_value = service
 
-        with patch.object(
-            GoogleAdsClient, "_load_credentials", lambda self: None
-        ), patch.object(GoogleAdsClient, "refresh_token") as mock_refresh:
+        with (
+            patch.object(GoogleAdsClient, "_load_credentials", lambda self: None),
+            patch.object(GoogleAdsClient, "refresh_token") as mock_refresh,
+        ):
             client = GoogleAdsClient("cred.json", "token.json")
             result = client.list_campaigns("123", page_size=10)
             mock_refresh.assert_called_once()
@@ -108,9 +109,10 @@ class TestGAClient(unittest.TestCase):
         run.execute.return_value = {"rows": [{"metric": "value"}]}
         mock_build.return_value = service
 
-        with patch.object(
-            GAClient, "_load_credentials", lambda self: None
-        ), patch.object(GAClient, "refresh_token") as mock_refresh:
+        with (
+            patch.object(GAClient, "_load_credentials", lambda self: None),
+            patch.object(GAClient, "refresh_token") as mock_refresh,
+        ):
             client = GAClient("cred.json", "token.json", "999")
             result = client.fetch_traffic("2023-01-01", "2023-01-02")
             mock_refresh.assert_called_once()
@@ -149,9 +151,10 @@ class TestGAClient(unittest.TestCase):
         run.execute.return_value = {"rows": [{"conv": "val"}]}
         mock_build.return_value = service
 
-        with patch.object(
-            GAClient, "_load_credentials", lambda self: None
-        ), patch.object(GAClient, "refresh_token") as mock_refresh:
+        with (
+            patch.object(GAClient, "_load_credentials", lambda self: None),
+            patch.object(GAClient, "refresh_token") as mock_refresh,
+        ):
             client = GAClient("cred.json", "token.json", "888")
             result = client.fetch_conversions("2023-02-01", "2023-02-02")
             mock_refresh.assert_called_once()

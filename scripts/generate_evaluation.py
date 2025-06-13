@@ -9,7 +9,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
-from limited_io import _LimitedIO
+from limited_io import _LimitedIO  # noqa: E402
 
 
 sys.stdout = _LimitedIO(sys.stdout)
