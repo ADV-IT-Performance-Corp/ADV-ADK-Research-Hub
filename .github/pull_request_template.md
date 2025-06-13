@@ -1,4 +1,4 @@
-# 🚀 Pull Request Summary - v3.5.10
+# 🚀 Pull Request Summary - v4.0.0
 
 ## 📋 Description of Changes
 <!-- Briefly describe what this PR implements or fixes for v3.5.10 -->
@@ -9,7 +9,7 @@
 
 ---
 
-## 🗂 Affected Files (v3.5.10)
+## 🗂 Affected Files (v4.0.0)
 <!-- Check all that apply -->
 
 ### Core Files
