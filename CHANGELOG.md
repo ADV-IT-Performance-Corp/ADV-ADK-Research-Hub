@@ -13,7 +13,7 @@ All notable changes to this project are documented in this file.
 
 ### 🛠 Maintenance
 - Updated packaging to include `marketing_assistant` modules
-- Bumped version metadata to 3.5.9
+- Bumped version metadata to 3.5.10
 
 ## [v3.5.10] — 2025-06-04
 
