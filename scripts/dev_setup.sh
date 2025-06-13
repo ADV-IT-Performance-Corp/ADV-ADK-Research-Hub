@@ -22,6 +22,8 @@ info "Installing Google Cloud CLI..."
 GCLOUD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz"
 curl -fsSL "$GCLOUD_URL" | tar -xz
 ./google-cloud-sdk/install.sh --quiet
+source ./google-cloud-sdk/path.bash.inc
+source ./google-cloud-sdk/completion.bash.inc
 
 info "Installing Python packages..."
 python3 -m pip install --quiet --upgrade pip
