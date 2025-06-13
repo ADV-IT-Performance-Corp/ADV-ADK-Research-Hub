@@ -34,7 +34,7 @@ config/
 tests/
 ```
 
-_Diagrams from the original 21 May prompt illustrate this layout. See [Prompt Kernel v3.5](prompt/prompt_kernel_v3.5.md) for visuals._
+_Diagrams from the original 21 May prompt illustrate this layout. See [Prompt Kernel v3.5](prompt/prompt_kernel_v4.md) for visuals._
 
 Example skeletons of `google.adk.Agent` and `ResearchAgent` are provided in the
 `o3research/` directory for reference. These stubs demonstrate the minimal interface
@@ -86,7 +86,7 @@ runner.run()
 ## Diagrams
 The 21 May prompt introduced a sequential flow diagram showing Research →
 Content → Campaign → Optimization → Analytics. See the
-[prompt kernel](prompt/prompt_kernel_v3.5.md#module-map) for visuals.
+[prompt kernel](prompt/prompt_kernel_v4.md#module-map) for visuals.
 
 A simplified textual view of the agent handoff looks like:
 

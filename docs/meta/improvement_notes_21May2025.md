@@ -26,7 +26,7 @@ This note compares the `O3 Deep Research Prompt – V3.5 Unified Final` dated 20
    - Create additional golden prompts focusing on configuration adjustments.
 
 5. **Documentation Clarity**
-   - Cross‑link related docs (e.g., `integration_guide_o3.md`) from `prompt_kernel_v3.5.md` sections.
+   - Cross‑link related docs (e.g., `integration_guide_o3.md`) from `prompt_kernel_v4.md` sections.
    - Summarize key diagrams from the 21 May version in `agent_system_overview.md`.
 
 These proposals aim to keep all existing content while incrementally refining documentation, testing, and agent coordination.

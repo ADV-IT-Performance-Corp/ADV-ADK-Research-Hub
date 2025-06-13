@@ -6,10 +6,10 @@ This document tracks the migration and deprecation of previous versions of the O
 
 ### Current Version
 - **v3.5.10** (2025-06-02)
-  - Location: `docs/prompt/prompt_kernel_v3.5.md`
+  - Location: `docs/prompt/prompt_kernel_v4.md`
   - Patch release with MarketingAssistant, API integration, and expanded examples
 - **v3.5.0** (2025-05-22)
-  - Location: `docs/prompt/prompt_kernel_v3.5.md`
+  - Location: `docs/prompt/prompt_kernel_v4.md`
   - Key Features:
     - Multi-agent coordination
     - ReAct patterns implementation
@@ -60,7 +60,7 @@ This document tracks the migration and deprecation of previous versions of the O
 ## File Structure Changes
 
 ### Added
-- `docs/prompt/prompt_kernel_v3.5.md`
+- `docs/prompt/prompt_kernel_v4.md`
 - `docs/meta/prompt_evolution_log/v3.5.yaml`
 - `docs/meta/meta_evaluation.json`
 - `.github/workflows/validate_repo.yml`

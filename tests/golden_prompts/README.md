@@ -57,6 +57,6 @@ When adding new golden prompts:
 4. Update this README
 5. Ensure CI passes
 ## Related Documentation
-- [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v3.5.md)
+- [Prompt Kernel v3.5 Documentation](./../../docs/prompt/prompt_kernel_v4.md)
 - [Testing Guidelines](../../docs/contribution_guide.md)
 - [CI Configuration](./../../.github/workflows/validate_repo.yml)

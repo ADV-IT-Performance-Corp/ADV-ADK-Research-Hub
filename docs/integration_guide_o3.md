@@ -16,7 +16,7 @@ Use GitHub repository: https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Resear
 * `ADK_quickstart.md` — ADK system overview and quickstart guide
 * `adk_docs_snapshot.md` — Core ADK components and architecture
 * `kaggle_prompt_engineering_summary.md` — Advanced prompting techniques (CoT, ReAct, Self-reflection)
-* `prompt/prompt_kernel_v3.5.md` — Complete v3.5.10 Unified Final prompt
+* `prompt/prompt_kernel_v4.md` — Complete v3.5.10 Unified Final prompt
 
 ### Performance Marketing
 * `performance_marketing/` — Strategic playbooks and industry models:
