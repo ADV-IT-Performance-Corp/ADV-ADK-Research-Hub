@@ -101,3 +101,8 @@ The marketing workflow showcases `GoogleAdsCampaignAgent` and
 `BudgetAllocatorAgent` coordinating via the async event bus.
 For insight into how prompts are logged during execution, see
 [analytics/prompt_observability.md](analytics/prompt_observability.md).
+
+To execute the workflow for several clients in succession, use the
+[Multi-Client Workflow Runner](orchestration/multi_client.md). This helper
+invokes `orchestration/multi_client_runner.py` for every YAML file in
+`config/clients/`.
