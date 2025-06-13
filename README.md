@@ -41,6 +41,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Configuration Settings Reference](docs/config/settings_reference.md) - Details for `settings.yaml`
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
+- [Phase 4 Blueprint](docs/Phase_4_Blueprint.md) - Runtime fixes and A2A integration
 - [Documentation Index](docs/tree.md) - Overview of all docs
 - [Performance Marketing Assistant Architecture](docs/performance_marketing/assistant_architecture.md)
 - [Marketing API Integration](docs/performance_marketing/api_integration.md)
