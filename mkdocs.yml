@@ -13,7 +13,7 @@ nav:
   - Research Goals: RESEARCH_GOALS.md
   - Agent System Overview: agent_system_overview.md
   - Multi-Client Workflow Runner: orchestration/multi_client.md
-  - Prompt Kernel: prompt/prompt_kernel_v3.5.md
+  - Prompt Kernel: prompt/prompt_kernel_v4.md
   - ChatGPT Test: test_chatgpt.md
   - Meta:
       - Prompt Evolution Log: meta/prompt_evolution_log/v3.5.yaml

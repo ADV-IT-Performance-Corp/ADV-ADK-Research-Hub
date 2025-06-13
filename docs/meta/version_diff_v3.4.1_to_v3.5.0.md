@@ -68,7 +68,7 @@ This document outlines the key differences and migration path from version 3.4.1
 ## 🛠 Migration Guide
 
 ### Preparation
-1. Review the new architecture in `prompt_kernel_v3.5.md`
+1. Review the new architecture in `prompt_kernel_v4.md`
 2. Backup existing configurations
 3. Test in staging environment
 

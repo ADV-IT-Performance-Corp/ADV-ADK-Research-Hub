@@ -12,9 +12,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 > - [Vertex AI ADK quick-start](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
 > - [ADK Python repo](https://github.com/google/adk-python)
 > - [gcloud CLI install](https://cloud.google.com/sdk)
->
 > Requires **Python 3.11**.
-
 
 ## 🚀 Key Features (v4.0.0)
 

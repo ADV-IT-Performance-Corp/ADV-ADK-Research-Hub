@@ -51,7 +51,7 @@
           "react-patterns",
           "multi-agent-systems"
         ],
-        "file_path": "docs/prompt/prompt_kernel_v3.5.md",
+        "file_path": "docs/prompt/prompt_kernel_v4.md",
         "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
@@ -104,7 +104,7 @@
           "react-patterns",
           "multi-agent-systems"
         ],
-        "file_path": "docs/prompt/prompt_kernel_v3.5.md",
+        "file_path": "docs/prompt/prompt_kernel_v4.md",
         "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
@@ -157,7 +157,7 @@
           "react-patterns",
           "multi-agent-systems"
         ],
-        "file_path": "docs/prompt/prompt_kernel_v3.5.md",
+        "file_path": "docs/prompt/prompt_kernel_v4.md",
         "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
@@ -210,7 +210,7 @@
           "react-patterns",
           "multi-agent-systems"
         ],
-        "file_path": "docs/prompt/prompt_kernel_v3.5.md",
+        "file_path": "docs/prompt/prompt_kernel_v4.md",
         "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },

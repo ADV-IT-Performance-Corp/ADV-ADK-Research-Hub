@@ -16,4 +16,4 @@ Google Docs API enables structured document creation, formatting, and semantic c
 - Use as write memory for engagement feedback
 - Leverage JSON-based doc templates for routing metadata
 
-See also [Prompt Kernel v3.5](../../prompt/prompt_kernel_v3.5.md) for integration guidance.
+See also [Prompt Kernel v3.5](../../prompt/prompt_kernel_v4.md) for integration guidance.

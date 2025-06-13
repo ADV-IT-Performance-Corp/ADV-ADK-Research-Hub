@@ -1,7 +1,7 @@
 # ✅ Release Checklist — O3 Prompt System (v3.5+)
 
 ## 🔖 Version Declaration
-- [ ] Create new prompt file: `docs/prompt/prompt_kernel_v3.5.md`
+- [ ] Create new prompt file: `docs/prompt/prompt_kernel_v4.md`
 - [ ] Add new version entry to `docs/meta/prompt_genome.json`
 - [ ] Update `CHANGELOG.md` with `## [v3.5.x]`
 
