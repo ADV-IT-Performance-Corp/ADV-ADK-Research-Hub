@@ -10,5 +10,5 @@ Outline an Advantage+ campaign for a new product using Meta Ads.
 - References Advantage+ automation benefits
 
 ### NOTES
-Prompt Kernel: v3.5.9
+Prompt Kernel: v3.5.10
 **Tags:** meta ads, advantage+

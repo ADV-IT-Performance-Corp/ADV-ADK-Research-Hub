@@ -15,7 +15,7 @@ before:
   prompt_version: 3.5.7
   routing_weight: 1
 after:
-  prompt_version: 3.5.9
+  prompt_version: 3.5.10
   routing_weight: 2
 ```
 

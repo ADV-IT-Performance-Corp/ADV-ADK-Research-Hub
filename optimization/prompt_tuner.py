@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Iterable
 
-__version__ = "3.5.9"
+__version__ = "3.5.10"
 
 
 class PromptTuner:
