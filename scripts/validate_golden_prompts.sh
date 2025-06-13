@@ -16,16 +16,16 @@ for file in tests/golden_prompts/*.md; do
   fi
   info "Checking $file"
   for section in INPUT EXPECTED NOTES; do
-    if ! grep -q "^### $section" "$file"; then
+    if ! "$(dirname "$0")/safe_grep.sh" -q "^### $section" "$file"; then
       error "Missing section: $section in $file"
       exit 1
     fi
   done
-  if ! grep -q '^**Tags:**' "$file"; then
+  if ! "$(dirname "$0")/safe_grep.sh" -q '^**Tags:**' "$file"; then
     error "Missing Tags in $file"
     exit 1
   fi
-  if ! grep -q "v${VERSION_PREFIX}" "$file"; then
+  if ! "$(dirname "$0")/safe_grep.sh" -q "v${VERSION_PREFIX}" "$file"; then
     error "Version not specified or incorrect in $file"
     exit 1
   fi
