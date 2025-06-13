@@ -31,6 +31,10 @@ if ! command -v pipx >/dev/null 2>&1; then
 fi
 pipx install google-adk[cli]
 
+# Install pre-commit and clone hooks
+python3 -m pip install --quiet pre-commit
+pre-commit install --install-hooks
+
 # Export GCP_PROJECT
 if ! grep -q 'GCP_PROJECT' ~/.bashrc; then
   echo 'export GCP_PROJECT=<your-gcp-project>' >> ~/.bashrc
