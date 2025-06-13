@@ -1,5 +1,7 @@
 # Vertex AI Quickstart
 
+This repo is built on Google ADK 1.3 + Vertex AI; all agents communicate via the Google Agent‐to‐Agent protocol (A2A v0.6).
+
 Summary of Google ADK steps for running agents on Vertex AI.
 
 ## Setup Steps

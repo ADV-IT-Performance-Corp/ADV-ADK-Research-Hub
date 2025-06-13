@@ -1,5 +1,7 @@
 # Performance Marketing Resources
 
+This repo is built on Google ADK 1.3 + Vertex AI; all agents communicate via the Google Agent‐to‐Agent protocol (A2A v0.6).
+
 This directory compiles research notes and strategies for data-driven advertising. The summaries below highlight key concepts for optimizing campaigns with AI and automation.
 
 ## Included Summaries
