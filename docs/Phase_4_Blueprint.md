@@ -48,11 +48,13 @@ pyenv local 3.11.9
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install gcloud CLI
-        run: |
-          URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz
-          curl -sSL "$URL" | tar -xz
-          ./google-cloud-sdk/install.sh --quiet
+        - name: Install gcloud CLI
+          run: |
+            URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz
+            curl -sSL "$URL" | tar -xz
+            ./google-cloud-sdk/install.sh --quiet
+            source ./google-cloud-sdk/path.bash.inc
+            source ./google-cloud-sdk/completion.bash.inc
 
       - name: Install Node dependencies
         run: npm ci --omit=optional
