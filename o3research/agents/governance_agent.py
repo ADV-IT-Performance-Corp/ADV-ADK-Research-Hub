@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 
 import time
 from typing import Dict

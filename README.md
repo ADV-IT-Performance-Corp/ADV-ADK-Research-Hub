@@ -1,6 +1,6 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.10-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-4.0.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![CI/CD](https://img.shields.io/github/actions/workflow/status/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
 ![Coverage](coverage.svg)

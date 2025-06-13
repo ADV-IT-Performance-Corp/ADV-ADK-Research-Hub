@@ -648,7 +648,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "version": "v3.5.10",
+  "version": "v4.0.0",
   "prompt_layers": [
     {"id": "core-cof-ppc-001", "agent": "ResearchAgent", "pattern": "chain-of-thought"},
     {"id": "creative-tone-v2", "agent": "ContentAgent", "pattern": "few-shot"},
@@ -665,7 +665,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ```json
 {
-  "prompt_kernel_version": "v3.5.10",
+  "prompt_kernel_version": "v4.0.0",
   "coverage_score": 0.96,
   "coherence_rating": 0.93,
   "prompt_patterns_utilized": ["few-shot", "chain-of-thought", "semantic caching", "ReAct", "self-reflection"],

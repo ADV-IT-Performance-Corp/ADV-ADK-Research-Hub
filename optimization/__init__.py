@@ -1,6 +1,6 @@
 """Prompt optimization utilities."""
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 
 from .prompt_tuner import PromptTuner
 

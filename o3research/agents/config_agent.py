@@ -1,6 +1,6 @@
 from pathlib import Path
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 from typing import Any, Dict
 
 import yaml

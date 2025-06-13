@@ -1,6 +1,6 @@
 """Convenience imports for marketing assistant roles."""
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 
 from ..research_agent import ResearchAgent
 from ..content_agent import ContentAgent

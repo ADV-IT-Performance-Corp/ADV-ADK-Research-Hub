@@ -10,5 +10,5 @@ ConfigAgent receives a new routing table with updated weights. Provide a summary
 - Mentions validation checklist
 
 ### NOTES
-Prompt Kernel: v3.5.10
+Prompt Kernel: v4.0.0
 **Tags:** config-agent, routing-diff

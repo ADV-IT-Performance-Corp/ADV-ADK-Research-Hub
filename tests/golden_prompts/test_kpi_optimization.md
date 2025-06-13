@@ -11,5 +11,5 @@ Suggest a content strategy to maximize click-through rate (CTR) for a B2B SaaS p
 - Shows alignment with `Prompt Kernel v3.5` architecture map
 
 ### NOTES
-Prompt Kernel: v3.5.10  
+Prompt Kernel: v4.0.0  
 **Tags:** KPI optimization, content strategy, content targeting

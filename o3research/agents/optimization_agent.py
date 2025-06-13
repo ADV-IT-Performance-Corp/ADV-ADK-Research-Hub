@@ -1,7 +1,7 @@
 from google.adk import Agent
 from o3research.lifecycle import finish_run, start_run
 
-__version__ = "3.5.10"
+__version__ = "4.0.0"
 
 
 class OptimizationAgent(Agent):
