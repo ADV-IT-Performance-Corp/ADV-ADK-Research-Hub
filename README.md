@@ -203,9 +203,14 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
    pip install -e .
    ```
 
-3. The current release version is stored in the `VERSION` file and exposed as
+3. Source the provided shell configuration to set helpful aliases:
+
+   ```bash
+   source shell_config.sh
+   ```
+4. The current release version is stored in the `VERSION` file and exposed as
    `o3research.__version__` for programmatic access.
-4. After publishing a release, record the evaluation scores in
+5. After publishing a release, record the evaluation scores in
    `docs/meta/evaluation_results.json` with the reviewer name and date.
 
 ### Running Tests Manually
