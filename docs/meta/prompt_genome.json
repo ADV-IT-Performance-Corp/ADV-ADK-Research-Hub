@@ -52,7 +52,7 @@
           "multi-agent-systems"
         ],
         "file_path": "docs/prompt/prompt_kernel_v4.md",
-        "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
+        "evolution_log": "docs/meta/prompt_evolution_log/v4.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
       {
@@ -105,7 +105,7 @@
           "multi-agent-systems"
         ],
         "file_path": "docs/prompt/prompt_kernel_v4.md",
-        "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
+        "evolution_log": "docs/meta/prompt_evolution_log/v4.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
       {
@@ -158,7 +158,7 @@
           "multi-agent-systems"
         ],
         "file_path": "docs/prompt/prompt_kernel_v4.md",
-        "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
+        "evolution_log": "docs/meta/prompt_evolution_log/v4.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
       {
@@ -211,7 +211,7 @@
           "multi-agent-systems"
         ],
         "file_path": "docs/prompt/prompt_kernel_v4.md",
-        "evolution_log": "docs/meta/prompt_evolution_log/v3.5.yaml",
+        "evolution_log": "docs/meta/prompt_evolution_log/v4.yaml",
         "evaluation_framework": "docs/meta/meta_evaluation.json"
       },
       {

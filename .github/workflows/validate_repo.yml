@@ -129,7 +129,7 @@ jobs:
           echo "Checking required files..."
           REQUIRED_ALWAYS=(
             "docs/prompt/prompt_kernel_v4.md"
-            "docs/meta/prompt_evolution_log/v3.5.yaml"
+            "docs/meta/prompt_evolution_log/v4.yaml"
             "docs/meta/meta_evaluation.json"
             "docs/meta/prompt_genome.json"
             "docs/source_index.json"

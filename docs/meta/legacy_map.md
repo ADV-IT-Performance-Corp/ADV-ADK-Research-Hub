@@ -61,7 +61,7 @@ This document tracks the migration and deprecation of previous versions of the O
 
 ### Added
 - `docs/prompt/prompt_kernel_v4.md`
-- `docs/meta/prompt_evolution_log/v3.5.yaml`
+- `docs/meta/prompt_evolution_log/v4.yaml`
 - `docs/meta/meta_evaluation.json`
 - `.github/workflows/validate_repo.yml`
 

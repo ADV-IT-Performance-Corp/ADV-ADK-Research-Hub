@@ -677,7 +677,7 @@ All actions are logged in `logs/agents/{agent}.json` for traceability.
 
 ## 18. Prompt Evolution Hook
 
-Store evolution notes in `/meta/prompt_evolution_log/v3.5.yaml` using the format:
+Store evolution notes in `/meta/prompt_evolution_log/v4.yaml` using the format:
 
 ```yaml
 version: 3.5.10

@@ -3,7 +3,7 @@
 ## 📋 Description of Changes
 <!-- Briefly describe what this PR implements or fixes for v3.5.10 -->
 - [ ] Added new prompt kernel: `docs/prompt/prompt_kernel_v4.md`
-- [ ] Added evolution log: `docs/meta/prompt_evolution_log/v3.5.yaml`
+- [ ] Added evolution log: `docs/meta/prompt_evolution_log/v4.yaml`
 - [ ] Updated meta evaluation: `docs/meta/meta_evaluation.json`
 - [ ] Updated documentation and references
 
@@ -14,7 +14,7 @@
 
 ### Core Files
 - [ ] `docs/prompt/prompt_kernel_v4.md`
-- [ ] `docs/meta/prompt_evolution_log/v3.5.yaml`
+- [ ] `docs/meta/prompt_evolution_log/v4.yaml`
 - [ ] `docs/meta/meta_evaluation.json`
 
 ### Test Files
