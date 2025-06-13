@@ -1,4 +1,5 @@
 mypy
 types-PyYAML
+types-requests
 coverage
 pytest

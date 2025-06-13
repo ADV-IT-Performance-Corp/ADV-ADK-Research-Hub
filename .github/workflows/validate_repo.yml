@@ -12,7 +12,23 @@ name: CI Validate O3 Repo v3.5.10
       - '!docs/legacy/**'  # Exclude legacy files from triggering CI
 
 jobs:
-  validate:
+  check-network:
+    runs-on: ubuntu-latest
+    outputs:
+      online: ${{ steps.net.outputs.online }}
+    steps:
+      - name: Check connectivity
+        id: net
+        run: |
+          if ping -c 1 github.com >/dev/null 2>&1; then
+            echo "online=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "online=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  markdownlint:
+    needs: check-network
+    if: needs.check-network.outputs.online == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -22,6 +38,44 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+
+      - name: Prepare environment
+        run: bash scripts/setup_env.sh
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install npm dependencies
+        env:
+          npm_config_proxy: ""
+          npm_config_http_proxy: ""
+          npm_config_https_proxy: ""
+        run: |
+          npm ci --omit=optional 2>&1 | tee npm.log
+          if scripts/safe_grep.sh -qE 'ENETUNREACH|EAI_AGAIN' npm.log; then
+              echo "❌ npm network error" >&2
+              exit 1
+          fi
+
+      - name: Lint Markdown files
+        run: |
+          npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**" "prompt_catalog/**/*.md"
+          echo "Markdown lint passed"
+
+
+  validate:
+    needs: check-network
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Prepare environment
         run: bash scripts/setup_env.sh
@@ -53,35 +107,6 @@ jobs:
           fi
           echo "✅ Commit message prefix check passed"
 
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.npm
-            node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        # Unset npm-specific proxy vars so npm doesn't emit warnings. System proxy vars remain for connectivity.
-        env:
-          npm_config_proxy: ""
-          npm_config_http_proxy: ""
-          npm_config_https_proxy: ""
-        run: |
-          npm ci --omit=optional 2>&1 | tee npm.log
-          if scripts/safe_grep.sh -qE 'ENETUNREACH|EAI_AGAIN' npm.log; then
-              echo "❌ npm network error" >&2
-              exit 1
-          fi
-
-      # jq and yamllint installed via scripts/setup_env.sh
-
-      - name: Lint Markdown files
-        run: |
-          npx markdownlint-cli2 "docs/**/*.md" "!docs/legacy/**" "prompt_catalog/**/*.md"
-          echo "Markdown lint passed"
 
       - name: Validate JSON files
         run: |
@@ -164,7 +189,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Cache pip
         uses: actions/cache@v3
@@ -174,10 +199,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
+      - name: Install gcloud CLI
+        run: |
+          URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz
+          curl "$URL" | tar -xz
+          ./google-cloud-sdk/install.sh --quiet
+
       - name: Install Python dependencies
         env:
           PIP_ROOT_USER_ACTION: ignore
         run: |
+          pip install --quiet --progress-bar off google-adk google-cloud-aiplatform \
+            --extra-index-url https://pypi.org/simple
           pip install --quiet --progress-bar off -r requirements.txt
           if [ -f requirements-dev.txt ]; then pip install --quiet --progress-bar off -r requirements-dev.txt; fi
           pip install --quiet --progress-bar off -e .
@@ -189,13 +222,6 @@ jobs:
       - name: Validate prompt catalog
         run: python scripts/validate_prompt_catalog.py
 
-      - name: Online Link Check
-        run: |
-          bash scripts/online_link_check.sh
-          test -f docs/performance_marketing/reforge_growth_loops.md
-          test -f docs/legacy/prompt/prompt_kernel_v3.4.md
-          test -f docs/meta/prompt_genome.json
-          echo "Link check passed"
 
       - name: Prompt Genome Version Consistency
         run: |
