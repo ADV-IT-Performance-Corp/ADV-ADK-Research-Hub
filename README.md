@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![CI/CD](https://img.shields.io/github/actions/workflow/status/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
 ![Coverage](coverage.svg)
+This repo is built on Google ADK 1.3 + Vertex AI; all agents communicate via the Google Agent‐to‐Agent protocol (A2A v0.6).
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 

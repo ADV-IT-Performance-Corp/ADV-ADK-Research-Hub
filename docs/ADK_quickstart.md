@@ -1,5 +1,7 @@
 # ADK Quickstart Snapshot
 
+This repo is built on Google ADK 1.3 + Vertex AI; all agents communicate via the Google Agent‐to‐Agent protocol (A2A v0.6).
+
 This file summarizes the official Agent Development Kit (ADK) quickstart from Google Cloud.
 
 Reference: https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart
