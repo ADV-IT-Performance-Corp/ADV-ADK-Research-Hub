@@ -248,3 +248,12 @@ jobs:
             fi
           done
           echo "Script output limit enforced"
+      - name: check-line-length
+        run: |
+          bash scripts/check_incomplete_work.sh | tee line.log
+          max_len=$(wc -L < line.log)
+          echo "Max line length: $max_len"
+          if [ "$max_len" -gt 1600 ]; then
+            echo "❌ Line length $max_len exceeds limit" >&2
+            exit 1
+          fi
