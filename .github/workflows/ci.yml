@@ -1,0 +1,76 @@
+---
+name: CI
+
+'on':
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python: ["3.11"]
+        node: ["20"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install gcloud CLI
+        run: |
+          URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz
+          curl -sSL "$URL" | tar -xz
+          ./google-cloud-sdk/install.sh --quiet
+
+      - name: Install Node dependencies
+        run: npm ci --omit=optional
+
+      - name: Install Python dependencies
+        run: pip install -e . -r requirements*.txt
+
+      - name: Lint Markdown
+        run: npx markdownlint-cli2 "docs/**/*.md" '!docs/legacy/**' "prompt_catalog/**/*.md"
+
+      - name: Run flake8
+        run: flake8
+
+      - name: Run black
+        run: black --check .
+
+      - name: Run mypy
+        run: mypy o3research
+
+      - name: Run tests
+        run: pytest --cov
+
+      - name: Enforce 1600-byte guard
+        run: |
+          for s in scripts/*.sh scripts/*.py; do
+            if ! grep -q 'head -c 1600' "$s" && ! grep -q 'limit_output' "$s"; then
+              echo "Missing output limit in $s" >&2
+              exit 1
+            fi
+          done
+
+      - name: Generate coverage badge
+        run: |
+          pip install coverage-badge
+          coverage-badge -o coverage.svg -f
+
+      - name: Upload coverage.svg
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage.svg
