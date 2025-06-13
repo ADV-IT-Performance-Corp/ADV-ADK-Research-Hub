@@ -46,7 +46,7 @@ jobs:
             exit 0
           fi
           CHECK_REGEX='^(feat|fix|chore(\(release\))?|docs|refactor|test|build|ci|perf|style|revert):'
-          if ! echo "$COMMIT_MSG" | grep -Eqi "$CHECK_REGEX"; then
+          if ! echo "$COMMIT_MSG" | scripts/safe_grep.sh -Eqi "$CHECK_REGEX"; then
             echo "❌ Commit message must start with one of:" && \
             echo "feat:, fix:, chore:, docs:, refactor:, test:, build:, ci:, perf:, style:, revert:"
             exit 1
@@ -71,7 +71,7 @@ jobs:
           npm_config_https_proxy: ""
         run: |
           npm ci --omit=optional 2>&1 | tee npm.log
-          if grep -qE 'ENETUNREACH|EAI_AGAIN' npm.log; then
+          if scripts/safe_grep.sh -qE 'ENETUNREACH|EAI_AGAIN' npm.log; then
               echo "❌ npm network error" >&2
               exit 1
           fi
@@ -147,8 +147,8 @@ jobs:
       - name: Check Version Consistency
         run: |
           echo "Checking version consistency..."
-          VERSION_IN_README=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
-          VERSION_IN_CHANGELOG=$(grep -oP '## \[v\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
+          VERSION_IN_README=$(scripts/safe_grep.sh -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
+          VERSION_IN_CHANGELOG=$(scripts/safe_grep.sh -oP '## \[v\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
 
           if [ "$VERSION_IN_README" != "$VERSION_IN_CHANGELOG" ]; then
             echo "❌ Version mismatch between README ($VERSION_IN_README) and CHANGELOG ($VERSION_IN_CHANGELOG)"
@@ -242,7 +242,7 @@ jobs:
         run: |
           for s in scripts/*.sh scripts/*.py; do
             echo "Checking $s"
-            if ! grep -q 'head -c 1600' "$s" && ! grep -q 'limit_output' "$s"; then
+            if ! scripts/safe_grep.sh -q 'head -c 1600' "$s" && ! scripts/safe_grep.sh -q 'limit_output' "$s"; then
               echo "❌ Missing output limit in $s" >&2
               exit 1
             fi
