@@ -1,6 +1,7 @@
 # limit_output
 MAX_BYTES = 1600
 
+
 class _LimitedIO:
     """Wrap a text stream to limit total bytes written."""
 

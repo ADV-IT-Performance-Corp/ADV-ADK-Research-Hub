@@ -18,8 +18,9 @@ class TestApiWriter(unittest.TestCase):
         def collector(event):
             events.append(event)
 
-        with patch.object(telemetry, "collector", collector, create=False), patch.dict(
-            os.environ, {"TELEMETRY_ENABLED": "1"}
+        with (
+            patch.object(telemetry, "collector", collector, create=False),
+            patch.dict(os.environ, {"TELEMETRY_ENABLED": "1"}),
         ):
             res = push_campaign({"customer_id": "123", "name": "Test"})
 
