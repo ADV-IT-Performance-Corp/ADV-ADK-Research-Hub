@@ -1,28 +1,14 @@
 #!/usr/bin/env python3
+# limit_output
 """Validate prompt catalog metadata."""
 
 import sys
 from pathlib import Path
 import yaml
 
-MAX_BYTES = 1600
-
-
-class _LimitedIO:
-    def __init__(self, stream, limit=MAX_BYTES):
-        self.stream = stream
-        self.remaining = limit
-
-    def write(self, data):
-        if self.remaining <= 0:
-            return
-        encoded = data.encode(self.stream.encoding or "utf-8", errors="replace")
-        chunk = encoded[: self.remaining]
-        self.stream.buffer.write(chunk)
-        self.remaining -= len(chunk)
-
-    def flush(self):
-        self.stream.flush()
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from limited_io import _LimitedIO
 
 
 sys.stdout = _LimitedIO(sys.stdout)
