@@ -10,5 +10,5 @@ Provide a quick performance summary for each active advertising channel.
 - Suggests next action items
 
 ### NOTES
-Prompt Kernel: v3.5.9
+Prompt Kernel: v3.5.10
 **Tags:** performance summary, channel metrics

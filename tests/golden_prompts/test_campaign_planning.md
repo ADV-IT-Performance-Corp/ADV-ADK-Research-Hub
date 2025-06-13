@@ -10,5 +10,5 @@ Outline a cross-channel marketing campaign for launching a new service. Include 
 - Mentions coordination with MemoryAgent data
 
 ### NOTES
-Prompt Kernel: v3.5.9
+Prompt Kernel: v3.5.10
 **Tags:** campaign plan, cross-channel

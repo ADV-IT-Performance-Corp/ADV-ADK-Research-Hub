@@ -8,7 +8,7 @@
     "docs/kaggle_prompt_engineering_summary.md"
   ],
   "external_sources_minimum": 10,
-  "prompt_version": "v3.5.9",
+  "prompt_version": "v3.5.10",
   "metadata_check": {
     "semantic_tags_present": true,
     "version_tracking_enabled": true,
