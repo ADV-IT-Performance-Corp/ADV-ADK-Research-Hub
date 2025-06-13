@@ -17,7 +17,7 @@ subversions:
     summary: added AsyncEventBus, logging utilities and example workflow
   - tag: 3.5.8
     summary: added MarketingAssistant module and push_campaign API integration
-  - tag: 3.5.9
+  - tag: 3.5.10
     summary: packaging update for marketing assistant
   - tag: 3.5.10
     summary: dependency updates for Vertex AI support
