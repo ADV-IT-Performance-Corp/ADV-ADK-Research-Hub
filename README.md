@@ -29,6 +29,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [AGENTS Guide](AGENTS.md) - Short rules for using ChatGPT with this repo
 - [Agent System Overview](docs/agent_system_overview.md) - Module map and agent roles
 - [ConfigAgent Overview](docs/config_agent_overview.md) - Prompt configuration management
+- [Multi-Client Workflow Runner](docs/orchestration/multi_client.md) - Execute workflows for multiple clients
 - [Configuration Settings Reference](docs/config/settings_reference.md) - Details for `settings.yaml`
 - [GovernanceAgent Concept](docs/governance_agent_concept.md) - Proposed compliance layer
 - [World Agent Integration Blueprint](docs/world_agent_integration.md) - Connect external agents via the event bus
