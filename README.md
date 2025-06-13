@@ -168,6 +168,8 @@ bash scripts/online_link_check.sh
 
 Note: The `node_modules/` directory is excluded via `.gitignore` to avoid large diffs. Do not commit this folder.
 All helper scripts pipe their output through `head -c 1600` so CI logs remain concise.
+CI also checks that no individual line of output exceeds **1600 bytes**. Keep
+documentation and command logs under this limit or the workflow will fail.
 
 ## Deploying on Vertex AI
 See [docs/vertex_ai_quickstart.md](docs/vertex_ai_quickstart.md) for setup steps and
@@ -203,11 +205,15 @@ Run `bash scripts/online_link_check.sh` to verify external sources are reachable
    pip install -e .
    ```
 
-3. Source the provided shell configuration to set helpful aliases:
+3. Source the provided shell configuration to enable consistent aliases and
+   terminal settings:
 
    ```bash
    source shell_config.sh
    ```
+   The script disables colored `grep`, limits `find` output to the first
+   200 characters, and resets the terminal width so lines stay within the
+   1600-byte CI limit.
 4. The current release version is stored in the `VERSION` file and exposed as
    `o3research.__version__` for programmatic access.
 5. After publishing a release, record the evaluation scores in
