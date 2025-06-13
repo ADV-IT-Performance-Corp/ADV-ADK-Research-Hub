@@ -1,6 +1,6 @@
 # O3 Deep Research - AI Marketing Automation System
 
-[![O3 Version](https://img.shields.io/badge/version-3.5.10-blue)](CHANGELOG.md)
+[![O3 Version](https://img.shields.io/badge/version-4.0.0-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![CI/CD](https://img.shields.io/github/actions/workflow/status/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/validate_repo.yml?branch=master)
 ![Coverage](coverage.svg)
@@ -16,7 +16,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 > Requires **Python 3.11**.
 
 
-## 🚀 Key Features (v3.5.10)
+## 🚀 Key Features (v4.0.0)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
 - **Asynchronous Event Bus**: Async publish/subscribe layer for agent communication
@@ -28,8 +28,8 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ## 📚 Documentation
 
 ### Core Documentation
-- [Prompt Kernel v3.5](docs/prompt/prompt_kernel_v3.5.md) - Core prompt engineering framework (latest)
-- [Prompt Evolution Log](docs/meta/prompt_evolution_log/v3.5.yaml) - Version history and changes
+- [Prompt Kernel v4](docs/prompt/prompt_kernel_v4.md) - Core prompt engineering framework (latest)
+- [Prompt Evolution Log](docs/meta/prompt_evolution_log/v4.yaml) - Version history and changes
 - [Meta Evaluation](docs/meta/meta_evaluation.json) - Evaluation framework and metrics
 - [Meta Evaluation Usage](docs/meta/meta_evaluation.md) - How to compute weighted scores
 - [Evaluation Results](docs/meta/evaluation_results.json) - Scores recorded for each release
@@ -54,11 +54,11 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 ### Project Management
 - [Contribution Guide](docs/contribution_guide.md) - How to contribute to the project
   (see checklist; CI fails if the online link check reports errors)
-- [Release Checklist](docs/meta/release_checklist_v3.5.md) - Process for new releases
+- [Release Checklist](docs/meta/release_checklist_v4.0.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
 - [Version Diff v3.5.7 to v3.5.8](docs/meta/version_diff_v3.5.7_to_v3.5.8.md) - Summary of new modules and docs
 
-## 📂 Repository Structure (v3.5.10)
+## 📂 Repository Structure (v4.0.0)
 
 ```text
 .
@@ -87,7 +87,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 
 ## 🚀 Quick Start
 
-### For O3 Deep Research V3.5
+### For O3 Deep Research V4
 Reference this repository in your prompts using:
 
 📘 EXTERNAL KNOWLEDGE CONTEXT:
@@ -97,7 +97,7 @@ Key references:
 - docs/ADK_quickstart.md
 - docs/adk_docs_snapshot.md
 - docs/kaggle_prompt_engineering_summary.md
-- docs/prompt/prompt_kernel_v3.5.md  # Core V3.5 prompt
+- docs/prompt/prompt_kernel_v4.md  # Core V4 prompt
 - docs/performance_marketing/*.md
 - docs/meta/prompt_genome.json  # Version and lineage tracking
 - docs/source_index.json

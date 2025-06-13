@@ -1,4 +1,4 @@
-# Integration Guide for O3 Deep Research (v3.5.10)
+# Integration Guide for O3 Deep Research (v4.0.0)
 
 This guide explains how to use this repository as the external knowledge context for the O3 Deep Research prompt (v3.5.10 and above).
 
