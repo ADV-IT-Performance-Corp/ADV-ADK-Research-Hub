@@ -7,6 +7,15 @@
 
 This repository powers the O3 Deep Research initiative, an advanced AI-powered marketing automation system for ADV IT Performance Corp. It implements the V3.5 Unified Final prompt architecture with enhanced CI/CD validation, comprehensive research capabilities, and advanced agent coordination.
 
+> **Quick Start**
+> - [Google ADK docs](https://google.github.io/adk-docs/ )
+> - [Vertex AI ADK quick-start](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-development-kit/quickstart)
+> - [ADK Python repo](https://github.com/google/adk-python)
+> - [gcloud CLI install](https://cloud.google.com/sdk)
+> 
+> Requires **Python 3.11**.
+
+
 ## 🚀 Key Features (v3.5.10)
 
 - **Enhanced Multi-Agent System**: Specialized agents with clear responsibilities and improved coordination
