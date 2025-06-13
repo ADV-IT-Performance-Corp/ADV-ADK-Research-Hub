@@ -15,4 +15,6 @@ class PromptManager:
 
         summary_count = len(history) - (self.history_limit - 1)
         summary = f"[{summary_count} messages summarized]"
+        # fmt: off
         return [summary] + history[-(self.history_limit - 1):]
+        # fmt: on
