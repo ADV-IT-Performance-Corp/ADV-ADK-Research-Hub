@@ -15,6 +15,8 @@ To maintain quality, reproducibility, and consistency, all contributions must fo
 - [ ] `CHANGELOG.md` contains a descriptive section of updates
 - [ ] `python scripts/generate_evaluation.py tests/sample_metrics.json` run to update evaluation results
 - [ ] `coverage-badge -o coverage.svg -f` run to regenerate the coverage badge
+- [ ] Source `shell_config.sh` to enable project aliases and consistent output
+- [ ] Ensure no line in your logs or docs exceeds **1600 bytes**
 
 The incomplete work script scans only the `docs/` directory for Markdown and YAML files. JSON files are ignored.
 
