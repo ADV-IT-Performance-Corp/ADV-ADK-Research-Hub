@@ -21,3 +21,8 @@ Run the same checks that CI performs in `.github/workflows/validate_repo.yml`:
 5. Validate the golden prompt files in `tests/golden_prompts/`.
 
 All checks should pass before opening a pull request.
+
+## 📦 Agents
+
+- `agents/build_assistant/` contains a skeleton Build Assistant with a
+  `plan_and_apply()` function.
