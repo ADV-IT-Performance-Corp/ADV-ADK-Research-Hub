@@ -164,7 +164,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Cache pip
         uses: actions/cache@v3
@@ -173,6 +173,12 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+
+      - name: Install gcloud CLI
+        run: |
+          URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-475.0.0-linux-x86_64.tar.gz
+          curl "$URL" | tar -xz
+          ./google-cloud-sdk/install.sh --quiet
 
       - name: Install Python dependencies
         env:
