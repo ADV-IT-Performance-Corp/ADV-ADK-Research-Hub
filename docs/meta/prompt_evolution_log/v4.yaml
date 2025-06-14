@@ -18,8 +18,6 @@ subversions:
   - tag: 3.5.8
     summary: added MarketingAssistant module and push_campaign API integration
   - tag: 3.5.10
-    summary: packaging update for marketing assistant
-  - tag: 3.5.10
-    summary: dependency updates for Vertex AI support
+    summary: packaging update for marketing assistant and dependency updates for Vertex AI support
 notes:
   - 'Version 3.5.5 expands simulation logs and adds schema diff prompt.'
