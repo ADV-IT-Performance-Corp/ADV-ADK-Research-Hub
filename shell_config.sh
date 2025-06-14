@@ -3,7 +3,10 @@
 # Source this file to enable consistent aliases and terminal settings.
 
 alias grep='grep --color=never'
-alias find='find "$@" | cut -b1-200'
+find_cut() {
+  command find "$@" | cut -b1-200
+}
+alias find=find_cut
 
 export LINES=0
 export COLUMNS=0
