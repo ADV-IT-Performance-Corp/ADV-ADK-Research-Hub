@@ -56,7 +56,6 @@ class BudgetAllocatorAgent(Agent):
         lines.append(f"Daily budget: ${daily_budget}")
         result = "\n".join(lines)
         latency = time.perf_counter() - start
-        latency = time.perf_counter() - start
         record_prompt(
             "budget_allocation",
             self.name,
