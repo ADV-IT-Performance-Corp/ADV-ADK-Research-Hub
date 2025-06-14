@@ -291,15 +291,10 @@ jobs:
 
       - name: Mass Deletion Guard
         run: |
-          base=$(git rev-parse origin/master)
-          stats=$(git diff --shortstat "$base" HEAD)
-          deletes=$(echo "$stats" | awk '{for(i=1;i<=NF;i++) if($i=="deletions(-)") print $(i-1)}')
-          files=$(echo "$stats" | awk '{print $1}')
-          deletes=${deletes:-0}
-          files=${files:-0}
-          echo "Files changed: $files, deletions: $deletes"
-          if [ "$files" -gt 100 ] || [ "$deletes" -gt 1000 ]; then
-            echo "❌ Excessive deletions detected" >&2
-            exit 1
+          deleted=$(git diff --name-status ${{ github.event.before }} \
+                   | awk '$1=="D"{c++} END{print c+0}')
+          if [ "$deleted" -gt 5 ] && \
+             ! git log -1 --format=%s | grep -q '^chore: prune'; then
+              echo "❌ Too many deletions without explicit prune commit"
+              exit 1
           fi
-          echo "Mass deletion guard passed"
