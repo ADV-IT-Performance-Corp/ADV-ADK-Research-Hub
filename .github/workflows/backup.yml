@@ -1,0 +1,39 @@
+name: Nightly Backup
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create backup branch
+        run: |
+          date=$(date -u +'%Y%m%d')
+          branch="backup/$date"
+          git config user.name 'github-actions'
+          git config user.email 'actions@github.com'
+          git fetch origin master
+          git checkout -B "$branch" origin/master
+          git push origin "$branch" --force
+
+      - name: Create archive
+        run: |
+          ts=$(date -u +'%Y-%m-%d')
+          git archive --format=zip HEAD > "repo-$ts.zip"
+
+      - name: Upload release asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ts=$(date -u +'%Y-%m-%d')
+          tag="backup-$ts"
+          gh release create "$tag" "repo-$ts.zip" -t "Backup $ts" -n "Automated backup for $ts" --prerelease \
+            || gh release upload "$tag" "repo-$ts.zip" --clobber

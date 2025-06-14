@@ -854,6 +854,13 @@
       ],
       "last_reviewed": "2025-06-13",
       "type": "external"
+    },
+    {
+      "name": "Backup and Restore Guide",
+      "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/operations/backup_and_restore.md",
+      "tags": ["operations", "backup", "restore"],
+      "version": "4.0.0",
+      "type": "documentation"
     }
   ],
   "metadata": {
