@@ -14,6 +14,18 @@
       "type": "core"
     },
     {
+      "name": "O3 Deep Research v3.5.10",
+      "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/prompt/prompt_kernel_v3.5.md",
+      "tags": [
+        "o3",
+        "prompt-kernel",
+        "v3.5.10",
+        "research"
+      ],
+      "version": "3.5.10",
+      "type": "core"
+    },
+    {
       "name": "Prompt Evolution v4.0.0",
       "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/meta/prompt_evolution_log/v4.yaml",
       "tags": [
@@ -858,7 +870,11 @@
     {
       "name": "Backup and Restore Guide",
       "link": "https://github.com/ADV-IT-Performance-Corp/ADV-ADK-Research-Hub/blob/main/docs/operations/backup_and_restore.md",
-      "tags": ["operations", "backup", "restore"],
+      "tags": [
+        "operations",
+        "backup",
+        "restore"
+      ],
       "version": "4.0.0",
       "type": "documentation"
     }
