@@ -56,6 +56,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
   (see checklist; CI fails if the online link check reports errors)
 - [Release Checklist](docs/meta/release_checklist_v4.0.md) - Process for new releases
 - [Changelog](CHANGELOG.md) - Version history and changes
+- [Backup and Restore Guide](docs/operations/backup_and_restore.md) - Recover the repository from nightly backups
 - [Version Diff v3.5.7 to v3.5.8](docs/meta/version_diff_v3.5.7_to_v3.5.8.md) - Summary of new modules and docs
 
 ## 📂 Repository Structure (v4.0.0)
