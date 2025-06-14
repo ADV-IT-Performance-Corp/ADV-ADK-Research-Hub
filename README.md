@@ -46,6 +46,7 @@ This repository powers the O3 Deep Research initiative, an advanced AI-powered m
 - [Performance Marketing Assistant Architecture](docs/performance_marketing/assistant_architecture.md)
 - [Marketing API Integration](docs/performance_marketing/api_integration.md)
 - [Prompt Usage Examples](docs/performance_marketing/prompt_usage_examples.md)
+- [Marketing Assistant Clients](marketing_assistant/README.md) - Google Ads and GA client usage
 
 ### Research & Methodology
 - [Research Goals](docs/RESEARCH_GOALS.md) - Overview of research objectives and success metrics
