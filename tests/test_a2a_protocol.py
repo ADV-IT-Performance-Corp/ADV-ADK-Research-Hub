@@ -9,6 +9,7 @@ modules = {
     "google.ads.googleads": ModuleType("google.ads.googleads"),
     "google.ads.googleads.client": ModuleType("google.ads.googleads.client"),
     "google.ads.googleads.errors": ModuleType("google.ads.googleads.errors"),
+    "google.adk": ModuleType("google.adk"),
 }
 for name, mod in modules.items():
     sys.modules.setdefault(name, mod)
