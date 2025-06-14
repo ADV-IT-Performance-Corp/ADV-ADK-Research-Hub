@@ -9,7 +9,7 @@ This document tracks the migration and deprecation of previous versions of the O
   - Location: `docs/prompt/prompt_kernel_v4.md`
   - Patch release with MarketingAssistant, API integration, and expanded examples
 - **v3.5.0** (2025-05-22)
-  - Location: `docs/prompt/prompt_kernel_v4.md`
+  - Location: `docs/legacy/prompt/prompt_kernel_v3.5.md`
   - Key Features:
     - Multi-agent coordination
     - ReAct patterns implementation
@@ -68,6 +68,7 @@ This document tracks the migration and deprecation of previous versions of the O
 ### Moved to Legacy
 - `docs/prompt/prompt_kernel_v3.4.md` → `docs/legacy/prompt/prompt_kernel_v3.4.md`
 - `docs/prompt/prompt_kernel_v3.md` → `docs/legacy/prompt/prompt_kernel_v3.md`
+- `docs/prompt/prompt_kernel_v3.5.md` → `docs/legacy/prompt/prompt_kernel_v3.5.md`
 
 ## Version Compatibility
 
